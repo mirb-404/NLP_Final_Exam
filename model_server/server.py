@@ -34,24 +34,78 @@ COMPLIANT — it is NOT a paid commercial LLM API.
 import os
 import time
 import uuid
+from pathlib import Path
 
 import uvicorn
 from fastapi import FastAPI, Header, HTTPException
+from huggingface_hub import snapshot_download
 from pydantic import BaseModel
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 MODEL_ID = os.getenv("MODEL_ID", "Qwen/Qwen2.5-3B-Instruct")
+MODELS_DIR = Path(os.getenv("MODELS_DIR", "agent_models"))  # where weights are stored
 API_KEY = os.getenv("API_KEY")            # if set, clients must send Authorization: Bearer <key>
 HOST = os.getenv("HOST", "0.0.0.0")
 PORT = int(os.getenv("PORT", "8000"))
 
-print(f"[server] loading {MODEL_ID} ... (first run downloads weights)")
-tokenizer = AutoTokenizer.from_pretrained(MODEL_ID)
-model = AutoModelForCausalLM.from_pretrained(
-    MODEL_ID,
-    torch_dtype="auto",
-    device_map="auto",
-)
+# Files we never need (mistral ships a non-HF single-file dupe + .pth/.gguf variants).
+# Tip: if a repo has BOTH *.bin and *.safetensors, add "*.bin" here to ~halve the download.
+_IGNORE = ["*.pth", "*.gguf", "original/*", "consolidated.safetensors"]
+_WEIGHT_GLOBS = ("*.safetensors", "*.bin")
+
+
+def _model_path() -> Path:
+    """Local folder for this model, e.g. agent_models/mistralai__Mistral-7B-Instruct-v0.2."""
+    return MODELS_DIR / MODEL_ID.replace("/", "__")
+
+
+def _is_downloaded(path: Path) -> bool:
+    """True only if config + at least one weight file are already on disk."""
+    if not (path / "config.json").exists():
+        return False
+    return any(next(path.glob(g), None) for g in _WEIGHT_GLOBS)
+
+
+def ensure_model() -> str:
+    """Download MODEL_ID into agent_models/ once; reuse it (offline) thereafter."""
+    path = _model_path()
+    if _is_downloaded(path):
+        print(f"[server] model found at {path} — loading locally (no download)")
+    else:
+        print(f"[server] model not in {path} — downloading {MODEL_ID} (one time) ...")
+        snapshot_download(
+            repo_id=MODEL_ID,
+            local_dir=str(path),
+            token=os.getenv("HUGGINGFACEHUB_API_TOKEN"),  # required for gated repos (Mistral)
+            ignore_patterns=_IGNORE,
+        )
+        print(f"[server] download complete -> {path}")
+    return str(path)
+
+
+MODEL_PATH = ensure_model()
+# 4-bit (NF4) drops VRAM ~15GB -> ~5GB. Only *faster* if fp16 would OOM/offload;
+# on a GPU that already fits fp16 it is similar or slightly slower. Default off.
+LOAD_4BIT = os.getenv("LOAD_4BIT", "0").lower() in ("1", "true", "yes")
+
+print(f"[server] loading {MODEL_ID} from {MODEL_PATH} ... (4bit={LOAD_4BIT})")
+tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH, local_files_only=True)
+
+model_kwargs = {"device_map": "auto", "local_files_only": True}
+if LOAD_4BIT:
+    import torch
+    from transformers import BitsAndBytesConfig
+
+    model_kwargs["quantization_config"] = BitsAndBytesConfig(
+        load_in_4bit=True,
+        bnb_4bit_quant_type="nf4",
+        bnb_4bit_use_double_quant=True,
+        bnb_4bit_compute_dtype=torch.bfloat16,
+    )
+else:
+    model_kwargs["torch_dtype"] = "auto"
+
+model = AutoModelForCausalLM.from_pretrained(MODEL_PATH, **model_kwargs)
 print(f"[server] model ready on device: {model.device}")
 
 app = FastAPI(title="AI CEO model server")

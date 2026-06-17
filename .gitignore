@@ -2,3 +2,7 @@ _reference_repo
 .claude
 Exam_docs
 .env
+agent_models/
+.venv/
+data/chroma/
+__pycache__/

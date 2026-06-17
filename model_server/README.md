@@ -15,18 +15,43 @@ commercial LLM API.
 ```bash
 pip install -r requirements.txt
 
-export MODEL_ID="Qwen/Qwen2.5-3B-Instruct"   # see hardware table below
-export API_KEY="some-secret"                 # optional bearer auth
-python server.py                             # 0.0.0.0:8000
+export MODEL_ID="mistralai/Mistral-7B-Instruct-v0.2"   # see hardware table below
+export API_KEY="some-secret"                           # optional bearer auth
+python server.py                                       # 0.0.0.0:8000
 ```
+
+**Weights are stored in `agent_models/`** (override with `MODELS_DIR`). On
+startup the script:
+- checks `agent_models/<model>/` — if the weights are there, it **loads them
+  offline** (no download);
+- if not, it **downloads once** into that folder, then loads.
+
+So the first run downloads; every run after is offline. Gated models (Mistral)
+need auth for that first download — run `huggingface-cli login` (or set
+`HUGGINGFACEHUB_API_TOKEN`) **and** accept the model license on HF.
+
+> Space tip: Mistral ships duplicate weight formats. The script already skips
+> `consolidated.safetensors`; if the repo also has `*.bin` next to
+> `*.safetensors`, add `"*.bin"` to `_IGNORE` in `server.py` to ~halve the download.
 
 Pick `MODEL_ID` for your hardware:
 
 | DataLab hardware | MODEL_ID | Notes |
 |---|---|---|
-| GPU ≥16 GB | `meta-llama/Llama-3.1-8B-Instruct` | best; PDF-recommended (gated → accept license on HF) |
-| GPU ~8 GB | `Qwen/Qwen2.5-3B-Instruct` | good; **default** |
+| GPU ≥16 GB | `mistralai/Mistral-7B-Instruct-v0.2` | fp16, ~15 GB; gated → accept license + login |
+| GPU 6–12 GB | `mistralai/Mistral-7B-Instruct-v0.2` + `LOAD_4BIT=1` | ~5 GB, fits smaller GPUs |
+| GPU ~8 GB (no quant) | `Qwen/Qwen2.5-3B-Instruct` | good, lighter |
 | CPU only | `Qwen/Qwen2.5-1.5B-Instruct` | works, slow |
+
+### 4-bit quantization (`LOAD_4BIT=1`)
+```bash
+pip install bitsandbytes          # CUDA/Linux GPU only
+LOAD_4BIT=1 MODEL_ID="mistralai/Mistral-7B-Instruct-v0.2" python server.py
+```
+Cuts VRAM ~15 GB → ~5 GB. **Not automatically faster:** on a GPU that already
+fits fp16 it's similar or slightly slower (dequant overhead). It's faster *only*
+when fp16 would OOM and spill to CPU offload. Rule of thumb: GPU ≥16 GB → leave
+it off (fp16); smaller GPU → turn it on so the model fits without offloading.
 
 Check it locally on the DataLab:
 ```bash
@@ -35,7 +60,11 @@ curl http://localhost:8000/health
 
 ## 2. Expose it publicly
 
-A DataLab notebook usually has no public IP. Open a tunnel:
+**Same machine?** If you run the whole pipeline ON the DataLab too, skip this —
+just use `MODEL_SERVER_URL=http://localhost:8000`. No tunnel needed.
+
+Otherwise (pipeline on a different machine), a DataLab notebook usually has no
+public IP, so open a tunnel:
 
 ```bash
 # cloudflared — no signup, prints an https URL
@@ -58,6 +87,16 @@ uv run python main.py
 ```
 
 ## 4. Verify end-to-end
+
+Easiest — the test script (health check + timed call, reports tokens/sec):
+```bash
+python test_server.py                                  # default localhost
+python test_server.py "What does Siemens do?"          # custom prompt
+MODEL_SERVER_URL=http://localhost:8000 MODEL_SERVER_KEY=some-secret python test_server.py
+```
+It calls twice (cold + warm) so you see steady-state speed.
+
+Or raw curl:
 ```bash
 curl -X POST "$MODEL_SERVER_URL/v1/chat/completions" \
   -H "Content-Type: application/json" \
