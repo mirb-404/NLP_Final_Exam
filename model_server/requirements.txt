@@ -1,0 +1,7 @@
+# Install ON the DataLab / hosting box (NOT in the main project .venv).
+fastapi>=0.115
+uvicorn>=0.30
+transformers>=4.44
+torch>=2.3
+accelerate>=0.33
+sentencepiece>=0.2

@@ -1,0 +1,6 @@
+{
+  "n_recommendations": 5,
+  "mean_confidence": 0.633,
+  "factual_precision": 0.4,
+  "threshold": 0.7
+}

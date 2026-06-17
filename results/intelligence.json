@@ -1,0 +1,518 @@
+{
+  "opportunities": [
+    {
+      "title": "Cloud-based SCADA solutions for non-renewable energy sources",
+      "impact": "Medium",
+      "confidence": 0.847,
+      "evidence": [
+        {
+          "ref": "src-1",
+          "title": "Siemens delivers major cloud-based SCADA for renewables - Siemens",
+          "source": "Siemens",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBzdVZFdFdMNWlwdU10NGZPcUhLcVJZVDJ3dkFCdzJRbXNRWjFkWUJRUWQxRVV5Ym9kY0MyMzdmSFFhc3Q4LXhMN1JvaHlIMUwtRVZIb19rTTVqeHRIXzVQZ1pWNzVsaEdwRmp1d0V5NWFXZmM?oc=5",
+          "score": 0.8603
+        },
+        {
+          "ref": "src-2",
+          "title": "Smart building infrastructure and technologies - Siemens",
+          "source": "Siemens",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9CdHlmNk1SNWF0REYxRTJPSG5xTTlZM014eEd5ZUd6d1N0a1NxOG16SDNxWXZIRzNCM2d3c1o5LXJIYU5yLXpXNkY3OHhzaDRaODdMUUllSV9GTGxMV1NvTUZndVJDQXoxUEhCSWRLN2FjT0RMQkRR?oc=5",
+          "score": 0.8573
+        },
+        {
+          "ref": "src-3",
+          "title": "Siemens unveils technologies to accelerate the industrial AI revolution at CES 2026 - Siemens press",
+          "source": "Siemens press",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWUl4Q2NONi03VDladkJlXzFVMWZpQzZHeGN6blhyQjZhMGE3cXktdFFHUVpqWnBWVEtUZzBWYzBVenNwMHNLVzNUenBYb0NuUjdyRGhLeGlCV0dZZ3V0NXRaNlZUbGV2UUlqdDJ6ZWNFODZRSjNTTmRJYkdROXlPX1pPWDRfMlNKb0NhUWFaNnZMdDlrNE1MeTVYQlBub0dmdm5tSUlHLWFfdWZUM1p4SVB5T2UyWkVmbmhVX21KTQ?oc=5",
+          "score": 0.8239
+        }
+      ]
+    },
+    {
+      "title": "Smart building infrastructure expansion into new markets",
+      "impact": "Medium",
+      "confidence": 0.847,
+      "evidence": [
+        {
+          "ref": "src-1",
+          "title": "Siemens delivers major cloud-based SCADA for renewables - Siemens",
+          "source": "Siemens",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBzdVZFdFdMNWlwdU10NGZPcUhLcVJZVDJ3dkFCdzJRbXNRWjFkWUJRUWQxRVV5Ym9kY0MyMzdmSFFhc3Q4LXhMN1JvaHlIMUwtRVZIb19rTTVqeHRIXzVQZ1pWNzVsaEdwRmp1d0V5NWFXZmM?oc=5",
+          "score": 0.8603
+        },
+        {
+          "ref": "src-2",
+          "title": "Smart building infrastructure and technologies - Siemens",
+          "source": "Siemens",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9CdHlmNk1SNWF0REYxRTJPSG5xTTlZM014eEd5ZUd6d1N0a1NxOG16SDNxWXZIRzNCM2d3c1o5LXJIYU5yLXpXNkY3OHhzaDRaODdMUUllSV9GTGxMV1NvTUZndVJDQXoxUEhCSWRLN2FjT0RMQkRR?oc=5",
+          "score": 0.8573
+        },
+        {
+          "ref": "src-3",
+          "title": "Siemens unveils technologies to accelerate the industrial AI revolution at CES 2026 - Siemens press",
+          "source": "Siemens press",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWUl4Q2NONi03VDladkJlXzFVMWZpQzZHeGN6blhyQjZhMGE3cXktdFFHUVpqWnBWVEtUZzBWYzBVenNwMHNLVzNUenBYb0NuUjdyRGhLeGlCV0dZZ3V0NXRaNlZUbGV2UUlqdDJ6ZWNFODZRSjNTTmRJYkdROXlPX1pPWDRfMlNKb0NhUWFaNnZMdDlrNE1MeTVYQlBub0dmdm5tSUlHLWFfdWZUM1p4SVB5T2UyWkVmbmhVX21KTQ?oc=5",
+          "score": 0.8239
+        }
+      ]
+    },
+    {
+      "title": "Industrial AI adoption consulting services for manufacturing companies",
+      "impact": "High",
+      "confidence": 0.847,
+      "evidence": [
+        {
+          "ref": "src-1",
+          "title": "Siemens delivers major cloud-based SCADA for renewables - Siemens",
+          "source": "Siemens",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBzdVZFdFdMNWlwdU10NGZPcUhLcVJZVDJ3dkFCdzJRbXNRWjFkWUJRUWQxRVV5Ym9kY0MyMzdmSFFhc3Q4LXhMN1JvaHlIMUwtRVZIb19rTTVqeHRIXzVQZ1pWNzVsaEdwRmp1d0V5NWFXZmM?oc=5",
+          "score": 0.8603
+        },
+        {
+          "ref": "src-2",
+          "title": "Smart building infrastructure and technologies - Siemens",
+          "source": "Siemens",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9CdHlmNk1SNWF0REYxRTJPSG5xTTlZM014eEd5ZUd6d1N0a1NxOG16SDNxWXZIRzNCM2d3c1o5LXJIYU5yLXpXNkY3OHhzaDRaODdMUUllSV9GTGxMV1NvTUZndVJDQXoxUEhCSWRLN2FjT0RMQkRR?oc=5",
+          "score": 0.8573
+        },
+        {
+          "ref": "src-3",
+          "title": "Siemens unveils technologies to accelerate the industrial AI revolution at CES 2026 - Siemens press",
+          "source": "Siemens press",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWUl4Q2NONi03VDladkJlXzFVMWZpQzZHeGN6blhyQjZhMGE3cXktdFFHUVpqWnBWVEtUZzBWYzBVenNwMHNLVzNUenBYb0NuUjdyRGhLeGlCV0dZZ3V0NXRaNlZUbGV2UUlqdDJ6ZWNFODZRSjNTTmRJYkdROXlPX1pPWDRfMlNKb0NhUWFaNnZMdDlrNE1MeTVYQlBub0dmdm5tSUlHLWFfdWZUM1p4SVB5T2UyWkVmbmhVX21KTQ?oc=5",
+          "score": 0.8239
+        }
+      ]
+    },
+    {
+      "title": "Hosting industrial AI conferences and events globally",
+      "impact": "Medium",
+      "confidence": 0.847,
+      "evidence": [
+        {
+          "ref": "src-1",
+          "title": "Siemens delivers major cloud-based SCADA for renewables - Siemens",
+          "source": "Siemens",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBzdVZFdFdMNWlwdU10NGZPcUhLcVJZVDJ3dkFCdzJRbXNRWjFkWUJRUWQxRVV5Ym9kY0MyMzdmSFFhc3Q4LXhMN1JvaHlIMUwtRVZIb19rTTVqeHRIXzVQZ1pWNzVsaEdwRmp1d0V5NWFXZmM?oc=5",
+          "score": 0.8603
+        },
+        {
+          "ref": "src-2",
+          "title": "Smart building infrastructure and technologies - Siemens",
+          "source": "Siemens",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9CdHlmNk1SNWF0REYxRTJPSG5xTTlZM014eEd5ZUd6d1N0a1NxOG16SDNxWXZIRzNCM2d3c1o5LXJIYU5yLXpXNkY3OHhzaDRaODdMUUllSV9GTGxMV1NvTUZndVJDQXoxUEhCSWRLN2FjT0RMQkRR?oc=5",
+          "score": 0.8573
+        },
+        {
+          "ref": "src-3",
+          "title": "Siemens unveils technologies to accelerate the industrial AI revolution at CES 2026 - Siemens press",
+          "source": "Siemens press",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWUl4Q2NONi03VDladkJlXzFVMWZpQzZHeGN6blhyQjZhMGE3cXktdFFHUVpqWnBWVEtUZzBWYzBVenNwMHNLVzNUenBYb0NuUjdyRGhLeGlCV0dZZ3V0NXRaNlZUbGV2UUlqdDJ6ZWNFODZRSjNTTmRJYkdROXlPX1pPWDRfMlNKb0NhUWFaNnZMdDlrNE1MeTVYQlBub0dmdm5tSUlHLWFfdWZUM1p4SVB5T2UyWkVmbmhVX21KTQ?oc=5",
+          "score": 0.8239
+        }
+      ]
+    },
+    {
+      "title": "Expansion of manufacturing operations into new booming towns",
+      "impact": "High",
+      "confidence": 0.847,
+      "evidence": [
+        {
+          "ref": "src-1",
+          "title": "Siemens delivers major cloud-based SCADA for renewables - Siemens",
+          "source": "Siemens",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBzdVZFdFdMNWlwdU10NGZPcUhLcVJZVDJ3dkFCdzJRbXNRWjFkWUJRUWQxRVV5Ym9kY0MyMzdmSFFhc3Q4LXhMN1JvaHlIMUwtRVZIb19rTTVqeHRIXzVQZ1pWNzVsaEdwRmp1d0V5NWFXZmM?oc=5",
+          "score": 0.8603
+        },
+        {
+          "ref": "src-2",
+          "title": "Smart building infrastructure and technologies - Siemens",
+          "source": "Siemens",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9CdHlmNk1SNWF0REYxRTJPSG5xTTlZM014eEd5ZUd6d1N0a1NxOG16SDNxWXZIRzNCM2d3c1o5LXJIYU5yLXpXNkY3OHhzaDRaODdMUUllSV9GTGxMV1NvTUZndVJDQXoxUEhCSWRLN2FjT0RMQkRR?oc=5",
+          "score": 0.8573
+        },
+        {
+          "ref": "src-3",
+          "title": "Siemens unveils technologies to accelerate the industrial AI revolution at CES 2026 - Siemens press",
+          "source": "Siemens press",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWUl4Q2NONi03VDladkJlXzFVMWZpQzZHeGN6blhyQjZhMGE3cXktdFFHUVpqWnBWVEtUZzBWYzBVenNwMHNLVzNUenBYb0NuUjdyRGhLeGlCV0dZZ3V0NXRaNlZUbGV2UUlqdDJ6ZWNFODZRSjNTTmRJYkdROXlPX1pPWDRfMlNKb0NhUWFaNnZMdDlrNE1MeTVYQlBub0dmdm5tSUlHLWFfdWZUM1p4SVB5T2UyWkVmbmhVX21KTQ?oc=5",
+          "score": 0.8239
+        }
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "title": "Loss of Competitive Advantage",
+      "category": "competitive",
+      "severity": "High",
+      "confidence": 0.726,
+      "evidence": [
+        {
+          "ref": "src-1",
+          "title": "How PepsiCo Slashes Supply Chain Costs with Siemens AI Tech - Supply Chain Digital",
+          "source": "Supply Chain Digital",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNV0VUR0lxYm5DTHh6TzA4UVNnY1p2Rjc5WjFRNFhmODUyUGJJb241WXZNTU9SRGtiNlcxbWNKczNWdGppd0RQX3JBQTBydzRoejRYU0pCRHloY2w5NDZDWl9CYzhYa3JmNEdQQlVnTHJyR2xBNXlNUUltYTdOYlVWYWh1RjROU2NQNEoybHFMVGVmb3RCQmlaS3RR?oc=5",
+          "score": 0.8254
+        },
+        {
+          "ref": "src-2",
+          "title": "Siemens Plans A Shake-Up To Break Up Its Biggest Divisions - Finimize",
+          "source": "Finimize",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNQUdqcnpQR3VOWkFXdGFRcVpoOVBnT1g0Q2RveVBTY00xSmc3Mk12dDZvSUxIcUhhS1BaMFZTSHJXWkdndm90dVpYQTVPX0kwUG5OOHo5cDg3Q0xnX3luSWZuSnNxVUNNODgyWmlTYjlIYzF0cHFlUHZxVVJmamg1QkFFRkRYM0dMWGo0WFp1SzI?oc=5",
+          "score": 0.7125
+        },
+        {
+          "ref": "src-3",
+          "title": "Manchester, UK: Siemens Returns with 2-Day Transform Event at 0 Euros Entry as What Others Are Missing in Industrial AI Adoption as it Becomes Exposed - Travel And Tour World",
+          "source": "Travel And Tour World",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9BSEhSMWVHYVg5OHRUc3JlUlRvSmhBTkZ0RDhjMU9ISHU5R2dQNC1KQnRzTHUwWkR2VmhJUFF0UDFrcWdVYnFRXzFwbmg4c25WYTBXc254UnlrSXhWUV9NRUNiOGJCd0NEbjFxZGNB?oc=5",
+          "score": 0.6398
+        }
+      ]
+    },
+    {
+      "title": "Regulatory Non-Compliance",
+      "category": "regulatory",
+      "severity": "Medium",
+      "confidence": 0.726,
+      "evidence": [
+        {
+          "ref": "src-1",
+          "title": "How PepsiCo Slashes Supply Chain Costs with Siemens AI Tech - Supply Chain Digital",
+          "source": "Supply Chain Digital",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNV0VUR0lxYm5DTHh6TzA4UVNnY1p2Rjc5WjFRNFhmODUyUGJJb241WXZNTU9SRGtiNlcxbWNKczNWdGppd0RQX3JBQTBydzRoejRYU0pCRHloY2w5NDZDWl9CYzhYa3JmNEdQQlVnTHJyR2xBNXlNUUltYTdOYlVWYWh1RjROU2NQNEoybHFMVGVmb3RCQmlaS3RR?oc=5",
+          "score": 0.8254
+        },
+        {
+          "ref": "src-2",
+          "title": "Siemens Plans A Shake-Up To Break Up Its Biggest Divisions - Finimize",
+          "source": "Finimize",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNQUdqcnpQR3VOWkFXdGFRcVpoOVBnT1g0Q2RveVBTY00xSmc3Mk12dDZvSUxIcUhhS1BaMFZTSHJXWkdndm90dVpYQTVPX0kwUG5OOHo5cDg3Q0xnX3luSWZuSnNxVUNNODgyWmlTYjlIYzF0cHFlUHZxVVJmamg1QkFFRkRYM0dMWGo0WFp1SzI?oc=5",
+          "score": 0.7125
+        },
+        {
+          "ref": "src-3",
+          "title": "Manchester, UK: Siemens Returns with 2-Day Transform Event at 0 Euros Entry as What Others Are Missing in Industrial AI Adoption as it Becomes Exposed - Travel And Tour World",
+          "source": "Travel And Tour World",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9BSEhSMWVHYVg5OHRUc3JlUlRvSmhBTkZ0RDhjMU9ISHU5R2dQNC1KQnRzTHUwWkR2VmhJUFF0UDFrcWdVYnFRXzFwbmg4c25WYTBXc254UnlrSXhWUV9NRUNiOGJCd0NEbjFxZGNB?oc=5",
+          "score": 0.6398
+        }
+      ]
+    },
+    {
+      "title": "Negative Sentiment Impact on Brand Reputation",
+      "category": "sentiment",
+      "severity": "Medium",
+      "confidence": 0.726,
+      "evidence": [
+        {
+          "ref": "src-1",
+          "title": "How PepsiCo Slashes Supply Chain Costs with Siemens AI Tech - Supply Chain Digital",
+          "source": "Supply Chain Digital",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNV0VUR0lxYm5DTHh6TzA4UVNnY1p2Rjc5WjFRNFhmODUyUGJJb241WXZNTU9SRGtiNlcxbWNKczNWdGppd0RQX3JBQTBydzRoejRYU0pCRHloY2w5NDZDWl9CYzhYa3JmNEdQQlVnTHJyR2xBNXlNUUltYTdOYlVWYWh1RjROU2NQNEoybHFMVGVmb3RCQmlaS3RR?oc=5",
+          "score": 0.8254
+        },
+        {
+          "ref": "src-2",
+          "title": "Siemens Plans A Shake-Up To Break Up Its Biggest Divisions - Finimize",
+          "source": "Finimize",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNQUdqcnpQR3VOWkFXdGFRcVpoOVBnT1g0Q2RveVBTY00xSmc3Mk12dDZvSUxIcUhhS1BaMFZTSHJXWkdndm90dVpYQTVPX0kwUG5OOHo5cDg3Q0xnX3luSWZuSnNxVUNNODgyWmlTYjlIYzF0cHFlUHZxVVJmamg1QkFFRkRYM0dMWGo0WFp1SzI?oc=5",
+          "score": 0.7125
+        },
+        {
+          "ref": "src-3",
+          "title": "Manchester, UK: Siemens Returns with 2-Day Transform Event at 0 Euros Entry as What Others Are Missing in Industrial AI Adoption as it Becomes Exposed - Travel And Tour World",
+          "source": "Travel And Tour World",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9BSEhSMWVHYVg5OHRUc3JlUlRvSmhBTkZ0RDhjMU9ISHU5R2dQNC1KQnRzTHUwWkR2VmhJUFF0UDFrcWdVYnFRXzFwbmg4c25WYTBXc254UnlrSXhWUV9NRUNiOGJCd0NEbjFxZGNB?oc=5",
+          "score": 0.6398
+        }
+      ]
+    },
+    {
+      "title": "Disruption to Supply Chain Partnerships",
+      "category": "supply chain",
+      "severity": "Medium",
+      "confidence": 0.726,
+      "evidence": [
+        {
+          "ref": "src-1",
+          "title": "How PepsiCo Slashes Supply Chain Costs with Siemens AI Tech - Supply Chain Digital",
+          "source": "Supply Chain Digital",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNV0VUR0lxYm5DTHh6TzA4UVNnY1p2Rjc5WjFRNFhmODUyUGJJb241WXZNTU9SRGtiNlcxbWNKczNWdGppd0RQX3JBQTBydzRoejRYU0pCRHloY2w5NDZDWl9CYzhYa3JmNEdQQlVnTHJyR2xBNXlNUUltYTdOYlVWYWh1RjROU2NQNEoybHFMVGVmb3RCQmlaS3RR?oc=5",
+          "score": 0.8254
+        },
+        {
+          "ref": "src-2",
+          "title": "Siemens Plans A Shake-Up To Break Up Its Biggest Divisions - Finimize",
+          "source": "Finimize",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNQUdqcnpQR3VOWkFXdGFRcVpoOVBnT1g0Q2RveVBTY00xSmc3Mk12dDZvSUxIcUhhS1BaMFZTSHJXWkdndm90dVpYQTVPX0kwUG5OOHo5cDg3Q0xnX3luSWZuSnNxVUNNODgyWmlTYjlIYzF0cHFlUHZxVVJmamg1QkFFRkRYM0dMWGo0WFp1SzI?oc=5",
+          "score": 0.7125
+        },
+        {
+          "ref": "src-3",
+          "title": "Manchester, UK: Siemens Returns with 2-Day Transform Event at 0 Euros Entry as What Others Are Missing in Industrial AI Adoption as it Becomes Exposed - Travel And Tour World",
+          "source": "Travel And Tour World",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9BSEhSMWVHYVg5OHRUc3JlUlRvSmhBTkZ0RDhjMU9ISHU5R2dQNC1KQnRzTHUwWkR2VmhJUFF0UDFrcWdVYnFRXzFwbmg4c25WYTBXc254UnlrSXhWUV9NRUNiOGJCd0NEbjFxZGNB?oc=5",
+          "score": 0.6398
+        }
+      ]
+    },
+    {
+      "title": "Financial Impact from Division Break-Up",
+      "category": "financial",
+      "severity": "High",
+      "confidence": 0.726,
+      "evidence": [
+        {
+          "ref": "src-1",
+          "title": "How PepsiCo Slashes Supply Chain Costs with Siemens AI Tech - Supply Chain Digital",
+          "source": "Supply Chain Digital",
+          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNV0VUR0lxYm5DTHh6TzA4UVNnY1p2Rjc5WjFRNFhmODUyUGJJb241WXZNTU9SRGtiNlcxbWNKczNWdGppd0RQX3JBQTBydzRoejRYU0pCRHloY2w5NDZDWl9CYzhYa3JmNEdQQlVnTHJyR2xBNXlNUUltYTdOYlVWYWh1RjROU2NQNEoybHFMVGVmb3RCQmlaS3RR?oc=5",
+          "score": 0.8254
+        },
+        {
+          "ref": "src-2",
+          "title": "Siemens Plans A Shake-Up To Break Up Its Biggest Divisions - Finimize",
+          "source": "Finimize",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNQUdqcnpQR3VOWkFXdGFRcVpoOVBnT1g0Q2RveVBTY00xSmc3Mk12dDZvSUxIcUhhS1BaMFZTSHJXWkdndm90dVpYQTVPX0kwUG5OOHo5cDg3Q0xnX3luSWZuSnNxVUNNODgyWmlTYjlIYzF0cHFlUHZxVVJmamg1QkFFRkRYM0dMWGo0WFp1SzI?oc=5",
+          "score": 0.7125
+        },
+        {
+          "ref": "src-3",
+          "title": "Manchester, UK: Siemens Returns with 2-Day Transform Event at 0 Euros Entry as What Others Are Missing in Industrial AI Adoption as it Becomes Exposed - Travel And Tour World",
+          "source": "Travel And Tour World",
+          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9BSEhSMWVHYVg5OHRUc3JlUlRvSmhBTkZ0RDhjMU9ISHU5R2dQNC1KQnRzTHUwWkR2VmhJUFF0UDFrcWdVYnFRXzFwbmg4c25WYTBXc254UnlrSXhWUV9NRUNiOGJCd0NEbjFxZGNB?oc=5",
+          "score": 0.6398
+        }
+      ]
+    }
+  ],
+  "trends": [
+    {
+      "title": "Here are 5 emerging trends that Siemens management should monitor based on the provided evidence:",
+      "confidence": 0.834,
+      "evidence": [
+        {
+          "ref": "src-1",
+          "title": "Smart manufacturing for the semiconductors industry - Siemens",
+          "source": "Siemens",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTEJkRWRXMjhHck5MMk5KeVJKS25DNGNLdGt1Vk9JZG1rMnpLQ1Q1VDNoeXhHMF9qaUFDNHBDMGNWSERZTFJQZElscFV4OGFFcnMtNUhRU2ljaXROREc1UVdUZHotTnh5OWlKb0EtaThzeWpvNVFrcTE2cUFNend5dC1MTm1tcmM?oc=5",
+          "score": 0.8436
+        },
+        {
+          "ref": "src-2",
+          "title": "Siemens transforms customer engagement for electronic component manufacturers with PartQuest Design Enablement - Siemens",
+          "source": "Siemens",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBQUUZhdDJVeGRpdVVGa1NndjNhTHBtVWhnZjI4bnhRendPY0h4T3ljNDJydENsR2trUzBYUXpOY1FKX3NpNTJzRjc0Vm5rUFMyWjdqbVh6NTFUbWc5M29Qbklvd29VRGJjVVdkdFJfNHJvMm4yMFE?oc=5",
+          "score": 0.8416
+        },
+        {
+          "ref": "src-3",
+          "title": "Nokia, Siemens and Iran: When technology gets bloody",
+          "source": "Hacker News",
+          "url": "http://blogs.telegraph.co.uk/technology/basheerakhan/100000089/nokia-siemens-and-iran-when-technology-gets-bloody/",
+          "score": 0.817
+        }
+      ],
+      "keywords": [
+        "siemens",
+        "nbsp",
+        "healthineers",
+        "siemens healthineers",
+        "energy",
+        "nbsp nbsp",
+        "siemens energy",
+        "ai"
+      ]
+    },
+    {
+      "title": "Increased adoption of smart manufacturing in the semiconductor industry**: As seen in [src-1], smart manufacturing is becoming a key focus for the semiconductor industry, and Siemens is at the forefront of this trend.",
+      "confidence": 0.834,
+      "evidence": [
+        {
+          "ref": "src-1",
+          "title": "Smart manufacturing for the semiconductors industry - Siemens",
+          "source": "Siemens",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTEJkRWRXMjhHck5MMk5KeVJKS25DNGNLdGt1Vk9JZG1rMnpLQ1Q1VDNoeXhHMF9qaUFDNHBDMGNWSERZTFJQZElscFV4OGFFcnMtNUhRU2ljaXROREc1UVdUZHotTnh5OWlKb0EtaThzeWpvNVFrcTE2cUFNend5dC1MTm1tcmM?oc=5",
+          "score": 0.8436
+        },
+        {
+          "ref": "src-2",
+          "title": "Siemens transforms customer engagement for electronic component manufacturers with PartQuest Design Enablement - Siemens",
+          "source": "Siemens",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBQUUZhdDJVeGRpdVVGa1NndjNhTHBtVWhnZjI4bnhRendPY0h4T3ljNDJydENsR2trUzBYUXpOY1FKX3NpNTJzRjc0Vm5rUFMyWjdqbVh6NTFUbWc5M29Qbklvd29VRGJjVVdkdFJfNHJvMm4yMFE?oc=5",
+          "score": 0.8416
+        },
+        {
+          "ref": "src-3",
+          "title": "Nokia, Siemens and Iran: When technology gets bloody",
+          "source": "Hacker News",
+          "url": "http://blogs.telegraph.co.uk/technology/basheerakhan/100000089/nokia-siemens-and-iran-when-technology-gets-bloody/",
+          "score": 0.817
+        }
+      ],
+      "keywords": [
+        "siemens",
+        "nbsp",
+        "healthineers",
+        "siemens healthineers",
+        "energy",
+        "nbsp nbsp",
+        "siemens energy",
+        "ai"
+      ]
+    },
+    {
+      "title": "Growing importance of AI in industrial processes**: The partnership between Siemens and Capgemini, as mentioned in [src-5], highlights the increasing role of AI in driving industrial innovation and future growth.",
+      "confidence": 0.834,
+      "evidence": [
+        {
+          "ref": "src-1",
+          "title": "Smart manufacturing for the semiconductors industry - Siemens",
+          "source": "Siemens",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTEJkRWRXMjhHck5MMk5KeVJKS25DNGNLdGt1Vk9JZG1rMnpLQ1Q1VDNoeXhHMF9qaUFDNHBDMGNWSERZTFJQZElscFV4OGFFcnMtNUhRU2ljaXROREc1UVdUZHotTnh5OWlKb0EtaThzeWpvNVFrcTE2cUFNend5dC1MTm1tcmM?oc=5",
+          "score": 0.8436
+        },
+        {
+          "ref": "src-2",
+          "title": "Siemens transforms customer engagement for electronic component manufacturers with PartQuest Design Enablement - Siemens",
+          "source": "Siemens",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBQUUZhdDJVeGRpdVVGa1NndjNhTHBtVWhnZjI4bnhRendPY0h4T3ljNDJydENsR2trUzBYUXpOY1FKX3NpNTJzRjc0Vm5rUFMyWjdqbVh6NTFUbWc5M29Qbklvd29VRGJjVVdkdFJfNHJvMm4yMFE?oc=5",
+          "score": 0.8416
+        },
+        {
+          "ref": "src-3",
+          "title": "Nokia, Siemens and Iran: When technology gets bloody",
+          "source": "Hacker News",
+          "url": "http://blogs.telegraph.co.uk/technology/basheerakhan/100000089/nokia-siemens-and-iran-when-technology-gets-bloody/",
+          "score": 0.817
+        }
+      ],
+      "keywords": [
+        "siemens",
+        "nbsp",
+        "healthineers",
+        "siemens healthineers",
+        "energy",
+        "nbsp nbsp",
+        "siemens energy",
+        "ai"
+      ]
+    },
+    {
+      "title": "Rise of design enablement platforms for electronic component manufacturers**: Siemens' PartQuest Design Enablement platform, mentioned in [src-2], is an example of the growing need for digital tools that facilitate collaboration and design enablement in the electronics industry.",
+      "confidence": 0.834,
+      "evidence": [
+        {
+          "ref": "src-1",
+          "title": "Smart manufacturing for the semiconductors industry - Siemens",
+          "source": "Siemens",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTEJkRWRXMjhHck5MMk5KeVJKS25DNGNLdGt1Vk9JZG1rMnpLQ1Q1VDNoeXhHMF9qaUFDNHBDMGNWSERZTFJQZElscFV4OGFFcnMtNUhRU2ljaXROREc1UVdUZHotTnh5OWlKb0EtaThzeWpvNVFrcTE2cUFNend5dC1MTm1tcmM?oc=5",
+          "score": 0.8436
+        },
+        {
+          "ref": "src-2",
+          "title": "Siemens transforms customer engagement for electronic component manufacturers with PartQuest Design Enablement - Siemens",
+          "source": "Siemens",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBQUUZhdDJVeGRpdVVGa1NndjNhTHBtVWhnZjI4bnhRendPY0h4T3ljNDJydENsR2trUzBYUXpOY1FKX3NpNTJzRjc0Vm5rUFMyWjdqbVh6NTFUbWc5M29Qbklvd29VRGJjVVdkdFJfNHJvMm4yMFE?oc=5",
+          "score": 0.8416
+        },
+        {
+          "ref": "src-3",
+          "title": "Nokia, Siemens and Iran: When technology gets bloody",
+          "source": "Hacker News",
+          "url": "http://blogs.telegraph.co.uk/technology/basheerakhan/100000089/nokia-siemens-and-iran-when-technology-gets-bloody/",
+          "score": 0.817
+        }
+      ],
+      "keywords": [
+        "siemens",
+        "nbsp",
+        "healthineers",
+        "siemens healthineers",
+        "energy",
+        "nbsp nbsp",
+        "siemens energy",
+        "ai"
+      ]
+    },
+    {
+      "title": "Growing recognition of quality management system software**: Siemens' recognition as a leader in the Gartner Magic Quadrant for Quality Management System Software, as reported in [src-4], indicates a growing demand for robust quality management systems in various industries.",
+      "confidence": 0.834,
+      "evidence": [
+        {
+          "ref": "src-1",
+          "title": "Smart manufacturing for the semiconductors industry - Siemens",
+          "source": "Siemens",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTEJkRWRXMjhHck5MMk5KeVJKS25DNGNLdGt1Vk9JZG1rMnpLQ1Q1VDNoeXhHMF9qaUFDNHBDMGNWSERZTFJQZElscFV4OGFFcnMtNUhRU2ljaXROREc1UVdUZHotTnh5OWlKb0EtaThzeWpvNVFrcTE2cUFNend5dC1MTm1tcmM?oc=5",
+          "score": 0.8436
+        },
+        {
+          "ref": "src-2",
+          "title": "Siemens transforms customer engagement for electronic component manufacturers with PartQuest Design Enablement - Siemens",
+          "source": "Siemens",
+          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBQUUZhdDJVeGRpdVVGa1NndjNhTHBtVWhnZjI4bnhRendPY0h4T3ljNDJydENsR2trUzBYUXpOY1FKX3NpNTJzRjc0Vm5rUFMyWjdqbVh6NTFUbWc5M29Qbklvd29VRGJjVVdkdFJfNHJvMm4yMFE?oc=5",
+          "score": 0.8416
+        },
+        {
+          "ref": "src-3",
+          "title": "Nokia, Siemens and Iran: When technology gets bloody",
+          "source": "Hacker News",
+          "url": "http://blogs.telegraph.co.uk/technology/basheerakhan/100000089/nokia-siemens-and-iran-when-technology-gets-bloody/",
+          "score": 0.817
+        }
+      ],
+      "keywords": [
+        "siemens",
+        "nbsp",
+        "healthineers",
+        "siemens healthineers",
+        "energy",
+        "nbsp nbsp",
+        "siemens energy",
+        "ai"
+      ]
+    }
+  ],
+  "competitor_activity": [
+    {
+      "ref": "src-1",
+      "title": "Manchester, UK: Siemens Returns with 2-Day Transform Event at 0 Euros Entry as What Others Are Missing in Industrial AI Adoption as it Becomes Exposed - Travel And Tour World",
+      "source": "Travel And Tour World",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9BSEhSMWVHYVg5OHRUc3JlUlRvSmhBTkZ0RDhjMU9ISHU5R2dQNC1KQnRzTHUwWkR2VmhJUFF0UDFrcWdVYnFRXzFwbmg4c25WYTBXc254UnlrSXhWUV9NRUNiOGJCd0NEbjFxZGNB?oc=5",
+      "score": 0.8669
+    },
+    {
+      "ref": "src-2",
+      "title": "SPS 2025: How Siemens, Beckhoff, Rockwell, ABB, and peers are positioning for industrial automation’s future - IoT Analytics",
+      "source": "IoT Analytics",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQVElLaGxaZVFNa0NzMkJJeGl4Nkd2QV8zYVpfX1YtNzJZb25WX1AwTG9QclJnVXRQT093YU9qc2lRcU1NQXdCeU5faEFxc0RhNm9BOGhoM0RBZzJub3BEMXMwNmJKUHBFUmp3aEgzRXRJYXc0eG0zUzcyM09mQ3BZeURVMjhwRXhOWUJ4VmpJS0prMzJtVUF5RjFB?oc=5",
+      "score": 0.7785
+    },
+    {
+      "ref": "src-3",
+      "title": "Airbus partners with Rolls-Royce and Siemens to build an electric airplane",
+      "source": "Hacker News",
+      "url": "https://electrek.co/2017/11/28/airbus-partners-rolls-royce-siemens-build-electric-plane/",
+      "score": 0.6728
+    }
+  ],
+  "keywords": [
+    "siemens",
+    "nbsp",
+    "healthineers",
+    "siemens healthineers",
+    "energy",
+    "nbsp nbsp",
+    "siemens energy",
+    "ai",
+    "nbsp siemens",
+    "digital",
+    "industrial",
+    "automation",
+    "finance",
+    "yahoo",
+    "yahoo finance"
+  ]
+}
