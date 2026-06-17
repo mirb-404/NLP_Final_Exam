@@ -13,10 +13,13 @@ import uuid
 from pathlib import Path
 
 import uvicorn
+from dotenv import load_dotenv
 from fastapi import FastAPI, Header, HTTPException
 from huggingface_hub import snapshot_download
 from pydantic import BaseModel
 from transformers import AutoModelForCausalLM, AutoTokenizer
+
+load_dotenv(Path(__file__).resolve().parent.parent / ".env")  # read project-root .env
 
 MODEL_ID = os.getenv("MODEL_ID", "mistralai/Mistral-7B-Instruct-v0.2")
 API_KEY = os.getenv("API_KEY")  # if set, clients must send: Authorization: Bearer <key>

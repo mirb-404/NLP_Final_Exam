@@ -8,3 +8,4 @@ sentencepiece>=0.2
 huggingface_hub>=0.24    # snapshot_download into agent_models/
 bitsandbytes>=0.43       # only if LOAD_4BIT=1 (CUDA/Linux GPU required)
 requests>=2.32           # used by test_server.py
+python-dotenv>=1.0       # server.py reads the project-root .env
