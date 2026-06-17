@@ -30,9 +30,10 @@ So the first run downloads; every run after is offline. Gated models (Mistral)
 need auth for that first download — run `huggingface-cli login` (or set
 `HUGGINGFACEHUB_API_TOKEN`) **and** accept the model license on HF.
 
-> Space tip: Mistral ships duplicate weight formats. The script already skips
-> `consolidated.safetensors`; if the repo also has `*.bin` next to
-> `*.safetensors`, add `"*.bin"` to `_IGNORE` in `server.py` to ~halve the download.
+> Note: the script downloads **safetensors only** (skips `*.bin`,
+> `consolidated.safetensors`, `*.pth`) to keep the download small. Works for
+> Mistral and most modern repos; if a model ships *only* `.bin`, edit the
+> `ignore_patterns` in `server.py`.
 
 Pick `MODEL_ID` for your hardware:
 
