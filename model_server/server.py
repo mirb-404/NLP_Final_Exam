@@ -18,7 +18,7 @@ from huggingface_hub import snapshot_download
 from pydantic import BaseModel
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-MODEL_ID = os.getenv("MODEL_ID", "Qwen/Qwen2.5-3B-Instruct")
+MODEL_ID = os.getenv("MODEL_ID", "mistralai/Mistral-7B-Instruct-v0.2")
 API_KEY = os.getenv("API_KEY")  # if set, clients must send: Authorization: Bearer <key>
 LOAD_4BIT = os.getenv("LOAD_4BIT", "0").lower() in ("1", "true", "yes")
 PATH = Path(os.getenv("MODELS_DIR", "agent_models")) / MODEL_ID.replace("/", "__")
