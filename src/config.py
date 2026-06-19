@@ -25,39 +25,10 @@ COMPETITORS = [
 ]
 
 # ----------------------------------------------------------------------------
-# Task 1 — Live data sources (>= 3 independent public sources)
-# Every source is free and needs no paid key.
+# Task 1 — Live data sources
+# Endpoints + queries live in collector.py (one home for everything about
+# collection). The company identity below (COMPANY / TICKER) drives them.
 # ----------------------------------------------------------------------------
-# 1) NEWS  — Google News RSS (aggregates financial / industry / tech news)
-NEWS_RSS_QUERIES = [
-    "Siemens",
-    "Siemens Energy",
-    "Siemens Healthineers",
-    "Siemens automation",
-    "Siemens digital industries",
-]
-GOOGLE_NEWS_RSS = "https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
-
-# 2) FINANCE — Yahoo Finance headline RSS for the Siemens ticker
-YAHOO_FINANCE_RSS = (
-    "https://feeds.finance.yahoo.com/rss/2.0/headline?s={ticker}&region=US&lang=en-US"
-)
-
-# 3) COMMUNITY — Hacker News (Algolia public API, no auth, very reliable)
-HN_SEARCH_JSON = "https://hn.algolia.com/api/v1/search?query={query}&tags=story&hitsPerPage=100"
-HN_QUERIES = ["Siemens", "Siemens automation", "Siemens industrial"]
-
-# 3b) COMMUNITY (best effort) — Reddit public search JSON.
-# Works from a normal home IP but is often blocked (HTTP 403) from data-centre IPs,
-# so it is optional: if it fails, Hacker News still provides the community source.
-REDDIT_SEARCH_JSON = "https://www.reddit.com/search.json?q={query}&sort=new&limit=100"
-REDDIT_QUERIES = ["Siemens", "Siemens automation", "Siemens PLC"]
-
-# A descriptive User-Agent is required or these endpoints return HTTP 429/403.
-HTTP_HEADERS = {"User-Agent": "ai-ceo-research-agent/1.0 (educational NLP project)"}
-
-# Minimum collection target (PDF Task 1)
-MIN_DOCS = 100
 
 # ----------------------------------------------------------------------------
 # Models (PDF "Mandatory Components" — open-source / freely accessible only)

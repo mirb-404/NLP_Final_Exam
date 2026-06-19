@@ -1,19 +1,14 @@
 """
 Task 1 — Live Data Collection.
 
-Automatically pulls live, public information about the company from THREE
-independent sources and writes the raw documents to data/raw/*.json:
+Pulls live public documents about the company from four independent source types
+and writes them to data/raw/*.json. Every record has the same shape so the rest
+of the pipeline is uniform:  {id, title, text, source, source_type, url, date}
 
-  1. NEWS      -> Google News RSS  (financial / industry / tech news)
-  2. FINANCE   -> Yahoo Finance RSS (headlines for the ticker)
-  3. COMMUNITY -> Reddit public search JSON (public opinion / sentiment)
-
-Each collected record has the same shape so the rest of the pipeline is uniform:
-    {id, title, text, source, source_type, url, date}
-
-NOTE: the course repo ships ready-made CSV datasets, so it has no scraper. The
-PDF requires *live* collection, so this file uses three small standard libraries
-(`feedparser`, `requests`) that are not in the repo's requirements.txt.
+    news       Google News RSS
+    finance    Yahoo Finance RSS
+    community  Hacker News + Stack Overflow  (+ Reddit, best-effort)
+    research   arXiv + OpenAlex
 """
 
 import hashlib
@@ -24,149 +19,179 @@ import requests
 from src import config
 from src.utils import clean_text, now_iso, save_json
 
+# --- source endpoints + queries ---------------------------------------------
+HEADERS = {"User-Agent": "ai-ceo-research-agent/1.0 (educational NLP project)"}
+TIMEOUT = 25
+MIN_DOCS = 100  # PDF Task 1 minimum
 
-def _make_id(url: str, title: str) -> str:
-    """Stable short id from url+title (used later for de-duplication)."""
-    return hashlib.md5(f"{url}|{title}".encode("utf-8")).hexdigest()[:12]
+NEWS_RSS = "https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
+NEWS_QUERIES = ["Siemens", "Siemens Energy", "Siemens Healthineers",
+                "Siemens automation", "Siemens digital industries"]
+
+FINANCE_RSS = "https://feeds.finance.yahoo.com/rss/2.0/headline?s={ticker}&region=US&lang=en-US"
+
+HN_API = "https://hn.algolia.com/api/v1/search?query={query}&tags=story&hitsPerPage=100"
+HN_QUERIES = ["Siemens", "Siemens automation", "Siemens industrial"]
+
+STACKEX_API = ("https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=relevance"
+               "&q={query}&site=stackoverflow&pagesize=50&filter=withbody")
+STACKEX_QUERIES = ["Siemens", "Siemens PLC", "Siemens TIA Portal"]
+
+REDDIT_API = "https://www.reddit.com/search.json?q={query}&sort=new&limit=100"  # often 403; optional
+REDDIT_QUERIES = ["Siemens", "Siemens automation", "Siemens PLC"]
+
+ARXIV_API = "http://export.arxiv.org/api/query?search_query=all:{query}&start=0&max_results=50"
+ARXIV_QUERIES = ["Siemens", "Siemens automation", "Siemens digital twin"]
+
+OPENALEX_API = "https://api.openalex.org/works?search={query}&per_page=50&mailto=bhandarimirang03@gmail.com"
+OPENALEX_QUERIES = ["Siemens automation", "Siemens industrial", "Siemens energy"]
 
 
-def _record(title, text, source, source_type, url, date):
+# --- shared helpers ---------------------------------------------------------
+def _quote(text: str) -> str:
+    return requests.utils.quote(text)
+
+
+def _record(title, text, source, source_type, url, date) -> dict:
+    """Normalise any source into the uniform document shape."""
+    title = clean_text(title)
     return {
-        "id": _make_id(url or title, title),
-        "title": clean_text(title),
-        "text": clean_text(text) or clean_text(title),
+        "id": hashlib.md5(f"{url or title}|{title}".encode("utf-8")).hexdigest()[:12],
+        "title": title,
+        "text": clean_text(text) or title,
         "source": source,
-        "source_type": source_type,      # news | finance | community
-        "url": url,
+        "source_type": source_type,
+        "url": url or "",
         "date": date or "",
     }
 
 
-# ----------------------------------------------------------------------------
-# Source 1 — Google News RSS
-# ----------------------------------------------------------------------------
+def _report(label: str, docs: list[dict]) -> list[dict]:
+    print(f"[collector] {label}: {len(docs)} items")
+    return docs
+
+
+def _get_json(url: str) -> dict:
+    """GET JSON, returning {} on any failure (so one dead source never aborts the run)."""
+    try:
+        resp = requests.get(url, headers=HEADERS, timeout=TIMEOUT)
+        resp.raise_for_status()
+        return resp.json()
+    except Exception as exc:
+        print(f"[collector] request failed: {exc}")
+        return {}
+
+
+# --- news ----------------------------------------------------------------
 def collect_news() -> list[dict]:
     docs = []
-    for query in config.NEWS_RSS_QUERIES:
-        url = config.GOOGLE_NEWS_RSS.format(query=requests.utils.quote(query))
-        feed = feedparser.parse(url)
-        for entry in feed.entries:
-            docs.append(
-                _record(
-                    title=entry.get("title", ""),
-                    text=entry.get("summary", ""),
-                    source=entry.get("source", {}).get("title", "Google News"),
-                    source_type="news",
-                    url=entry.get("link", ""),
-                    date=entry.get("published", ""),
-                )
-            )
-    print(f"[collector] news: {len(docs)} items")
-    return docs
+    for query in NEWS_QUERIES:
+        for e in feedparser.parse(NEWS_RSS.format(query=_quote(query))).entries:
+            docs.append(_record(e.get("title", ""), e.get("summary", ""),
+                                e.get("source", {}).get("title", "Google News"),
+                                "news", e.get("link", ""), e.get("published", "")))
+    return _report("news", docs)
 
 
-# ----------------------------------------------------------------------------
-# Source 2 — Yahoo Finance RSS
-# ----------------------------------------------------------------------------
+# --- finance -------------------------------------------------------------
 def collect_finance() -> list[dict]:
-    url = config.YAHOO_FINANCE_RSS.format(ticker=config.TICKER)
-    feed = feedparser.parse(url)
-    docs = [
-        _record(
-            title=entry.get("title", ""),
-            text=entry.get("summary", ""),
-            source="Yahoo Finance",
-            source_type="finance",
-            url=entry.get("link", ""),
-            date=entry.get("published", ""),
-        )
-        for entry in feed.entries
-    ]
-    print(f"[collector] finance: {len(docs)} items")
-    return docs
+    feed = feedparser.parse(FINANCE_RSS.format(ticker=config.TICKER))
+    docs = [_record(e.get("title", ""), e.get("summary", ""), "Yahoo Finance",
+                    "finance", e.get("link", ""), e.get("published", ""))
+            for e in feed.entries]
+    return _report("finance", docs)
 
 
-# ----------------------------------------------------------------------------
-# Source 3 — Hacker News (Algolia public API)  [community / tech discussion]
-# ----------------------------------------------------------------------------
+# --- community: hacker news ----------------------------------------------
 def collect_hackernews() -> list[dict]:
     docs = []
-    for query in config.HN_QUERIES:
-        url = config.HN_SEARCH_JSON.format(query=requests.utils.quote(query))
-        try:
-            resp = requests.get(url, headers=config.HTTP_HEADERS, timeout=20)
-            resp.raise_for_status()
-            hits = resp.json().get("hits", [])
-        except Exception as exc:
-            print(f"[collector] hackernews query '{query}' failed: {exc}")
-            continue
-        for h in hits:
-            docs.append(
-                _record(
-                    title=h.get("title") or h.get("story_title") or "",
-                    text=h.get("story_text") or h.get("comment_text") or h.get("title") or "",
-                    source="Hacker News",
-                    source_type="community",
-                    url=h.get("url") or f"https://news.ycombinator.com/item?id={h.get('objectID')}",
-                    date=h.get("created_at", ""),
-                )
-            )
-    print(f"[collector] community(hackernews): {len(docs)} items")
-    return docs
+    for query in HN_QUERIES:
+        for h in _get_json(HN_API.format(query=_quote(query))).get("hits", []):
+            docs.append(_record(
+                h.get("title") or h.get("story_title") or "",
+                h.get("story_text") or h.get("comment_text") or h.get("title") or "",
+                "Hacker News", "community",
+                h.get("url") or f"https://news.ycombinator.com/item?id={h.get('objectID')}",
+                h.get("created_at", "")))
+    return _report("community(hackernews)", docs)
 
 
-# ----------------------------------------------------------------------------
-# Source 3b — Reddit public search JSON (best effort; may be blocked)
-# ----------------------------------------------------------------------------
+# --- community: stack overflow -------------------------------------------
+def collect_stackexchange() -> list[dict]:
+    docs = []
+    for query in STACKEX_QUERIES:
+        for it in _get_json(STACKEX_API.format(query=_quote(query))).get("items", []):
+            docs.append(_record(it.get("title", ""), it.get("body", "") or it.get("title", ""),
+                                "Stack Overflow", "community",
+                                it.get("link", ""), str(it.get("creation_date", ""))))
+    return _report("community(stackexchange)", docs)
+
+
+# --- community: reddit (best-effort; often 403) --------------------------
 def collect_reddit() -> list[dict]:
     docs = []
-    for query in config.REDDIT_QUERIES:
-        url = config.REDDIT_SEARCH_JSON.format(query=requests.utils.quote(query))
-        try:
-            resp = requests.get(url, headers=config.HTTP_HEADERS, timeout=20)
-            resp.raise_for_status()
-            children = resp.json().get("data", {}).get("children", [])
-        except Exception as exc:
-            print(f"[collector] reddit query '{query}' failed: {exc}")
-            continue
-        for child in children:
-            d = child.get("data", {})
-            docs.append(
-                _record(
-                    title=d.get("title", ""),
-                    text=d.get("selftext", "") or d.get("title", ""),
-                    source=f"reddit/{d.get('subreddit', '?')}",
-                    source_type="community",
-                    url="https://www.reddit.com" + d.get("permalink", ""),
-                    date=str(d.get("created_utc", "")),
-                )
-            )
-    print(f"[collector] community(reddit): {len(docs)} items")
-    return docs
+    for query in REDDIT_QUERIES:
+        for c in _get_json(REDDIT_API.format(query=_quote(query))).get("data", {}).get("children", []):
+            d = c.get("data", {})
+            docs.append(_record(d.get("title", ""), d.get("selftext", "") or d.get("title", ""),
+                                f"reddit/{d.get('subreddit', '?')}", "community",
+                                "https://www.reddit.com" + d.get("permalink", ""),
+                                str(d.get("created_utc", ""))))
+    return _report("community(reddit)", docs)
 
 
-# ----------------------------------------------------------------------------
-# Run all sources
-# ----------------------------------------------------------------------------
+# --- research: arxiv -----------------------------------------------------
+def collect_arxiv() -> list[dict]:
+    docs = []
+    for query in ARXIV_QUERIES:
+        for e in feedparser.parse(ARXIV_API.format(query=_quote(query))).entries:
+            docs.append(_record(e.get("title", ""), e.get("summary", ""), "arXiv",
+                                "research", e.get("link", ""), e.get("published", "")))
+    return _report("research(arxiv)", docs)
+
+
+# --- research: openalex --------------------------------------------------
+def _openalex_abstract(inverted: dict | None) -> str:
+    """Rebuild plain text from OpenAlex's abstract_inverted_index ({word: [positions]})."""
+    if not inverted:
+        return ""
+    words = [""] * (max(p for ps in inverted.values() for p in ps) + 1)
+    for word, positions in inverted.items():
+        for p in positions:
+            words[p] = word
+    return " ".join(w for w in words if w)
+
+
+def collect_openalex() -> list[dict]:
+    docs = []
+    for query in OPENALEX_QUERIES:
+        for w in _get_json(OPENALEX_API.format(query=_quote(query))).get("results", []):
+            title = w.get("title") or ""
+            docs.append(_record(title, _openalex_abstract(w.get("abstract_inverted_index")) or title,
+                                "OpenAlex", "research",
+                                w.get("doi") or w.get("id", ""), w.get("publication_date", "")))
+    return _report("research(openalex)", docs)
+
+
+# --- run all -------------------------------------------------------------
 def collect_all() -> list[dict]:
-    """Collect from every source, save each to data/raw/, return the merged list."""
-    news = collect_news()
-    finance = collect_finance()
-    community = collect_hackernews() + collect_reddit()  # HN reliable, Reddit best-effort
+    """Collect every source, save each type to data/raw/, return the merged list."""
+    by_type = {
+        "news": collect_news(),
+        "finance": collect_finance(),
+        "community": collect_hackernews() + collect_stackexchange() + collect_reddit(),
+        "research": collect_arxiv() + collect_openalex(),
+    }
+    for name, docs in by_type.items():
+        save_json(docs, config.RAW_DIR / f"{name}.json")
 
-    save_json(news, config.RAW_DIR / "news.json")
-    save_json(finance, config.RAW_DIR / "finance.json")
-    save_json(community, config.RAW_DIR / "community.json")
+    all_docs = [d for docs in by_type.values() for d in docs]
+    save_json({"collected_at": now_iso(), "total": len(all_docs), "documents": all_docs},
+              config.RAW_DIR / "all_raw.json")
 
-    all_docs = news + finance + community
-    save_json(
-        {"collected_at": now_iso(), "total": len(all_docs), "documents": all_docs},
-        config.RAW_DIR / "all_raw.json",
-    )
-
-    print(f"[collector] TOTAL collected: {len(all_docs)} (target >= {config.MIN_DOCS})")
-    if len(all_docs) < config.MIN_DOCS:
-        print("[collector] WARNING: below the 100-document minimum — add more queries in config.py")
+    print(f"[collector] TOTAL collected: {len(all_docs)} (target >= {MIN_DOCS})")
+    if len(all_docs) < MIN_DOCS:
+        print("[collector] WARNING: below the 100-document minimum — add more queries above")
     return all_docs
 
 

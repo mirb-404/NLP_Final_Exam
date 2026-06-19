@@ -6,6 +6,7 @@ Keeping the model loaders here means every agent uses the *same* embedding model
 and the *same* LLM, and we only load each heavy object once (cached).
 """
 
+import html
 import json
 import re
 from datetime import datetime, timezone
@@ -48,9 +49,10 @@ _HTML_RE = re.compile(r"<[^>]+>")
 
 
 def clean_text(text: str) -> str:
-    """Strip HTML tags and collapse whitespace. Cheap, deterministic, explainable."""
+    """Unescape HTML entities, strip tags, collapse whitespace. Cheap, deterministic, explainable."""
     if not text:
         return ""
+    text = html.unescape(text)   # &nbsp; &lt; &amp; -> real chars (news/StackExchange/research feeds)
     text = _HTML_RE.sub(" ", text)
     text = _WS_RE.sub(" ", text)
     return text.strip()
