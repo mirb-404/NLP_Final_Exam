@@ -123,10 +123,13 @@ uv sync                              # install deps
 uv run python -m spacy download en_core_web_sm   # one-time, for NER
 cp .env.example .env                 # add a free HUGGINGFACEHUB_API_TOKEN (optional)
 
+uv run python main.py ingest         # refresh data: collect + corpus + index  (slow, run rarely)
+uv run python main.py analyze        # reuse stored index -> results/          (fast, repeatable)
+uv run python main.py                # full: ingest + analyze
+
 uv run python main.py collect        # Task 1 only  -> data/raw/*.json
 uv run python main.py corpus         # Task 3 only  -> data/corpus.csv
 uv run python main.py index          # Task 2 only  -> data/chroma/
-uv run python main.py                # full LangGraph pipeline -> results/
 ```
 
 ## Outputs (`results/`)

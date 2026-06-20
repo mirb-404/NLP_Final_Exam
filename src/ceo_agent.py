@@ -68,18 +68,14 @@ def generate_recommendations(intel: dict, max_recs: int = 5) -> list[dict]:
         reverse=True,
     )
 
-    recs = []
-    # interleave top opportunities and top risk mitigations
-    for opp, risk in zip(opportunities, risks):
-        recs.append(_signal_to_recommendation(opp, "opportunity"))
-        recs.append(_signal_to_recommendation(risk, "risk"))
-    # top up from whichever list is longer
-    for opp in opportunities[len(risks):]:
-        recs.append(_signal_to_recommendation(opp, "opportunity"))
-    for risk in risks[len(opportunities):]:
-        recs.append(_signal_to_recommendation(risk, "risk"))
+    # Interleave opportunities and risk-mitigations, longer list tops up the tail.
+    signals = [(s, kind) for pair in zip(opportunities, risks)
+               for s, kind in ((pair[0], "opportunity"), (pair[1], "risk"))]
+    signals += [(o, "opportunity") for o in opportunities[len(risks):]]
+    signals += [(r, "risk") for r in risks[len(opportunities):]]
 
-    return recs[:max_recs]
+    # Cap to max_recs BEFORE calling the LLM — one generation per kept recommendation.
+    return [_signal_to_recommendation(s, kind) for s, kind in signals[:max_recs]]
 
 
 def generate_briefing(intel: dict, sentiment: dict) -> str:
