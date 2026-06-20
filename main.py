@@ -64,10 +64,14 @@ class AgentState(TypedDict, total=False):
 def reason_node(state: AgentState) -> AgentState:
     """Ask the LLM for the next Thought/Action (or the Final Answer)."""
     prompt = f"{SYSTEM}\n\nQuestion: {state['question']}\n{state.get('scratchpad', '')}"
-    text = ask_llm(prompt).split("Observation:")[0].strip()  # ignore any hallucinated Observation
+    text = ask_llm(prompt).split("Observation:")[0]   # never let the model invent an Observation
+    m = _ACTION_RE.search(text)
+    if m:
+        text = text[: m.end()]   # keep only the first Thought + Action + Action Input; we run the tool
+    text = text.strip()
     return {
         "pending": text,
-        "scratchpad": state.get("scratchpad", "") + "\n" + text,
+        "scratchpad": state.get("scratchpad", "") + "\n" + text + "\n",
         "steps": state.get("steps", 0) + 1,
     }
 
@@ -115,8 +119,14 @@ def ask_ceo(question: str) -> str:
         {"question": question, "scratchpad": "", "steps": 0},
         {"recursion_limit": 2 * MAX_STEPS + 2},
     )
-    m = re.search(r"Final Answer:\s*(.+)", state["scratchpad"], re.IGNORECASE | re.DOTALL)
-    return m.group(1).strip() if m else state["scratchpad"].strip()
+    pad = state["scratchpad"]
+    m = re.search(r"Final Answer:\s*(.+)", pad, re.IGNORECASE | re.DOTALL)
+    if m:
+        return m.group(1).strip()
+    # Ran out of steps without concluding -> force one clean synthesis from the evidence gathered.
+    final = ask_llm(f"{SYSTEM}\n\nQuestion: {question}\n{pad}\n\n"
+                    "You now have enough evidence. Reply with ONLY:\nFinal Answer:")
+    return final.split("Final Answer:")[-1].strip()
 
 
 # ----------------------------------------------------------------------------
