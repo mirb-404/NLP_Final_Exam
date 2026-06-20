@@ -93,7 +93,8 @@ def generate_briefing(intel: dict, sentiment: dict) -> str:
         f"Key trends: {trends}\n"
         f"News sentiment: {sentiment.get('news_sentiment')}, "
         f"public sentiment: {sentiment.get('public_sentiment')}.\n\n"
-        f"Write a concise executive briefing with three short paragraphs:\n"
+        f"Write a detailed executive briefing. Under EACH heading write a full "
+        f"paragraph of 4-6 sentences (specific, evidence-grounded, no bullet points):\n"
         f"WHAT HAPPENED:\nWHY IT MATTERS:\nWHAT TO DO NEXT:\n"
     )
     return ask_llm(prompt)

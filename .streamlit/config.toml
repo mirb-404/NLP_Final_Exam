@@ -1,0 +1,8 @@
+[server]
+# Stop the hot-reload watcher from crawling transformers' submodules
+# (it tries to import optional torchvision vision models -> noisy tracebacks).
+fileWatcherType = "none"
+headless = true
+
+[browser]
+gatherUsageStats = false

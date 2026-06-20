@@ -1,3 +1,4 @@
 git config --global --add safe.directory /home/jovyan/vault/NLP_Final_Exam
 git config user.email "bhandarimirang03@gmail.com"
 git config user.name "Mirang Bhandari"
+./cloudflared tunnel --url http://localhost:8501
