@@ -12,6 +12,7 @@ State flows through a typed GraphState; each node returns partial updates
 results/trace.json, and the assembled dashboard payload to results/dashboard_data.json.
 """
 
+import re
 from typing import TypedDict
 
 from langgraph.graph import END, StateGraph
@@ -124,27 +125,58 @@ def build_analyze_graph():
     return g.compile()
 
 
+def _briefing_sections(text: str) -> dict:
+    """Split the CEO briefing into the three PDF Section-7 questions."""
+    labels = [
+        ("what_happened", r"WHAT HAPPENED"),
+        ("why_it_matters", r"WHY (?:IT|DOES IT) MATTER[S]?"),
+        ("what_next", r"WHAT (?:TO DO NEXT|SHOULD MANAGEMENT DO NEXT)"),
+    ]
+    out = {}
+    for i, (key, pat) in enumerate(labels):
+        nxt = labels[i + 1][1] if i + 1 < len(labels) else r"\Z"
+        m = re.search(rf"{pat}\s*:?\s*(.+?)(?={nxt}|\Z)", text, re.IGNORECASE | re.DOTALL)
+        out[key] = m.group(1).strip() if m else ""
+    return out
+
+
+def _recent_news(n: int = 8) -> list[dict]:
+    """A few recent news/finance headlines for the dashboard Market Intelligence panel."""
+    df = load_corpus()
+    news = df[df["source_type"].isin(["news", "finance"])].head(n)
+    return [{"title": r.title, "source": r.source, "url": r.url, "date": str(r.date)}
+            for r in news.itertuples()]
+
+
 def _save_outputs(state: GraphState) -> None:
-    """Persist all deliverables to results/ (also feeds the future dashboard)."""
+    """Persist all deliverables to results/, including the section-aligned dashboard payload."""
     save_json(state["recommendations"], config.RESULTS_DIR / "recommendations.json")
     save_json(state["trace"], config.RESULTS_DIR / "trace.json")
     save_text(state.get("briefing", ""), config.RESULTS_DIR / "ceo_briefing.txt")
 
-    # Counts come from the persisted corpus/index, so analyze-only runs report correctly.
-    n_sources = int(load_corpus()["source_type"].nunique())
+    intel = state.get("intel", {})
+    briefing = state.get("briefing", "")
+    # Keys map 1:1 to the PDF dashboard sections so the frontend is a thin renderer.
     dashboard = {
-        "company": {
+        "company": {                                                  # Section 1
             "name": config.COMPANY,
             "industry": config.INDUSTRY,
             "n_documents": kb_count(),
-            "n_sources": n_sources,
+            "n_sources": int(load_corpus()["source_type"].nunique()),
             "last_update": now_iso(),
         },
-        "sentiment": state.get("sentiment", {}),
-        "intelligence": state.get("intel", {}),
-        "recommendations": state.get("recommendations", []),
+        "market_intelligence": {                                      # Section 2
+            "recent_news": _recent_news(),
+            "competitor_activity": intel.get("competitor_activity", []),
+            "emerging_technologies": intel.get("trends", []),
+            "keywords": intel.get("keywords", []),
+        },
+        "opportunities": intel.get("opportunities", []),              # Section 3
+        "risks": intel.get("risks", []),                             # Section 4
+        "sentiment": state.get("sentiment", {}),                      # Section 5 (incl. trend)
+        "recommendations": state.get("recommendations", []),          # Section 6 (incl. risk_level)
+        "briefing": {"raw": briefing, **_briefing_sections(briefing)},  # Section 7
         "metrics": state.get("metrics", {}),
-        "briefing": state.get("briefing", ""),
     }
     save_json(dashboard, config.RESULTS_DIR / "dashboard_data.json")
     print(f"[orchestrator] outputs written to {config.RESULTS_DIR}")

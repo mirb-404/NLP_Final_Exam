@@ -44,13 +44,16 @@ def _signal_to_recommendation(signal: dict, kind: str) -> dict:
         f"RISK: <2-3 risks of acting, comma separated>\n"
     )
     resp = ask_llm(prompt)
+    confidence = signal.get("confidence", 0.0)
     return {
         "recommendation": _field(resp, "RECOMMENDATION", default=f"Act on: {signal['title']}"),
         "priority": level if level in _IMPACT_RANK else "Medium",
+        # single risk level (Section 6): acting on weaker evidence = higher execution risk
+        "risk_level": "High" if confidence < 0.5 else "Medium" if confidence < 0.75 else "Low",
         "expected_impact": _to_list(_field(resp, "IMPACT")) or ["Revenue growth", "Market differentiation"],
         "risk_assessment": _to_list(_field(resp, "RISK")) or ["Financial risk", "Execution risk"],
         "supporting_evidence": signal.get("evidence", []),
-        "confidence": signal.get("confidence", 0.0),
+        "confidence": confidence,
         "source_signal": kind,
     }
 

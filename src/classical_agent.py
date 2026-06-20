@@ -13,6 +13,7 @@ These are deterministic and fast, so they run over the whole corpus.
 from collections import Counter
 
 import nltk
+import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 from src import config
@@ -49,12 +50,24 @@ def corpus_sentiment(df) -> dict:
         "news_sentiment": _avg(news_mask),
         "public_sentiment": _avg(public_mask),
         "overall_sentiment": round(float(df["_sent"].mean()), 4),
-        "distribution": Counter(
+        "distribution": dict(Counter(
             df["_sent"].map(
                 lambda s: "positive" if s > 0.05 else "negative" if s < -0.05 else "neutral"
             )
-        ),
+        )),
+        "trend": _sentiment_trend(df),
     }
+
+
+def _sentiment_trend(df) -> list[dict]:
+    """Average sentiment per month (Section 5 trend chart). Best-effort on messy feed dates."""
+    month = pd.to_datetime(df["date"], errors="coerce", utc=True).dt.to_period("M")
+    sub = df.assign(_month=month).dropna(subset=["_month"])
+    if sub.empty:
+        return []
+    g = sub.groupby("_month")["_sent"].agg(["mean", "size"]).reset_index()
+    return [{"period": str(r["_month"]), "sentiment": round(float(r["mean"]), 4), "count": int(r["size"])}
+            for _, r in g.sort_values("_month").iterrows()]
 
 
 # ----------------------------------------------------------------------------
