@@ -49,12 +49,11 @@ COMPETITORS = [
 # Models (PDF "Mandatory Components" — open-source / freely accessible only)
 # ----------------------------------------------------------------------------
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"               # Module 10 embedding model
-# Primary reasoning LLM — served free via HF Inference Providers (chat_completion).
-# Llama-3.1-8B-Instruct is one of the PDF-recommended models and follows the
-# structured prompts cleanly. (Old serverless Mistral-7B-v0.2 is no longer hosted.)
-LLM_REPO_ID = "meta-llama/Llama-3.1-8B-Instruct"
+# Primary reasoning LLM: PDF-recommended Mistral-7B-Instruct, served by the local
+# DataLab model_server (OpenAI-compatible). This id MUST match what your server
+# advertises at GET /v1/models  (curl http://127.0.0.1:8000/v1/models).
+LLM_REPO_ID = "mistralai/Mistral-7B-Instruct-v0.3"
 LLM_FALLBACK = "Qwen/Qwen2.5-0.5B-Instruct"        # local fallback (no token / offline)
-NLI_MODEL = "facebook/bart-large-mnli"             # verifier (optional contradiction check)
 
 # ----------------------------------------------------------------------------
 # Retrieval settings (Module 10 hybrid)

@@ -8,7 +8,6 @@ model and hand them to Chroma explicitly, so the embedding step is transparent.
 Public API:
     build_index(df)          -> (re)build the Chroma collection from the corpus
     get_collection()         -> the persistent Chroma collection
-    dense_query(text, k)     -> top-k documents by embedding similarity
     count()                  -> number of indexed documents
 """
 
@@ -63,28 +62,6 @@ def build_index(df) -> None:
         ],
     )
     print(f"[knowledge_base] indexed {collection.count()} documents in Chroma")
-
-
-def dense_query(text: str, k: int = config.TOP_K) -> list[dict]:
-    """Embed the query and return the k nearest documents from Chroma."""
-    collection = get_collection()
-    q_emb = get_embedder().encode(
-        [text], convert_to_numpy=True, normalize_embeddings=True
-    ).tolist()
-    res = collection.query(query_embeddings=q_emb, n_results=k)
-
-    docs = []
-    for i in range(len(res["ids"][0])):
-        docs.append(
-            {
-                "id": res["ids"][0][i],
-                "text": res["documents"][0][i],
-                "metadata": res["metadatas"][0][i],
-                # Chroma returns cosine distance; similarity = 1 - distance
-                "score": 1.0 - res["distances"][0][i],
-            }
-        )
-    return docs
 
 
 def count() -> int:

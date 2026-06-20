@@ -5,6 +5,7 @@ Usage:
     uv run python main.py            # full pipeline (ingest + analyze)
     uv run python main.py ingest     # refresh data only: collect + corpus + index
     uv run python main.py analyze    # fast: reuse stored index -> results/  (no re-collect)
+    uv run python main.py ask "..."  # tool-calling CEO agent answers one question (LangGraph)
     uv run python main.py collect    # only Task 1 (live data collection)
     uv run python main.py corpus     # only Task 3 (build clean corpus)
     uv run python main.py index      # only Task 2 (build Chroma index)
@@ -35,6 +36,10 @@ def main() -> None:
     elif cmd == "ingest":
         from src.orchestrator import run_ingest
         run_ingest()
+    elif cmd == "ask":
+        from src.agent import ask_ceo
+        question = " ".join(sys.argv[2:])
+        print(ask_ceo(question or "If you were the CEO today, what would you do next and why?"))
     else:  # "analyze" (fast) or "run"/default (full)
         from src.orchestrator import run_analyze, run_pipeline
         state = run_analyze() if cmd == "analyze" else run_pipeline()

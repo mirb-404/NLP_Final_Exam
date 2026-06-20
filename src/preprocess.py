@@ -21,6 +21,8 @@ import pandas as pd
 from src import config
 from src.utils import clean_text, load_json
 
+MAX_DOCS_PER_TYPE = 120  # balance + shrink: at most this many docs per source type
+
 # Match brand/competitor names as WHOLE WORDS so generic names ("Apple") don't
 # catch "pineapple" / "apple pie". Falls back to COMPANY if no alias list is set.
 _ALIASES = getattr(config, "COMPANY_ALIASES", [config.COMPANY]) + config.COMPETITORS
@@ -51,6 +53,9 @@ def build_corpus() -> pd.DataFrame:
     df = df.drop_duplicates(subset="id")
     df = df.drop_duplicates(subset="_norm_title")
     df = df.drop(columns="_norm_title").reset_index(drop=True)
+
+    # 6. cap per source type -> smaller, balanced corpus (news/community no longer dominate)
+    df = df.groupby("source_type", group_keys=False).head(MAX_DOCS_PER_TYPE).reset_index(drop=True)
 
     df.to_csv(config.CORPUS_CSV, index=False)
     print(f"[preprocess] clean corpus: {len(df)} documents -> {config.CORPUS_CSV.name}")

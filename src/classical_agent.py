@@ -5,7 +5,6 @@ Provides the "classical" signals the dashboard and intelligence engine need,
 without any LLM:
 
   - sentiment   : VADER (nltk) compound score  -> news vs public sentiment
-  - entities    : spaCy NER (organisations, products, people)
   - keywords    : scikit-learn TF-IDF top terms
 
 These are deterministic and fast, so they run over the whole corpus.
@@ -28,27 +27,10 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer  # noqa: E402
 
 _VADER = SentimentIntensityAnalyzer()
 
-# spaCy is optional: if the model is missing we degrade gracefully.
-try:
-    import spacy
-
-    _NLP = spacy.load("en_core_web_sm")
-except Exception:
-    _NLP = None
-    print("[classical_agent] spaCy model 'en_core_web_sm' not found — "
-          "run: uv run python -m spacy download en_core_web_sm")
-
 
 # ----------------------------------------------------------------------------
 # Sentiment (Module 9)
 # ----------------------------------------------------------------------------
-def analyze_sentiment(text: str) -> dict:
-    """VADER compound score -> {label, score}. score in [-1, 1]."""
-    score = _VADER.polarity_scores(text or "")["compound"]
-    label = "positive" if score > 0.05 else "negative" if score < -0.05 else "neutral"
-    return {"label": label, "score": round(score, 4)}
-
-
 def corpus_sentiment(df) -> dict:
     """
     Aggregate sentiment for the dashboard (Section 5).
@@ -73,21 +55,6 @@ def corpus_sentiment(df) -> dict:
             )
         ),
     }
-
-
-# ----------------------------------------------------------------------------
-# Named entities (Module 3)
-# ----------------------------------------------------------------------------
-def extract_entities(text: str) -> dict:
-    """Return organisations / products / people mentioned (spaCy NER)."""
-    if _NLP is None:
-        return {"ORG": [], "PRODUCT": [], "PERSON": []}
-    doc = _NLP(text[:2000])  # cap length for speed
-    out = {"ORG": [], "PRODUCT": [], "PERSON": []}
-    for ent in doc.ents:
-        if ent.label_ in out:
-            out[ent.label_].append(ent.text)
-    return {k: list(dict.fromkeys(v)) for k, v in out.items()}  # dedupe, keep order
 
 
 # ----------------------------------------------------------------------------
