@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-06-20T12:25:30.114114+02:00",
+  "collected_at": "2026-06-20T11:10:03.576076+00:00",
   "total": 1260,
   "documents": [
     {
@@ -19,6 +19,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPeDFhZWFCdElyS1BUQndyQ2tmU1ktQlU2S3ByR203NTNBeDREd1JuYlBlbThVV0tmOXotTzRKYloxYWxVNmxicXBteGhXR19lUHJ6ZDNkZ08xTVkzMmdWZ01xNkZyeTd3bkFOV2Z2VlFwRk1XakFMSjVicGIxc3l0RXdpbTZDOVNaNmVSeTJtSjNGTURmdUE?oc=5",
       "date": "Tue, 16 Jun 2026 18:49:32 GMT"
+    },
+    {
+      "id": "e5f23700d072",
+      "title": "AAPL - Apple Inc Stock Price and Quote - Finviz",
+      "text": "AAPL - Apple Inc Stock Price and Quote Finviz",
+      "source": "Finviz",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5OcXZ0WUY5TUFhb1JEbC1vR0xvaUdXcUhSVVo5NHVRYWtxd3k3Zy1pcHNBTWt5U3kyVDNzanVZdENiTzdIUUE?oc=5",
+      "date": "Thu, 18 Jun 2026 20:00:00 GMT"
     },
     {
       "id": "e0858ed96a2e",
@@ -48,13 +57,13 @@
       "date": "Thu, 18 Jun 2026 12:26:10 GMT"
     },
     {
-      "id": "394ddab0ba9a",
-      "title": "Apple Is Betting That Its Next Big Product Could Be AirPods with Cameras - Barchart.com",
-      "text": "Apple Is Betting That Its Next Big Product Could Be AirPods with Cameras Barchart.com",
-      "source": "Barchart.com",
+      "id": "0a8ee74e8cf9",
+      "title": "Trump says Apple to partner with Intel on US chip design, production - Reuters",
+      "text": "Trump says Apple to partner with Intel on US chip design, production Reuters",
+      "source": "Reuters",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOeVpLbG1hMnZqZmJLSWFMdmVGMTFqV2RaYm90V3Fyb1o1eldRUjE5SFNpMTBIRHZXMmJWNk9CNUpMaFlwS29NQjZQSWtEcVVVV2oxOHRGclV0QS1yUDY4cFh5R1FkRzd1Q0ZnRFRyMEdudjNDV2JwaDNCNzVaVndDQmM1UTJhbmpJUGYwVFlMOXJHWmRzTUM1NGwyVlBiRmF1bXpDakpORndDVXlhcVU0V2tUMWFPVXc?oc=5",
-      "date": "Fri, 19 Jun 2026 13:00:02 GMT"
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUnN4Ym4xVHp1d21VWFd5dFFMRWd6OGQ3MFRYT1NjMUVqYk13NGFydVJwU3BCTGZjRzdKQ3RMd2kzSVZOZW52X1hRM1BQQ3N0VUpfeTh2aHhvSjZJSTFSX3UzUnpfZ2hVMzRwWmxJcVAxQU1saXV5ZXJjdk94OGE2YnhtQndZWEFEQkdiUnFMSURWcjBwWXlWY1ZfYWZENWM?oc=5",
+      "date": "Thu, 18 Jun 2026 22:43:34 GMT"
     },
     {
       "id": "eb047d1aeb3f",
@@ -66,13 +75,13 @@
       "date": "Fri, 19 Jun 2026 21:25:06 GMT"
     },
     {
-      "id": "0a8ee74e8cf9",
-      "title": "Trump says Apple to partner with Intel on US chip design, production - Reuters",
-      "text": "Trump says Apple to partner with Intel on US chip design, production Reuters",
-      "source": "Reuters",
+      "id": "394ddab0ba9a",
+      "title": "Apple Is Betting That Its Next Big Product Could Be AirPods with Cameras - Barchart.com",
+      "text": "Apple Is Betting That Its Next Big Product Could Be AirPods with Cameras Barchart.com",
+      "source": "Barchart.com",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUnN4Ym4xVHp1d21VWFd5dFFMRWd6OGQ3MFRYT1NjMUVqYk13NGFydVJwU3BCTGZjRzdKQ3RMd2kzSVZOZW52X1hRM1BQQ3N0VUpfeTh2aHhvSjZJSTFSX3UzUnpfZ2hVMzRwWmxJcVAxQU1saXV5ZXJjdk94OGE2YnhtQndZWEFEQkdiUnFMSURWcjBwWXlWY1ZfYWZENWM?oc=5",
-      "date": "Thu, 18 Jun 2026 22:43:34 GMT"
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOeVpLbG1hMnZqZmJLSWFMdmVGMTFqV2RaYm90V3Fyb1o1eldRUjE5SFNpMTBIRHZXMmJWNk9CNUpMaFlwS29NQjZQSWtEcVVVV2oxOHRGclV0QS1yUDY4cFh5R1FkRzd1Q0ZnRFRyMEdudjNDV2JwaDNCNzVaVndDQmM1UTJhbmpJUGYwVFlMOXJHWmRzTUM1NGwyVlBiRmF1bXpDakpORndDVXlhcVU0V2tUMWFPVXc?oc=5",
+      "date": "Fri, 19 Jun 2026 13:00:02 GMT"
     },
     {
       "id": "1b79845f6d32",
@@ -84,15 +93,6 @@
       "date": "Wed, 17 Jun 2026 20:54:00 GMT"
     },
     {
-      "id": "f435dd44d72c",
-      "title": "Kroger, Micron, Apple, First Phosphate: What brokers said this week - Proactive financial news",
-      "text": "Kroger, Micron, Apple, First Phosphate: What brokers said this week Proactive financial news",
-      "source": "Proactive financial news",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOQlBaTWNFSUZnMlFRdS10c0s0MjlNLVltZEw1SmozN1lXMmlINWpNTUNhSG5ZWmRZT1RVZ0EtTXZObWJpQUFPZ1ZReERTY20xNnhhUVl2TkZGQmZQUW41V1dxOC1YWS1kMGc5UXRHaDROSW1DZktkVEdoZXpWZnBOSzFEektPZVh6djJKekZya2FnMUJ0WnZQSVpQZ3ByeVNFbUtENy13Ykt5YS1xYWc5aWxaQUVwc2pPSVVCVWVEOVlWTXNWY0hUbFlLbHM2V2s?oc=5",
-      "date": "Fri, 19 Jun 2026 14:30:00 GMT"
-    },
-    {
       "id": "e9386f44e726",
       "title": "Intel Shares Soar After Trump Says It Struck Apple Chip Deal - Bloomberg.com",
       "text": "Intel Shares Soar After Trump Says It Struck Apple Chip Deal Bloomberg.com",
@@ -100,6 +100,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNYlM2ZEprdFdVelV2Tkd4NFlubFJYTXFadUxtVXkxSF9scFg5dk91U0dKR3pkWENoXy1CVXppRjZta2hYZS1qa1BsTDJaWTNRR2ZwaVJrNzN0d1BrWlVJQVFOZUZLa1lLTnFVXy1xLXN3Mm1wdnh4RGtiM19vbDgyZzQtZzhqZXRKTkZPbEJyNzNkRHIySl9UZzBpZXJaZUIzdUdEbzQzLUFuVnhhbDFNV0VKOE5hazVGcjRJUHFBaw?oc=5",
       "date": "Thu, 18 Jun 2026 09:35:34 GMT"
+    },
+    {
+      "id": "f435dd44d72c",
+      "title": "Kroger, Micron, Apple, First Phosphate: What brokers said this week - Proactive financial news",
+      "text": "Kroger, Micron, Apple, First Phosphate: What brokers said this week Proactive financial news",
+      "source": "Proactive financial news",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOQlBaTWNFSUZnMlFRdS10c0s0MjlNLVltZEw1SmozN1lXMmlINWpNTUNhSG5ZWmRZT1RVZ0EtTXZObWJpQUFPZ1ZReERTY20xNnhhUVl2TkZGQmZQUW41V1dxOC1YWS1kMGc5UXRHaDROSW1DZktkVEdoZXpWZnBOSzFEektPZVh6djJKekZya2FnMUJ0WnZQSVpQZ3ByeVNFbUtENy13Ykt5YS1xYWc5aWxaQUVwc2pPSVVCVWVEOVlWTXNWY0hUbFlLbHM2V2s?oc=5",
+      "date": "Fri, 19 Jun 2026 14:30:00 GMT"
     },
     {
       "id": "b2a626716eb5",
@@ -118,15 +127,6 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOVWUya0NickR0aDBHWFo1RzRuZkRMUEVreWloSFAtOGZOYjBadUdCcTZ2bWNHWVFpMlZlVm5HWWRwQUR0dUE1aGVHX1RWWHkyeDJUcG1KRTA5aTVXUV9iQXdQT2s0S09yMk91WjVjbXZwZjVjVXFxOWpfVVZnVEFjTjVfODRBR1czWVczb1kyMDdVaWc5Wl91T1RDbmxnLWtmTC0xTVR5TnJYX0Npa3ZCaGxZOVlvanBSU0RVaW4xSQ?oc=5",
       "date": "Fri, 19 Jun 2026 09:08:12 GMT"
-    },
-    {
-      "id": "d56590f25319",
-      "title": "Apple: Memory Crisis Should Not Unravel Its Advance (NASDAQ:AAPL) - Seeking Alpha",
-      "text": "Apple: Memory Crisis Should Not Unravel Its Advance (NASDAQ:AAPL) Seeking Alpha",
-      "source": "Seeking Alpha",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPcEgza0txQkhkd3VpYUo1cC1vS3pFRkJkWUZVdGhtZldsaUtNd1JpUmNwSkQ3OFBDZFYzTFdqMEs0aFUydG5HQ0FNRkQxaHhheU1sRFlDSDVoX3VkdWhMYzdSRENPNHkzTlU5Z3ZkNk5GNGpUUndLSFBQQURSUGtOX0xVQnBYdWJGN0l4SjFxN29wWXByVnc?oc=5",
-      "date": "Fri, 19 Jun 2026 13:00:00 GMT"
     },
     {
       "id": "d1e7e1ffef74",
@@ -201,6 +201,15 @@
       "date": "Thu, 18 Jun 2026 01:36:00 GMT"
     },
     {
+      "id": "d56590f25319",
+      "title": "Apple: Memory Crisis Should Not Unravel Its Advance (NASDAQ:AAPL) - Seeking Alpha",
+      "text": "Apple: Memory Crisis Should Not Unravel Its Advance (NASDAQ:AAPL) Seeking Alpha",
+      "source": "Seeking Alpha",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPcEgza0txQkhkd3VpYUo1cC1vS3pFRkJkWUZVdGhtZldsaUtNd1JpUmNwSkQ3OFBDZFYzTFdqMEs0aFUydG5HQ0FNRkQxaHhheU1sRFlDSDVoX3VkdWhMYzdSRENPNHkzTlU5Z3ZkNk5GNGpUUndLSFBQQURSUGtOX0xVQnBYdWJGN0l4SjFxN29wWXByVnc?oc=5",
+      "date": "Fri, 19 Jun 2026 13:00:00 GMT"
+    },
+    {
       "id": "405377639e9a",
       "title": "Apple revamps Siri as it tries to catch up in the AI race - Arizona Daily Sun",
       "text": "Apple revamps Siri as it tries to catch up in the AI race Arizona Daily Sun",
@@ -255,15 +264,6 @@
       "date": "Thu, 18 Jun 2026 10:16:37 GMT"
     },
     {
-      "id": "923620ce2ee2",
-      "title": "Apple Plans Camera AirPods Alongside Upgraded Foldable iPhone in 2027 - Bloomberg.com",
-      "text": "Apple Plans Camera AirPods Alongside Upgraded Foldable iPhone in 2027 Bloomberg.com",
-      "source": "Bloomberg.com",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNUzVZbW1ja0gwZWdDMC1TOVA5OHJPQWpjUzFzRWEyQkxhd2RJcFllVVctcFl4Nl9SOS1vczdMUDFWOEZtWjliVVB4UldzLXZGS09jOTg0NlU5TzJEbVFScktCMVZ5U0poR3MzTEVJLUFtNmtWNGYyV2hGeW1WNFNWcnVtOEVRdHlzVkYtLU5lZkZXYlRVNVhnNmw1UlQ1dmY1ajVtXzhTVmpxbnZIRk81QVFpLTB3TU12VFlWYnEtajhya3RHWUE?oc=5",
-      "date": "Tue, 16 Jun 2026 16:01:41 GMT"
-    },
-    {
       "id": "bc71895b5e84",
       "title": "Apple Prepares Second-Generation iPhone Air for Spring 2027 - Bloomberg.com",
       "text": "Apple Prepares Second-Generation iPhone Air for Spring 2027 Bloomberg.com",
@@ -271,6 +271,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPZUpDWEo3RnZiTGRXQTJnTGpxdW1ZVllyRWVQLVc1U1JnTkxfWXZKRktmWUpNVDRYc2dKUWs2cVVYQXNQeGh6ZU5Pa3djZGRsSjJ6cEhJQ1FlbTZoM1NJMEJPNzdsNVAtbDhISkdIeGNqTmJrOFJBSWFiQzZVUkxydUxONkJEbGFPa05nRFBuNjNtb2MzSnVZRTVTd2pYWktWdThQbTFjOXBSRFNnTm40?oc=5",
       "date": "Wed, 17 Jun 2026 19:57:38 GMT"
+    },
+    {
+      "id": "923620ce2ee2",
+      "title": "Apple Plans Camera AirPods Alongside Upgraded Foldable iPhone in 2027 - Bloomberg.com",
+      "text": "Apple Plans Camera AirPods Alongside Upgraded Foldable iPhone in 2027 Bloomberg.com",
+      "source": "Bloomberg.com",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNUzVZbW1ja0gwZWdDMC1TOVA5OHJPQWpjUzFzRWEyQkxhd2RJcFllVVctcFl4Nl9SOS1vczdMUDFWOEZtWjliVVB4UldzLXZGS09jOTg0NlU5TzJEbVFScktCMVZ5U0poR3MzTEVJLUFtNmtWNGYyV2hGeW1WNFNWcnVtOEVRdHlzVkYtLU5lZkZXYlRVNVhnNmw1UlQ1dmY1ajVtXzhTVmpxbnZIRk81QVFpLTB3TU12VFlWYnEtajhya3RHWUE?oc=5",
+      "date": "Tue, 16 Jun 2026 16:01:41 GMT"
     },
     {
       "id": "7835e7ac92bc",
@@ -316,15 +325,6 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQNXJOYXQxaTlfSW0yVS1pT1I4VTBtM2lvRndBSmJCaHBMd2hJUHJDZWc3QzNRVmFxdEYyMzZSdnhTMjJjY093cERhTWppeHc2QXQ2ODA2eEdBU3c1cVd4VDFEY1A4Wnk3X3VHZFhzTnpnVlMxSDNDcVhyQlNVZ056NnQybGR1QjlCNXBYeFROaXVTNTc3bllFMVJ6dkRkbTdr?oc=5",
       "date": "Tue, 09 Jun 2026 13:00:02 GMT"
-    },
-    {
-      "id": "630538a49b78",
-      "title": "Intel: Priced For Perfection Amid Game-Changing Apple Deal (NASDAQ:INTC) - Seeking Alpha",
-      "text": "Intel: Priced For Perfection Amid Game-Changing Apple Deal (NASDAQ:INTC) Seeking Alpha",
-      "source": "Seeking Alpha",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNY2wzdlpReUJCaVNFSHVyN2hacXI3LUZ6YTB1dFhndVgwTUZKV1I5bWF0bGl0Q043WE5Va3ZzUlp6RWZEVGFDRU5wZzE5d3FITmx4M0JSeTdabG9XWkhheFdxcW1vRlVnak5nUjlLbDFkYnBDRU1FR1JCVWFVZF9lUHRLUzJoSEZlVkE1NUlueHpReklSdFZSU09ieG85dkU?oc=5",
-      "date": "Fri, 19 Jun 2026 11:30:00 GMT"
     },
     {
       "id": "319a78f580ef",
@@ -399,6 +399,15 @@
       "date": "Thu, 18 Jun 2026 20:17:19 GMT"
     },
     {
+      "id": "630538a49b78",
+      "title": "Intel: Priced For Perfection Amid Game-Changing Apple Deal (NASDAQ:INTC) - Seeking Alpha",
+      "text": "Intel: Priced For Perfection Amid Game-Changing Apple Deal (NASDAQ:INTC) Seeking Alpha",
+      "source": "Seeking Alpha",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNY2wzdlpReUJCaVNFSHVyN2hacXI3LUZ6YTB1dFhndVgwTUZKV1I5bWF0bGl0Q043WE5Va3ZzUlp6RWZEVGFDRU5wZzE5d3FITmx4M0JSeTdabG9XWkhheFdxcW1vRlVnak5nUjlLbDFkYnBDRU1FR1JCVWFVZF9lUHRLUzJoSEZlVkE1NUlueHpReklSdFZSU09ieG85dkU?oc=5",
+      "date": "Fri, 19 Jun 2026 11:30:00 GMT"
+    },
+    {
       "id": "844579f5ebe4",
       "title": "Apple Dominates Global Smartwatch Market - Benzinga",
       "text": "Apple Dominates Global Smartwatch Market Benzinga",
@@ -426,15 +435,6 @@
       "date": "Thu, 18 Jun 2026 18:00:09 GMT"
     },
     {
-      "id": "83f558dc82d8",
-      "title": "Xiao-I Corporation Provides Update on First-Instance Rulings in Patent Litigation Against Apple; Company Intends to Appeal to the Supreme People's Court - The Manila Times",
-      "text": "Xiao-I Corporation Provides Update on First-Instance Rulings in Patent Litigation Against Apple; Company Intends to Appeal to the Supreme People's Court The Manila Times",
-      "source": "The Manila Times",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMixAJBVV95cUxOY1hVU3BpUlRBSmxWUmk0RUdxX2xMWjVXMURYR1I5N1diLXROY2sxT0lNNk9SU1FRX2dENWVPVDdRNHFua1Q1YVNDMEo0UFhfQXRfZG5iQ2xWbV84RjBRZTFvZllEZmxaOGx5NlhoTXFaSVo3RnhobkVjakl4Wk9ZaW13WkNtWFVVaW11Njh5enZjTC16SERTcGJFU2ZJbDlONHNMLVpUNzRQZWtxMHVyd3VjV09DQWNabVg4cnRZbjBQZDR3Z2kwejZ2Mk1TLWFlTFlYa0l5dHJEZURJWklheTVuQm9sMjdxc1A2a2EtV3QtY1o2UzgxbDFYODljODlDV0pmaGx0M0dDTms3NjZESVpFRFl1UVhLX1pfMElqMk40ZXZLX3FKSVJYVE9wc3VwcW5rUkE1TFlyRlpZWHJvQnZKNnHSAcoCQVVfeXFMT3lVQVE2Yy1ueWk5cF9FWG5iUVlyZzQ5RTBNdUF0eHBvUGpzeW5LeUhLM3hTN1VZZ1YzYWQ1TUItWnQ2TlgxUzRhV3I0Y0RfYkFBanBRMzdxTjZFaUdsd0dOLTc0bl9qaEhrRlpOTkoxclJJS3ZnQ3l3NFFaOVR1QldSb2o1WENzMF9ENjJrZlM5RmFnTkhKN3E2VGZyNXFVZG9pTzQ4V2JScW1kMGlVYXZnTXlYVGtoTUpmSm0tZS1UdXdZV1JmZWo4b2JlbDItOW1sSlpvVFEzN0JUTnFLOEk3eDl5dFRHVU5OWlpxYTBEX0pNLTgweWt5MWRnUWRtdEJ2RjFLQ0w2eUdxbmFTYmhJaUZRY1lHZjR5c3NwMEZGbHNHUXBMcTIwR184VGw1Si1fbzlNTEgxM2l5SXd1NkNIMEE2bUdSSHhn?oc=5",
-      "date": "Fri, 19 Jun 2026 21:25:03 GMT"
-    },
-    {
       "id": "58eab33b0e8f",
       "title": "Apple May Add $100 To Higher-End iPhone Models To Counter Memory Costs: Analyst - Benzinga",
       "text": "Apple May Add $100 To Higher-End iPhone Models To Counter Memory Costs: Analyst Benzinga",
@@ -451,6 +451,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPaGctd1VSRXVhaXpuZUR6WjJVUHBLV2hva29GQjZEZFpSS1hTZldTTncyWGNTa0NZZ2NwaFdWU2dLZ2ZIeDNIVklWekpwdUNkenpZcGZVb2wzLW9nZGUtbUMyMU9iTmFjdUZJU01qNVJwLXJrV3dzMVRPMjFsaXNoUUlmOGFjSXVWS0dBblJZMHI4T2NSVlZrMndseFE3aUoyU2lzOTRzMXRlU2RCWTdn0gGuAUFVX3lxTE91S042U24tckVhaWs1aGlLdUNVS2ducjlTbmVoZ2xHUVJkRkk4WnpXbUlDWk9oME5sbG91NGg4aWdWcFdLNlcyRGZFeXkzdjZqSEpSQndiYnR4THdnYTczemhmVWYyTjdVSGFFdlMwcTU3NkRnMFN4RlRyS2JEQ296Q3Rka0hOSWFHam0xcVdwS1pmXzBJSmRhZXozR1FvcG52X0lfd3VXWkdob0Vodw?oc=5",
       "date": "Fri, 19 Jun 2026 00:38:28 GMT"
+    },
+    {
+      "id": "83f558dc82d8",
+      "title": "Xiao-I Corporation Provides Update on First-Instance Rulings in Patent Litigation Against Apple; Company Intends to Appeal to the Supreme People's Court - The Manila Times",
+      "text": "Xiao-I Corporation Provides Update on First-Instance Rulings in Patent Litigation Against Apple; Company Intends to Appeal to the Supreme People's Court The Manila Times",
+      "source": "The Manila Times",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMixAJBVV95cUxOY1hVU3BpUlRBSmxWUmk0RUdxX2xMWjVXMURYR1I5N1diLXROY2sxT0lNNk9SU1FRX2dENWVPVDdRNHFua1Q1YVNDMEo0UFhfQXRfZG5iQ2xWbV84RjBRZTFvZllEZmxaOGx5NlhoTXFaSVo3RnhobkVjakl4Wk9ZaW13WkNtWFVVaW11Njh5enZjTC16SERTcGJFU2ZJbDlONHNMLVpUNzRQZWtxMHVyd3VjV09DQWNabVg4cnRZbjBQZDR3Z2kwejZ2Mk1TLWFlTFlYa0l5dHJEZURJWklheTVuQm9sMjdxc1A2a2EtV3QtY1o2UzgxbDFYODljODlDV0pmaGx0M0dDTms3NjZESVpFRFl1UVhLX1pfMElqMk40ZXZLX3FKSVJYVE9wc3VwcW5rUkE1TFlyRlpZWHJvQnZKNnHSAcoCQVVfeXFMT3lVQVE2Yy1ueWk5cF9FWG5iUVlyZzQ5RTBNdUF0eHBvUGpzeW5LeUhLM3hTN1VZZ1YzYWQ1TUItWnQ2TlgxUzRhV3I0Y0RfYkFBanBRMzdxTjZFaUdsd0dOLTc0bl9qaEhrRlpOTkoxclJJS3ZnQ3l3NFFaOVR1QldSb2o1WENzMF9ENjJrZlM5RmFnTkhKN3E2VGZyNXFVZG9pTzQ4V2JScW1kMGlVYXZnTXlYVGtoTUpmSm0tZS1UdXdZV1JmZWo4b2JlbDItOW1sSlpvVFEzN0JUTnFLOEk3eDl5dFRHVU5OWlpxYTBEX0pNLTgweWt5MWRnUWRtdEJ2RjFLQ0w2eUdxbmFTYmhJaUZRY1lHZjR5c3NwMEZGbHNHUXBMcTIwR184VGw1Si1fbzlNTEgxM2l5SXd1NkNIMEE2bUdSSHhn?oc=5",
+      "date": "Fri, 19 Jun 2026 21:25:03 GMT"
     },
     {
       "id": "1e3b537c4147",
@@ -642,6 +651,15 @@
       "date": "Thu, 18 Jun 2026 16:29:25 GMT"
     },
     {
+      "id": "cdd807611144",
+      "title": "Fed Holds Rates Steady; Retail Sales Remain Resilient - Benzinga",
+      "text": "Fed Holds Rates Steady; Retail Sales Remain Resilient Benzinga",
+      "source": "Benzinga",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQYzk5UXFEY0p1YzM2ZFh6cy1uTWdtUXhHNDFja19FbDJWUVg0alpVUnR0amVfcjkwbWc1cUVYNFVzcGV6VHVtckNFRGpvMk1qR2p2c01BSk5xa0JtWmFXbVMzMzBBenRNQ3h0Q01WM3lXbjZYS0VOSXJGei1GQUlmNUppRzg3aHlrTnRBM3kwenlxNkxFUlcwQWpjZmNycW9ZRkE?oc=5",
+      "date": "Wed, 17 Jun 2026 19:47:18 GMT"
+    },
+    {
       "id": "e1f9cb904c04",
       "title": "Apple’s Stock Soars 50% in a Year, with Three Key Pillars Supporting Long-Term Investment Value - NAI500",
       "text": "Apple’s Stock Soars 50% in a Year, with Three Key Pillars Supporting Long-Term Investment Value NAI500",
@@ -696,15 +714,6 @@
       "date": "Wed, 04 Feb 2026 08:00:00 GMT"
     },
     {
-      "id": "76696afd23aa",
-      "title": "Is Apple Inc. (AAPL) A Good Stock To Buy Now? - Yahoo Finance",
-      "text": "Is Apple Inc. (AAPL) A Good Stock To Buy Now? Yahoo Finance",
-      "source": "Yahoo Finance",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5CSFQ4b0JBV0x1UkQ5SWFUbmNQWWZ5NWtHU0x3bHFyc3N3WC1LVHVoSThPamFtSHZOdFp1NUpub1MyY1RHclRQcFNsb1FyOUw5Zkh1aWtsbTVVTWFDWm8xX2Fzem5iOUY5c3pYdmYzdVFRM2J5RW9VSlRMRQ?oc=5",
-      "date": "Sun, 15 Mar 2026 07:00:00 GMT"
-    },
-    {
       "id": "d75331a9b8aa",
       "title": "Apple Inc. (AAPL) Is a Trending Stock: Facts to Know Before Betting on It - Yahoo Finance",
       "text": "Apple Inc. (AAPL) Is a Trending Stock: Facts to Know Before Betting on It Yahoo Finance",
@@ -739,6 +748,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9XMXVrd2Z0Rk1tU09lVmU5T1p1UWwySzNELXJRMTUwTkdfcDRFd29rem03TEZZUWhUcDA1WXM1WUFSd2FvTXZnQ2JOYUsyWTNiNkxWWjJUYnlEanQwUmp0ZUdxdVM1NDhfRWxjSg?oc=5",
       "date": "Tue, 31 Mar 2026 07:00:00 GMT"
+    },
+    {
+      "id": "76696afd23aa",
+      "title": "Is Apple Inc. (AAPL) A Good Stock To Buy Now? - Yahoo Finance",
+      "text": "Is Apple Inc. (AAPL) A Good Stock To Buy Now? Yahoo Finance",
+      "source": "Yahoo Finance",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5CSFQ4b0JBV0x1UkQ5SWFUbmNQWWZ5NWtHU0x3bHFyc3N3WC1LVHVoSThPamFtSHZOdFp1NUpub1MyY1RHclRQcFNsb1FyOUw5Zkh1aWtsbTVVTWFDWm8xX2Fzem5iOUY5c3pYdmYzdVFRM2J5RW9VSlRMRQ?oc=5",
+      "date": "Sun, 15 Mar 2026 07:00:00 GMT"
     },
     {
       "id": "db26a0633686",
@@ -822,15 +840,6 @@
       "date": "Wed, 22 Apr 2026 07:00:00 GMT"
     },
     {
-      "id": "e14879139b79",
-      "title": "Apple Inc. (AAPL)’s Upcoming Hardware and AI Updates Keep Street Optimistic - Yahoo Finance",
-      "text": "Apple Inc. (AAPL)’s Upcoming Hardware and AI Updates Keep Street Optimistic Yahoo Finance",
-      "source": "Yahoo Finance",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNalVqbEJfR3F6cnF3UXg2UzlYSUhTRTNtMU9HMjBURE5heDdGLXRvR20ycWd1UzVPZlZTTWFucFRnNWlPSFBDeE9reXlLN0wxWEpLb3BOY3BwWG1HY2ZSbk43RG5jVGNTUjJ5cTRVcTY4dHpacWc4dzFLR2doX3c0OG1YVXM?oc=5",
-      "date": "Fri, 13 Feb 2026 08:00:00 GMT"
-    },
-    {
       "id": "cd02ccf8ff48",
       "title": "Apple Inc. (AAPL) Targets $15B Service Revenue via AI - Yahoo Finance",
       "text": "Apple Inc. (AAPL) Targets $15B Service Revenue via AI Yahoo Finance",
@@ -838,6 +847,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPcEp4T0FqNE8zZDFuVUZhOG9jcHJiNjVQbVZxMFNkbm1ydkhhTi1waGNmWFMzV1k2eER5a3ZNekFkRUk5dUR4emV0WDA0NWFPSmtZQUh6NWRlOWxnNG9veWtGOEtqcmx2VXdqbzVNUHpjMUo3SnFlUnlOVEFtTlFsYVR5VGJSMXA2ZENxQ0QzZmFNekVlWFRSRk84SQ?oc=5",
       "date": "Thu, 21 May 2026 07:00:00 GMT"
+    },
+    {
+      "id": "e14879139b79",
+      "title": "Apple Inc. (AAPL)’s Upcoming Hardware and AI Updates Keep Street Optimistic - Yahoo Finance",
+      "text": "Apple Inc. (AAPL)’s Upcoming Hardware and AI Updates Keep Street Optimistic Yahoo Finance",
+      "source": "Yahoo Finance",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNalVqbEJfR3F6cnF3UXg2UzlYSUhTRTNtMU9HMjBURE5heDdGLXRvR20ycWd1UzVPZlZTTWFucFRnNWlPSFBDeE9reXlLN0wxWEpLb3BOY3BwWG1HY2ZSbk43RG5jVGNTUjJ5cTRVcTY4dHpacWc4dzFLR2doX3c0OG1YVXM?oc=5",
+      "date": "Fri, 13 Feb 2026 08:00:00 GMT"
     },
     {
       "id": "8343cb4ed38e",
@@ -885,24 +903,6 @@
       "date": "Fri, 24 Apr 2026 07:00:00 GMT"
     },
     {
-      "id": "88f161774722",
-      "title": "Mapping the Design Space of User Experience for Computer Use Agents - Apple Machine Learning Research",
-      "text": "Mapping the Design Space of User Experience for Computer Use Agents Apple Machine Learning Research",
-      "source": "Apple Machine Learning Research",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9DN0t2c1dXMVNPWDdaWTg1ckhwM1ZiS3pKVVNLcl92NHlrcDNBOUpFc0ptRzJDYzNxN0pyY2RzbXV6VnRLcUlBXzBZTzFlTEgtS3JhT0dOVlNMbll3MjZJ?oc=5",
-      "date": "Thu, 12 Feb 2026 21:40:19 GMT"
-    },
-    {
-      "id": "860f993bf486",
-      "title": "Apple Inc. (AAPL): One of the 20 Stocks with the Biggest Share Buybacks - Yahoo Finance",
-      "text": "Apple Inc. (AAPL): One of the 20 Stocks with the Biggest Share Buybacks Yahoo Finance",
-      "source": "Yahoo Finance",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPcGZmaG1hTjgwR0hqY1MyTUtleTN1V3VKWTdGV25hWE9vUXhhczRZRUd4a2VlVzh6cWtsd0JtVE4xdFpzaHg3dzdhTUgzXzRidy1fanVjSTExdXEyYnRqQUlBQ1hzTVZ4a1NKaGh0OEViR2E4LWlrTVJNTlZ5UFhuSG45Tk1OMTV1a3JRVmUtOA?oc=5",
-      "date": "Thu, 30 Apr 2026 07:00:00 GMT"
-    },
-    {
       "id": "f9ee35535f3c",
       "title": "Older iPhones are vulnerable to a flaw Apple likely can’t fix - Mashable",
       "text": "Older iPhones are vulnerable to a flaw Apple likely can’t fix Mashable",
@@ -921,15 +921,6 @@
       "date": "Wed, 17 Jun 2026 19:57:38 GMT"
     },
     {
-      "id": "ad6561f784ab",
-      "title": "We Did the Math on Why the iPhone 18 Pro Could Cost $1,299 - WSJ",
-      "text": "We Did the Math on Why the iPhone 18 Pro Could Cost $1,299 WSJ Worst iPhone 18 and iPhone 18 Pro news comes straight from CEO Tim Cook PhoneArena Apple's Tim Cook and many others say the AI boom is spiking costs — so their prices will spike, too. Business Insider",
-      "source": "WSJ",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPTjIyMHRaaUoxakl1SjBCem9FU2NNSTVGaFBCNGV1ajFOMldFZXJXdUVWWElTTWt4bHV3Yml4YUpPQ3ZGMjRJc3R2Y1JETXl5MWxJX0RORTBCUlNpaXVndE1ER3RJSmZ4aDBBUy1oOE9kdGozNXlZeEszZ3BKVDBCZg?oc=5",
-      "date": "Wed, 17 Jun 2026 21:01:00 GMT"
-    },
-    {
       "id": "5047434e0874",
       "title": "Why Apple Enjoys Peerless iPhone Pricing Power - WSJ",
       "text": "Why Apple Enjoys Peerless iPhone Pricing Power WSJ",
@@ -937,6 +928,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNUkdUZUtmd0RIeW50SXFYZXRLdmRUVm44a2UwdFNUeDgzN0NxWDVHTDNUdUpfbzAzNXFWY0Q4ZVN2ODJNdTdTQ3A4al9nZW5qMXFaR21mdkRSZUd5THlkTGU2UXRSZ1dxeWpJZWZreENpV3g3cmJ3U2h0UjRqOXczRXVnN1VsQ1E?oc=5",
       "date": "Sat, 20 Jun 2026 09:30:00 GMT"
+    },
+    {
+      "id": "ad6561f784ab",
+      "title": "We Did the Math on Why the iPhone 18 Pro Could Cost $1,299 - WSJ",
+      "text": "We Did the Math on Why the iPhone 18 Pro Could Cost $1,299 WSJ Worst iPhone 18 and iPhone 18 Pro news comes straight from CEO Tim Cook PhoneArena Apple's Tim Cook and many others say the AI boom is spiking costs — so their prices will spike, too. Business Insider",
+      "source": "WSJ",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPTjIyMHRaaUoxakl1SjBCem9FU2NNSTVGaFBCNGV1ajFOMldFZXJXdUVWWElTTWt4bHV3Yml4YUpPQ3ZGMjRJc3R2Y1JETXl5MWxJX0RORTBCUlNpaXVndE1ER3RJSmZ4aDBBUy1oOE9kdGozNXlZeEszZ3BKVDBCZg?oc=5",
+      "date": "Wed, 17 Jun 2026 21:01:00 GMT"
     },
     {
       "id": "312caf966727",
@@ -1002,13 +1002,13 @@
       "date": "Sat, 20 Jun 2026 08:00:00 GMT"
     },
     {
-      "id": "d56e8cba391d",
-      "title": "Apple's iOS 27 will have three more unannounced features, report claims - Mashable",
-      "text": "Apple's iOS 27 will have three more unannounced features, report claims Mashable",
+      "id": "3753c5fd2e14",
+      "title": "T-Mobile is giving away the Apple iPhone 17 for free — how to claim - Mashable",
+      "text": "T-Mobile is giving away the Apple iPhone 17 for free — how to claim Mashable",
       "source": "Mashable",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE05V2VadDBxWDVNZllMSHBRRTJjd25tUmZremdVajRiRVpuTHBCSDM4Qk5JazJBMHE4RVBMWm5nQUpYNVkyQWtZWXZGb1JYQmNjekpDeHp0S0pSUjFFRTd1YjlB?oc=5",
-      "date": "Fri, 19 Jun 2026 20:35:52 GMT"
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9McEVmNmtqVElPTFEyLWZpclQ0RW10aGRnZjEwd1hqTlFhZUl5REY0cXRyYm9PMkJSZmJmUzZGN0lXTW9oMXljdXpmNGJmZ0E0VzMwelZEY0prVmthUDRVQTlvZE9uVUU?oc=5",
+      "date": "Sat, 20 Jun 2026 09:00:00 GMT"
     },
     {
       "id": "d748493627f5",
@@ -1029,6 +1029,15 @@
       "date": "Wed, 17 Jun 2026 20:54:00 GMT"
     },
     {
+      "id": "040e69ff3970",
+      "title": "iPhone users: Be aware of this new ‘Apple High Alert’ scam - Fast Company",
+      "text": "iPhone users: Be aware of this new ‘Apple High Alert’ scam Fast Company",
+      "source": "Fast Company",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOcUQ0UVp3RDFVM3hKcTJQQmlTbUs3SDRrZG5nWmdWYkVOS3RHN3B4UzZiaTFxdUVsZF9fb0xPMTI1QnFqRTZ2SDlMTlJLc0xaYlg5M28zMnlOWjZER1VuVXlaeG9OcWlibTVUQmd4OFhfOEtxVzJhbXpjZHd0aXlMN1BYYk5lTVZaOThCRDRpNVU4LVFaa2NVdXFoSC12QQ?oc=5",
+      "date": "Sat, 20 Jun 2026 09:04:07 GMT"
+    },
+    {
       "id": "e4a07f2bd3aa",
       "title": "Apple users told to watch out for 'unpatchable' iPhone security issues - here's what we know - TechRadar",
       "text": "Apple users told to watch out for 'unpatchable' iPhone security issues - here's what we know TechRadar",
@@ -1038,13 +1047,13 @@
       "date": "Fri, 19 Jun 2026 14:05:00 GMT"
     },
     {
-      "id": "1c691ed19c62",
-      "title": "Memory crisis hits such extremes that 'even Apple can't be safe' - CNBC",
-      "text": "Memory crisis hits such extremes that 'even Apple can't be safe' CNBC",
-      "source": "CNBC",
+      "id": "1b07449d3885",
+      "title": "Unpatchable 'usbliter8' Exploit Breaks Apple A12 and A13 SecureROM Boot Chain - The Hacker News",
+      "text": "Unpatchable 'usbliter8' Exploit Breaks Apple A12 and A13 SecureROM Boot Chain The Hacker News",
+      "source": "The Hacker News",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPOHhLdl9EZlk5dU14NktSbnNNdlZZcHdQd0sxYjM0QkpYMkRkRWl1NTc2V0ZjM2FjRjdrLUZ4SXpaMHVjUGlmNkxkWk00MFdLUnA1RUs1c3JoTVJTaUNlMVhVVWNMSTBBSmh5emtEbnZCMEdYeHBGSzd4Z3JIUzhTX2pUVmFPaVhqd2dHdWU5dlBYUlFWSVRjSnI3UGNJcWRl0gGmAUFVX3lxTE9UbF9EcWl1bmt1QmtRT2Jjd3VrNUpNSGJkSjN6UVd1UGFaVVhtRGx3ZDZkcmpnd2VULVE2ZVNUV3ZnM2M0WVZmMmJrRC1JNlV2aExfcGFBR3F6U25nYzRKbjVnejhaejRLTWtxZG1GWHczcWNMRk5RdGw4aUxYT1RJSXRDd0lETkFRamhEaEFHN09oaWZYSmk5cjRxTjZvbGtFeGQyM1E?oc=5",
-      "date": "Fri, 19 Jun 2026 12:00:02 GMT"
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPRzZ2bmt3eGxGSjZFZ3h4REkzUHVrb05oVlRUR3huNWFsdjV6LUx1ZDBrZndCclNaS1pDUTRjNUl3ZTZ4WFNiZFJsc1BNZ2NQZ0RYTXlXT1FOdE5MRFNYdGtaajVrTHR4YkdTaUNHcDFXbzJLb2RmMWhhV1RrUDRxRw?oc=5",
+      "date": "Fri, 19 Jun 2026 18:37:00 GMT"
     },
     {
       "id": "a9e9db182afa",
@@ -1056,13 +1065,13 @@
       "date": "Fri, 19 Jun 2026 22:30:53 GMT"
     },
     {
-      "id": "3753c5fd2e14",
-      "title": "T-Mobile is giving away the Apple iPhone 17 for free — how to claim - Mashable",
-      "text": "T-Mobile is giving away the Apple iPhone 17 for free — how to claim Mashable",
+      "id": "d56e8cba391d",
+      "title": "Apple's iOS 27 will have three more unannounced features, report claims - Mashable",
+      "text": "Apple's iOS 27 will have three more unannounced features, report claims Mashable",
       "source": "Mashable",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9McEVmNmtqVElPTFEyLWZpclQ0RW10aGRnZjEwd1hqTlFhZUl5REY0cXRyYm9PMkJSZmJmUzZGN0lXTW9oMXljdXpmNGJmZ0E0VzMwelZEY0prVmthUDRVQTlvZE9uVUU?oc=5",
-      "date": "Sat, 20 Jun 2026 09:00:00 GMT"
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE05V2VadDBxWDVNZllMSHBRRTJjd25tUmZremdVajRiRVpuTHBCSDM4Qk5JazJBMHE4RVBMWm5nQUpYNVkyQWtZWXZGb1JYQmNjekpDeHp0S0pSUjFFRTd1YjlB?oc=5",
+      "date": "Fri, 19 Jun 2026 20:35:52 GMT"
     },
     {
       "id": "65ced8b8be64",
@@ -1072,15 +1081,6 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1MeGFxMm9OUVN6SGxGaWZTSWFwblJ1QU5xRXN3WktXMkVmSVVuaGRldGlpYVVKbFVxR2Zqc09maHFaaTZ3WlJYc3otUENlZXMtcG1aNklCcFVkVVVGZWVBNVFKcTl3TGtGWUl5V0ZzUzFaRlpRY0R2bw?oc=5",
       "date": "Wed, 17 Jun 2026 21:00:00 GMT"
-    },
-    {
-      "id": "c4e421b35df0",
-      "title": "Apple tipped to launch 6 new iPhones, 2 new wearables, and more in 'biggest product year’ ever — here's the full list - TechRadar",
-      "text": "Apple tipped to launch 6 new iPhones, 2 new wearables, and more in 'biggest product year’ ever — here's the full list TechRadar",
-      "source": "TechRadar",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQbzB1cnRSX3BNcEp3em5iRWVNeTd6NUFmMmFWcHpnYmxoaVRLV3JtSHg0ZTBwRmJ2cldDc3RNN1lWWEpqYWN1N0h5M0o0NzZDR3JfZ0ZhQnVnUjJRVWxnY2VSWUxZLXpRWUJpVE5vYzh4RmUyOU5nbmsyMHJYcWF1NFdfVzBHRndsNDFrVm03X3lXSE51RW5ZSDZyUmtFenhOQm1iUDkzY2VEQmI1bnFuc2NZcXRzdG9CVUtrekVXdk5rUkVvdzJrSnhWbUVmVm5qUDd6QXZlMF9wVDJFd0pGNWg2NE8?oc=5",
-      "date": "Fri, 19 Jun 2026 12:08:38 GMT"
     },
     {
       "id": "bb7fe7a2af30",
@@ -1101,6 +1101,15 @@
       "date": "Thu, 18 Jun 2026 21:00:53 GMT"
     },
     {
+      "id": "ed4cd003c6f7",
+      "title": "Apple iPhone 18 Pro Release Date: Why A September 2026 Launch Looks Likely - Forbes",
+      "text": "Apple iPhone 18 Pro Release Date: Why A September 2026 Launch Looks Likely Forbes",
+      "source": "Forbes",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQakpyM1BPVDRraE5NV0djOXVrT1ZVUnZscVA2SXVmZjRkQml0UmRTVkJUOERVSHQwQjFZZEplX0JsbWF2VGwxTVJUMTNIMkVBZ2RyZkxkNUQySzFJbjhjNVBhZGc4RF9WN3RpUVNmUmRIakp3d3daRHFMQ2FyLXJ2TnQ5M1JPRWx1QXBDYzdkVHhZdXN1RGJPWXpTTGVVMEoyREE?oc=5",
+      "date": "Tue, 16 Jun 2026 09:21:00 GMT"
+    },
+    {
       "id": "32e60cfab481",
       "title": "Tim Cook says iPhone price increase is 'unavoidable' - Mashable",
       "text": "Tim Cook says iPhone price increase is 'unavoidable' Mashable",
@@ -1119,24 +1128,6 @@
       "date": "Fri, 19 Jun 2026 22:03:53 GMT"
     },
     {
-      "id": "ed4cd003c6f7",
-      "title": "Apple iPhone 18 Pro Release Date: Why A September 2026 Launch Looks Likely - Forbes",
-      "text": "Apple iPhone 18 Pro Release Date: Why A September 2026 Launch Looks Likely Forbes",
-      "source": "Forbes",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQakpyM1BPVDRraE5NV0djOXVrT1ZVUnZscVA2SXVmZjRkQml0UmRTVkJUOERVSHQwQjFZZEplX0JsbWF2VGwxTVJUMTNIMkVBZ2RyZkxkNUQySzFJbjhjNVBhZGc4RF9WN3RpUVNmUmRIakp3d3daRHFMQ2FyLXJ2TnQ5M1JPRWx1QXBDYzdkVHhZdXN1RGJPWXpTTGVVMEoyREE?oc=5",
-      "date": "Tue, 16 Jun 2026 09:21:00 GMT"
-    },
-    {
-      "id": "1b07449d3885",
-      "title": "Unpatchable 'usbliter8' Exploit Breaks Apple A12 and A13 SecureROM Boot Chain - The Hacker News",
-      "text": "Unpatchable 'usbliter8' Exploit Breaks Apple A12 and A13 SecureROM Boot Chain The Hacker News",
-      "source": "The Hacker News",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPRzZ2bmt3eGxGSjZFZ3h4REkzUHVrb05oVlRUR3huNWFsdjV6LUx1ZDBrZndCclNaS1pDUTRjNUl3ZTZ4WFNiZFJsc1BNZ2NQZ0RYTXlXT1FOdE5MRFNYdGtaajVrTHR4YkdTaUNHcDFXbzJLb2RmMWhhV1RrUDRxRw?oc=5",
-      "date": "Fri, 19 Jun 2026 18:37:00 GMT"
-    },
-    {
       "id": "8e54fbe93896",
       "title": "The best smartphones of 2026 are elite — and expensive - Mashable",
       "text": "The best smartphones of 2026 are elite — and expensive Mashable",
@@ -1146,31 +1137,22 @@
       "date": "Fri, 19 Jun 2026 22:00:00 GMT"
     },
     {
-      "id": "040e69ff3970",
-      "title": "iPhone users: Be aware of this new ‘Apple High Alert’ scam - Fast Company",
-      "text": "iPhone users: Be aware of this new ‘Apple High Alert’ scam Fast Company",
-      "source": "Fast Company",
+      "id": "c4e421b35df0",
+      "title": "Apple tipped to launch 6 new iPhones, 2 new wearables, and more in 'biggest product year’ ever — here's the full list - TechRadar",
+      "text": "Apple tipped to launch 6 new iPhones, 2 new wearables, and more in 'biggest product year’ ever — here's the full list TechRadar",
+      "source": "TechRadar",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOcUQ0UVp3RDFVM3hKcTJQQmlTbUs3SDRrZG5nWmdWYkVOS3RHN3B4UzZiaTFxdUVsZF9fb0xPMTI1QnFqRTZ2SDlMTlJLc0xaYlg5M28zMnlOWjZER1VuVXlaeG9OcWlibTVUQmd4OFhfOEtxVzJhbXpjZHd0aXlMN1BYYk5lTVZaOThCRDRpNVU4LVFaa2NVdXFoSC12QQ?oc=5",
-      "date": "Sat, 20 Jun 2026 09:04:07 GMT"
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQbzB1cnRSX3BNcEp3em5iRWVNeTd6NUFmMmFWcHpnYmxoaVRLV3JtSHg0ZTBwRmJ2cldDc3RNN1lWWEpqYWN1N0h5M0o0NzZDR3JfZ0ZhQnVnUjJRVWxnY2VSWUxZLXpRWUJpVE5vYzh4RmUyOU5nbmsyMHJYcWF1NFdfVzBHRndsNDFrVm03X3lXSE51RW5ZSDZyUmtFenhOQm1iUDkzY2VEQmI1bnFuc2NZcXRzdG9CVUtrekVXdk5rUkVvdzJrSnhWbUVmVm5qUDd6QXZlMF9wVDJFd0pGNWg2NE8?oc=5",
+      "date": "Fri, 19 Jun 2026 12:08:38 GMT"
     },
     {
-      "id": "1a26cea28eb6",
-      "title": "Your old iPhone may have a security flaw Apple can’t fix - Digital Trends",
-      "text": "Your old iPhone may have a security flaw Apple can’t fix Digital Trends",
-      "source": "Digital Trends",
+      "id": "1c691ed19c62",
+      "title": "Memory crisis hits such extremes that 'even Apple can't be safe' - CNBC",
+      "text": "Memory crisis hits such extremes that 'even Apple can't be safe' CNBC",
+      "source": "CNBC",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOR2RzUGRCd19SeDQxZThIVkxXblJ4VzdjR2JHM1Vnenk3SjBCXzVOb1VXd1JfRTJaSmtMblVGZ1J5RVVyZHZNZVVqYkcxUWRuR1U4RFlOSjYwMkVFbGFRTHNDanloQURJNzZ2dUdCYVVMZ2w0RTN1S0FRV1g0elhVal9ZaVpmMVlRc0lfTlVrTlhvZm1wcVA0ZA?oc=5",
-      "date": "Sat, 20 Jun 2026 02:25:00 GMT"
-    },
-    {
-      "id": "45ea2ba9b284",
-      "title": "Apple price hikes are 'fairly imminent,' report says - Mashable",
-      "text": "Apple price hikes are 'fairly imminent,' report says Mashable",
-      "source": "Mashable",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBJelFGa092UzlMaUIzYUhxWHlKcXpES1JYWmxUMXRzWFBHd0JwZ3dpYjU5eU1fa2x6M2hhYzRmQ0JOaFN4TnZJWGVXdUFyM2ZiUXFKcmVrWDhjdlEzVDFQaDlR?oc=5",
-      "date": "Fri, 19 Jun 2026 13:52:54 GMT"
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPOHhLdl9EZlk5dU14NktSbnNNdlZZcHdQd0sxYjM0QkpYMkRkRWl1NTc2V0ZjM2FjRjdrLUZ4SXpaMHVjUGlmNkxkWk00MFdLUnA1RUs1c3JoTVJTaUNlMVhVVWNMSTBBSmh5emtEbnZCMEdYeHBGSzd4Z3JIUzhTX2pUVmFPaVhqd2dHdWU5dlBYUlFWSVRjSnI3UGNJcWRl0gGmAUFVX3lxTE9UbF9EcWl1bmt1QmtRT2Jjd3VrNUpNSGJkSjN6UVd1UGFaVVhtRGx3ZDZkcmpnd2VULVE2ZVNUV3ZnM2M0WVZmMmJrRC1JNlV2aExfcGFBR3F6U25nYzRKbjVnejhaejRLTWtxZG1GWHczcWNMRk5RdGw4aUxYT1RJSXRDd0lETkFRamhEaEFHN09oaWZYSmk5cjRxTjZvbGtFeGQyM1E?oc=5",
+      "date": "Fri, 19 Jun 2026 12:00:02 GMT"
     },
     {
       "id": "4c41c073fc90",
@@ -1191,13 +1173,13 @@
       "date": "Thu, 18 Jun 2026 12:11:10 GMT"
     },
     {
-      "id": "51be6b3be8d8",
-      "title": "When Will iPhone Prices Increase? Tim Cook Says Higher Cost Is ‘Unavoidable’ - Forbes",
-      "text": "When Will iPhone Prices Increase? Tim Cook Says Higher Cost Is ‘Unavoidable’ Forbes",
-      "source": "Forbes",
+      "id": "1a26cea28eb6",
+      "title": "Your old iPhone may have a security flaw Apple can’t fix - Digital Trends",
+      "text": "Your old iPhone may have a security flaw Apple can’t fix Digital Trends",
+      "source": "Digital Trends",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOUE9QdDRLZnpPaEI2VExqLVp3aEFFQXVXTFMxTTZKVEZRMm1LbHR1YVk2Slh4bEFGRF9jUnFBenRJTkk0Sng2Vmw0T3lhZ2lxSS1BemF3amx0M1JHaFEtRDlSbWVNTnh1aE1FZmx4TktKQ0o1dUxZZ18tcE9KWXdrcjRpQjQzU1JyTlQ5OW9KTHJlNTZ2bWpuZGdpS09YVnhQQW5iQ0hjRFNaSmU4YnNJMTcwbS1fdTQ?oc=5",
-      "date": "Thu, 18 Jun 2026 14:29:02 GMT"
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOR2RzUGRCd19SeDQxZThIVkxXblJ4VzdjR2JHM1Vnenk3SjBCXzVOb1VXd1JfRTJaSmtMblVGZ1J5RVVyZHZNZVVqYkcxUWRuR1U4RFlOSjYwMkVFbGFRTHNDanloQURJNzZ2dUdCYVVMZ2w0RTN1S0FRV1g0elhVal9ZaVpmMVlRc0lfTlVrTlhvZm1wcVA0ZA?oc=5",
+      "date": "Sat, 20 Jun 2026 02:25:00 GMT"
     },
     {
       "id": "48d707151e53",
@@ -1207,6 +1189,24 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5JdUptaUYtQ3ZIbjRzejlVRHBvckt1NmZYS2VxNW53dXhYbWZUQTV0MXFCZmNlLVZWVkYtR1VfLW1tMmRsVWQxRG5tZWRIcE5TTVhsWkVNdlozM0UtVFF3aEZFdXBEVlFPSFdGemt1eTVIYUN2Q0RsRXpCN2hvUDg?oc=5",
       "date": "Thu, 18 Jun 2026 10:39:54 GMT"
+    },
+    {
+      "id": "45ea2ba9b284",
+      "title": "Apple price hikes are 'fairly imminent,' report says - Mashable",
+      "text": "Apple price hikes are 'fairly imminent,' report says Mashable",
+      "source": "Mashable",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBJelFGa092UzlMaUIzYUhxWHlKcXpES1JYWmxUMXRzWFBHd0JwZ3dpYjU5eU1fa2x6M2hhYzRmQ0JOaFN4TnZJWGVXdUFyM2ZiUXFKcmVrWDhjdlEzVDFQaDlR?oc=5",
+      "date": "Fri, 19 Jun 2026 13:52:54 GMT"
+    },
+    {
+      "id": "51be6b3be8d8",
+      "title": "When Will iPhone Prices Increase? Tim Cook Says Higher Cost Is ‘Unavoidable’ - Forbes",
+      "text": "When Will iPhone Prices Increase? Tim Cook Says Higher Cost Is ‘Unavoidable’ Forbes",
+      "source": "Forbes",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOUE9QdDRLZnpPaEI2VExqLVp3aEFFQXVXTFMxTTZKVEZRMm1LbHR1YVk2Slh4bEFGRF9jUnFBenRJTkk0Sng2Vmw0T3lhZ2lxSS1BemF3amx0M1JHaFEtRDlSbWVNTnh1aE1FZmx4TktKQ0o1dUxZZ18tcE9KWXdrcjRpQjQzU1JyTlQ5OW9KTHJlNTZ2bWpuZGdpS09YVnhQQW5iQ0hjRFNaSmU4YnNJMTcwbS1fdTQ?oc=5",
+      "date": "Thu, 18 Jun 2026 14:29:02 GMT"
     },
     {
       "id": "7fd94a355b8f",
@@ -1281,15 +1281,6 @@
       "date": "Tue, 16 Jun 2026 16:01:41 GMT"
     },
     {
-      "id": "81b3130f3cc5",
-      "title": "Apple price hikes predicted to be ‘fairly imminent’ — so don't wait on upgrading your Mac, iPad or iPhone - TechRadar",
-      "text": "Apple price hikes predicted to be ‘fairly imminent’ — so don't wait on upgrading your Mac, iPad or iPhone TechRadar",
-      "source": "TechRadar",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPckVSM3gxOUFtU004dWRZaExuUlBDbk9ZNXZkYTJPNi1HX3lWTEV6dnBvb21od29YN25zT3l3Q0pXS2hReDNoY3F6R2dGSDROOW1uQUo4cjV4UGdvNXBRWURCVUJDazNJaDg5dGFjc29tOFFOU2FnN3I0cFFUU1ZzYnhub3pyQ0R3NXdHX05zUUNNTVZndUoxQmhuSXhCcGJPbmN6NEJVMDRBV2I0bzgxa1J1OHpVclprMm4wa3AxeFZZUU1ZRmNBWlo3MC0?oc=5",
-      "date": "Fri, 19 Jun 2026 11:49:29 GMT"
-    },
-    {
       "id": "e4aa1a1ea82e",
       "title": "Apple boss Tim Cook says prices to rise due to memory chip costs - BBC",
       "text": "Apple boss Tim Cook says prices to rise due to memory chip costs BBC",
@@ -1308,15 +1299,6 @@
       "date": "Fri, 19 Jun 2026 01:54:54 GMT"
     },
     {
-      "id": "1f4a5f50ed44",
-      "title": "iPhone 18 Pro Max set for September with smaller Dynamic Island, variable aperture camera - eciks.org",
-      "text": "iPhone 18 Pro Max set for September with smaller Dynamic Island, variable aperture camera eciks.org",
-      "source": "eciks.org",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPUkp5UEhqcTVIZkFPWi1EQkxBSzVBWm9hZUh6Q0JIVE12d0NRdWV2Yy1yZWtjd1RpU3J1bUxnMWZUdFAwalVXckZ3SmN3cTgtYVVCVDdVWm5KWS1XQU9faTdOQ3B1MElJZ1lmU014TVg1NzFQdDZuRnljOGRrOHJ0UERnM2pDNzZJVzZCMkdVZ2xHZ28?oc=5",
-      "date": "Fri, 19 Jun 2026 22:07:08 GMT"
-    },
-    {
       "id": "7dd172fa3991",
       "title": "Here’s when you can get Apple’s foldable iPhone Ultra according to the latest report - PhoneArena",
       "text": "Here’s when you can get Apple’s foldable iPhone Ultra according to the latest report PhoneArena",
@@ -1324,15 +1306,6 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPX0VlZkEwOS1NeVA2TG5pLXpNbXFjeVF0NU9QbUdXamJfaENSM3Y4Mks4bk1qOHVub1RMZnY4SXpWUlRBMnR2aDl5dmJoWmxtWFJXcTh3bjIycTdvUnBWLV9CT0hnejdZbzhLSkdYc29lS0NVN0FyOW9rdXVROTVnTXdRSlRJbV9jck9kWW9MNGt3NHpZeXJqdUdfQklvTzZS?oc=5",
       "date": "Thu, 18 Jun 2026 16:12:06 GMT"
-    },
-    {
-      "id": "e84d3e62764a",
-      "title": "What Siri AI, Apple TV, & more are like with CarPlay in iOS 27 - AppleInsider",
-      "text": "What Siri AI, Apple TV, & more are like with CarPlay in iOS 27 AppleInsider",
-      "source": "AppleInsider",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQeHo5OG9ITkJkYmVacWY5RkI3MVhPa05Bc3R4R3I5UDRKSFAwSzZPWS1HU0tpTnR0LW1hSmpPbGhZYXd4YVVIMTc1SG1mN2ZsQUc0NWs2ZF8wV2VrNEt6UVdLMzNCcVlGSlR3RnNvOC1tc3Z0Tk9EWTBxckxjOHpYbTJDbVpxS05Ha3BXYXpyUVVPd244MndPTGNYbnRIZWdUS25R?oc=5",
-      "date": "Fri, 19 Jun 2026 17:27:00 GMT"
     },
     {
       "id": "528b422e39d5",
@@ -1344,13 +1317,22 @@
       "date": "Thu, 18 Jun 2026 09:17:44 GMT"
     },
     {
-      "id": "4950be65b68a",
-      "title": "Deals: iPhone 17 Pro/Max up to $290 off, AirPods $99, Apple Watch price drops, M5 Pro MacBook Pro $200 off, more - 9to5Mac",
-      "text": "Deals: iPhone 17 Pro/Max up to $290 off, AirPods $99, Apple Watch price drops, M5 Pro MacBook Pro $200 off, more 9to5Mac",
-      "source": "9to5Mac",
+      "id": "1f4a5f50ed44",
+      "title": "iPhone 18 Pro Max set for September with smaller Dynamic Island, variable aperture camera - eciks.org",
+      "text": "iPhone 18 Pro Max set for September with smaller Dynamic Island, variable aperture camera eciks.org",
+      "source": "eciks.org",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQMkN2ZWNLR1h5dS1ocUtlMmhwVjMyLWZEQXMtM3ZnTmVMUnRCdEtCWEd4d1FmeGptekh0MjdBelpPMU93cGtZeGhSR1RVVTlvcDB2Q1FoWHl5czhYSTEtUmJzRVRHOG5qb1FCR2xRZDhnZzRQMDM2NU8zR0NEZUZtd0RmOFFsSF9GRzln?oc=5",
-      "date": "Fri, 19 Jun 2026 15:30:00 GMT"
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPUkp5UEhqcTVIZkFPWi1EQkxBSzVBWm9hZUh6Q0JIVE12d0NRdWV2Yy1yZWtjd1RpU3J1bUxnMWZUdFAwalVXckZ3SmN3cTgtYVVCVDdVWm5KWS1XQU9faTdOQ3B1MElJZ1lmU014TVg1NzFQdDZuRnljOGRrOHJ0UERnM2pDNzZJVzZCMkdVZ2xHZ28?oc=5",
+      "date": "Fri, 19 Jun 2026 22:07:08 GMT"
+    },
+    {
+      "id": "81b3130f3cc5",
+      "title": "Apple price hikes predicted to be ‘fairly imminent’ — so don't wait on upgrading your Mac, iPad or iPhone - TechRadar",
+      "text": "Apple price hikes predicted to be ‘fairly imminent’ — so don't wait on upgrading your Mac, iPad or iPhone TechRadar",
+      "source": "TechRadar",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPckVSM3gxOUFtU004dWRZaExuUlBDbk9ZNXZkYTJPNi1HX3lWTEV6dnBvb21od29YN25zT3l3Q0pXS2hReDNoY3F6R2dGSDROOW1uQUo4cjV4UGdvNXBRWURCVUJDazNJaDg5dGFjc29tOFFOU2FnN3I0cFFUU1ZzYnhub3pyQ0R3NXdHX05zUUNNTVZndUoxQmhuSXhCcGJPbmN6NEJVMDRBV2I0bzgxa1J1OHpVclprMm4wa3AxeFZZUU1ZRmNBWlo3MC0?oc=5",
+      "date": "Fri, 19 Jun 2026 11:49:29 GMT"
     },
     {
       "id": "d008fbf2a4d2",
@@ -1362,13 +1344,13 @@
       "date": "Fri, 19 Jun 2026 07:09:05 GMT"
     },
     {
-      "id": "13a08f9447b6",
-      "title": "iPhone 18 Pro launching soon: Design, cameras, performance, expected price and more - India Today",
-      "text": "iPhone 18 Pro launching soon: Design, cameras, performance, expected price and more India Today",
-      "source": "India Today",
+      "id": "e84d3e62764a",
+      "title": "What Siri AI, Apple TV, & more are like with CarPlay in iOS 27 - AppleInsider",
+      "text": "What Siri AI, Apple TV, & more are like with CarPlay in iOS 27 AppleInsider",
+      "source": "AppleInsider",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNVnRyNmhMWFZrSWlGemtPZjFRdGY5SzZObUNaTml4Z2dwSXRQTGFiSHF1YXhwdm1CQy05WV95MnVXVTc5X1dUbjBBUERjY0ctaGI5aHVmZG1qY1FmN2ZlTEd0eVFqeEtfcWRldU1CUUJ4YmUyX0JKMVVDVW15QlhTbExMRDNORmFzTVB2TGM2bVN3d2NfQlpPdkd6REsxZkYtOFRZYXFWSnZleW9xWFlJNXYtN2tsbnRHUm9ISjAyZXh0ZTdIOFJ3bm5GWmtVajBsdC1FdTdKRzlvTV9NaG1R0gHkAUFVX3lxTE1EdU1WazBKVzhacFlmbUk1c2JKRVhOSjhWOUVibk9waElvdW12aTE5cWhrMkhleDhxdzhJRHAzZThzeDl3dVByaVh0a05nclN3MTk1dUhGM2FXWEFiZk1YRFlLQnkyZmlHYk9fV0V4UjlNbU1Edk9wNXpteVg0VUQ3SlJEVlBHUXp5MzlDcnBRNkJLelhDZGRvaGkzUjhCU1VFekFobHdaUnBkTWx3cWFQaVY3ZUJVUXBzQU5BZHl1X2RERmdQM1hWTWd1RXMzaVViR2F5TVBKZWR6aDIydUFCVTFsQg?oc=5",
-      "date": "Sat, 20 Jun 2026 07:24:52 GMT"
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQeHo5OG9ITkJkYmVacWY5RkI3MVhPa05Bc3R4R3I5UDRKSFAwSzZPWS1HU0tpTnR0LW1hSmpPbGhZYXd4YVVIMTc1SG1mN2ZsQUc0NWs2ZF8wV2VrNEt6UVdLMzNCcVlGSlR3RnNvOC1tc3Z0Tk9EWTBxckxjOHpYbTJDbVpxS05Ha3BXYXpyUVVPd244MndPTGNYbnRIZWdUS25R?oc=5",
+      "date": "Fri, 19 Jun 2026 17:27:00 GMT"
     },
     {
       "id": "2b2b95d97467",
@@ -1380,6 +1362,24 @@
       "date": "Thu, 18 Jun 2026 18:16:00 GMT"
     },
     {
+      "id": "4950be65b68a",
+      "title": "Deals: iPhone 17 Pro/Max up to $290 off, AirPods $99, Apple Watch price drops, M5 Pro MacBook Pro $200 off, more - 9to5Mac",
+      "text": "Deals: iPhone 17 Pro/Max up to $290 off, AirPods $99, Apple Watch price drops, M5 Pro MacBook Pro $200 off, more 9to5Mac",
+      "source": "9to5Mac",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQMkN2ZWNLR1h5dS1ocUtlMmhwVjMyLWZEQXMtM3ZnTmVMUnRCdEtCWEd4d1FmeGptekh0MjdBelpPMU93cGtZeGhSR1RVVTlvcDB2Q1FoWHl5czhYSTEtUmJzRVRHOG5qb1FCR2xRZDhnZzRQMDM2NU8zR0NEZUZtd0RmOFFsSF9GRzln?oc=5",
+      "date": "Fri, 19 Jun 2026 15:30:00 GMT"
+    },
+    {
+      "id": "13a08f9447b6",
+      "title": "iPhone 18 Pro launching soon: Design, cameras, performance, expected price and more - India Today",
+      "text": "iPhone 18 Pro launching soon: Design, cameras, performance, expected price and more India Today",
+      "source": "India Today",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNVnRyNmhMWFZrSWlGemtPZjFRdGY5SzZObUNaTml4Z2dwSXRQTGFiSHF1YXhwdm1CQy05WV95MnVXVTc5X1dUbjBBUERjY0ctaGI5aHVmZG1qY1FmN2ZlTEd0eVFqeEtfcWRldU1CUUJ4YmUyX0JKMVVDVW15QlhTbExMRDNORmFzTVB2TGM2bVN3d2NfQlpPdkd6REsxZkYtOFRZYXFWSnZleW9xWFlJNXYtN2tsbnRHUm9ISjAyZXh0ZTdIOFJ3bm5GWmtVajBsdC1FdTdKRzlvTV9NaG1R0gHkAUFVX3lxTE1EdU1WazBKVzhacFlmbUk1c2JKRVhOSjhWOUVibk9waElvdW12aTE5cWhrMkhleDhxdzhJRHAzZThzeDl3dVByaVh0a05nclN3MTk1dUhGM2FXWEFiZk1YRFlLQnkyZmlHYk9fV0V4UjlNbU1Edk9wNXpteVg0VUQ3SlJEVlBHUXp5MzlDcnBRNkJLelhDZGRvaGkzUjhCU1VFekFobHdaUnBkTWx3cWFQaVY3ZUJVUXBzQU5BZHl1X2RERmdQM1hWTWd1RXMzaVViR2F5TVBKZWR6aDIydUFCVTFsQg?oc=5",
+      "date": "Sat, 20 Jun 2026 07:24:52 GMT"
+    },
+    {
       "id": "a4356446ee0e",
       "title": "The $1,399 iPhone 18 Pro makes sense, and that's the problem - PhoneArena",
       "text": "The $1,399 iPhone 18 Pro makes sense, and that's the problem PhoneArena",
@@ -1387,24 +1387,6 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQSGROck45dU5zeDBNS3FSN0UzaHJHQUtrN3MyajZRSTdpUmxuSkthVU1PX0Z6VzRBZ2djR1JoZFo2Z1I0TEgzT2s4amhlRXlKZ0RHQzlvLTZwdDFsV1FrVFFEVHg2ZVZVb21lWl9DQWdZOFY1Qm5SbUJfM1otTks3UjVibFE1RU9qMWNDWTA0TXBYdC15YkluTGhLT1JSVjlORWRVQkswUms?oc=5",
       "date": "Thu, 18 Jun 2026 13:53:03 GMT"
-    },
-    {
-      "id": "8707417dcf29",
-      "title": "iPhone parts factory in India faces new health probe over alleged water contamination - 9to5Mac",
-      "text": "iPhone parts factory in India faces new health probe over alleged water contamination 9to5Mac",
-      "source": "9to5Mac",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPcnpxcjZGVWkwaV9pN1ptdnB1V1pSOUhiTjdUaklEc1N1cktGWm1odUpQQmwxaXJWbDRQRVc1UWc4YXU3NUdSQ0kzM05sVTZNVmppV1RYVDhOSWJfVWpPaWQzUFhoX2lVbkhFa3F3M0hCZTFNQzlaT1FSSVptWFgwblRVQlRiZVQtVlJ0TUM3WmlHNTJwU2VRLXJocTQ5MzVwb1ZpZWZ4Tnc2bExaOXl3TXlTdVB0S051?oc=5",
-      "date": "Fri, 19 Jun 2026 19:51:00 GMT"
-    },
-    {
-      "id": "4b5d28998952",
-      "title": "Storage Shortage Spreads: Cook Hints at Apple Product Price Hikes - Is the Most Expensive iPhone in History on the Way? - 36 Kr",
-      "text": "Storage Shortage Spreads: Cook Hints at Apple Product Price Hikes - Is the Most Expensive iPhone in History on the Way? 36 Kr",
-      "source": "36 Kr",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1UczlhdnRnMFR2OHJzSS1UUlgwU1B4UEs5UmlHSnU4WXBYeUZIUUozZ1RfdS1pdHJDelJkTHAyZlhad1ktSUpVVWd1ekU4MEc3OUNj?oc=5",
-      "date": "Sat, 20 Jun 2026 04:06:01 GMT"
     },
     {
       "id": "5888b36caaef",
@@ -1425,6 +1407,15 @@
       "date": "Thu, 18 Jun 2026 08:06:00 GMT"
     },
     {
+      "id": "8707417dcf29",
+      "title": "iPhone parts factory in India faces new health probe over alleged water contamination - 9to5Mac",
+      "text": "iPhone parts factory in India faces new health probe over alleged water contamination 9to5Mac",
+      "source": "9to5Mac",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPcnpxcjZGVWkwaV9pN1ptdnB1V1pSOUhiTjdUaklEc1N1cktGWm1odUpQQmwxaXJWbDRQRVc1UWc4YXU3NUdSQ0kzM05sVTZNVmppV1RYVDhOSWJfVWpPaWQzUFhoX2lVbkhFa3F3M0hCZTFNQzlaT1FSSVptWFgwblRVQlRiZVQtVlJ0TUM3WmlHNTJwU2VRLXJocTQ5MzVwb1ZpZWZ4Tnc2bExaOXl3TXlTdVB0S051?oc=5",
+      "date": "Fri, 19 Jun 2026 19:51:00 GMT"
+    },
+    {
       "id": "1683eb03fba7",
       "title": "No iPhone 18 This Year, Apple Supplier Comments Seemingly Confirm - MacRumors",
       "text": "No iPhone 18 This Year, Apple Supplier Comments Seemingly Confirm MacRumors",
@@ -1434,13 +1425,13 @@
       "date": "Mon, 15 Jun 2026 17:51:57 GMT"
     },
     {
-      "id": "a0ff6bffc0ea",
-      "title": "The iPhone 18 Pro is shaping up to be Apple’s best ever: here are the most exciting things we expect to see - stuff.tv",
-      "text": "The iPhone 18 Pro is shaping up to be Apple’s best ever: here are the most exciting things we expect to see stuff.tv",
-      "source": "stuff.tv",
+      "id": "4b5d28998952",
+      "title": "Storage Shortage Spreads: Cook Hints at Apple Product Price Hikes - Is the Most Expensive iPhone in History on the Way? - 36 Kr",
+      "text": "Storage Shortage Spreads: Cook Hints at Apple Product Price Hikes - Is the Most Expensive iPhone in History on the Way? 36 Kr",
+      "source": "36 Kr",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQeXJ4ejE0cHFZaF9fYXRGRDdHR0RVWS1zdm9zSUo3aHRRRW94QTEzVldzbzk1UVpOMHBqaHNRSl91X1lkOUlhaUV1OHQ2Ul9UUHFyeE9xYUlhekwzTl9UNEtYQTJNY2xkX1dBUm1SNnJTUzhkSEVPbnFFYWV4QVNYSHF4dUdVZ2U0Y290NjhXZGRuMk1sUGYyNWxVZDFvRElTczlxd1JxYms5eURNSG5aVS1JN25kYnF2bmFEaGFLaWdXOVZ1R0J1b2wyU0E1Qnpmb2c?oc=5",
-      "date": "Fri, 19 Jun 2026 11:03:45 GMT"
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1UczlhdnRnMFR2OHJzSS1UUlgwU1B4UEs5UmlHSnU4WXBYeUZIUUozZ1RfdS1pdHJDelJkTHAyZlhad1ktSUpVVWd1ekU4MEc3OUNj?oc=5",
+      "date": "Sat, 20 Jun 2026 04:06:01 GMT"
     },
     {
       "id": "85a169766027",
@@ -1450,24 +1441,6 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxOYm53OXhSSFN3THhGVy1aYUNZUXFCTlhUWERSMFBDQmt0M3YwNF9sQm5zX0UzemVNZ0tZMmdzYVFLYktOQ2ducWFfTmt4TllkQjI0OUJBbXpTWDdtVTRibDVHaVB4d0E1WU1xRWVRMHJGT1FrdXlEUkxTZUM3bWNXR2ktR2pZVDhobWdpeDhqcmtPU0RFeC1TTGtwUEFDUGt0WE51cWQ4dThkSXJVdmhacEs0S2dxeUpkTUpIckNaNDlRTHVlNlpDOXZiRDQyeDZMdnlWbTJ5b2ZQSnMzMUlBUUJtN09aRnZHQUNxcGVyRzF1dWE2eWVSMHNEdnQ4dw?oc=5",
       "date": "Thu, 18 Jun 2026 10:24:26 GMT"
-    },
-    {
-      "id": "7b622d70a4e7",
-      "title": "The latest iPhone Ultra leak leaves little to the imagination, includes a much-awaited iOS feature - Digital Trends",
-      "text": "The latest iPhone Ultra leak leaves little to the imagination, includes a much-awaited iOS feature Digital Trends",
-      "source": "Digital Trends",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOamhxTjd6ZEtmVFctWlVOaHRfbXpFRkRLX3pldFJMSEw5RVQ3UDF3ZGFQUThNQmhpWTdnTTdBY05aNGV4anl2U1Y1bjZwVHFHYmtRZzFyVjhOd2E1eExCQm5vWXJ6QnJtdWFfQmtVbmY0cHloRmFwUHRNRUdWbmxHWHlqWl92eGVpejNrb0h0Q0kwMUhzSXRheUhmZkxPQlgxWEJsVVkzUUJvUEE4VktoM0JYaU9qWXg3UGRZaEZlTHpWZTFKa1o1TmZpX1JjQWRzRnN3aGpR?oc=5",
-      "date": "Fri, 19 Jun 2026 13:28:56 GMT"
-    },
-    {
-      "id": "ae3cb0a953ef",
-      "title": "Siri AI, Snap Spectacles, and iPhone rumors, on the AppleInsider Podcast - AppleInsider",
-      "text": "Siri AI, Snap Spectacles, and iPhone rumors, on the AppleInsider Podcast AppleInsider",
-      "source": "AppleInsider",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOazFMMXhsVnpuandFYlFpTjVJVFpJVzY2NzhDdTlRZzZiVXpoa1dqamJpbV9vMEp1V0lmTXVPTXBJUERESk1ZbUhtanlXVXR1Vm4wd2JxcFhjaDJVTjkxRHJteVlJTTk4RVNFR2JfYm5FQVhTekZaQ2tRa3pTQjNTQmc5ZkdRYjBYVjF1MldIOFRNUGp2X0laMjc4UFVjbmdWX19KTzJNZ1RVQlJMNHpTNmlB?oc=5",
-      "date": "Fri, 19 Jun 2026 14:05:06 GMT"
     },
     {
       "id": "ea079955e197",
@@ -1488,22 +1461,31 @@
       "date": "Mon, 08 Jun 2026 07:00:00 GMT"
     },
     {
-      "id": "ec681675b43c",
-      "title": "Researchers drop checkm8-style BootROM exploit for A12 and A13 iPhones - The Register",
-      "text": "Researchers drop checkm8-style BootROM exploit for A12 and A13 iPhones The Register",
-      "source": "The Register",
+      "id": "7b622d70a4e7",
+      "title": "The latest iPhone Ultra leak leaves little to the imagination, includes a much-awaited iOS feature - Digital Trends",
+      "text": "The latest iPhone Ultra leak leaves little to the imagination, includes a much-awaited iOS feature Digital Trends",
+      "source": "Digital Trends",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPVTA2cDFXMGJlLW9KNVVfd3BmRlBNUVZRbkJOVFU4M0YtT1FMd2kxOWN0UnZUdVZWbWN0cUFxeVhxLXNvUlhUODdaYmdfbTFOQ0pVTzA2V3ZoVkxkSEcxcXFrbjZNWk9xdnZCUXNpbzZJTV9mQ2kwTXBKOHZXbnpId1Jtamc2b3NkMHBjdEV1OUI0ckRWMTRKOWNQZDRsYmJFR2VvNFNwR2llWGtDM1VxTFlNWVpCallwOUtwVWRiRS1VZnU1?oc=5",
-      "date": "Fri, 19 Jun 2026 16:02:00 GMT"
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOamhxTjd6ZEtmVFctWlVOaHRfbXpFRkRLX3pldFJMSEw5RVQ3UDF3ZGFQUThNQmhpWTdnTTdBY05aNGV4anl2U1Y1bjZwVHFHYmtRZzFyVjhOd2E1eExCQm5vWXJ6QnJtdWFfQmtVbmY0cHloRmFwUHRNRUdWbmxHWHlqWl92eGVpejNrb0h0Q0kwMUhzSXRheUhmZkxPQlgxWEJsVVkzUUJvUEE4VktoM0JYaU9qWXg3UGRZaEZlTHpWZTFKa1o1TmZpX1JjQWRzRnN3aGpR?oc=5",
+      "date": "Fri, 19 Jun 2026 13:28:56 GMT"
     },
     {
-      "id": "97f52573357f",
-      "title": "I spent a week with Siri AI — here are my honest pros and cons - Tom's Guide",
-      "text": "I spent a week with Siri AI — here are my honest pros and cons Tom's Guide",
-      "source": "Tom's Guide",
+      "id": "ae3cb0a953ef",
+      "title": "Siri AI, Snap Spectacles, and iPhone rumors, on the AppleInsider Podcast - AppleInsider",
+      "text": "Siri AI, Snap Spectacles, and iPhone rumors, on the AppleInsider Podcast AppleInsider",
+      "source": "AppleInsider",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPV3NiMWlLbnlfWlR6bmczbjdjeWxDV09UQk1vY1NBU0JTVGN1VmdNVGwxc0FhSVk3SWlsTDZNbWRiajMyeGYwa0tPSFFLNGd4VHN4ckY5Nzl1RGRmWnFnN2JkUHU4RHdLQ1dNY0g5NnR1ZFFQZzU2a3lDcm1VSTBNeG9GQlpHeHBhRl9PTnFIbWU3bVVTU2w1LWJOazNST1JQdE5n?oc=5",
-      "date": "Sat, 20 Jun 2026 06:01:44 GMT"
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOazFMMXhsVnpuandFYlFpTjVJVFpJVzY2NzhDdTlRZzZiVXpoa1dqamJpbV9vMEp1V0lmTXVPTXBJUERESk1ZbUhtanlXVXR1Vm4wd2JxcFhjaDJVTjkxRHJteVlJTTk4RVNFR2JfYm5FQVhTekZaQ2tRa3pTQjNTQmc5ZkdRYjBYVjF1MldIOFRNUGp2X0laMjc4UFVjbmdWX19KTzJNZ1RVQlJMNHpTNmlB?oc=5",
+      "date": "Fri, 19 Jun 2026 14:05:06 GMT"
+    },
+    {
+      "id": "a0ff6bffc0ea",
+      "title": "The iPhone 18 Pro is shaping up to be Apple’s best ever: here are the most exciting things we expect to see - stuff.tv",
+      "text": "The iPhone 18 Pro is shaping up to be Apple’s best ever: here are the most exciting things we expect to see stuff.tv",
+      "source": "stuff.tv",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQeXJ4ejE0cHFZaF9fYXRGRDdHR0RVWS1zdm9zSUo3aHRRRW94QTEzVldzbzk1UVpOMHBqaHNRSl91X1lkOUlhaUV1OHQ2Ul9UUHFyeE9xYUlhekwzTl9UNEtYQTJNY2xkX1dBUm1SNnJTUzhkSEVPbnFFYWV4QVNYSHF4dUdVZ2U0Y290NjhXZGRuMk1sUGYyNWxVZDFvRElTczlxd1JxYms5eURNSG5aVS1JN25kYnF2bmFEaGFLaWdXOVZ1R0J1b2wyU0E1Qnpmb2c?oc=5",
+      "date": "Fri, 19 Jun 2026 11:03:45 GMT"
     },
     {
       "id": "0636d3f501e2",
@@ -1524,6 +1506,33 @@
       "date": "Wed, 17 Jun 2026 23:28:21 GMT"
     },
     {
+      "id": "97f52573357f",
+      "title": "I spent a week with Siri AI — here are my honest pros and cons - Tom's Guide",
+      "text": "I spent a week with Siri AI — here are my honest pros and cons Tom's Guide",
+      "source": "Tom's Guide",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPV3NiMWlLbnlfWlR6bmczbjdjeWxDV09UQk1vY1NBU0JTVGN1VmdNVGwxc0FhSVk3SWlsTDZNbWRiajMyeGYwa0tPSFFLNGd4VHN4ckY5Nzl1RGRmWnFnN2JkUHU4RHdLQ1dNY0g5NnR1ZFFQZzU2a3lDcm1VSTBNeG9GQlpHeHBhRl9PTnFIbWU3bVVTU2w1LWJOazNST1JQdE5n?oc=5",
+      "date": "Sat, 20 Jun 2026 06:01:44 GMT"
+    },
+    {
+      "id": "ec681675b43c",
+      "title": "Researchers drop checkm8-style BootROM exploit for A12 and A13 iPhones - The Register",
+      "text": "Researchers drop checkm8-style BootROM exploit for A12 and A13 iPhones The Register",
+      "source": "The Register",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPVTA2cDFXMGJlLW9KNVVfd3BmRlBNUVZRbkJOVFU4M0YtT1FMd2kxOWN0UnZUdVZWbWN0cUFxeVhxLXNvUlhUODdaYmdfbTFOQ0pVTzA2V3ZoVkxkSEcxcXFrbjZNWk9xdnZCUXNpbzZJTV9mQ2kwTXBKOHZXbnpId1Jtamc2b3NkMHBjdEV1OUI0ckRWMTRKOWNQZDRsYmJFR2VvNFNwR2llWGtDM1VxTFlNWVpCallwOUtwVWRiRS1VZnU1?oc=5",
+      "date": "Fri, 19 Jun 2026 16:02:00 GMT"
+    },
+    {
+      "id": "0feeac7d0b4d",
+      "title": "iPhone Air With Dual Lens Camera Coming in Spring 2027 - MacRumors",
+      "text": "iPhone Air With Dual Lens Camera Coming in Spring 2027 MacRumors",
+      "source": "MacRumors",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE81VldlQy0xNjVYRV94VE1kRjFoc2hRT0Z5TlNHZFZhSVd2My02U0NJVWRQcjJWNGFrbllQQVYzOExBVi1DdFBTVzhhZWxnbEdUQXZySV9RUDEwSHRrQzhibkdmeTBEMVZDZkdXdjlNNkRHNE92Q3l2Rzhn?oc=5",
+      "date": "Wed, 17 Jun 2026 20:18:16 GMT"
+    },
+    {
       "id": "a8eec027e45b",
       "title": "iPhone's new Gemini experience puts Google's own Pixel phone to shame - How-To Geek",
       "text": "iPhone's new Gemini experience puts Google's own Pixel phone to shame How-To Geek",
@@ -1540,15 +1549,6 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPVFhrUWNIX2FmQ1Vram9heWRWUGhZWlZJY2pNWmVtSXhGcS1RT2RNS1FfRVJlYXd5cUJVVmN1MzE0bmh4TjgzbERfbm5vWkpsT3JhazFiNWdHZjgyRlVaX2MtNkhOazJiWkxIZkRwSzdHNXZFYWxMOFRFOFEtbzB1Rld4NkVRMjJlS200VjFIMjRpY254ZWNNOVJjemNZUVE?oc=5",
       "date": "Fri, 19 Jun 2026 15:39:30 GMT"
-    },
-    {
-      "id": "0feeac7d0b4d",
-      "title": "iPhone Air With Dual Lens Camera Coming in Spring 2027 - MacRumors",
-      "text": "iPhone Air With Dual Lens Camera Coming in Spring 2027 MacRumors",
-      "source": "MacRumors",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE81VldlQy0xNjVYRV94VE1kRjFoc2hRT0Z5TlNHZFZhSVd2My02U0NJVWRQcjJWNGFrbllQQVYzOExBVi1DdFBTVzhhZWxnbEdUQXZySV9RUDEwSHRrQzhibkdmeTBEMVZDZkdXdjlNNkRHNE92Q3l2Rzhn?oc=5",
-      "date": "Wed, 17 Jun 2026 20:18:16 GMT"
     },
     {
       "id": "aaadec9a0f6b",
@@ -1578,15 +1578,6 @@
       "date": "Fri, 19 Jun 2026 16:05:54 GMT"
     },
     {
-      "id": "3c2c1d5579cd",
-      "title": "Caviar's iPhone case is 3x pricier than the phone and adorned with a real T-Rex tooth fragment - Digital Trends",
-      "text": "Caviar's iPhone case is 3x pricier than the phone and adorned with a real T-Rex tooth fragment Digital Trends",
-      "source": "Digital Trends",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNdFBQRldlS0RsaFZxbWdySlpMTUtkUDVFWkJMUktvbzQyR3gzVVNqTjEwRHhWb3Z0M0lsQjFDYkRXRnFGNV9ydmpXSDB4VGUxcF9ibWhzRDQ4bzF5Q19BLW1KNEtMRHljU25qLVhxZkhCWmlVZ0lnQldVbTlFYWdiQ0lkMmJyaDNycVlkR2V5VS1HTTFXWE95cDZHbXN6WWxDNlJ3OFl6YzlpTTcySzZPazlCQmNTTk5oaXZuLURrUV9WbFJjMFUyakRybw?oc=5",
-      "date": "Fri, 19 Jun 2026 19:33:27 GMT"
-    },
-    {
       "id": "f53a4cfb8b01",
       "title": "Resizable iPhone apps show what the folding iPhone will be like [Gallery] - Cult of Mac",
       "text": "Resizable iPhone apps show what the folding iPhone will be like [Gallery] Cult of Mac",
@@ -1596,13 +1587,13 @@
       "date": "Fri, 19 Jun 2026 22:10:33 GMT"
     },
     {
-      "id": "86e10f96f260",
-      "title": "Apple’s iPhone 18 Pro could cost a lot more, thanks to the chip shortage - MobileSyrup",
-      "text": "Apple’s iPhone 18 Pro could cost a lot more, thanks to the chip shortage MobileSyrup",
-      "source": "MobileSyrup",
+      "id": "3c2c1d5579cd",
+      "title": "Caviar's iPhone case is 3x pricier than the phone and adorned with a real T-Rex tooth fragment - Digital Trends",
+      "text": "Caviar's iPhone case is 3x pricier than the phone and adorned with a real T-Rex tooth fragment Digital Trends",
+      "source": "Digital Trends",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNaTQwelVQWG9CSjNOOEZUX2xlYlJQdnRRZ1JGNHVtYUFSMEU5VGpCWFhYX0ltb1BPLTlOMlllQWN0LUZwcmU3R0MwYlgwZ3Jaa2VRTzFXTXg3XzhVZW05VjBqcjJxc0ZqUzlHRTF3RXlYdlpCeWZkNEFoMEZUa1luWVlveEZVWDBGc0VYeQ?oc=5",
-      "date": "Fri, 19 Jun 2026 18:53:00 GMT"
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNdFBQRldlS0RsaFZxbWdySlpMTUtkUDVFWkJMUktvbzQyR3gzVVNqTjEwRHhWb3Z0M0lsQjFDYkRXRnFGNV9ydmpXSDB4VGUxcF9ibWhzRDQ4bzF5Q19BLW1KNEtMRHljU25qLVhxZkhCWmlVZ0lnQldVbTlFYWdiQ0lkMmJyaDNycVlkR2V5VS1HTTFXWE95cDZHbXN6WWxDNlJ3OFl6YzlpTTcySzZPazlCQmNTTk5oaXZuLURrUV9WbFJjMFUyakRybw?oc=5",
+      "date": "Fri, 19 Jun 2026 19:33:27 GMT"
     },
     {
       "id": "a43861e123d4",
@@ -1612,6 +1603,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9tS3RON0lSTW4tMzhGZDBuQThvQjdqX3FHN04wOGVndXk2ZW9IMEhLMkVTNlJrR1FZOFBwekY4elktVDlIT3ppSUNhRG8yM1JReW9XZi1DMGlDcVVBeEdOUVdDV3ppZHlkT3RLU21rTkF3bE0wcTdERTE0dw?oc=5",
       "date": "Thu, 18 Jun 2026 14:44:00 GMT"
+    },
+    {
+      "id": "86e10f96f260",
+      "title": "Apple’s iPhone 18 Pro could cost a lot more, thanks to the chip shortage - MobileSyrup",
+      "text": "Apple’s iPhone 18 Pro could cost a lot more, thanks to the chip shortage MobileSyrup",
+      "source": "MobileSyrup",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNaTQwelVQWG9CSjNOOEZUX2xlYlJQdnRRZ1JGNHVtYUFSMEU5VGpCWFhYX0ltb1BPLTlOMlllQWN0LUZwcmU3R0MwYlgwZ3Jaa2VRTzFXTXg3XzhVZW05VjBqcjJxc0ZqUzlHRTF3RXlYdlpCeWZkNEFoMEZUa1luWVlveEZVWDBGc0VYeQ?oc=5",
+      "date": "Fri, 19 Jun 2026 18:53:00 GMT"
     },
     {
       "id": "03829693fed9",
@@ -1632,24 +1632,6 @@
       "date": "Thu, 18 Jun 2026 14:52:20 GMT"
     },
     {
-      "id": "a282c9c7f3c8",
-      "title": "Old iPhones Have a Hardware Flaw That Apple Can Never Actually Fix - Android Headlines",
-      "text": "Old iPhones Have a Hardware Flaw That Apple Can Never Actually Fix Android Headlines",
-      "source": "Android Headlines",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPVzFQb0V3MW1SdndWUERJOTB2NDFkbktCbkVaMXEyZkp0R3RBRTlqUE90Nm83V0FaWUZFbFp5NUZGN2U0eklUOXBjamtLem1JbndFZjNFT3JIdjhjbUdPZWFlZFV1WTJlZXVSMzhKeld3eF9fdEQ4c0lSeXdkV1F6X1VtQjFSVGlBRmMwbnM0SF90WVBBbkRtNnpIYS1hYl8w?oc=5",
-      "date": "Fri, 19 Jun 2026 16:17:28 GMT"
-    },
-    {
-      "id": "916fbaffdc25",
-      "title": "iPhone Air 2 Is Coming Spring 2027 — And It Finally Gets Camera Upgrade - Memeburn",
-      "text": "iPhone Air 2 Is Coming Spring 2027 — And It Finally Gets Camera Upgrade Memeburn",
-      "source": "Memeburn",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQSDNIUFRqYWR2SHZmUnJyZU9iZGloMVRfbDZCUGw5ckltaUZaV0tzZ0JROE4tcDFWWUlTcUwtVW9RYjNpeHJXOUhVd2JmZzBEUjBmNGN3bkJ3NXgxWGJvcFUxemxJT0dLSHkxdEJnTjRCbFU3amZrYUcwTUd2NTFMR3F1V2VNUjhnemlwcGVkMklCalgwZ0E?oc=5",
-      "date": "Fri, 19 Jun 2026 15:48:59 GMT"
-    },
-    {
       "id": "fb984c39f6a4",
       "title": "Tim Cook Says Apple Price Increases Are 'Unavoidable' Due to Memory Costs - MacRumors",
       "text": "Tim Cook Says Apple Price Increases Are 'Unavoidable' Due to Memory Costs MacRumors",
@@ -1668,13 +1650,22 @@
       "date": "Thu, 18 Jun 2026 16:00:00 GMT"
     },
     {
-      "id": "0d2579ecb531",
-      "title": "Apple Announces Major App Store Changes on iOS in Brazil - MacRumors",
-      "text": "Apple Announces Major App Store Changes on iOS in Brazil MacRumors",
-      "source": "MacRumors",
+      "id": "a282c9c7f3c8",
+      "title": "Old iPhones Have a Hardware Flaw That Apple Can Never Actually Fix - Android Headlines",
+      "text": "Old iPhones Have a Hardware Flaw That Apple Can Never Actually Fix Android Headlines",
+      "source": "Android Headlines",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQd3Bha3ROMTFabkxLQi1rVGUxY0s0RXR3OW5ydjNjeGV6UW1ET2kyYkNsMTRZOGpwOEl2RV9oWi1mdkdkdEplSWQyZTFJaXBRWFllVzZreTQ2R2pIV2hVWG43WXBZZEQyZWpMalo1Q2dQWjRXNmJPZUJYS0J4SWpRYktzWnd0ZlhZWUpMQWZB?oc=5",
-      "date": "Thu, 18 Jun 2026 15:50:43 GMT"
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPVzFQb0V3MW1SdndWUERJOTB2NDFkbktCbkVaMXEyZkp0R3RBRTlqUE90Nm83V0FaWUZFbFp5NUZGN2U0eklUOXBjamtLem1JbndFZjNFT3JIdjhjbUdPZWFlZFV1WTJlZXVSMzhKeld3eF9fdEQ4c0lSeXdkV1F6X1VtQjFSVGlBRmMwbnM0SF90WVBBbkRtNnpIYS1hYl8w?oc=5",
+      "date": "Fri, 19 Jun 2026 16:17:28 GMT"
+    },
+    {
+      "id": "916fbaffdc25",
+      "title": "iPhone Air 2 Is Coming Spring 2027 — And It Finally Gets Camera Upgrade - Memeburn",
+      "text": "iPhone Air 2 Is Coming Spring 2027 — And It Finally Gets Camera Upgrade Memeburn",
+      "source": "Memeburn",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQSDNIUFRqYWR2SHZmUnJyZU9iZGloMVRfbDZCUGw5ckltaUZaV0tzZ0JROE4tcDFWWUlTcUwtVW9RYjNpeHJXOUhVd2JmZzBEUjBmNGN3bkJ3NXgxWGJvcFUxemxJT0dLSHkxdEJnTjRCbFU3amZrYUcwTUd2NTFMR3F1V2VNUjhnemlwcGVkMklCalgwZ0E?oc=5",
+      "date": "Fri, 19 Jun 2026 15:48:59 GMT"
     },
     {
       "id": "c99d4014ccfb",
@@ -1684,6 +1675,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5TQklBd09yeVpiSWw5Qm5jZ2NydTBDdzc1N2Z6R3czTHVYczllNGVHTV9HTGJEV01VQTdnUnJ6WkY1SGVNRnUzdGRTdHBMTS1GTEdaT1hCV3VYeGE3LTFKR1EwYnFRVFBoY3o0M3BiTU5OVXdldHc?oc=5",
       "date": "Thu, 18 Jun 2026 18:41:28 GMT"
+    },
+    {
+      "id": "0d2579ecb531",
+      "title": "Apple Announces Major App Store Changes on iOS in Brazil - MacRumors",
+      "text": "Apple Announces Major App Store Changes on iOS in Brazil MacRumors",
+      "source": "MacRumors",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQd3Bha3ROMTFabkxLQi1rVGUxY0s0RXR3OW5ydjNjeGV6UW1ET2kyYkNsMTRZOGpwOEl2RV9oWi1mdkdkdEplSWQyZTFJaXBRWFllVzZreTQ2R2pIV2hVWG43WXBZZEQyZWpMalo1Q2dQWjRXNmJPZUJYS0J4SWpRYktzWnd0ZlhZWUpMQWZB?oc=5",
+      "date": "Thu, 18 Jun 2026 15:50:43 GMT"
     },
     {
       "id": "4e17ca7459e0",
@@ -1713,33 +1713,6 @@
       "date": "Thu, 18 Jun 2026 21:17:00 GMT"
     },
     {
-      "id": "c9eb7fbb66f1",
-      "title": "iOS 27 Apple Wallet Features: What’s New for iPhone Users - The Mac Observer",
-      "text": "iOS 27 Apple Wallet Features: What’s New for iPhone Users The Mac Observer",
-      "source": "The Mac Observer",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNSGI5ckJoUkR5eDlVZ2Q4SHhrM1l2Y0JQM0ZEM2hicWJhUklWbzU0Y21DM0ZGdXJodVRXeFc1eXRIZk9YbkU5WVRDOU9tcFhlS2hSQXAzal9JTjkxQVRqaUo1YV9ONFB3UWxZT1FhX3Zwd21SbnduSFcyZGZyaWM2RFFFUms3MUNWVlpRbmFjbW9udTBFTlI5WXZqX21rdk1y?oc=5",
-      "date": "Fri, 19 Jun 2026 23:00:50 GMT"
-    },
-    {
-      "id": "f746bbab269a",
-      "title": "Switching to Android is now easier than ever — thanks, in part, to Apple - MakeUseOf",
-      "text": "Switching to Android is now easier than ever — thanks, in part, to Apple MakeUseOf",
-      "source": "MakeUseOf",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQSUJ0QXdONUw1eXZ4Yk9pN2hXMG5ueVlvdGpmeTRuZlMwMi1KU0pMcm5fNWZOd0FodzNIcktmVHV0Y1c2MzlfektOMDBLem1wcjB2dThOclRzLVV3MV9RbWQ0QUlIR1k5eGdaUE9Zd0J2dzNLblRXUmRST21JMUtxQjFFM3c1OTV4Q1Z3ZEdPZTZZWDdZdGZaVC1kMA?oc=5",
-      "date": "Fri, 19 Jun 2026 19:35:23 GMT"
-    },
-    {
-      "id": "454aece6b9c9",
-      "title": "iPhone factory right back in the spotlight as India opens new contamination probe - AppleInsider",
-      "text": "iPhone factory right back in the spotlight as India opens new contamination probe AppleInsider",
-      "source": "AppleInsider",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNaURHdWFrLVJzTVViOTJlLTVqYU5UekRXWEdpWGtfalFBcWRjODExR2hrUFhLQUFodllrZ2diV2RXSUI2TDVQZDY0RnpYNDF3VjRtdmlYOTBDYkVjQWR0bUdac3ZHT09DTG9JT0ZaVDc3bGhsSkhWODR3b002Tld1QXBqNHBWbEY2TW1SOEl3QzNuamFrbFVENndkUlhoTzVGQjdqN3hRRnBva3J4UnJkOTNGTEF2QU4wVGxQaFIzTlJFUQ?oc=5",
-      "date": "Fri, 19 Jun 2026 12:06:00 GMT"
-    },
-    {
       "id": "2fcb37c4b1c6",
       "title": "All the foldable iPhone Ultra hints in the iOS 27 beta - Mashable",
       "text": "All the foldable iPhone Ultra hints in the iOS 27 beta Mashable",
@@ -1756,6 +1729,24 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOa0hudVRFbnVzTW1zZlV4eXV1bWpsSVFzbnVwNy1URDRMdnpodXk4VUNqZUNJNkZpNVZYRmZIbmd5MFpaUUdyUnpKc0puSkQ5VmxoOFZPT1JyekFDQ1dxcGlzS3A3T2p1NEJ3ckd0U1ZKQ1ZjcDcyaE13akpmNldkOUhJem1SQjlhY2EtanU3NUVKaFRmRWhqQ1lqSFR2MEd4bUpwVUtaTHpXalJYTGxXTQ?oc=5",
       "date": "Thu, 21 May 2026 07:00:00 GMT"
+    },
+    {
+      "id": "c9eb7fbb66f1",
+      "title": "iOS 27 Apple Wallet Features: What’s New for iPhone Users - The Mac Observer",
+      "text": "iOS 27 Apple Wallet Features: What’s New for iPhone Users The Mac Observer",
+      "source": "The Mac Observer",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNSGI5ckJoUkR5eDlVZ2Q4SHhrM1l2Y0JQM0ZEM2hicWJhUklWbzU0Y21DM0ZGdXJodVRXeFc1eXRIZk9YbkU5WVRDOU9tcFhlS2hSQXAzal9JTjkxQVRqaUo1YV9ONFB3UWxZT1FhX3Zwd21SbnduSFcyZGZyaWM2RFFFUms3MUNWVlpRbmFjbW9udTBFTlI5WXZqX21rdk1y?oc=5",
+      "date": "Fri, 19 Jun 2026 23:00:50 GMT"
+    },
+    {
+      "id": "f746bbab269a",
+      "title": "Switching to Android is now easier than ever — thanks, in part, to Apple - MakeUseOf",
+      "text": "Switching to Android is now easier than ever — thanks, in part, to Apple MakeUseOf",
+      "source": "MakeUseOf",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQSUJ0QXdONUw1eXZ4Yk9pN2hXMG5ueVlvdGpmeTRuZlMwMi1KU0pMcm5fNWZOd0FodzNIcktmVHV0Y1c2MzlfektOMDBLem1wcjB2dThOclRzLVV3MV9RbWQ0QUlIR1k5eGdaUE9Zd0J2dzNLblRXUmRST21JMUtxQjFFM3c1OTV4Q1Z3ZEdPZTZZWDdZdGZaVC1kMA?oc=5",
+      "date": "Fri, 19 Jun 2026 19:35:23 GMT"
     },
     {
       "id": "931d93ec81b1",
@@ -1776,13 +1767,22 @@
       "date": "Thu, 18 Jun 2026 19:28:40 GMT"
     },
     {
-      "id": "87a1409635d9",
-      "title": "The iPhone 18 Pro's Price Could Jump $200, and Here's the Reason Why - Android Headlines",
-      "text": "The iPhone 18 Pro's Price Could Jump $200, and Here's the Reason Why Android Headlines",
-      "source": "Android Headlines",
+      "id": "7970ec17fdc4",
+      "title": "Apple One is getting better in iOS 27, here’s what’s new - 9to5Mac",
+      "text": "Apple One is getting better in iOS 27, here’s what’s new 9to5Mac",
+      "source": "9to5Mac",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOX2NpQUtDS05hYnB5UzlJaXl0U210SmFqWjYzMWJjTndzX3I3TzNzVFdtREVWMG5Hd0RNbDV0UkFBT2N0WGZUUTZ1UmRqNDU5QmZPbGpudjhXeF9XZFlkVEN1cGd4djlqUXVfUnlVeEtaZW1tN2xGc1ljVldwWFVzMUZZd0RXT1JNWVFFUDM4eFJSZjlyN203dDhrdG1VejFORVJXR0FYRU9sbVJUaF9B?oc=5",
-      "date": "Fri, 19 Jun 2026 12:47:30 GMT"
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOOFVzcEJqNWdfS0FWT0I4dWFReEFLQlNtblRrd0xzcUNYd1lEWDBNcUpYYlNZdVh6RGYwYkh0TGpubzl4bG5yM2lTYy1pN2lMRE5DcUVJT2Q2cWRnZkpjZW1sMGdzUXpqZ0JMOHZ0d0NQNUlXQmE4U19RbmpOejBRLUtpLVgzRFQzZ0FFR0FR?oc=5",
+      "date": "Wed, 17 Jun 2026 14:59:00 GMT"
+    },
+    {
+      "id": "5209d19074a7",
+      "title": "Apple’s foldable iPhone reportedly faces a major hurdle ahead of launch - Sportskeeda Tech",
+      "text": "Apple’s foldable iPhone reportedly faces a major hurdle ahead of launch Sportskeeda Tech",
+      "source": "Sportskeeda Tech",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQUEdGWHByWTJ4clQzQl9Dc25kNUpYN25PaFpWQnVMSW4wLWlZMDhoeHl6Y1hERV9zaWp4SUY5U2VLWmcxNmFMOUhpRVBUUkdDeE16NkJMUFhieEh6M0RwZUFnTHRCb3JCV2pSaGJObHpHVEdUQ1F2ZWp3UGFuSjZnaElaZHRKc05Mazh5dXJYVmFOWGNCQnlROXhZVXJlOXZCOXVWSFJR?oc=5",
+      "date": "Sat, 20 Jun 2026 10:37:33 GMT"
     },
     {
       "id": "55c7cce00818",
@@ -1893,15 +1893,6 @@
       "date": "Wed, 17 Jun 2026 19:41:33 GMT"
     },
     {
-      "id": "c87c5109d8e2",
-      "title": "Snap quietly fixed the biggest problem with Apple Vision Pro, and I'm excited by what's coming - t3.com",
-      "text": "Snap quietly fixed the biggest problem with Apple Vision Pro, and I'm excited by what's coming t3.com",
-      "source": "t3.com",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPb0doTU9MdHV0eFZqZms5Um9vdExnZE5DLVJDNFM0eWJkY2E3V0x0STFzWTR1alRMTTVLWjd4QThvdWpmdnN2T2FXSDFqWlJ1TGxzR3JwU3JweXg3R2ZwX0NWVXNkdXBTRG9JbHRONHhNdmZFU25wUVB5TzdmbUxYLXAxRVhKSW1fSloxcHJJSHBFVmllTHliMktMZGhlVmhNQlBkeElqZ1g3UDV6OWFTQ1RNMXBRbXphMVE?oc=5",
-      "date": "Fri, 19 Jun 2026 15:00:00 GMT"
-    },
-    {
       "id": "569b90cdd464",
       "title": "Apple Vision Pro's biggest problem isn't addressed in visionOS 27, but progress is progress - AppleInsider",
       "text": "Apple Vision Pro's biggest problem isn't addressed in visionOS 27, but progress is progress AppleInsider",
@@ -1909,6 +1900,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOZDZKT0pFd0tDbVBjNGM0SmFQSGxvUl9XaktpTnBRVEdSaGtIM1l2aHhZOWFZQXZrVU5saDN2T2d2dWQxNXVCbEN1dFNpM2VTek1UanRkM2N1aXY4aGdqY25tZXBhSWxmTUVSVlBTdF9HSjJpcWtCVktReTNab0lVWjNLSWYyTU4xRzA2VTlNdEZ2eUZqT1pMU0R4NUVQNk8xckY4VTVBNXp6bldJWXhJM1BQRFZEM0VJbzlwZXNObHhuN3YwaWpTWFJiYw?oc=5",
       "date": "Thu, 11 Jun 2026 07:00:00 GMT"
+    },
+    {
+      "id": "c87c5109d8e2",
+      "title": "Snap quietly fixed the biggest problem with Apple Vision Pro, and I'm excited by what's coming - t3.com",
+      "text": "Snap quietly fixed the biggest problem with Apple Vision Pro, and I'm excited by what's coming t3.com",
+      "source": "t3.com",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPb0doTU9MdHV0eFZqZms5Um9vdExnZE5DLVJDNFM0eWJkY2E3V0x0STFzWTR1alRMTTVLWjd4QThvdWpmdnN2T2FXSDFqWlJ1TGxzR3JwU3JweXg3R2ZwX0NWVXNkdXBTRG9JbHRONHhNdmZFU25wUVB5TzdmbUxYLXAxRVhKSW1fSloxcHJJSHBFVmllTHliMktMZGhlVmhNQlBkeElqZ1g3UDV6OWFTQ1RNMXBRbXphMVE?oc=5",
+      "date": "Fri, 19 Jun 2026 15:00:00 GMT"
     },
     {
       "id": "7981b4d76522",
@@ -2325,15 +2325,6 @@
       "date": "Wed, 27 May 2026 07:00:00 GMT"
     },
     {
-      "id": "01a3ee63c7bf",
-      "title": "X-Plane & iRacing PC VR Streaming Clients Launched For Apple Vision Pro - UploadVR",
-      "text": "X-Plane & iRacing PC VR Streaming Clients Launched For Apple Vision Pro UploadVR",
-      "source": "UploadVR",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQMmdra21UNTZ0LTQ4dlBjRU50aEh1MFNrcWdZaEMyVnNZMU1Pa0ItVS1ULWJWZkZGZ3NFNm9FYlBuUlZaUWVhVnFnSjdfQWcxN2FzSkxCSVozMzJsalI0LXo1bUhBQ2hBNVZGTkk2MVhfOV9kcG52MVdZOVc2dW5BSmRGbTlYMkRIemVYT015NUNMUl9jX0E?oc=5",
-      "date": "Wed, 03 Jun 2026 07:00:00 GMT"
-    },
-    {
       "id": "3f7990dbd268",
       "title": "10 Hacks Every Apple Vision Pro User Should Know - Lifehacker",
       "text": "10 Hacks Every Apple Vision Pro User Should Know Lifehacker",
@@ -2343,13 +2334,13 @@
       "date": "Wed, 08 Apr 2026 07:00:00 GMT"
     },
     {
-      "id": "cc0a02ead7dd",
-      "title": "Apple makes quiet AI move that will change iPhones, Vision Pro - thestreet.com",
-      "text": "Apple makes quiet AI move that will change iPhones, Vision Pro thestreet.com",
-      "source": "thestreet.com",
+      "id": "01a3ee63c7bf",
+      "title": "X-Plane & iRacing PC VR Streaming Clients Launched For Apple Vision Pro - UploadVR",
+      "text": "X-Plane & iRacing PC VR Streaming Clients Launched For Apple Vision Pro UploadVR",
+      "source": "UploadVR",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNV3JYSVNVSTZUSW9HaXpHMDBXS1VYQnhwbUJBenRXd0xKX1RJbThERjRpUWJrOENVblAzWUpUZ1pEdGo4YlFmYXVENTZDQVFzOEtPLVJwWGVIZGsyNF8wX3FQNG9GT0JKdWpFSHlHazlVX0c1Z2ZkN3E5UHUzR1k3YzFLdDNoWkZHSnJoTlpKYWxiU3lzMGtMMVlOVUVFUQ?oc=5",
-      "date": "Tue, 26 May 2026 07:00:00 GMT"
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQMmdra21UNTZ0LTQ4dlBjRU50aEh1MFNrcWdZaEMyVnNZMU1Pa0ItVS1ULWJWZkZGZ3NFNm9FYlBuUlZaUWVhVnFnSjdfQWcxN2FzSkxCSVozMzJsalI0LXo1bUhBQ2hBNVZGTkk2MVhfOV9kcG52MVdZOVc2dW5BSmRGbTlYMkRIemVYT015NUNMUl9jX0E?oc=5",
+      "date": "Wed, 03 Jun 2026 07:00:00 GMT"
     },
     {
       "id": "44da083d4426",
@@ -2359,6 +2350,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPYWgwc0JOMGxMNFllWlY3elRHYVpoZkxZeE1JOGNWMk1ETlZDb2RSUzdRaS1KcTVfdHRMS2h1eUFoZVVkYS1fQ3ZKbmVJanl3WTh3Y3ZrT3hqZEZUNXR6MGpmZktqcUUwV25QajA1X3k5TnI2bVc5UWt1bGtzLURzclExV24zdHNLRF9iX0h2NVU2R19qbVN2MkRhbk5HbHM?oc=5",
       "date": "Mon, 23 Feb 2026 08:00:00 GMT"
+    },
+    {
+      "id": "cc0a02ead7dd",
+      "title": "Apple makes quiet AI move that will change iPhones, Vision Pro - thestreet.com",
+      "text": "Apple makes quiet AI move that will change iPhones, Vision Pro thestreet.com",
+      "source": "thestreet.com",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNV3JYSVNVSTZUSW9HaXpHMDBXS1VYQnhwbUJBenRXd0xKX1RJbThERjRpUWJrOENVblAzWUpUZ1pEdGo4YlFmYXVENTZDQVFzOEtPLVJwWGVIZGsyNF8wX3FQNG9GT0JKdWpFSHlHazlVX0c1Z2ZkN3E5UHUzR1k3YzFLdDNoWkZHSnJoTlpKYWxiU3lzMGtMMVlOVUVFUQ?oc=5",
+      "date": "Tue, 26 May 2026 07:00:00 GMT"
     },
     {
       "id": "efef54bf1a8f",
@@ -2379,13 +2379,13 @@
       "date": "Tue, 26 May 2026 07:00:00 GMT"
     },
     {
-      "id": "5e88d6de1826",
-      "title": "Snap's New Specs Are Chunky, Pricey and I Really Need to Try Them - CNET",
-      "text": "Snap's New Specs Are Chunky, Pricey and I Really Need to Try Them CNET",
-      "source": "CNET",
+      "id": "86bae7c64431",
+      "title": "How the Vision Pro Rollout Inflamed Tensions at Apple - WIRED",
+      "text": "How the Vision Pro Rollout Inflamed Tensions at Apple WIRED",
+      "source": "WIRED",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOQkZJTDM4MHFMNFFYbGI0RE1ZbElHMmpGczFLZnA3WXVMQ24wWE9MUzFJWVRicldSLW42X3d1dFlrOFRIcE1kaUQ1Q0xMSVlfb2l1MElIRE1rMEhqRXVJc3YwaUtjY0tDYXZ5ZEhqS1RnZ2NUcDc3bXlNNHNZbjc2MGk5S2FoMmVzN3VGYVdZLVF3NFMydTVuZG5mcllfeHB3cE5v?oc=5",
-      "date": "Tue, 16 Jun 2026 16:50:00 GMT"
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPc2hHRXAxOW1qQWE3Rlh2ZURSbWQ2RjFqR2QyS1kydHBXZkp2bGZmTXdFczFreVNXNW85MnZabGJBMGZlbDlSMW9tSlZPbXJ4eWdHMmJqVE81aE16dWlfUHBXcVFRaHJjcjlSa2I3YmMzWVZKZmR5VjJMeGFiSTVfcXE5QWxCQQ?oc=5",
+      "date": "Tue, 07 Apr 2026 07:00:00 GMT"
     },
     {
       "id": "0d1dc7bae626",
@@ -2397,13 +2397,13 @@
       "date": "Tue, 16 Jun 2026 12:30:10 GMT"
     },
     {
-      "id": "86bae7c64431",
-      "title": "How the Vision Pro Rollout Inflamed Tensions at Apple - WIRED",
-      "text": "How the Vision Pro Rollout Inflamed Tensions at Apple WIRED",
-      "source": "WIRED",
+      "id": "5e88d6de1826",
+      "title": "Snap's New Specs Are Chunky, Pricey and I Really Need to Try Them - CNET",
+      "text": "Snap's New Specs Are Chunky, Pricey and I Really Need to Try Them CNET",
+      "source": "CNET",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPc2hHRXAxOW1qQWE3Rlh2ZURSbWQ2RjFqR2QyS1kydHBXZkp2bGZmTXdFczFreVNXNW85MnZabGJBMGZlbDlSMW9tSlZPbXJ4eWdHMmJqVE81aE16dWlfUHBXcVFRaHJjcjlSa2I3YmMzWVZKZmR5VjJMeGFiSTVfcXE5QWxCQQ?oc=5",
-      "date": "Tue, 07 Apr 2026 07:00:00 GMT"
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOQkZJTDM4MHFMNFFYbGI0RE1ZbElHMmpGczFLZnA3WXVMQ24wWE9MUzFJWVRicldSLW42X3d1dFlrOFRIcE1kaUQ1Q0xMSVlfb2l1MElIRE1rMEhqRXVJc3YwaUtjY0tDYXZ5ZEhqS1RnZ2NUcDc3bXlNNHNZbjc2MGk5S2FoMmVzN3VGYVdZLVF3NFMydTVuZG5mcllfeHB3cE5v?oc=5",
+      "date": "Tue, 16 Jun 2026 16:50:00 GMT"
     },
     {
       "id": "db15608a8dfe",
@@ -2478,15 +2478,6 @@
       "date": "Thu, 30 Apr 2026 07:00:00 GMT"
     },
     {
-      "id": "b413c8e97753",
-      "title": "9 Over Hyped Tech Gadgets That Failed On Arrival - bgr.com",
-      "text": "9 Over Hyped Tech Gadgets That Failed On Arrival bgr.com",
-      "source": "bgr.com",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBJbG9hS0N6SGF5TG1YMWV3SHZKS3VhUHRQUnR4VkNMd2ZDYkgyeGIyWFRYZ3VTWkFYWV9nTElBcmlxUWZ1cTItRjJHZXZld1ltbGUybGFUbHNHZVZCX3FKaHB5TGN4Qnc?oc=5",
-      "date": "Mon, 15 Jun 2026 18:02:00 GMT"
-    },
-    {
       "id": "73b345636217",
       "title": "Nvidia builds bridge to Apple Vision Pro - AEC Magazine",
       "text": "Nvidia builds bridge to Apple Vision Pro AEC Magazine",
@@ -2503,6 +2494,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOcDk3bEhSNmFaS3RtY2EyTnpRbnVnWXk1SDJOQ0lzeXpDQkV4QjBKeEFfeXZsVHNQR2lEbkR0QUZuMElDeUlxMXlQcVNvSVpDb0VaRVBZay1RdFlkVkhEbVAyenU4SDJ3MGZaWDJpVEh0dzZLOFZGdVBKWnhTclRabl9ualZGUklMN0g3SmpiSVlkeGlxazRwQUdkS2JRMkowNUE?oc=5",
       "date": "Thu, 09 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "id": "b413c8e97753",
+      "title": "9 Over Hyped Tech Gadgets That Failed On Arrival - bgr.com",
+      "text": "9 Over Hyped Tech Gadgets That Failed On Arrival bgr.com",
+      "source": "bgr.com",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBJbG9hS0N6SGF5TG1YMWV3SHZKS3VhUHRQUnR4VkNMd2ZDYkgyeGIyWFRYZ3VTWkFYWV9nTElBcmlxUWZ1cTItRjJHZXZld1ltbGUybGFUbHNHZVZCX3FKaHB5TGN4Qnc?oc=5",
+      "date": "Mon, 15 Jun 2026 18:02:00 GMT"
     },
     {
       "id": "39ccc80f9f29",
@@ -2730,6 +2730,15 @@
       "date": "Thu, 11 Jun 2026 07:00:00 GMT"
     },
     {
+      "id": "931d93ec81b1",
+      "title": "Fake pictures, obsolescence, and an out-of-reach iPhone 18 Pro: the gift of AI to iOS users - PhoneArena",
+      "text": "Fake pictures, obsolescence, and an out-of-reach iPhone 18 Pro: the gift of AI to iOS users PhoneArena",
+      "source": "PhoneArena",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOdlJ6Tml1OGlKV1ZfLUF6MG9wSEZrOHhoX2VWM19tbU1wbzV6MWx6Sm9JY3Rpc2dfMnVBZFlQQU9ycEk0UGVvNnlLRE5IRkJXTWVuYUwycU1YTXdRaDhvRjBLRE0wM1R6NUpxVkxfQVVSLXpfcFlfUlhmeTJkOUM2bTR4bjVpQQ?oc=5",
+      "date": "Thu, 18 Jun 2026 20:57:14 GMT"
+    },
+    {
       "id": "1222bf0c09af",
       "title": "Apple to launch AI-juiced AirPods and sunglasses, going head-to-head with Meta - New York Post",
       "text": "Apple to launch AI-juiced AirPods and sunglasses, going head-to-head with Meta New York Post",
@@ -2766,15 +2775,6 @@
       "date": "Thu, 28 May 2026 07:00:00 GMT"
     },
     {
-      "id": "ef833ca7e294",
-      "title": "Former Google and Apple Researchers Launch a Startup to Build AI’s Missing Feedback Loop - WIRED",
-      "text": "Former Google and Apple Researchers Launch a Startup to Build AI’s Missing Feedback Loop WIRED",
-      "source": "WIRED",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNRkNNS0pUaXczNnRQYVpBZjV0NFdPbWdUYkRvcEJQR3I1NmZoWTh2MzlEXzJkVVd4N3RyWDF2emQxeUJqY3JOT2x2Sm9fQlJPQ1AySHpqbjBwWlVZSnE4TWJnbG5qamVyTjg3aWl5NFVNa2Q2WWZVckpKRTVrcnFxV2dUOEZveThkb0dqWW5wcldXaFlWQjlWamtnN2U1djg4YUd6NTZBUzZENTg?oc=5",
-      "date": "Wed, 27 May 2026 07:00:00 GMT"
-    },
-    {
       "id": "65ced8b8be64",
       "title": "Exclusive | Apple to Raise Prices Due to Memory Chip Crunch, Tim Cook Says - WSJ",
       "text": "Exclusive | Apple to Raise Prices Due to Memory Chip Crunch, Tim Cook Says WSJ",
@@ -2782,6 +2782,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1MeGFxMm9OUVN6SGxGaWZTSWFwblJ1QU5xRXN3WktXMkVmSVVuaGRldGlpYVVKbFVxR2Zqc09maHFaaTZ3WlJYc3otUENlZXMtcG1aNklCcFVkVVVGZWVBNVFKcTl3TGtGWUl5V0ZzUzFaRlpRY0R2bw?oc=5",
       "date": "Wed, 17 Jun 2026 21:00:00 GMT"
+    },
+    {
+      "id": "f88a9312d57f",
+      "title": "Apple Launches Core AI for Apple-Silicon Optimized On-Device Generative AI - infoq.com",
+      "text": "Apple Launches Core AI for Apple-Silicon Optimized On-Device Generative AI infoq.com",
+      "source": "infoq.com",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5Cd2pEbzJEekZBeXJQZ3o0SUpkT2wtYW5BM3ctNVlpSUh4eVYwRWhETlNmTXI2YUdRVXIwQjF6YVdOYmdQbGlQNUk5ZTN3OW5iLWFUQTdBTnkxN3E5R2RqLUpfQzQ?oc=5",
+      "date": "Sat, 20 Jun 2026 11:00:13 GMT"
     },
     {
       "id": "4a70c7e22593",
@@ -2901,15 +2910,6 @@
       "date": "Mon, 08 Jun 2026 07:00:00 GMT"
     },
     {
-      "id": "ee9e6591bda0",
-      "title": "Apple iPhone Air 2 Slated For Spring 2027 With Dual-Camera Upgrade - Forbes",
-      "text": "Apple iPhone Air 2 Slated For Spring 2027 With Dual-Camera Upgrade Forbes",
-      "source": "Forbes",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNbGdHSGxLZlUxU0VlWDBIZVpWcWxhQUVVWmk5ekJzc0FsN09aRWZSb2FxTWloY2dobW1Qb1NqWVJqVDBYWmFfNTRrWU1FRTA0Szd3ZTdwVFpILTczRTNyRFNfd2JlNVVsWnhoYzFJaVVwWE1sbnd5UmVVRDRjSWRUNW1RdWhpTWtmYUZ1dXptZnhLWGpQNG5rb0p0X20xYUlmWXV1SDltazJ1ekdXSVdfaG91VmpNT3FEWS1xTnNn?oc=5",
-      "date": "Thu, 18 Jun 2026 21:00:53 GMT"
-    },
-    {
       "id": "1808f33fe035",
       "title": "Apple Intelligence brings powerful AI capabilities into everyday experiences - Apple",
       "text": "Apple Intelligence brings powerful AI capabilities into everyday experiences Apple",
@@ -2926,6 +2926,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOYXJCVHVtdnRLcWJUbU5yaGZIbnJnaFVfUlFZdUhBYXoxQmRVQTB5a1lTb3lpQktQVHY2TXo3UFRtTFRsSi1Sc3BJcTF6VHhyUlVxNmRESlJFUnMzVkJyMEoxWDAyYndzUXNpbjdHR0ZFMEZJNmp5TTRfSFNGdHlYcEZhaDhiRjFxb0xaaHJKQ0Z0dlZHdHBWdkdvYUpWOGtXem5idjZESElnVkhD?oc=5",
       "date": "Mon, 08 Jun 2026 07:00:00 GMT"
+    },
+    {
+      "id": "ee9e6591bda0",
+      "title": "Apple iPhone Air 2 Slated For Spring 2027 With Dual-Camera Upgrade - Forbes",
+      "text": "Apple iPhone Air 2 Slated For Spring 2027 With Dual-Camera Upgrade Forbes",
+      "source": "Forbes",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNbGdHSGxLZlUxU0VlWDBIZVpWcWxhQUVVWmk5ekJzc0FsN09aRWZSb2FxTWloY2dobW1Qb1NqWVJqVDBYWmFfNTRrWU1FRTA0Szd3ZTdwVFpILTczRTNyRFNfd2JlNVVsWnhoYzFJaVVwWE1sbnd5UmVVRDRjSWRUNW1RdWhpTWtmYUZ1dXptZnhLWGpQNG5rb0p0X20xYUlmWXV1SDltazJ1ekdXSVdfaG91VmpNT3FEWS1xTnNn?oc=5",
+      "date": "Thu, 18 Jun 2026 21:00:53 GMT"
     },
     {
       "id": "3ed155234420",
@@ -2991,15 +3000,6 @@
       "date": "Mon, 08 Jun 2026 07:00:00 GMT"
     },
     {
-      "id": "50665896ef5d",
-      "title": "Apple’s AI Plans Are Finally Taking Shape. Here’s What That Means for AAPL Stock. - Yahoo Finance",
-      "text": "Apple’s AI Plans Are Finally Taking Shape. Here’s What That Means for AAPL Stock. Yahoo Finance",
-      "source": "Yahoo Finance",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVDdQY1NESFhJVlhROWFuNTk5MTRXYTZJMFhhVDBFazJYdkxmSmVyWnFyWnNLdl9oQUkyckRmb2FhaG11SDdJM0VPdXo2VDltSEI1QWE1U1RIU3VyV2RzWUxFUDhqLXkxRERIYW96X1ZScHVkeDBEQS1oM0ZLYXltdTMxUkVYVGVKUXpVRGpNMTJZS0R2cktPbA?oc=5",
-      "date": "Mon, 15 Jun 2026 16:47:20 GMT"
-    },
-    {
       "id": "1b79845f6d32",
       "title": "Apple prepares second-generation iPhone Air for spring 2027 - Fortune",
       "text": "Apple prepares second-generation iPhone Air for spring 2027 Fortune",
@@ -3007,6 +3007,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBBMVJVV3NNbjZwaFFzdkw5elk5YjQ4d3BoMTdyNmgzX2Q0YVdnTmJ6alBzRlVuS014M0pQWnhac3lSWjREcnd5UHVNTU04YzFmU2piaTZFQno2TVkxX19hNTlSTlNhRDlpWHc3cmIxQmZ1cnZ2WDFhOGh3?oc=5",
       "date": "Wed, 17 Jun 2026 20:54:00 GMT"
+    },
+    {
+      "id": "50665896ef5d",
+      "title": "Apple’s AI Plans Are Finally Taking Shape. Here’s What That Means for AAPL Stock. - Yahoo Finance",
+      "text": "Apple’s AI Plans Are Finally Taking Shape. Here’s What That Means for AAPL Stock. Yahoo Finance",
+      "source": "Yahoo Finance",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVDdQY1NESFhJVlhROWFuNTk5MTRXYTZJMFhhVDBFazJYdkxmSmVyWnFyWnNLdl9oQUkyckRmb2FhaG11SDdJM0VPdXo2VDltSEI1QWE1U1RIU3VyV2RzWUxFUDhqLXkxRERIYW96X1ZScHVkeDBEQS1oM0ZLYXltdTMxUkVYVGVKUXpVRGpNMTJZS0R2cktPbA?oc=5",
+      "date": "Mon, 15 Jun 2026 16:47:20 GMT"
     },
     {
       "id": "4b1aedada45c",
@@ -3036,15 +3045,6 @@
       "date": "Thu, 18 Jun 2026 05:34:16 GMT"
     },
     {
-      "id": "a1a014a208c3",
-      "title": "Why Europe’s demands on Apple AI put your data at risk - Computerworld",
-      "text": "Why Europe’s demands on Apple AI put your data at risk Computerworld",
-      "source": "Computerworld",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQOVVHR0VTeTVYNFcyTmtGU0hlMlVtZjlUMmRBMllZVkFLTHdod05lZlRWaV9rYjlGWF9wdnZMQXpfTGdTbHR0MFZFUUJyTzRCVWFYOWxJdTNwa1hDdzlBNUxrZUlyb2ZTdkpsZXpuQmlhSHV0XzVUS2Z1bmltdk1hMExwNnM1dE1zcE1pdlhVeGptaEhUNkxVb2gtMzh4NWQ4T1ZYNFVIMA?oc=5",
-      "date": "Mon, 15 Jun 2026 15:22:44 GMT"
-    },
-    {
       "id": "7264d37af87c",
       "title": "Apple's AI Siri will be held back by aging devices, Morgan Stanley says - Reuters",
       "text": "Apple's AI Siri will be held back by aging devices, Morgan Stanley says Reuters",
@@ -3052,6 +3052,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWDRhQ3NHck5vamJBREFWRU1UQ1haMjVPRmtfLXlVUkp6Ykl5VHRXamxIWUZxYVFtQzE2SnRuSGJqOGNWRDNEaWNKNG83TWxMenlINTJWc0c3NmNFc0o2aXZkVG5RWWV3T1IwU1hRaUNaMUNjb2xOUUtTbExveTVicXA4eTZaek83bnk4WkJHR083X0pmQ2VPYzRXR0xTa3NQN0FHaWNrNGRCQW9ROTZTeWJOUEI?oc=5",
       "date": "Tue, 09 Jun 2026 07:00:00 GMT"
+    },
+    {
+      "id": "a1a014a208c3",
+      "title": "Why Europe’s demands on Apple AI put your data at risk - Computerworld",
+      "text": "Why Europe’s demands on Apple AI put your data at risk Computerworld",
+      "source": "Computerworld",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQOVVHR0VTeTVYNFcyTmtGU0hlMlVtZjlUMmRBMllZVkFLTHdod05lZlRWaV9rYjlGWF9wdnZMQXpfTGdTbHR0MFZFUUJyTzRCVWFYOWxJdTNwa1hDdzlBNUxrZUlyb2ZTdkpsZXpuQmlhSHV0XzVUS2Z1bmltdk1hMExwNnM1dE1zcE1pdlhVeGptaEhUNkxVb2gtMzh4NWQ4T1ZYNFVIMA?oc=5",
+      "date": "Mon, 15 Jun 2026 15:22:44 GMT"
     },
     {
       "id": "e0efe6f780b6",
@@ -3063,24 +3072,6 @@
       "date": "Sat, 20 Jun 2026 06:51:42 GMT"
     },
     {
-      "id": "cee74bd15c5c",
-      "title": "Five Apple Watch models are about to become obsolete and it's mostly due to Siri AI – read Apple's response - stuff.tv",
-      "text": "Five Apple Watch models are about to become obsolete and it's mostly due to Siri AI – read Apple's response stuff.tv",
-      "source": "stuff.tv",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE43S0wzNEZtLXd2LTJHUVphNmt2YmhweFd2MHl1eEI5TXZxZ19icUFZZ0NkT29TQTk5Q2owdDRTRUo3MlNvRGVOLVBVcHNqOGRsLTBOWjJVR2w0QU5Kb3hVNWxrZTB2emNMSmJUNVBGWGwwdnJrWUZuTkhTcw?oc=5",
-      "date": "Fri, 19 Jun 2026 20:23:12 GMT"
-    },
-    {
-      "id": "ae3cb0a953ef",
-      "title": "Siri AI, Snap Spectacles, and iPhone rumors, on the AppleInsider Podcast - AppleInsider",
-      "text": "Siri AI, Snap Spectacles, and iPhone rumors, on the AppleInsider Podcast AppleInsider",
-      "source": "AppleInsider",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOazFMMXhsVnpuandFYlFpTjVJVFpJVzY2NzhDdTlRZzZiVXpoa1dqamJpbV9vMEp1V0lmTXVPTXBJUERESk1ZbUhtanlXVXR1Vm4wd2JxcFhjaDJVTjkxRHJteVlJTTk4RVNFR2JfYm5FQVhTekZaQ2tRa3pTQjNTQmc5ZkdRYjBYVjF1MldIOFRNUGp2X0laMjc4UFVjbmdWX19KTzJNZ1RVQlJMNHpTNmlB?oc=5",
-      "date": "Fri, 19 Jun 2026 14:05:06 GMT"
-    },
-    {
       "id": "fc5bb37ab949",
       "title": "Apple Has Another Go at A.I., but Don’t Call It a Reinvention - The New York Times",
       "text": "Apple Has Another Go at A.I., but Don’t Call It a Reinvention The New York Times",
@@ -3090,13 +3081,13 @@
       "date": "Mon, 08 Jun 2026 07:00:00 GMT"
     },
     {
-      "id": "80e4ebf06448",
-      "title": "HomeKit Weekly: The Qingping Air Monitor Lite brings a retro vibe to Apple Home climate tracking - 9to5Mac",
-      "text": "HomeKit Weekly: The Qingping Air Monitor Lite brings a retro vibe to Apple Home climate tracking 9to5Mac",
-      "source": "9to5Mac",
+      "id": "cee74bd15c5c",
+      "title": "Five Apple Watch models are about to become obsolete and it's mostly due to Siri AI – read Apple's response - stuff.tv",
+      "text": "Five Apple Watch models are about to become obsolete and it's mostly due to Siri AI – read Apple's response stuff.tv",
+      "source": "stuff.tv",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9US1MwS255ZkhOSVJCdkgwSmxWaUNCalZJMmJJS0Q1b0NhbWtFRzdYeUEtT3JRb3BNbndfSDRDaDNiUDlUZ3RXLXlEeGF3aXhpRTNxUkVNemFKM0NyOW5iUjJjSWc2dHFybVVN?oc=5",
-      "date": "Fri, 19 Jun 2026 18:54:00 GMT"
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE43S0wzNEZtLXd2LTJHUVphNmt2YmhweFd2MHl1eEI5TXZxZ19icUFZZ0NkT29TQTk5Q2owdDRTRUo3MlNvRGVOLVBVcHNqOGRsLTBOWjJVR2w0QU5Kb3hVNWxrZTB2emNMSmJUNVBGWGwwdnJrWUZuTkhTcw?oc=5",
+      "date": "Fri, 19 Jun 2026 20:23:12 GMT"
     },
     {
       "id": "cc46fbeb5c32",
@@ -3115,6 +3106,24 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFB4TjFkZDFJdkg4ZVUwNmhSSENfbldRMDdRS1dYNTVMTXZMVUt5bldNTzFWdmkxQlo4U3JRUWJOZXU5S0tYdDhDSUFsRnlIQzZST293NUFST1BfbWMzbGhnYTBHdHVoenZzMXhjWnRwdk50Q0XSAXhBVV95cUxNRUI5M19abFhpcDlMVlJRV0NJUTFybXExZ2pkTWVBT0pLMGsxeklfSHJiMDlSOGVyTjNSQzJKaUxEX2R5NjdHdUJDUGYwWWluRkEtd1BjbFQ3TVFaLUpQcHZXeUs0V1h1MjdtbldGR2Z3Q0x1WDRkczE?oc=5",
       "date": "Mon, 08 Jun 2026 07:00:00 GMT"
+    },
+    {
+      "id": "80e4ebf06448",
+      "title": "HomeKit Weekly: The Qingping Air Monitor Lite brings a retro vibe to Apple Home climate tracking - 9to5Mac",
+      "text": "HomeKit Weekly: The Qingping Air Monitor Lite brings a retro vibe to Apple Home climate tracking 9to5Mac",
+      "source": "9to5Mac",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9US1MwS255ZkhOSVJCdkgwSmxWaUNCalZJMmJJS0Q1b0NhbWtFRzdYeUEtT3JRb3BNbndfSDRDaDNiUDlUZ3RXLXlEeGF3aXhpRTNxUkVNemFKM0NyOW5iUjJjSWc2dHFybVVN?oc=5",
+      "date": "Fri, 19 Jun 2026 18:54:00 GMT"
+    },
+    {
+      "id": "ae3cb0a953ef",
+      "title": "Siri AI, Snap Spectacles, and iPhone rumors, on the AppleInsider Podcast - AppleInsider",
+      "text": "Siri AI, Snap Spectacles, and iPhone rumors, on the AppleInsider Podcast AppleInsider",
+      "source": "AppleInsider",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOazFMMXhsVnpuandFYlFpTjVJVFpJVzY2NzhDdTlRZzZiVXpoa1dqamJpbV9vMEp1V0lmTXVPTXBJUERESk1ZbUhtanlXVXR1Vm4wd2JxcFhjaDJVTjkxRHJteVlJTTk4RVNFR2JfYm5FQVhTekZaQ2tRa3pTQjNTQmc5ZkdRYjBYVjF1MldIOFRNUGp2X0laMjc4UFVjbmdWX19KTzJNZ1RVQlJMNHpTNmlB?oc=5",
+      "date": "Fri, 19 Jun 2026 14:05:06 GMT"
     },
     {
       "id": "ff76a963771b",
@@ -3153,15 +3162,6 @@
       "date": "Mon, 08 Jun 2026 07:00:00 GMT"
     },
     {
-      "id": "ca9928a81470",
-      "title": "2027 Will Be Apple’s “Biggest Product Year in History” — If It Can Solve One Specific Problem - 24/7 Wall St.",
-      "text": "2027 Will Be Apple’s “Biggest Product Year in History” — If It Can Solve One Specific Problem 24/7 Wall St.",
-      "source": "24/7 Wall St.",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQZk1pMVZ4c192VFBfRGd5UFYwbDR1cy1kS1dhcXlSWlFyTmM1THJmOEFWTG9iLTZQMG5xYktkRFJXdlNWMUxIT3M0LWlOZ2xnTjVlbWJaUXJ6YVdwbWttb3R0NThENEo4U2pTZG01VUlualprQzZlbzVxY3BhcnlvNmN2TWVMZ2xmczltbE5wTjdNbmp5cnQwczlxLWRrRV9tN0pHUEROVW9pU1pobE96d1cyY2xvdEJVTWZWNlpWcmdUMmxhWjVaY1RQM2k?oc=5",
-      "date": "Fri, 19 Jun 2026 13:30:16 GMT"
-    },
-    {
       "id": "75e1728ef4ea",
       "title": "iPhone 18 to sport 12GB of unified memory to support Siri AI and Apple Intelligence features - MacDailyNews",
       "text": "iPhone 18 to sport 12GB of unified memory to support Siri AI and Apple Intelligence features MacDailyNews",
@@ -3189,15 +3189,6 @@
       "date": "Thu, 11 Jun 2026 07:00:00 GMT"
     },
     {
-      "id": "bc71895b5e84",
-      "title": "Apple Prepares Second-Generation iPhone Air for Spring 2027 - Bloomberg.com",
-      "text": "Apple Prepares Second-Generation iPhone Air for Spring 2027 Bloomberg.com",
-      "source": "Bloomberg.com",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPZUpDWEo3RnZiTGRXQTJnTGpxdW1ZVllyRWVQLVc1U1JnTkxfWXZKRktmWUpNVDRYc2dKUWs2cVVYQXNQeGh6ZU5Pa3djZGRsSjJ6cEhJQ1FlbTZoM1NJMEJPNzdsNVAtbDhISkdIeGNqTmJrOFJBSWFiQzZVUkxydUxONkJEbGFPa05nRFBuNjNtb2MzSnVZRTVTd2pYWktWdThQbTFjOXBSRFNnTm40?oc=5",
-      "date": "Wed, 17 Jun 2026 19:57:38 GMT"
-    },
-    {
       "id": "8b95e3af7ba0",
       "title": "Apple debuts revamped ‘Siri AI’ and new child safety features for iPhones and iPads - The Guardian",
       "text": "Apple debuts revamped ‘Siri AI’ and new child safety features for iPhones and iPads The Guardian",
@@ -3207,13 +3198,13 @@
       "date": "Mon, 08 Jun 2026 07:00:00 GMT"
     },
     {
-      "id": "8a6e6fe61b69",
-      "title": "Apple Plans Price Hikes as AI Companies Drive Up Chip Costs - PYMNTS.com",
-      "text": "Apple Plans Price Hikes as AI Companies Drive Up Chip Costs PYMNTS.com",
-      "source": "PYMNTS.com",
+      "id": "bc71895b5e84",
+      "title": "Apple Prepares Second-Generation iPhone Air for Spring 2027 - Bloomberg.com",
+      "text": "Apple Prepares Second-Generation iPhone Air for Spring 2027 Bloomberg.com",
+      "source": "Bloomberg.com",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNS2ZSaW1lc0FUaTktMmxTNGoyZkpFMW41c3Jkelgzal84VkhNTnlhWFVUSUFjQUo5eXpHQ3k4eTRCaDR1bzBab0l1MjM2cTRLS1hNWWYtS1hkRnBtLWdWeUJTbnJ4TmlUOXdlRkxOWEtLMnZqRUl5VHpsZlh3Q3pDeXJNQktkRXFNWmFPTmpHLXBFNkRqa0Z6V2dR?oc=5",
-      "date": "Thu, 18 Jun 2026 01:34:19 GMT"
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPZUpDWEo3RnZiTGRXQTJnTGpxdW1ZVllyRWVQLVc1U1JnTkxfWXZKRktmWUpNVDRYc2dKUWs2cVVYQXNQeGh6ZU5Pa3djZGRsSjJ6cEhJQ1FlbTZoM1NJMEJPNzdsNVAtbDhISkdIeGNqTmJrOFJBSWFiQzZVUkxydUxONkJEbGFPa05nRFBuNjNtb2MzSnVZRTVTd2pYWktWdThQbTFjOXBSRFNnTm40?oc=5",
+      "date": "Wed, 17 Jun 2026 19:57:38 GMT"
     },
     {
       "id": "2f242f8bf109",
@@ -3234,6 +3225,15 @@
       "date": "Wed, 10 Jun 2026 07:00:00 GMT"
     },
     {
+      "id": "8a6e6fe61b69",
+      "title": "Apple Plans Price Hikes as AI Companies Drive Up Chip Costs - PYMNTS.com",
+      "text": "Apple Plans Price Hikes as AI Companies Drive Up Chip Costs PYMNTS.com",
+      "source": "PYMNTS.com",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNS2ZSaW1lc0FUaTktMmxTNGoyZkpFMW41c3Jkelgzal84VkhNTnlhWFVUSUFjQUo5eXpHQ3k4eTRCaDR1bzBab0l1MjM2cTRLS1hNWWYtS1hkRnBtLWdWeUJTbnJ4TmlUOXdlRkxOWEtLMnZqRUl5VHpsZlh3Q3pDeXJNQktkRXFNWmFPTmpHLXBFNkRqa0Z6V2dR?oc=5",
+      "date": "Thu, 18 Jun 2026 01:34:19 GMT"
+    },
+    {
       "id": "5d04c256e3bc",
       "title": "New report details Apple’s AI shakeup that led to iOS 27’s major upgrades - 9to5Mac",
       "text": "New report details Apple’s AI shakeup that led to iOS 27’s major upgrades 9to5Mac",
@@ -3243,15 +3243,6 @@
       "date": "Mon, 08 Jun 2026 07:00:00 GMT"
     },
     {
-      "id": "a33b4b9b36d2",
-      "title": "Apple clears the air on watchOS 27 skipping multiple models, and you can partly blame AI for it - Digital Trends",
-      "text": "Apple clears the air on watchOS 27 skipping multiple models, and you can partly blame AI for it Digital Trends",
-      "source": "Digital Trends",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOeV9xVElhX2R1UDRxUTFGSEFtc1ZWZUZ5WTRwQ1hkVlVMd1RBQnM1Q01vdUlOUXZnUlFPNDRLalBrRmVDVW1jVW52dTg3Q1ZENG1PUDBOR2s3WnhQME56NmtyOXczMjZZbWY1ZElROGkzMVNldzdjZEk1R3QwU21Xakk5UHhzZHY5YTQ2SklyY3pLLURMdUd3dWE0eFRVaHlITGtZLVJQZXJJQjN4V0g1NXg2dUxLWWZNNlQ3Xzl3WlkwaHEydDc5NzFzOWdndmI3?oc=5",
-      "date": "Fri, 19 Jun 2026 22:24:44 GMT"
-    },
-    {
       "id": "ab33e17e11e9",
       "title": "Siri AI & new Apple Intelligence not coming to EU right away thanks to DMA - AppleInsider",
       "text": "Siri AI & new Apple Intelligence not coming to EU right away thanks to DMA AppleInsider",
@@ -3259,6 +3250,24 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNRVFZT1oyTDBXWFBpcHdfLWJHbzFOc3daelZEMUhBUk11N2hSTHlieFFXeXIwSDNobzU2QmxoaW9jeDlUa21QcFhIQVBfeDlyZ3pjTzR0NkZWbWRsT2lkVkM0b2t4bGZhcWNrYVN0Z3c0QmJzZGVsYzI3ekRMbkJWQmoyODltUlA5bHZLMThLb3BFMEpqS1hIenlZRWJ6TjJlT2JRaFU2WjMxVHlQenl5NUU2aVlpQQ?oc=5",
       "date": "Mon, 08 Jun 2026 18:48:00 GMT"
+    },
+    {
+      "id": "ca9928a81470",
+      "title": "2027 Will Be Apple’s “Biggest Product Year in History” — If It Can Solve One Specific Problem - 24/7 Wall St.",
+      "text": "2027 Will Be Apple’s “Biggest Product Year in History” — If It Can Solve One Specific Problem 24/7 Wall St.",
+      "source": "24/7 Wall St.",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQZk1pMVZ4c192VFBfRGd5UFYwbDR1cy1kS1dhcXlSWlFyTmM1THJmOEFWTG9iLTZQMG5xYktkRFJXdlNWMUxIT3M0LWlOZ2xnTjVlbWJaUXJ6YVdwbWttb3R0NThENEo4U2pTZG01VUlualprQzZlbzVxY3BhcnlvNmN2TWVMZ2xmczltbE5wTjdNbmp5cnQwczlxLWRrRV9tN0pHUEROVW9pU1pobE96d1cyY2xvdEJVTWZWNlpWcmdUMmxhWjVaY1RQM2k?oc=5",
+      "date": "Fri, 19 Jun 2026 13:30:16 GMT"
+    },
+    {
+      "id": "a33b4b9b36d2",
+      "title": "Apple clears the air on watchOS 27 skipping multiple models, and you can partly blame AI for it - Digital Trends",
+      "text": "Apple clears the air on watchOS 27 skipping multiple models, and you can partly blame AI for it Digital Trends",
+      "source": "Digital Trends",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOeV9xVElhX2R1UDRxUTFGSEFtc1ZWZUZ5WTRwQ1hkVlVMd1RBQnM1Q01vdUlOUXZnUlFPNDRLalBrRmVDVW1jVW52dTg3Q1ZENG1PUDBOR2s3WnhQME56NmtyOXczMjZZbWY1ZElROGkzMVNldzdjZEk1R3QwU21Xakk5UHhzZHY5YTQ2SklyY3pLLURMdUd3dWE0eFRVaHlITGtZLVJQZXJJQjN4V0g1NXg2dUxLWWZNNlQ3Xzl3WlkwaHEydDc5NzFzOWdndmI3?oc=5",
+      "date": "Fri, 19 Jun 2026 22:24:44 GMT"
     },
     {
       "id": "80b5bbf207aa",
@@ -3324,15 +3333,6 @@
       "date": "Mon, 08 Jun 2026 07:00:00 GMT"
     },
     {
-      "id": "405377639e9a",
-      "title": "Apple revamps Siri as it tries to catch up in the AI race - Arizona Daily Sun",
-      "text": "Apple revamps Siri as it tries to catch up in the AI race Arizona Daily Sun",
-      "source": "Arizona Daily Sun",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNb3JaRGk3UEZaNExtVHhaV25XMFRmeWttV3YwOWhnYWFtVFdLSi1ESlhPc0RabDlQTVA0ZTJmcWZLeWRnQ0hJY0F6OUFGdmFVNGFUSjl4bXZBOG1wclpSYVRtUHRVSlJUaThYQ2JFU3AtWE9Md0xIWUhXbWZLMTctVlFqVThPbGJKcWF0MHRJSGV5RWNPUmFhb3FZdE9hOGtiVTNWOHRjbno0bXh3Q0dtaHFWUndPdlZmVzhWUTBqMXItbzd1NnpCUmVXaEdUVFF2QUFsZkxQeFV1b1R3?oc=5",
-      "date": "Thu, 18 Jun 2026 23:00:00 GMT"
-    },
-    {
       "id": "a7af19488bad",
       "title": "WWDC 2026: Apple’s AI overhaul leads the changes for this year’s software updates - Six Colors",
       "text": "WWDC 2026: Apple’s AI overhaul leads the changes for this year’s software updates Six Colors",
@@ -3340,6 +3340,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOM3dpNUxyOGRMc2JBR0U4RmVNN05SWmRMZ3lQUWROcDN6Y1hEdXR5amstVk4wYmgyREY2Y0stU3RtMkZDNEM5NzI5dm5qZkRaNjUzdHk3MGRJblM3WERDTmw3Mk1UeDdIZE9TUEF3Wi1ZM09JeVlkWUhNVUJCeUl6Y2xmTEJDTmZnQVNHRzdlMUJZTFRGQnQtR1loVF8xTmpZbXRUMVNZNi11bFAyY1dPNzRDVDY?oc=5",
       "date": "Mon, 08 Jun 2026 07:00:00 GMT"
+    },
+    {
+      "id": "405377639e9a",
+      "title": "Apple revamps Siri as it tries to catch up in the AI race - Arizona Daily Sun",
+      "text": "Apple revamps Siri as it tries to catch up in the AI race Arizona Daily Sun",
+      "source": "Arizona Daily Sun",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNb3JaRGk3UEZaNExtVHhaV25XMFRmeWttV3YwOWhnYWFtVFdLSi1ESlhPc0RabDlQTVA0ZTJmcWZLeWRnQ0hJY0F6OUFGdmFVNGFUSjl4bXZBOG1wclpSYVRtUHRVSlJUaThYQ2JFU3AtWE9Md0xIWUhXbWZLMTctVlFqVThPbGJKcWF0MHRJSGV5RWNPUmFhb3FZdE9hOGtiVTNWOHRjbno0bXh3Q0dtaHFWUndPdlZmVzhWUTBqMXItbzd1NnpCUmVXaEdUVFF2QUFsZkxQeFV1b1R3?oc=5",
+      "date": "Thu, 18 Jun 2026 23:00:00 GMT"
     },
     {
       "id": "d06e703b8eb2",
@@ -3378,24 +3387,6 @@
       "date": "Wed, 17 Jun 2026 23:22:07 GMT"
     },
     {
-      "id": "5bad063bbb1f",
-      "title": "2027 Will Be Apple’s “Biggest Product Year in History” — If It Can Solve One Specific Problem - Yahoo Tech",
-      "text": "2027 Will Be Apple’s “Biggest Product Year in History” — If It Can Solve One Specific Problem Yahoo Tech",
-      "source": "Yahoo Tech",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONTZqdFJUZFVIWHk1VGVENGhwY2FESEFWWi1MWDB6UG1YNjdJZTJGT3k5X0VHTHpfSnNmNEZqR2ZpOWV6UEtMcG9ma1ZLeFg4d25kYlduX3BwZWdoM3BNYlpHNUhQTzc0TGkzQ2x4eWM3N0RyOUx0b1g1VkprZnh2WXRITU1EcTdtbUhjMHJEcHBGSlE1ZmRJWEs1V1dwS3lJNS1JNV93?oc=5",
-      "date": "Fri, 19 Jun 2026 13:30:16 GMT"
-    },
-    {
-      "id": "758280f6a24c",
-      "title": "Bank of America predicts a major pricing shift for Apple - thestreet.com",
-      "text": "Bank of America predicts a major pricing shift for Apple thestreet.com",
-      "source": "thestreet.com",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOeGlrczRFSk5pXzhmcFF2cDcxMzREbkhhMHUxVm9QbVlIazBXX2RWQjdObVZCNlJveks0dWlRS1N3OHpJUVlrN3VHRkJIbGw1SXhxTWNLcTVIR2stWFV5Mmw0VnlvOXRHYnF3c216U0lWMnVmQWxkakdvYVdqUkJIaW9LYmVXX0otQTBCZ1lmT2V1X194MnFiN21oOVI3TFk?oc=5",
-      "date": "Fri, 19 Jun 2026 13:03:00 GMT"
-    },
-    {
       "id": "4852eb6a7aa5",
       "title": "Apple’s Plan for AI Dominance Rests on Fixing Its Much-Maligned Chatbot - WSJ",
       "text": "Apple’s Plan for AI Dominance Rests on Fixing Its Much-Maligned Chatbot WSJ",
@@ -3412,15 +3403,6 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPVlFRQ0VOVVZBdVdHaXRWMHRWakxGUVBodlQyNlFoODRHVUt4cGxhcFQzdWIzYW1tN2tVM0J6dmJmUHNNR0poNUJkbGxGLVgxWW1wZ3ZDcTZXNzVoVzQxZUlkVjl1NHpVcnM4aFM5LWJYcDlMSUFVVnN2bGowaDhBem9Nb050UkM1Z0ZzeXBSeDNYUQ?oc=5",
       "date": "Thu, 18 Jun 2026 15:38:12 GMT"
-    },
-    {
-      "id": "3f553931963b",
-      "title": "watchOS 27 and Siri AI will skip these Apple Watch models, and Apple explains why - Sportskeeda Tech",
-      "text": "watchOS 27 and Siri AI will skip these Apple Watch models, and Apple explains why Sportskeeda Tech",
-      "source": "Sportskeeda Tech",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNNHRWbTVoQXp6Z3VTVEhLNnBuMXhNcEhtT1dsWFVod1JnWGtDazVkVWR5eXhOS3ZSTER4V2pMcGVHei0zSXExRWhrNS11QW9RN1lkRDJ2Vnh6Y2J2ZzIxNldoRzBFTE9lM0RlWGd6UU94bllrMHJjNWRNeVFFLUJfVHBJR3ctQWZLZU9uTk5Jc1hrcUg2TnRyd0hPY3Nta1Z6MzA4?oc=5",
-      "date": "Sat, 20 Jun 2026 05:38:19 GMT"
     },
     {
       "id": "3abf40ac8c45",
@@ -3441,6 +3423,15 @@
       "date": "Sun, 07 Jun 2026 20:05:25 GMT"
     },
     {
+      "id": "3f553931963b",
+      "title": "watchOS 27 and Siri AI will skip these Apple Watch models, and Apple explains why - Sportskeeda Tech",
+      "text": "watchOS 27 and Siri AI will skip these Apple Watch models, and Apple explains why Sportskeeda Tech",
+      "source": "Sportskeeda Tech",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNNHRWbTVoQXp6Z3VTVEhLNnBuMXhNcEhtT1dsWFVod1JnWGtDazVkVWR5eXhOS3ZSTER4V2pMcGVHei0zSXExRWhrNS11QW9RN1lkRDJ2Vnh6Y2J2ZzIxNldoRzBFTE9lM0RlWGd6UU94bllrMHJjNWRNeVFFLUJfVHBJR3ctQWZLZU9uTk5Jc1hrcUg2TnRyd0hPY3Nta1Z6MzA4?oc=5",
+      "date": "Sat, 20 Jun 2026 05:38:19 GMT"
+    },
+    {
       "id": "db24dfc2b0db",
       "title": "Apple's AI News Underwhelms. Siri AI Release Concerns Persist. - Investor's Business Daily",
       "text": "Apple's AI News Underwhelms. Siri AI Release Concerns Persist. Investor's Business Daily",
@@ -3448,6 +3439,24 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPWVVYQklOdzh3dm0zS0pJZU9saFI4OVd6d2JEanZxMm8wSnFTeVNZUm56YV93MDdaNjgtRnY1SUFNSnlXUU1KWWp1SW1KeVpCMTk0YTdHUnozYXZJU21sX1B4VDRpcWdqNFRBLThKMDFBb3RURDh5dEsyaHd4cHJ0bElTNHBaOXRuSTd0anM5Y09SQTlIeWFTVHltTFo?oc=5",
       "date": "Tue, 09 Jun 2026 07:00:00 GMT"
+    },
+    {
+      "id": "5bad063bbb1f",
+      "title": "2027 Will Be Apple’s “Biggest Product Year in History” — If It Can Solve One Specific Problem - Yahoo Tech",
+      "text": "2027 Will Be Apple’s “Biggest Product Year in History” — If It Can Solve One Specific Problem Yahoo Tech",
+      "source": "Yahoo Tech",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxONTZqdFJUZFVIWHk1VGVENGhwY2FESEFWWi1MWDB6UG1YNjdJZTJGT3k5X0VHTHpfSnNmNEZqR2ZpOWV6UEtMcG9ma1ZLeFg4d25kYlduX3BwZWdoM3BNYlpHNUhQTzc0TGkzQ2x4eWM3N0RyOUx0b1g1VkprZnh2WXRITU1EcTdtbUhjMHJEcHBGSlE1ZmRJWEs1V1dwS3lJNS1JNV93?oc=5",
+      "date": "Fri, 19 Jun 2026 13:30:16 GMT"
+    },
+    {
+      "id": "758280f6a24c",
+      "title": "Bank of America predicts a major pricing shift for Apple - thestreet.com",
+      "text": "Bank of America predicts a major pricing shift for Apple thestreet.com",
+      "source": "thestreet.com",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOeGlrczRFSk5pXzhmcFF2cDcxMzREbkhhMHUxVm9QbVlIazBXX2RWQjdObVZCNlJveks0dWlRS1N3OHpJUVlrN3VHRkJIbGw1SXhxTWNLcTVIR2stWFV5Mmw0VnlvOXRHYnF3c216U0lWMnVmQWxkakdvYVdqUkJIaW9LYmVXX0otQTBCZ1lmT2V1X194MnFiN21oOVI3TFk?oc=5",
+      "date": "Fri, 19 Jun 2026 13:03:00 GMT"
     },
     {
       "id": "531758588841",
@@ -3459,15 +3468,6 @@
       "date": "Fri, 19 Jun 2026 10:20:14 GMT"
     },
     {
-      "id": "60b6af8d9f6b",
-      "title": "Can Apple’s AI Push Stay Profitable As Memory Costs Climb? A Fresh Look At (AAPL) - simplywall.st",
-      "text": "Can Apple’s AI Push Stay Profitable As Memory Costs Climb? A Fresh Look At (AAPL) simplywall.st",
-      "source": "simplywall.st",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQaE9QRWxtZEZwX243ay12Q3d5dlJPUVJnSXhUWk43bVk3d2tmUGtNbjU2ckVUd2ltbUxJYmtCa0xDdnBleC1lY19IRldDZ1l6YkI0T29EQl9NR2RuWGR1U1ZkMlo2NmxIUndPSFR0QXRWTklILWk3R1k3LVdzSHQxZWF3eTZXM0Ezb2FlSkQwb25oN3RZV2c1OXRlWTJ5TEx3SEd3cW92R25FNjBkdDhueGZkaWpQTkRnMW9Kb9IBwgFBVV95cUxQanZsY2NmV3BtRW84LVdfYUs1clo1cVY0MHVkRVA2VENCYkoySl94b2liRnNyUVQtRWZXOHhuemhXb3VaNDVFQWVrRjRDdTZ1MWkxaVFIOWhXOGNaWGlCbU9WNVNjbVJLNEJ4Q1ZzczNqajZLSWZkbG9xeFlsSkF2d2FNWmVsaDBQUTU0ajQzYmRuWVgzOUNGdmNzTHRzU3BVdEFlbXlid1ptUlhxSmptbDFZU3NSRlppa2ZyVVh3OF9lUQ?oc=5",
-      "date": "Mon, 15 Jun 2026 03:44:18 GMT"
-    },
-    {
       "id": "0c298baebeff",
       "title": "Apple announces Siri AI and its next generation of Apple Intelligence - The Verge",
       "text": "Apple announces Siri AI and its next generation of Apple Intelligence The Verge",
@@ -3475,6 +3475,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1WV2dadWJBSGRNQmYza3Z4RlBNTEZfT3N3QXdza1B2djV6Ti1BOG9YZ3hObzJQcldwY2h1eTRqRnJMR25SV1NqdjREV2Y2bUdnYUxxY0doeUNTekJhUlNHcVA2TEptOHdBY2t1dUF2OA?oc=5",
       "date": "Mon, 08 Jun 2026 07:00:00 GMT"
+    },
+    {
+      "id": "60b6af8d9f6b",
+      "title": "Can Apple’s AI Push Stay Profitable As Memory Costs Climb? A Fresh Look At (AAPL) - simplywall.st",
+      "text": "Can Apple’s AI Push Stay Profitable As Memory Costs Climb? A Fresh Look At (AAPL) simplywall.st",
+      "source": "simplywall.st",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQaE9QRWxtZEZwX243ay12Q3d5dlJPUVJnSXhUWk43bVk3d2tmUGtNbjU2ckVUd2ltbUxJYmtCa0xDdnBleC1lY19IRldDZ1l6YkI0T29EQl9NR2RuWGR1U1ZkMlo2NmxIUndPSFR0QXRWTklILWk3R1k3LVdzSHQxZWF3eTZXM0Ezb2FlSkQwb25oN3RZV2c1OXRlWTJ5TEx3SEd3cW92R25FNjBkdDhueGZkaWpQTkRnMW9Kb9IBwgFBVV95cUxQanZsY2NmV3BtRW84LVdfYUs1clo1cVY0MHVkRVA2VENCYkoySl94b2liRnNyUVQtRWZXOHhuemhXb3VaNDVFQWVrRjRDdTZ1MWkxaVFIOWhXOGNaWGlCbU9WNVNjbVJLNEJ4Q1ZzczNqajZLSWZkbG9xeFlsSkF2d2FNWmVsaDBQUTU0ajQzYmRuWVgzOUNGdmNzTHRzU3BVdEFlbXlid1ptUlhxSmptbDFZU3NSRlppa2ZyVVh3OF9lUQ?oc=5",
+      "date": "Mon, 15 Jun 2026 03:44:18 GMT"
     },
     {
       "id": "8c5c62142dcc",
@@ -3504,13 +3513,13 @@
       "date": "Fri, 19 Jun 2026 07:45:00 GMT"
     },
     {
-      "id": "f5354958bc5a",
-      "title": "As Anthropic's AI models face 'export ban', here's when an Apple Computer was classified as a weapon by t - The Times of India",
-      "text": "As Anthropic's AI models face 'export ban', here's when an Apple Computer was classified as a weapon by t The Times of India",
-      "source": "The Times of India",
+      "id": "c5bf707fa567",
+      "title": "Apple Watch models losing watchOS 27 support as Siri AI features arrive - BusinessLine",
+      "text": "Apple Watch models losing watchOS 27 support as Siri AI features arrive BusinessLine",
+      "source": "BusinessLine",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxOWlVlNDgtTWNLNGkzbzFOY1pLcTR1VVVwQVpNa3hyb0swdl9zanh1eXFqbTJsRDV0ZDNzZG90bm1RSXVrVENVUlVYZGxoRHJjY2ZvSGdkX0syRlpyQWRyOG9DaHR6Z2lmZkRzMzNGRWNMU1FremZTNXdPa1JrUjhFSnZrX3hINzM0RkYwaVR4M1RncjNNR252cDRqMUhWdHIwdFJmSHFselowT3pLeHhkTGUtblRMY3FsMTFWeF9MdEI2OUJNLWo1OUI1ZlJ2YTZmSmJfTTV6ejNRWVVIcGY0QTdCZV9MQW1DVHFiYnprUndOV3pFaDBBNks5VWotbGI1YkhnVzQyNXl5NGF1TGl1b3BtOUl3cHFPZUFwNGU0UlNjclZVVkIxMHpJa0NNNzdRQVNKcHkyWGVEbjU3UWx6c3pXWVVaUdIBywJBVV95cUxPRXpNVV8xZWRyM25XM0JXR2NkT29Lakxic29MeXVlSXFuUmdUSjNIOC1QXzV5alBnMkd0REdQbzZ3ODBGWFVZMFE2cUNRT05sZ1ZhX1pRcExUUE02U2dxSVJtQlhtd05kWlVTM1dqamZWVGVJWThJUXlqV1dpbmZTWVlXelhqczdWTXBXQkcwT0RXLUVSTHljSlgyb3VtaVhZbC16MjVQeFNLTzZFbjZvZldxM20wUFNObDJBWEdwMEhBcDFxMVBmMlhydXRwM3dHWTFpcmhkSzhRQkYwMHBTT3BKRjIwX0xyaGVobGJfWUNDSVNybWpRblNNV2daOXNGcDlUc0ZxWVZndDZlNjM4U19rNzNFVTNSREdXSUg3VUNwdkhUUU0wR3FFVzdxS0ZDN1BydDRub2pSNm80b2dtQ1RLY0JBcWlIZGxj?oc=5",
-      "date": "Sat, 20 Jun 2026 04:37:00 GMT"
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPVGJlOTRCeS1mU1hjOWRIVnBUQWdvc19Uc0tBM2ZoUWE4N1dkNjAyVXhzNlhnV2pfUk9mZDRwRm9xamJQVW4zR1BwUG9zWDdXRnl6aGRMYUh1dTFpVDJOS1FEWkFJQ19DNjFpTDVtUmFlMUU1ZHFpS1RLOWFWSDhOeGpPVjBZMEN2emlUVEw2ZGZTNFlsU2VJT0M2ekFfQS1JSDk2TF9YVW8zbjlWVV9NdlJSQkV2NWFWVC03dmktNTNQMXpVUEk1cHNYMXBEc2ZCQTJMQVNnZmRnX2VwalFmVVRB0gHoAUFVX3lxTFBOMjZFamFRU1I5ekVGd0pRVHpfMldaYzVVNVpEUWNmSDl3RmJWYkJsakNfTkJaRDNCMHVsVDlxcXppTk9yeDc1LVVSVkEwT1JGNU4xWk9ZeF84OU4wWVdUQUhPQ1c3R1BEV0p1MHZGQWk4d0NMMk9EYnlqa2JpakpmTGhpNnJvU0pPT3JMVUltNXAtZzRkLXRzMll5R0dQQVM0M1B2dHRESUxZb0Rla0tYTFowM0dCR0EtQzVDdzB4LUpWU29HWmtjZUZRM0MweVJDRUdKTm9qejV4TmQxQ0Y2dEloY0loYWg?oc=5",
+      "date": "Sat, 20 Jun 2026 10:25:54 GMT"
     },
     {
       "id": "303e7eee9ea9",
@@ -3549,6 +3558,15 @@
       "date": "Thu, 18 Jun 2026 12:12:27 GMT"
     },
     {
+      "id": "f5354958bc5a",
+      "title": "As Anthropic's AI models face 'export ban', here's when an Apple Computer was classified as a weapon by t - The Times of India",
+      "text": "As Anthropic's AI models face 'export ban', here's when an Apple Computer was classified as a weapon by t The Times of India",
+      "source": "The Times of India",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxOWlVlNDgtTWNLNGkzbzFOY1pLcTR1VVVwQVpNa3hyb0swdl9zanh1eXFqbTJsRDV0ZDNzZG90bm1RSXVrVENVUlVYZGxoRHJjY2ZvSGdkX0syRlpyQWRyOG9DaHR6Z2lmZkRzMzNGRWNMU1FremZTNXdPa1JrUjhFSnZrX3hINzM0RkYwaVR4M1RncjNNR252cDRqMUhWdHIwdFJmSHFselowT3pLeHhkTGUtblRMY3FsMTFWeF9MdEI2OUJNLWo1OUI1ZlJ2YTZmSmJfTTV6ejNRWVVIcGY0QTdCZV9MQW1DVHFiYnprUndOV3pFaDBBNks5VWotbGI1YkhnVzQyNXl5NGF1TGl1b3BtOUl3cHFPZUFwNGU0UlNjclZVVkIxMHpJa0NNNzdRQVNKcHkyWGVEbjU3UWx6c3pXWVVaUdIBywJBVV95cUxPRXpNVV8xZWRyM25XM0JXR2NkT29Lakxic29MeXVlSXFuUmdUSjNIOC1QXzV5alBnMkd0REdQbzZ3ODBGWFVZMFE2cUNRT05sZ1ZhX1pRcExUUE02U2dxSVJtQlhtd05kWlVTM1dqamZWVGVJWThJUXlqV1dpbmZTWVlXelhqczdWTXBXQkcwT0RXLUVSTHljSlgyb3VtaVhZbC16MjVQeFNLTzZFbjZvZldxM20wUFNObDJBWEdwMEhBcDFxMVBmMlhydXRwM3dHWTFpcmhkSzhRQkYwMHBTT3BKRjIwX0xyaGVobGJfWUNDSVNybWpRblNNV2daOXNGcDlUc0ZxWVZndDZlNjM4U19rNzNFVTNSREdXSUg3VUNwdkhUUU0wR3FFVzdxS0ZDN1BydDRub2pSNm80b2dtQ1RLY0JBcWlIZGxj?oc=5",
+      "date": "Sat, 20 Jun 2026 04:37:00 GMT"
+    },
+    {
       "id": "51418e087892",
       "title": "Apple’s WWDC AI demos looked more real after $250M false ad settlement - TechCrunch",
       "text": "Apple’s WWDC AI demos looked more real after $250M false ad settlement TechCrunch",
@@ -3567,27 +3585,9 @@
       "date": "Sat, 13 Jun 2026 09:10:04 GMT"
     },
     {
-      "id": "3be5b5923ade",
-      "title": "Are You Eligible to Claim Part of Apple's $250M AI iPhone Settlement? How to Find Out - CNET",
-      "text": "Are You Eligible to Claim Part of Apple's $250M AI iPhone Settlement? How to Find Out CNET",
-      "source": "CNET",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNFlRYjV1UWJCai1sVkZ3U0Z4TldXbW4wVmkzaXVpMWFmWXBQUWxMUnMzTVAwZHFUMWxiTWR3RUhPNjE2QXVTTEJvUXYtMXpsRld4NEZJQlZEYUNLdkVGSkJEMnFuWEhnMkd2MVY3SUk3Q1QzTkhxSGFMaGlNZnZLcjhVRHRtTGlLS1AxbEt3?oc=5",
-      "date": "Sun, 14 Jun 2026 14:52:00 GMT"
-    },
-    {
-      "id": "9ea92c260566",
-      "title": "Why Apple's AI pivot with new Siri is raising some red flags - Yahoo Finance",
-      "text": "Why Apple's AI pivot with new Siri is raising some red flags Yahoo Finance",
-      "source": "Yahoo Finance",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNVndKLTcyZVRoSmpHcXNMdFRsYzEtZm9mbWRvRXRwaFdsZ1h4RUlKaTd2MV9mOHFOclhDSGR2UUVUWGZQUVR5VUxsdTBKTjE2SERaOXRhenRVOEp6Qk9BRkhPNHlqQ010dHEyR0JMc3IwSkhSTnQxZmx5S0JMNDJnb2RPNUhydGxSQXZhWDhzU1VUUl9CQ2VVT3VUMVRQWUZWT0FIVE83Y3pyQQ?oc=5",
-      "date": "Mon, 08 Jun 2026 19:57:07 GMT"
-    },
-    {
       "id": "65ced8b8be64",
       "title": "Exclusive | Apple to Raise Prices Due to Memory Chip Crunch, Tim Cook Says - WSJ",
-      "text": "Exclusive | Apple to Raise Prices Due to Memory Chip Crunch, Tim Cook Says WSJ Tim Cook says RAM expenses are ‘unsustainable’ and Apple is going to raise prices The Verge Tim Cook says prices of Apple devices will jump amid memory chip shortage ABC News - Breaking News, Latest News and Videos WSJ: Apple CEO Tim Cook says tech giant to raise prices due to memory chip prices CNBC Memory stocks are surging after Tim Cook said price hikes are coming to offset costs Business Insider Apple's Tim Cook Says Price Increases Are 'Unavoidable' CNET Tim Cook Says Apple Price Increases Are 'Unavoidable' Due to Memory Costs MacRumors Tim Cook Confirms Apple Will Raise Prices Amid Memory Crunch PCMag Apple to raise prices due to memory chip shortage, CEO Cook tells WSJ Reuters",
+      "text": "Exclusive | Apple to Raise Prices Due to Memory Chip Crunch, Tim Cook Says WSJ Tim Cook says RAM expenses are ‘unsustainable’ and Apple is going to raise prices The Verge Tim Cook says prices of Apple devices will jump amid memory chip shortage ABC News - Breaking News, Latest News and Videos WSJ: Apple CEO Tim Cook says tech giant to raise prices due to memory chip prices CNBC Memory stocks are surging after Tim Cook said price hikes are coming to offset costs Business Insider Apple's Tim Cook Says Price Increases Are 'Unavoidable' CNET Tim Cook Says Apple Price Increases Are 'Unavoidable' Due to Memory Costs MacRumors When Will iPhone Prices Increase? Tim Cook Says Higher Cost Is ‘Unavoidable’ Forbes Tim Cook Confirms Apple Will Raise Prices Amid Memory Crunch PCMag",
       "source": "WSJ",
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1MeGFxMm9OUVN6SGxGaWZTSWFwblJ1QU5xRXN3WktXMkVmSVVuaGRldGlpYVVKbFVxR2Zqc09maHFaaTZ3WlJYc3otUENlZXMtcG1aNklCcFVkVVVGZWVBNVFKcTl3TGtGWUl5V0ZzUzFaRlpRY0R2bw?oc=5",
@@ -3621,13 +3621,22 @@
       "date": "Thu, 18 Jun 2026 14:03:27 GMT"
     },
     {
-      "id": "51be6b3be8d8",
-      "title": "When Will iPhone Prices Increase? Tim Cook Says Higher Cost Is ‘Unavoidable’ - Forbes",
-      "text": "When Will iPhone Prices Increase? Tim Cook Says Higher Cost Is ‘Unavoidable’ Forbes",
+      "id": "c412f1c42f2c",
+      "title": "iPhone 18 Pro: Apple’s Price Rise Changes The Game For Google And Samsung - Forbes",
+      "text": "iPhone 18 Pro: Apple’s Price Rise Changes The Game For Google And Samsung Forbes",
       "source": "Forbes",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOUE9QdDRLZnpPaEI2VExqLVp3aEFFQXVXTFMxTTZKVEZRMm1LbHR1YVk2Slh4bEFGRF9jUnFBenRJTkk0Sng2Vmw0T3lhZ2lxSS1BemF3amx0M1JHaFEtRDlSbWVNTnh1aE1FZmx4TktKQ0o1dUxZZ18tcE9KWXdrcjRpQjQzU1JyTlQ5OW9KTHJlNTZ2bWpuZGdpS09YVnhQQW5iQ0hjRFNaSmU4YnNJMTcwbS1fdTQ?oc=5",
-      "date": "Thu, 18 Jun 2026 14:29:02 GMT"
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNaFZkc1hScWg3V3BCU0NfbHNGOXJMOXNWdGRNWmJFMGpKZFZTYmZLcnhZeW8taDlpVU9RazlBb2NwOE5pWlZtek40Yzh0akVlU3RzajNwSVdoSnVGSGhic3VudFNMWjgtMzJScmlKMjVQSllheGpmTTI2T3hQc2dPMC1pZkJTbGs4QV8xT0gyajhnU1dGTVR5NTZncDl0MVZzeVN4bTZWdGlNbmstR2JHMnVFZ2tmQQ?oc=5",
+      "date": "Sat, 20 Jun 2026 08:00:00 GMT"
+    },
+    {
+      "id": "21f189468c0b",
+      "title": "Apple to raise prices due to memory chip shortage, CEO Cook tells WSJ - Reuters",
+      "text": "Apple to raise prices due to memory chip shortage, CEO Cook tells WSJ Reuters",
+      "source": "Reuters",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPb0NabFQwM1E1bmJKQXlqYVQ5QTJaSFFVd2Nja3FaZE0xNWFzSEpxRF9BR21TMHZSU0lFMkpveXJrTU1Vc3RPLWMtbWNhSjY0THNLTTd2YThHNlprM2x2SERhYkh4UGVxdkJaRmMyemloVFZSMTdqaEt2R2hSalhqM1RtblVGcnJITy1RRVlYSjdWTHF3RC1ZZmZTYnlPaE9NamtQbg?oc=5",
+      "date": "Thu, 18 Jun 2026 05:47:07 GMT"
     },
     {
       "id": "32e60cfab481",
@@ -3657,15 +3666,6 @@
       "date": "Thu, 18 Jun 2026 12:11:10 GMT"
     },
     {
-      "id": "244640280fda",
-      "title": "Apple Products Going Up in Price Is 'Unavoidable', Tim Cook Says - People.com",
-      "text": "Apple Products Going Up in Price Is 'Unavoidable', Tim Cook Says People.com",
-      "source": "People.com",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxObE1JRGwwLVRWY29kcWI3ZW42QXZkYjAzcWFwWmtmVjRKR01RVzlDdUw5NDVnZVRSYjVjM01BTVpYLWtKMXVocGp3bHRPc29yUXJHNHN4TGFFRlQ2MUY5Nm5vRGFTcHZ1bVl0SC1yVEYzZ2xZZUZKQ1htUjlOdUJMYlVTc1BtNlZhTzlVdXVoamdmaGRfZTRTdDk5cHUzUQ?oc=5",
-      "date": "Fri, 19 Jun 2026 22:41:02 GMT"
-    },
-    {
       "id": "f89be8c49ea3",
       "title": "Apple raising prices, CEO says - The Hill",
       "text": "Apple raising prices, CEO says The Hill",
@@ -3673,6 +3673,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQSzdoOGk5NXdpM1ZlSFE2QXc2TXNaNm0zWnhzNVJyS3lWUEc4R2JoRXozMGdtMUFpWGFidFV6eHkzdFNYN3Y1bElmc3VXMXlyZXBncEctTGk0OVphaVA0Q1hFaVVvUGliVXBscXMyNWhwT3VEdXlRY29GZ2FOSlFPdXl30gGHAUFVX3lxTE1uZm4xYWw2dGpjVEFrVDFIQmxIUm51UUdwRGpJdTkxYkdEekpzbU9ITTdTb3lUQVRhTVJzLXdqU0xpdXQ5SU8zbHpwS2FOcnBKNzI1eVZzb3VQLWNINmNrb1JDczR3WHlnZlpwelg5TF9Md2d6b21aNDJ3WGsyRWhjbVV0by02VQ?oc=5",
       "date": "Thu, 18 Jun 2026 19:52:00 GMT"
+    },
+    {
+      "id": "244640280fda",
+      "title": "Apple Products Going Up in Price Is 'Unavoidable', Tim Cook Says - People.com",
+      "text": "Apple Products Going Up in Price Is 'Unavoidable', Tim Cook Says People.com",
+      "source": "People.com",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxObE1JRGwwLVRWY29kcWI3ZW42QXZkYjAzcWFwWmtmVjRKR01RVzlDdUw5NDVnZVRSYjVjM01BTVpYLWtKMXVocGp3bHRPc29yUXJHNHN4TGFFRlQ2MUY5Nm5vRGFTcHZ1bVl0SC1yVEYzZ2xZZUZKQ1htUjlOdUJMYlVTc1BtNlZhTzlVdXVoamdmaGRfZTRTdDk5cHUzUQ?oc=5",
+      "date": "Fri, 19 Jun 2026 22:41:02 GMT"
     },
     {
       "id": "18bef44ff64f",
@@ -3684,15 +3693,6 @@
       "date": "Thu, 18 Jun 2026 11:21:01 GMT"
     },
     {
-      "id": "1c691ed19c62",
-      "title": "Memory crisis hits such extremes that 'even Apple can't be safe' - CNBC",
-      "text": "Memory crisis hits such extremes that 'even Apple can't be safe' CNBC",
-      "source": "CNBC",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPOHhLdl9EZlk5dU14NktSbnNNdlZZcHdQd0sxYjM0QkpYMkRkRWl1NTc2V0ZjM2FjRjdrLUZ4SXpaMHVjUGlmNkxkWk00MFdLUnA1RUs1c3JoTVJTaUNlMVhVVWNMSTBBSmh5emtEbnZCMEdYeHBGSzd4Z3JIUzhTX2pUVmFPaVhqd2dHdWU5dlBYUlFWSVRjSnI3UGNJcWRl0gGmAUFVX3lxTE9UbF9EcWl1bmt1QmtRT2Jjd3VrNUpNSGJkSjN6UVd1UGFaVVhtRGx3ZDZkcmpnd2VULVE2ZVNUV3ZnM2M0WVZmMmJrRC1JNlV2aExfcGFBR3F6U25nYzRKbjVnejhaejRLTWtxZG1GWHczcWNMRk5RdGw4aUxYT1RJSXRDd0lETkFRamhEaEFHN09oaWZYSmk5cjRxTjZvbGtFeGQyM1E?oc=5",
-      "date": "Fri, 19 Jun 2026 12:00:02 GMT"
-    },
-    {
       "id": "5955396b91b1",
       "title": "Apple will hike prices on products, CEO Tim Cook says - Yahoo Finance",
       "text": "Apple will hike prices on products, CEO Tim Cook says Yahoo Finance",
@@ -3702,13 +3702,13 @@
       "date": "Thu, 18 Jun 2026 11:20:34 GMT"
     },
     {
-      "id": "c412f1c42f2c",
-      "title": "iPhone 18 Pro: Apple’s Price Rise Changes The Game For Google And Samsung - Forbes",
-      "text": "iPhone 18 Pro: Apple’s Price Rise Changes The Game For Google And Samsung Forbes",
-      "source": "Forbes",
+      "id": "1c691ed19c62",
+      "title": "Memory crisis hits such extremes that 'even Apple can't be safe' - CNBC",
+      "text": "Memory crisis hits such extremes that 'even Apple can't be safe' CNBC",
+      "source": "CNBC",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNaFZkc1hScWg3V3BCU0NfbHNGOXJMOXNWdGRNWmJFMGpKZFZTYmZLcnhZeW8taDlpVU9RazlBb2NwOE5pWlZtek40Yzh0akVlU3RzajNwSVdoSnVGSGhic3VudFNMWjgtMzJScmlKMjVQSllheGpmTTI2T3hQc2dPMC1pZkJTbGs4QV8xT0gyajhnU1dGTVR5NTZncDl0MVZzeVN4bTZWdGlNbmstR2JHMnVFZ2tmQQ?oc=5",
-      "date": "Sat, 20 Jun 2026 08:00:00 GMT"
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPOHhLdl9EZlk5dU14NktSbnNNdlZZcHdQd0sxYjM0QkpYMkRkRWl1NTc2V0ZjM2FjRjdrLUZ4SXpaMHVjUGlmNkxkWk00MFdLUnA1RUs1c3JoTVJTaUNlMVhVVWNMSTBBSmh5emtEbnZCMEdYeHBGSzd4Z3JIUzhTX2pUVmFPaVhqd2dHdWU5dlBYUlFWSVRjSnI3UGNJcWRl0gGmAUFVX3lxTE9UbF9EcWl1bmt1QmtRT2Jjd3VrNUpNSGJkSjN6UVd1UGFaVVhtRGx3ZDZkcmpnd2VULVE2ZVNUV3ZnM2M0WVZmMmJrRC1JNlV2aExfcGFBR3F6U25nYzRKbjVnejhaejRLTWtxZG1GWHczcWNMRk5RdGw4aUxYT1RJSXRDd0lETkFRamhEaEFHN09oaWZYSmk5cjRxTjZvbGtFeGQyM1E?oc=5",
+      "date": "Fri, 19 Jun 2026 12:00:02 GMT"
     },
     {
       "id": "7fd94a355b8f",
@@ -3756,6 +3756,15 @@
       "date": "Wed, 17 Jun 2026 22:01:00 GMT"
     },
     {
+      "id": "8cd16a6764a5",
+      "title": "Apple Quietly Confirms Price Increases, and They’re Coming Soon - Men's Journal",
+      "text": "Apple Quietly Confirms Price Increases, and They’re Coming Soon Men's Journal",
+      "source": "Men's Journal",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOWmlZRGNsd2QzdHpBWmNaeTk0VGNXZFlJQ05pakVfZEc2ZzhwVEd3dDE1ZzdyVlNNNG9kMlhSdl9tNEdNNmFhR3BzbVEzTzczXzZ0ckhBaEJESl93MENsZGw0UHMzVm1DeE1KSkNienlYQy11Nmg0YlJpa0lCeGhIUDgwQkxPa0dnczdvd2R1SnZCeldJbGl1N2tB?oc=5",
+      "date": "Sat, 20 Jun 2026 10:41:00 GMT"
+    },
+    {
       "id": "d9da69c123a3",
       "title": "Apple’s memory crunch pushes Tim Cook to reopen China supply debate - CNBC",
       "text": "Apple’s memory crunch pushes Tim Cook to reopen China supply debate CNBC",
@@ -3792,15 +3801,6 @@
       "date": "Thu, 18 Jun 2026 19:39:39 GMT"
     },
     {
-      "id": "54749a7cec05",
-      "title": "Apple CEO Tim Cook confirmed price hikes are 'unavoidable' — so get ready to pay more - Tom's Guide",
-      "text": "Apple CEO Tim Cook confirmed price hikes are 'unavoidable' — so get ready to pay more Tom's Guide",
-      "source": "Tom's Guide",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQMHhiWmJmaGxNTjdXR09xZkVXaDF6TXJEaktDTkVtM3gzTy1xLXBza1RUR25zemVBV3RzTGZlMWlPdWZmVVVwdHBZbHlDcW1GMkY5eHZQQld4WDRXNlU0QkY4UGtBeE5CRTFhbldTVkRzMldPd0VDYVJaVlJCenhxaFBrT3gtUHM4c3BDZC1VWS1Ocko3VkVCYmptblpjUUFESWQ3dFhtZUVBQ3diOHg0cmxwczI0czZ2MHZUU0tyaw?oc=5",
-      "date": "Fri, 19 Jun 2026 11:00:47 GMT"
-    },
-    {
       "id": "d398f20b3d15",
       "title": "Here’s Why Apple CEO Tim Cook Says Prices Will Have to Increase - WSJ",
       "text": "Here’s Why Apple CEO Tim Cook Says Prices Will Have to Increase WSJ",
@@ -3808,6 +3808,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxONmMyS3N6d0djN0JxclluN2dBT1R6M2s2enpJTmRuQkMtQVdQeHFmMjkwX0pSbFBwZHJCT1JUaU5TdF9abFl2c3U2bXV4RzJoOXFyamU4SVNBd2x6b2xaVU02dWFXeWMwWDl0aXdlTXpIbHNKRjRSOG5BRVVGRmtELUtsdG56d1JtVXNUVExueXZKam1sRURobHlJdlVLSXJWUWREQ2JjWFgyQnFhdjFwa0JYa29qVWZEcXk0Q1h4NWhTQjA?oc=5",
       "date": "Wed, 17 Jun 2026 06:33:00 GMT"
+    },
+    {
+      "id": "54749a7cec05",
+      "title": "Apple CEO Tim Cook confirmed price hikes are 'unavoidable' — so get ready to pay more - Tom's Guide",
+      "text": "Apple CEO Tim Cook confirmed price hikes are 'unavoidable' — so get ready to pay more Tom's Guide",
+      "source": "Tom's Guide",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQMHhiWmJmaGxNTjdXR09xZkVXaDF6TXJEaktDTkVtM3gzTy1xLXBza1RUR25zemVBV3RzTGZlMWlPdWZmVVVwdHBZbHlDcW1GMkY5eHZQQld4WDRXNlU0QkY4UGtBeE5CRTFhbldTVkRzMldPd0VDYVJaVlJCenhxaFBrT3gtUHM4c3BDZC1VWS1Ocko3VkVCYmptblpjUUFESWQ3dFhtZUVBQ3diOHg0cmxwczI0czZ2MHZUU0tyaw?oc=5",
+      "date": "Fri, 19 Jun 2026 11:00:47 GMT"
     },
     {
       "id": "e8f05ba9976b",
@@ -3927,13 +3936,13 @@
       "date": "Thu, 18 Jun 2026 15:20:47 GMT"
     },
     {
-      "id": "1d6d3e13fe8e",
-      "title": "Tim Cook Says iPhone Price Hikes Are Unavoidable as the AI Memory Crunch Reaches Buyers - Tech Times",
-      "text": "Tim Cook Says iPhone Price Hikes Are Unavoidable as the AI Memory Crunch Reaches Buyers Tech Times",
-      "source": "Tech Times",
+      "id": "10625a6d82be",
+      "title": "Apple products are about to get more expensive, Tim Cook says - Yahoo Finance UK",
+      "text": "Apple products are about to get more expensive, Tim Cook says Yahoo Finance UK",
+      "source": "Yahoo Finance UK",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQbkQzWXZteFMtc3JkVEZTOGJqYTZDQkVJcHN0emVQQnBnU2l3WGRVZWRqR3ZsTG84QlZBOXBtMU5wQUFWNHpGNHFqb0VDY1VKLUVwVHRzSzJ0a0FGbTJ5M2NnaFRDR0t0NmoydXVueUdNbWE4Q3ZTTFJROFdOSzRneDE3b1NxV0QtOGRCM1VlUXpDZ0dPaUF6MzBvLVl1NTU4SGdicjNPaXFWeXhIdGVzdkZ0WE5wQVluNEl0TklrOGc0OE9VZ0ZmaWJfMW1XZ2xZ?oc=5",
-      "date": "Fri, 19 Jun 2026 14:18:28 GMT"
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNOVRHN09IMllid0JxLUIxUk5ubnAtemZkX0k3U2oza3ltdkg1dkdaOEd0VWlZelMzSlVFbFNaZllvYVNva2lIbk9KR19EeWRjRE01cndvT1JWTjI1XzZqZnFNMUVDSzBhQTNSUHFreTRSTXQ4c1VmUG1Td1JUNV81b1h4X3lnMmZGaVE?oc=5",
+      "date": "Thu, 18 Jun 2026 17:24:40 GMT"
     },
     {
       "id": "56766d784f7d",
@@ -3954,13 +3963,22 @@
       "date": "Thu, 18 Jun 2026 06:14:00 GMT"
     },
     {
-      "id": "99da2368df8c",
-      "title": "Apple to raise prices to offset memory chip shortage, Cook says - The National",
-      "text": "Apple to raise prices to offset memory chip shortage, Cook says The National",
-      "source": "The National",
+      "id": "1d6d3e13fe8e",
+      "title": "Tim Cook Says iPhone Price Hikes Are Unavoidable as the AI Memory Crunch Reaches Buyers - Tech Times",
+      "text": "Tim Cook Says iPhone Price Hikes Are Unavoidable as the AI Memory Crunch Reaches Buyers Tech Times",
+      "source": "Tech Times",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQVVBnc3R2RWYyemZsTmtPdDR2WTlnOWg2MUhINVJLMEhOaDV5bmNVWjNyYWJVenBaeDhPTXFRQkpkazNnTTFPVHlRM3pyZ0hqai1PcHNWMGE5TEFPZ2JkQWhvZF9xd1FIOUhnZkxiQmxTNXlSX0NpMHMwQ0EzMkRVNFpLT1IyN2dEUWROVS1rbFliSndwM2taRUJEMG9ycjJWb3JyaGt4NGpVaHFRbms2R1FtX21Ndw?oc=5",
-      "date": "Thu, 18 Jun 2026 13:11:59 GMT"
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQbkQzWXZteFMtc3JkVEZTOGJqYTZDQkVJcHN0emVQQnBnU2l3WGRVZWRqR3ZsTG84QlZBOXBtMU5wQUFWNHpGNHFqb0VDY1VKLUVwVHRzSzJ0a0FGbTJ5M2NnaFRDR0t0NmoydXVueUdNbWE4Q3ZTTFJROFdOSzRneDE3b1NxV0QtOGRCM1VlUXpDZ0dPaUF6MzBvLVl1NTU4SGdicjNPaXFWeXhIdGVzdkZ0WE5wQVluNEl0TklrOGc0OE9VZ0ZmaWJfMW1XZ2xZ?oc=5",
+      "date": "Fri, 19 Jun 2026 14:18:28 GMT"
+    },
+    {
+      "id": "f970e3f9dd4d",
+      "title": "ICYMI: Tim Cook warns Apple price hikes are on the way, Commodore took us back to 2004 with a flip phone, and there's plenty more tech news to catch up on - TechRadar",
+      "text": "ICYMI: Tim Cook warns Apple price hikes are on the way, Commodore took us back to 2004 with a flip phone, and there's plenty more tech news to catch up on TechRadar",
+      "source": "TechRadar",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNd1hEUDhmd3gwU3hMbkc4TXZsYlZUdWp5eTVhUlFGdU9hcHhwRXlacXQyOVpDMjRuT1JXVWx0bmZHYTFmY3pOQmRRcV9aNkJtTW9TQzhBOHlPYS1DRE1OOHV3TVpvakUzSEx1bnpCMHBDd05nb3Fzck5VcE1kV1NNWWxyZW93YS05ZDY1UmJrQ1ZveUtTRXFsYUNxclE4RUJGTjFGR2JnZ0o5Z0F3cUxuMVV0bmRhd1RZZkpkSW1Xb2pxT2NfUkk5RVNaMHNuSVh3d0Y3VGhDTERqblJON3ptSDRn?oc=5",
+      "date": "Sat, 20 Jun 2026 11:00:00 GMT"
     },
     {
       "id": "b35c80f4a185",
@@ -3970,6 +3988,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQS3lqZXVIaE5GV19MZzJmWTFXRjdGNG9RM29kWVdOSUVLQzdMSzZuX2ZYa0lINmRyUW5oSWVJZ2lzejVHOUU2emwyZlFaT0JRVUFITmYtN0FLTDJuU3poeXFvU3VBQzM3cFhyUzM3N2lNMElLaVltYklrV2pfZC11Q2ZndTBJdjN6c0dMeUlabzA3aGNMcTRjTVBOYjBlQjR4a1RielVJeUNBZHpiZ3pmOE0tcDB0UQ?oc=5",
       "date": "Mon, 20 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "id": "99da2368df8c",
+      "title": "Apple to raise prices to offset memory chip shortage, Cook says - The National",
+      "text": "Apple to raise prices to offset memory chip shortage, Cook says The National",
+      "source": "The National",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQVVBnc3R2RWYyemZsTmtPdDR2WTlnOWg2MUhINVJLMEhOaDV5bmNVWjNyYWJVenBaeDhPTXFRQkpkazNnTTFPVHlRM3pyZ0hqai1PcHNWMGE5TEFPZ2JkQWhvZF9xd1FIOUhnZkxiQmxTNXlSX0NpMHMwQ0EzMkRVNFpLT1IyN2dEUWROVS1rbFliSndwM2taRUJEMG9ycjJWb3JyaGt4NGpVaHFRbms2R1FtX21Ndw?oc=5",
+      "date": "Thu, 18 Jun 2026 13:11:59 GMT"
     },
     {
       "id": "29a24e674189",
@@ -4026,15 +4053,6 @@
       "date": "Thu, 18 Jun 2026 12:17:04 GMT"
     },
     {
-      "id": "85721285fc7f",
-      "title": "Apple unveils Siri AI makeover as Tim Cook bids farewell - BBC",
-      "text": "Apple unveils Siri AI makeover as Tim Cook bids farewell BBC",
-      "source": "BBC",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBtdnh1RGZ2QXRTUWYxWFBwblNxYnlNRFBjeXg1WHlZOGtBYUYyRl9HY0tGWjlIRTkwVUFTOGJ5V183OUpqU01vdWx6clFsczlpbFdlcWIxaUJSdw?oc=5",
-      "date": "Mon, 08 Jun 2026 07:00:00 GMT"
-    },
-    {
       "id": "870ee7083fda",
       "title": "Apple's Tim Cook bows out with careful keynote that's light on AI - Mashable",
       "text": "Apple's Tim Cook bows out with careful keynote that's light on AI Mashable",
@@ -4044,13 +4062,13 @@
       "date": "Tue, 09 Jun 2026 01:07:11 GMT"
     },
     {
-      "id": "7d013074255a",
-      "title": "'Price increases are unavoidable:' Apple plans to raise prices due to memory shortages - Yahoo Tech",
-      "text": "'Price increases are unavoidable:' Apple plans to raise prices due to memory shortages Yahoo Tech",
-      "source": "Yahoo Tech",
+      "id": "85721285fc7f",
+      "title": "Apple unveils Siri AI makeover as Tim Cook bids farewell - BBC",
+      "text": "Apple unveils Siri AI makeover as Tim Cook bids farewell BBC",
+      "source": "BBC",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQR0J1Wk0tZS05dkFqNDcyVTZjR2NDVVhPcU9IaDlNVDhFXzBkcnp4V0VmR0xOM2k1ZFZlRDE3NUp5MDRhR3huMnZjOWhMRkQxcnlSV2E0ZFJydjV6bndpajNEZkpXQVdZdnBJUTRFWXBBcXpmSUhsMkIyakIwVjI0endYdDdWOHN0c2ItdTZhdGdrM0JJYmZuWnB5QTlVcTFFYmRqaE9NV2c0aUROYnYyNE5xVldZS3pnbmtxMjlnbnl6bTAzWnlfMzBBcHk?oc=5",
-      "date": "Wed, 17 Jun 2026 22:02:57 GMT"
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBtdnh1RGZ2QXRTUWYxWFBwblNxYnlNRFBjeXg1WHlZOGtBYUYyRl9HY0tGWjlIRTkwVUFTOGJ5V183OUpqU01vdWx6clFsczlpbFdlcWIxaUJSdw?oc=5",
+      "date": "Mon, 08 Jun 2026 07:00:00 GMT"
     },
     {
       "id": "f70f3e486737",
@@ -4062,6 +4080,15 @@
       "date": "Thu, 11 Jun 2026 07:00:00 GMT"
     },
     {
+      "id": "7d013074255a",
+      "title": "'Price increases are unavoidable:' Apple plans to raise prices due to memory shortages - Yahoo Tech",
+      "text": "'Price increases are unavoidable:' Apple plans to raise prices due to memory shortages Yahoo Tech",
+      "source": "Yahoo Tech",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQR0J1Wk0tZS05dkFqNDcyVTZjR2NDVVhPcU9IaDlNVDhFXzBkcnp4V0VmR0xOM2k1ZFZlRDE3NUp5MDRhR3huMnZjOWhMRkQxcnlSV2E0ZFJydjV6bndpajNEZkpXQVdZdnBJUTRFWXBBcXpmSUhsMkIyakIwVjI0endYdDdWOHN0c2ItdTZhdGdrM0JJYmZuWnB5QTlVcTFFYmRqaE9NV2c0aUROYnYyNE5xVldZS3pnbmtxMjlnbnl6bTAzWnlfMzBBcHk?oc=5",
+      "date": "Wed, 17 Jun 2026 22:02:57 GMT"
+    },
+    {
       "id": "7ea080d4f48a",
       "title": "Tim Cook admits price hikes coming to Apple products due to skyrocketing memory chip costs - Notebookcheck",
       "text": "Tim Cook admits price hikes coming to Apple products due to skyrocketing memory chip costs Notebookcheck",
@@ -4069,15 +4096,6 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPWmJSSHFUcWVYZzF5eXRPRlRLR2o4NU83T2hzYVRaWlMtVXdyLUgyMndsRGF3OE8wU0ZBOC1ZQ3RTa0czTFJveEtMcUdVWWtqaHg3SlRsVTJ1bm9Gc1JyOFByd295MnhuSG5qWGd2Q1h4RHAtMUxjWUxhQzA1bGpRei12cVBLbWhmUzFfQkZqT3ZUeVM3YWQ4UzE2a01KMUNzRE1MR0NrSnRlbFB1YmZ4YUtGNXlEYm1KbGR6TGh4WHExZkZrcEFidFJEOXEtcGU3?oc=5",
       "date": "Thu, 18 Jun 2026 00:37:00 GMT"
-    },
-    {
-      "id": "c86b713a153e",
-      "title": "The Memory Boom Has Been a Gift to Micron. For Apple, It's Becoming a Problem. Or Is It? - The Motley Fool",
-      "text": "The Memory Boom Has Been a Gift to Micron. For Apple, It's Becoming a Problem. Or Is It? The Motley Fool",
-      "source": "The Motley Fool",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPSFNGLTNSMWUyU3FZYlJFUEdaU3Jpb243a1VoaUlEQWVpeXlDRE5aWUhTR1FxdVloaGszeXpLLUxodkt5dkU2ZzZGU3VQMktGQkxvdnNiMVdqVnBSTjZPNTI5SGZEVC14c1FLOHlvVzhabE5DUUhaSmpNSmhuZHR5ajFwOGRNS2VZdU90YnFHVXNLSkNKcjRDbA?oc=5",
-      "date": "Fri, 19 Jun 2026 22:17:00 GMT"
     },
     {
       "id": "bb56383a7f99",
@@ -4096,6 +4114,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOUW1Nd0Zfbk9mUWRIX1RvOHFDUmxpNEVnUEFnTVE2OWtUdTdFaGJ0UnBQelhXM1RDWWphRXNfdy1BSWhzdWo1Q19OZjRpU19SdGxGZmFHamJHM3hFaUM0X3AtNXVNYzA4YU1QTU5xQUJMV3h6V2t6SzQxTVQ4NC1paUFSMG5kampCX01J?oc=5",
       "date": "Mon, 08 Jun 2026 07:00:00 GMT"
+    },
+    {
+      "id": "c86b713a153e",
+      "title": "The Memory Boom Has Been a Gift to Micron. For Apple, It's Becoming a Problem. Or Is It? - The Motley Fool",
+      "text": "The Memory Boom Has Been a Gift to Micron. For Apple, It's Becoming a Problem. Or Is It? The Motley Fool",
+      "source": "The Motley Fool",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPSFNGLTNSMWUyU3FZYlJFUEdaU3Jpb243a1VoaUlEQWVpeXlDRE5aWUhTR1FxdVloaGszeXpLLUxodkt5dkU2ZzZGU3VQMktGQkxvdnNiMVdqVnBSTjZPNTI5SGZEVC14c1FLOHlvVzhabE5DUUhaSmpNSmhuZHR5ajFwOGRNS2VZdU90YnFHVXNLSkNKcjRDbA?oc=5",
+      "date": "Fri, 19 Jun 2026 22:17:00 GMT"
     },
     {
       "id": "6a779e9b49d4",
@@ -4134,15 +4161,6 @@
       "date": "Wed, 17 Jun 2026 21:17:00 GMT"
     },
     {
-      "id": "86b84a1b9e5e",
-      "title": "Apple price hikes are coming for iPhone, Mac and iPad, as CEO Tim Cook calls them ‘unavoidable’ - The Shortcut | Matt Swider",
-      "text": "Apple price hikes are coming for iPhone, Mac and iPad, as CEO Tim Cook calls them ‘unavoidable’ The Shortcut | Matt Swider",
-      "source": "The Shortcut | Matt Swider",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNTkl2Z2NWNW5UcnR4d3J1WE9UTWx5OVh6WW9DeExqcHhuNUNEQUV4THlzc0RWNHdkdTdSS19PVWI1N0RDUWZvNG9EZDN3ZDRNZDd5b2VibGpCZXVycDRIOHZxRldVQzl1SDB4NWNFMHhpSlN6enNnQS1XZDFibVdsU0lKTXlnOWY5d3NMQlNzWmxQb3ZhNXVESktEQS1IWWJaNVd5MkdRRmlnT3RDQ0x4VGZfRnVLVU5ZbThSSjFR?oc=5",
-      "date": "Thu, 18 Jun 2026 14:52:48 GMT"
-    },
-    {
       "id": "be9b46c5b36b",
       "title": "'Price increases are unavoidable' says Tim Cook, proving even Apple isn't impervious to the global memory shortage - PC Gamer",
       "text": "'Price increases are unavoidable' says Tim Cook, proving even Apple isn't impervious to the global memory shortage PC Gamer",
@@ -4150,6 +4168,15 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNeEEzTkpKY3MwNmxXWVA0RXgyTnVVTV91aTZzOTRFaWRPQmViNG85dFYzMm1EZVB6aEVqOVB6ZjFEVTB3RDk3Z3F4Q3NlcTdpbXZHdmlPOGhLSFFpRGw3dmx4LU5iRC1rVFFSRkVWQ0RUc3d4cUc2YkxKclZPY09SRG43RExROWYxZGxPR0RtTl9WcktOSVJyd0dPUXZQd3p2MHplZG9yRGRmWFZyYUxfRTNIWjdvTEVNYUdsbmxjaUgtSXNrS1lRamhhQ09aUjV1d01DemU3ckpmb3ZM?oc=5",
       "date": "Thu, 18 Jun 2026 11:16:37 GMT"
+    },
+    {
+      "id": "86b84a1b9e5e",
+      "title": "Apple price hikes are coming for iPhone, Mac and iPad, as CEO Tim Cook calls them ‘unavoidable’ - The Shortcut | Matt Swider",
+      "text": "Apple price hikes are coming for iPhone, Mac and iPad, as CEO Tim Cook calls them ‘unavoidable’ The Shortcut | Matt Swider",
+      "source": "The Shortcut | Matt Swider",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNTkl2Z2NWNW5UcnR4d3J1WE9UTWx5OVh6WW9DeExqcHhuNUNEQUV4THlzc0RWNHdkdTdSS19PVWI1N0RDUWZvNG9EZDN3ZDRNZDd5b2VibGpCZXVycDRIOHZxRldVQzl1SDB4NWNFMHhpSlN6enNnQS1XZDFibVdsU0lKTXlnOWY5d3NMQlNzWmxQb3ZhNXVESktEQS1IWWJaNVd5MkdRRmlnT3RDQ0x4VGZfRnVLVU5ZbThSSjFR?oc=5",
+      "date": "Thu, 18 Jun 2026 14:52:48 GMT"
     },
     {
       "id": "e7f6ea43e054",
@@ -4170,15 +4197,6 @@
       "date": "Wed, 17 Jun 2026 22:13:11 GMT"
     },
     {
-      "id": "f96ac65ae6d5",
-      "title": "Tim Cook says Apple price hikes are unavoidable as AI drives memory costs higher - Digital Trends",
-      "text": "Tim Cook says Apple price hikes are unavoidable as AI drives memory costs higher Digital Trends",
-      "source": "Digital Trends",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOdEQxY2pWeVdTNDNZUFdUdlpwT0NlS25nM0JwOGdxRmp6bGFxSTM3dnZmYk9QWEZ6UHJjRjNSTGl5VGhhVE5LTUsyYi1oeXRsYTEzZENiUndneFBEOUx0NE0zMGotQXdxLWtZNFRHdWRUQTBoak5FOFF1aVI2V0xpMmhyNE4xSGEtM0tybmgyTUhLTTJYSEM0bWVR?oc=5",
-      "date": "Wed, 17 Jun 2026 23:08:02 GMT"
-    },
-    {
       "id": "49a4f6c709db",
       "title": "Apple may raise prices due to soaring component costs, Tim Cook says - AzerNews",
       "text": "Apple may raise prices due to soaring component costs, Tim Cook says AzerNews",
@@ -4188,6 +4206,15 @@
       "date": "Thu, 18 Jun 2026 11:07:00 GMT"
     },
     {
+      "id": "f96ac65ae6d5",
+      "title": "Tim Cook says Apple price hikes are unavoidable as AI drives memory costs higher - Digital Trends",
+      "text": "Tim Cook says Apple price hikes are unavoidable as AI drives memory costs higher Digital Trends",
+      "source": "Digital Trends",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOdEQxY2pWeVdTNDNZUFdUdlpwT0NlS25nM0JwOGdxRmp6bGFxSTM3dnZmYk9QWEZ6UHJjRjNSTGl5VGhhVE5LTUsyYi1oeXRsYTEzZENiUndneFBEOUx0NE0zMGotQXdxLWtZNFRHdWRUQTBoak5FOFF1aVI2V0xpMmhyNE4xSGEtM0tybmgyTUhLTTJYSEM0bWVR?oc=5",
+      "date": "Wed, 17 Jun 2026 23:08:02 GMT"
+    },
+    {
       "id": "1f825a9aa2dd",
       "title": "Apple CEO Says Price Rise of Its Products Due to the Rise of Chip Costs Are ‘Unavoidable’ - International Business Times",
       "text": "Apple CEO Says Price Rise of Its Products Due to the Rise of Chip Costs Are ‘Unavoidable’ International Business Times",
@@ -4195,15 +4222,6 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNemltUmJmLUlHdDgyVThhVUg3ZFA0UHJZYVhkOFhHTUZfeDlvSDZzZHdqNjhFLVdwTEZBcld3MWxGemNidDZfalZGR0JaRS1WaW5vbS1NTkozNnB1cWdYQmU4RFFNZmxIZy1Xb01iV2luVktXSVdVVDJVa2c5NWxXU1duenNPMEhBVG5LUlI5QzlWLXp1SnFXU0NlOGlpVGV3UzZmSmg2dEZoZw?oc=5",
       "date": "Thu, 18 Jun 2026 18:51:12 GMT"
-    },
-    {
-      "id": "df99b796b6a7",
-      "title": "Apple's Tim Cook Says Price Hikes Inevitable as Memory Costs Soar - Seoul Economic Daily",
-      "text": "Apple's Tim Cook Says Price Hikes Inevitable as Memory Costs Soar Seoul Economic Daily",
-      "source": "Seoul Economic Daily",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQbWZKbHFQbU52T2JLX2EzcWpNdjRpUVNUakdPR2pyN2d1d3pRakZqbDlGNV83ZVU1cjBfTnVhNnljSTR2Mzl0OUdRSy1uQUxmRDZXQUhkLTBYRll5UkhTSkc5bVBDZnNLT2pJQ0VyM0YwajV4dG9Cem5mNWVpRFNMODh4dHdyZm5XOWNyYXdwUFRBRXBaS2Zza0NYSmRpUDAzanRlc3RWWQ?oc=5",
-      "date": "Sat, 20 Jun 2026 08:55:08 GMT"
     },
     {
       "id": "bd00df39e60a",
@@ -4233,6 +4251,15 @@
       "date": "Thu, 18 Jun 2026 16:25:28 GMT"
     },
     {
+      "id": "df99b796b6a7",
+      "title": "Apple's Tim Cook Says Price Hikes Inevitable as Memory Costs Soar - Seoul Economic Daily",
+      "text": "Apple's Tim Cook Says Price Hikes Inevitable as Memory Costs Soar Seoul Economic Daily",
+      "source": "Seoul Economic Daily",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQbWZKbHFQbU52T2JLX2EzcWpNdjRpUVNUakdPR2pyN2d1d3pRakZqbDlGNV83ZVU1cjBfTnVhNnljSTR2Mzl0OUdRSy1uQUxmRDZXQUhkLTBYRll5UkhTSkc5bVBDZnNLT2pJQ0VyM0YwajV4dG9Cem5mNWVpRFNMODh4dHdyZm5XOWNyYXdwUFRBRXBaS2Zza0NYSmRpUDAzanRlc3RWWQ?oc=5",
+      "date": "Sat, 20 Jun 2026 08:55:08 GMT"
+    },
+    {
       "id": "16b881c1ebb6",
       "title": "AI-driven chip shortages to cause Apple product price increase, says Cook - AppleInsider",
       "text": "AI-driven chip shortages to cause Apple product price increase, says Cook AppleInsider",
@@ -4240,15 +4267,6 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNeV9vSGFqODF0OHB3S0FHZmhJekwxc19LX0txOG9sdHlmenlQV3RTM2ZQT2NSZjJYRzgzMDQyVFc5SzFWbk1ZalNUTmJHdWZtMWtabUxZTVZRVVRpZ25oSldxRFhsdFpqZGRybzlQS2E0bjVCSW5TMWpQbkRHdl9nbFVTSkJfUXNPZTF3ZUdPam1VMXVJYWVPWTMxZWhfMGlGV2ZvRmRBUHZRMjV3ZEJ2Sk9QS25Mdw?oc=5",
       "date": "Wed, 17 Jun 2026 21:48:14 GMT"
-    },
-    {
-      "id": "cd43c30c886f",
-      "title": "Apple says price hike ‘unavoidable’ because of AI boom - The Nightly",
-      "text": "Apple says price hike ‘unavoidable’ because of AI boom The Nightly",
-      "source": "The Nightly",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQMURwcmdBVXF5bXVudFpOSjViYXFFcmVEdkJBZmFmbVZNWHlDa2xET2cyZDlnY05vOHZYTmV2dmo1S19wU2F3VnRRQ0pEb1VVLWZJNERSTnV2RFpUM1NyRmk4cDd6TGRHazlSa2QzMjJUZ3VtTTJFSnJudTltVm03RXYzS3J3NHdIZDVzbkdjQ1NVT0MwMmRZSEJkT05qY0E1VFNkS1dmVm9iR1ZJOFRhN0s4WHhNcXdsLTh6bTZrOUp1blJJa0J5NW9MZ3E1YlBGelpOeVVjTmFRM1NSdFg0cUFRdw?oc=5",
-      "date": "Sat, 20 Jun 2026 02:29:38 GMT"
     },
     {
       "id": "7366f3224dfa",
@@ -4278,6 +4296,15 @@
       "date": "Thu, 18 Jun 2026 16:00:00 GMT"
     },
     {
+      "id": "cd43c30c886f",
+      "title": "Apple says price hike ‘unavoidable’ because of AI boom - The Nightly",
+      "text": "Apple says price hike ‘unavoidable’ because of AI boom The Nightly",
+      "source": "The Nightly",
+      "source_type": "news",
+      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQMURwcmdBVXF5bXVudFpOSjViYXFFcmVEdkJBZmFmbVZNWHlDa2xET2cyZDlnY05vOHZYTmV2dmo1S19wU2F3VnRRQ0pEb1VVLWZJNERSTnV2RFpUM1NyRmk4cDd6TGRHazlSa2QzMjJUZ3VtTTJFSnJudTltVm03RXYzS3J3NHdIZDVzbkdjQ1NVT0MwMmRZSEJkT05qY0E1VFNkS1dmVm9iR1ZJOFRhN0s4WHhNcXdsLTh6bTZrOUp1blJJa0J5NW9MZ3E1YlBGelpOeVVjTmFRM1NSdFg0cUFRdw?oc=5",
+      "date": "Sat, 20 Jun 2026 02:29:38 GMT"
+    },
+    {
       "id": "91723156afa3",
       "title": "Six things I’ll remember when I think about Tim Cook’s version of Apple - Ars Technica",
       "text": "Six things I’ll remember when I think about Tim Cook’s version of Apple Ars Technica",
@@ -4285,15 +4312,6 @@
       "source_type": "news",
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNZ04xY0Q1ajhMNDVsWmcwcFJNNzVPT1o5QVljOTc5X2hOVUM3Ql9ITnMyUmlpTXJiMGh0Tm1XMkNxRWs1X0k5Z0tRRUItUHdaNmhTY29DVmVpM0ZGU1gxVE94M0c3QnBPeTNCTmhEemRXTXBLVENsaUpMdVNwaVFrcnRtMzFFRkNfMzFIQ1NWQ2p6NllEQnUwZWJwbFlKNVBYU0pjQThGdEhvNmlJZUJv?oc=5",
       "date": "Fri, 24 Apr 2026 07:00:00 GMT"
-    },
-    {
-      "id": "94613d94e6c0",
-      "title": "iPhone 18 Pro could start at $1,399, report claims - The Apple Post",
-      "text": "iPhone 18 Pro could start at $1,399, report claims The Apple Post",
-      "source": "The Apple Post",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNWDdPWmswUHpFY0cxV09FOFBHaVFpeUVlRmFKaFI4Vmw2Zm13a1M3S1hqSjlSRnpQd1pvRUJGN0x2RTFrVzNSUkY0TnQ0ZnhKZUExVG9QVWdLVU1iSThSVlplVjhHdTRLaEhJbmhGUjFwQTZBN0tMeC1abmJHQlI2SHNMZ2hQY2tfWVZRYzFJTjMxS3JVUWxSMUdR0gGfAUFVX3lxTE92Y3JYZ0lsUERhb1FYQ05QZmt2bXdCWWxGbWtoamo5dERKXzdQbVREVk80VThyVlBiRWhrZ2VfNWVvT2Vmd3lMVzIwNGxFRzhkTkluSGZWSGt6UGN1UXhJUzBjcDBla3dGdW9lVzg4NEt4ZGFLck16MEZFcjdYaWh0T2VVenYxQ2U0NHl4aFFPdVQ4YkZVMlphdDZaSWtlaw?oc=5",
-      "date": "Fri, 19 Jun 2026 16:05:54 GMT"
     },
     {
       "id": "560fd0509996",
@@ -4314,13 +4332,13 @@
       "date": "Fri, 05 Jun 2026 07:00:00 GMT"
     },
     {
-      "id": "48504f8c300d",
-      "title": "Apple products are about to get more expensive, Tim Cook says - AOL.com",
-      "text": "Apple products are about to get more expensive, Tim Cook says AOL.com",
-      "source": "AOL.com",
+      "id": "94613d94e6c0",
+      "title": "iPhone 18 Pro could start at $1,399, report claims - The Apple Post",
+      "text": "iPhone 18 Pro could start at $1,399, report claims The Apple Post",
+      "source": "The Apple Post",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxORjhSQnJqdDBrQlVmX254cUkybkdlUGxieERtdVFoOVhmVmVadEZtaFBNaTlYUXFDZXN5eVFfbDVyYWN4OXJjel9kMDBYRDc0Q3ZEWGl4b0hBc2szSDVJWGZWanRMWl92VEd0WDBuU1Nwb3U0NHAwR01SdHJjTmduMFg4VQ?oc=5",
-      "date": "Thu, 18 Jun 2026 17:37:13 GMT"
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNWDdPWmswUHpFY0cxV09FOFBHaVFpeUVlRmFKaFI4Vmw2Zm13a1M3S1hqSjlSRnpQd1pvRUJGN0x2RTFrVzNSUkY0TnQ0ZnhKZUExVG9QVWdLVU1iSThSVlplVjhHdTRLaEhJbmhGUjFwQTZBN0tMeC1abmJHQlI2SHNMZ2hQY2tfWVZRYzFJTjMxS3JVUWxSMUdR0gGfAUFVX3lxTE92Y3JYZ0lsUERhb1FYQ05QZmt2bXdCWWxGbWtoamo5dERKXzdQbVREVk80VThyVlBiRWhrZ2VfNWVvT2Vmd3lMVzIwNGxFRzhkTkluSGZWSGt6UGN1UXhJUzBjcDBla3dGdW9lVzg4NEt4ZGFLck16MEZFcjdYaWh0T2VVenYxQ2U0NHl4aFFPdVQ4YkZVMlphdDZaSWtlaw?oc=5",
+      "date": "Fri, 19 Jun 2026 16:05:54 GMT"
     },
     {
       "id": "6ced16bc38f5",
@@ -4377,15 +4395,6 @@
       "date": "Thu, 18 Jun 2026 12:53:41 GMT"
     },
     {
-      "id": "dee6e58bc7e2",
-      "title": "Apple CEO hints at your next iPhone being more expensive, as \"unavoidable\" price increases announced - PC Guide",
-      "text": "Apple CEO hints at your next iPhone being more expensive, as \"unavoidable\" price increases announced PC Guide",
-      "source": "PC Guide",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQV2puOTAwYmRQX0RRclN5QUpzTFhmOV8zU3o2YWNXblpURTNqRmkzYjlLOU5nLXNlU0V6cUVaZXJRcVBxdHU4MmxNYlhiaGRzTUp5WGdjS1pMWFBPVnlhaXJyVldraWtWb0pNSUxBZlFBbUdyMHV2NXJVUTdjWW14UFAzMi01eW1tcXRwZVRjYkFxSUdnTHJpUVE0OWxuZnNpT21BaTl5X2hfb2JBYTBCZVQ3Y3ItS3F0cUg2bUwwRWU2SXZqSUE?oc=5",
-      "date": "Thu, 18 Jun 2026 16:24:36 GMT"
-    },
-    {
       "id": "8877e160b779",
       "title": "Apple may raise iPhone prices as AI chip costs surge, Tim Cook's big warning | Hindustan Times - Hindustan Times",
       "text": "Apple may raise iPhone prices as AI chip costs surge, Tim Cook's big warning | Hindustan Times Hindustan Times",
@@ -4395,22 +4404,13 @@
       "date": "Thu, 18 Jun 2026 23:01:11 GMT"
     },
     {
-      "id": "b0970867887e",
-      "title": "Tim Cook’s Final WWDC Showed Why Apple Still Always Wins in the End - inc.com",
-      "text": "Tim Cook’s Final WWDC Showed Why Apple Still Always Wins in the End inc.com",
-      "source": "inc.com",
+      "id": "dee6e58bc7e2",
+      "title": "Apple CEO hints at your next iPhone being more expensive, as \"unavoidable\" price increases announced - PC Guide",
+      "text": "Apple CEO hints at your next iPhone being more expensive, as \"unavoidable\" price increases announced PC Guide",
+      "source": "PC Guide",
       "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxONUJwM1lpZ25kNS05MUkzNmZJUVktdGVHcGZSRkd3LVFPMDdlVVlaSURKNlNOdzRzS1BQLVVKcXVnT0Ixd2FDWll6a084QktlcW9MQ1ZpVHNuVkt1M0prWDVfcGpFdFB1bkJ3RXo4Zy1yUXZGY291Y3JvR2xoblpZZng4eUZkaEpLQ0ViMHF1YTFoVzM0Wkk2MUVZZEVsck9meXhOOUx0U1VndVI0?oc=5",
-      "date": "Mon, 08 Jun 2026 07:00:00 GMT"
-    },
-    {
-      "id": "3ef5c5f4aae9",
-      "title": "Tim Cook says price hikes of Apple products ‘unavoidable’ amid AI-fueled memory chip crisis - The Indian Express",
-      "text": "Tim Cook says price hikes of Apple products ‘unavoidable’ amid AI-fueled memory chip crisis The Indian Express",
-      "source": "The Indian Express",
-      "source_type": "news",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNcTJfVkZGRWdtTkRtOHl3cTJBR2ZYQ3Q5bVMycDhDLTR1cG12bnJkTlNsUW9IRHQ0QVNnem0wRzh4NEJrQm55UnhSaXNRcGVrWDFHVElCVUtwQ3djeVVTNUNkZmpvdUJ4MXZuLTRwQUx3RHg0UnBfN2tTQUdzb0J4V2RLR01JN3FiVHpvN1hHQ25qNzExWTVrRGthczZvd3VmYnlNVktCUkZkSF93VzhzdUs2N3ZfUnRGX0dwOUZsVdIBxgFBVV95cUxPTFhYd3VBV28zY0FISjVrSHl3TXpRWU0wS3BhYXpSWDlIeDhiWlpNb2wzMExKUnBLSXFMdHR0Z0tYUkE5M2NWSjN2bDFOU2QtZFNSSTlVV2VJUlB3ZDh4VXR4akpSamRNRDgzUmZFd0tkWHlNNG9KQVF0b3BOMTBoUzJXY3Z4Z29CbldVbV9JNU9tMXliNXRMX0dpUWN6aEZGeTFYN2E5V2lhRmJ6SmlsTFFRLTZyT3FjVVczYV94NW1Oc1U3d1E?oc=5",
-      "date": "Fri, 19 Jun 2026 04:42:00 GMT"
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQV2puOTAwYmRQX0RRclN5QUpzTFhmOV8zU3o2YWNXblpURTNqRmkzYjlLOU5nLXNlU0V6cUVaZXJRcVBxdHU4MmxNYlhiaGRzTUp5WGdjS1pMWFBPVnlhaXJyVldraWtWb0pNSUxBZlFBbUdyMHV2NXJVUTdjWW14UFAzMi01eW1tcXRwZVRjYkFxSUdnTHJpUVE0OWxuZnNpT21BaTl5X2hfb2JBYTBCZVQ3Y3ItS3F0cUg2bUwwRWU2SXZqSUE?oc=5",
+      "date": "Thu, 18 Jun 2026 16:24:36 GMT"
     },
     {
       "id": "16bb10d71698",
