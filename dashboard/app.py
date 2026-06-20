@@ -46,8 +46,10 @@ html, body, [class*="css"] { font-family:'Inter',system-ui,sans-serif; }
 .evidence{font-size:.83rem;color:#5a6472;border-left:3px solid #d9dee7;padding-left:.7rem;margin:.26rem 0;}
 .answer{background:linear-gradient(135deg,#f3f6ff,#eef2ff);border:1px solid #dbe2ff;border-radius:16px;
         padding:1.3rem 1.5rem;font-size:1.03rem;line-height:1.65;color:#1f2d45;}
-.brief-q{font-weight:600;font-size:1.08rem;color:#16243f;margin:1.1rem 0 .25rem;}
-.brief-a{color:#ff6b6b;line-height:1.7;font-size:1.0rem;}
+.brief-card{background:#161e2e;border:1px solid #243049;border-radius:14px;
+            padding:1.1rem 1.35rem;margin-bottom:.85rem;box-shadow:0 2px 6px rgba(0,0,0,.12);}
+.brief-q{font-weight:700;font-size:1.06rem;color:#ff8f8f;margin-bottom:.4rem;}
+.brief-a{color:#ffc9c9;line-height:1.75;font-size:1.0rem;}
 .flex-between{display:flex;justify-content:space-between;align-items:center;gap:.6rem;}
 .stTabs [data-baseweb="tab"]{font-weight:600;}
 </style>
@@ -182,9 +184,9 @@ with tabs[5]:
 # ---- Tab: Briefing (Section 7) ----------------------------------------------
 with tabs[6]:
     b = data.get("briefing", {})
-    for title, key in [("What happened?", "what_happened"),
-                       ("Why does it matter?", "why_it_matters"),
-                       ("What should management do next?", "what_next")]:
-        st.markdown(f"<div class='brief-q'>{title}</div>"
-                    f"<div class='brief-a'>{esc(b.get(key, ''))}</div>",
+    for icon, title, key in [("📌", "What happened?", "what_happened"),
+                             ("💡", "Why does it matter?", "why_it_matters"),
+                             ("🎯", "What should management do next?", "what_next")]:
+        st.markdown(f"<div class='brief-card'><div class='brief-q'>{icon} {title}</div>"
+                    f"<div class='brief-a'>{esc(b.get(key, ''))}</div></div>",
                     unsafe_allow_html=True)
