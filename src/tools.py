@@ -6,7 +6,7 @@ agent can *decide* which to call and fetch real evidence from the knowledge base
 instead of hallucinating. These are fetchers (retrieval + classical NLP); the
 agent does the strategic reasoning over what they return.
 
-Used by src/agent.py.
+Used by the agent graph in main.py.
 """
 
 from functools import lru_cache
