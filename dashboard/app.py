@@ -1,13 +1,16 @@
 """
 Executive Intelligence Dashboard (Streamlit) — Deliverable 2.
 
-A thin renderer of results/dashboard_data.json: every PDF dashboard section maps
-to one key in that file (the backend already shaped it). Run the backend first:
+Thin, styled renderer of results/dashboard_data.json. Every PDF dashboard section
+is a tab; the backend already shaped the data. Run the backend first:
 
-    python main.py report           # writes results/dashboard_data.json
+    python main.py report                       # writes results/dashboard_data.json
     uv run streamlit run dashboard/app.py
 """
 
+import contextlib
+import html
+import io
 import json
 import sys
 from pathlib import Path
@@ -18,128 +21,168 @@ import streamlit as st
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "results" / "dashboard_data.json"
 
-_LEVEL = {"high": "🔴 High", "medium": "🟡 Medium", "low": "🟢 Low"}
+st.set_page_config(page_title="AI CEO — Strategic Intelligence", page_icon="🧠", layout="wide")
+
+# ---------------------------------------------------------------- styling ----
+st.markdown("""
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+html, body, [class*="css"] { font-family:'Inter',system-ui,sans-serif; }
+#MainMenu, footer, header {visibility:hidden;}
+.block-container{padding-top:1.4rem; max-width:1180px;}
+.hero{font-size:1.9rem;font-weight:700;color:#16243f;margin:.1rem 0 .2rem;}
+.sub{color:#7a8595;margin-bottom:1rem;}
+.row{display:flex;gap:.8rem;flex-wrap:wrap;margin:.3rem 0 1rem;}
+.metric{flex:1;min-width:150px;background:#fff;border:1px solid #e7e9ee;border-radius:14px;
+        padding:.9rem 1.1rem;box-shadow:0 1px 3px rgba(0,0,0,.04);}
+.m-val{font-size:1.45rem;font-weight:700;color:#16243f;}
+.m-lbl{font-size:.74rem;color:#8a93a3;text-transform:uppercase;letter-spacing:.05em;}
+.card{background:#fff;border:1px solid #e7e9ee;border-radius:14px;padding:1rem 1.2rem;
+      margin-bottom:.8rem;box-shadow:0 1px 3px rgba(0,0,0,.04);}
+.card-title{font-weight:600;font-size:1.02rem;color:#16243f;}
+.muted{font-size:.82rem;color:#8a93a3;margin:.15rem 0 .5rem;}
+.badge{display:inline-block;padding:.14rem .65rem;border-radius:999px;font-size:.74rem;font-weight:600;white-space:nowrap;}
+.b-high{background:#fde8e8;color:#c0392b;} .b-med{background:#fff3e0;color:#b9770e;} .b-low{background:#e6f6ec;color:#1e7e45;}
+.evidence{font-size:.83rem;color:#5a6472;border-left:3px solid #d9dee7;padding-left:.7rem;margin:.26rem 0;}
+.answer{background:linear-gradient(135deg,#f3f6ff,#eef2ff);border:1px solid #dbe2ff;border-radius:16px;
+        padding:1.3rem 1.5rem;font-size:1.03rem;line-height:1.65;color:#1f2d45;}
+.flex-between{display:flex;justify-content:space-between;align-items:center;gap:.6rem;}
+.stTabs [data-baseweb="tab"]{font-weight:600;}
+</style>
+""", unsafe_allow_html=True)
+
+# ----------------------------------------------------------------- helpers ---
+def esc(x) -> str:
+    return html.escape(str(x))
 
 
-def badge(level: str) -> str:
-    return _LEVEL.get(str(level).lower(), level)
+def badge(level) -> str:
+    cls = {"high": "b-high", "medium": "b-med", "low": "b-low"}.get(str(level).lower(), "b-med")
+    return f"<span class='badge {cls}'>{esc(level)}</span>"
 
 
-def show_evidence(evidence: list[dict]) -> None:
-    for e in evidence:
-        line = f"`[{e.get('ref', 'src')}]` **{e.get('title', '')}** — {e.get('source', '')}"
-        if e.get("score") is not None:
-            line += f"  ·  score {e['score']}"
-        st.markdown(line)
-        if e.get("url"):
-            st.caption(e["url"])
+def metric(label, value) -> str:
+    return f"<div class='metric'><div class='m-val'>{esc(value)}</div><div class='m-lbl'>{esc(label)}</div></div>"
 
 
-st.set_page_config(page_title="AI CEO — Strategic Intelligence", layout="wide")
+def evidence_html(evidence) -> str:
+    return "".join(
+        f"<div class='evidence'>[{esc(e.get('ref', 'src'))}] {esc(e.get('title', ''))} — <i>{esc(e.get('source', ''))}</i></div>"
+        for e in evidence
+    ) or "<div class='evidence muted'>no evidence</div>"
 
+
+def card(title_html: str, body_html: str) -> None:
+    st.markdown(f"<div class='card'><div class='flex-between'>{title_html}</div>{body_html}</div>",
+                unsafe_allow_html=True)
+
+
+# -------------------------------------------------------------------- data ---
 if not DATA.exists():
-    st.error(f"No data yet. Run `python main.py report` first.\nExpected: {DATA}")
+    st.error(f"No data yet. Run `python main.py report` first.\n\nExpected: {DATA}")
     st.stop()
 
 data = json.loads(DATA.read_text(encoding="utf-8"))
+c = data["company"]
 
-# ---- Sidebar: refresh + interactive agent -----------------------------------
-with st.sidebar:
-    st.header("🧠 AI CEO")
-    if st.button("🔄 Reload data"):
-        st.rerun()
-    st.divider()
-    st.subheader("Ask the agent")
-    question = st.text_input("Strategic question", placeholder="What are our biggest risks?")
-    if st.button("Ask") and question:
+st.markdown(f"<div class='hero'>🧠 AI CEO — {esc(c['name'])}</div>", unsafe_allow_html=True)
+st.markdown(f"<div class='sub'>{esc(c['industry'])}</div>", unsafe_allow_html=True)
+
+tabs = st.tabs(["💬 Ask the CEO", "📊 Overview", "🚀 Opportunities", "⚠️ Risks",
+                "📈 Sentiment", "✅ Recommendations", "📝 Briefing"])
+
+# ---- Tab: Ask the CEO (interactive agent) -----------------------------------
+with tabs[0]:
+    st.markdown("#### Ask the AI CEO anything strategic")
+    st.markdown("<div class='muted'>The agent reasons, calls tools to fetch real evidence, then answers.</div>",
+                unsafe_allow_html=True)
+    q = st.text_input("question", placeholder="e.g. How do we beat Samsung in wearables?",
+                      label_visibility="collapsed")
+    if st.button("Ask the CEO  →", type="primary") and q.strip():
         sys.path.insert(0, str(ROOT))
-        with st.spinner("Agent reasoning + calling tools…"):
+        buf = io.StringIO()
+        with st.spinner("Reasoning and calling tools…"):
             try:
                 from main import ask_ceo
-                st.success(ask_ceo(question))
+                with contextlib.redirect_stdout(buf):
+                    answer = ask_ceo(q.strip())
+                st.markdown(f"<div class='answer'>{esc(answer)}</div>", unsafe_allow_html=True)
+                tool_lines = [l.strip() for l in buf.getvalue().splitlines() if "calling tool" in l]
+                if tool_lines:
+                    with st.expander(f"🔧 {len(tool_lines)} tool calls"):
+                        st.code("\n".join(tool_lines), language="text")
             except Exception as exc:
-                st.error(f"Agent unavailable (is the model server running?): {exc}")
+                st.error(f"Agent unavailable — is the model server running?\n\n{exc}")
 
-# ---- Section 1: Company Overview --------------------------------------------
-c = data["company"]
-st.title(f"AI CEO — {c['name']}")
-o = st.columns(4)
-o[0].metric("Industry", c["industry"])
-o[1].metric("Documents", c["n_documents"])
-o[2].metric("Data sources", c["n_sources"])
-o[3].metric("Last update", str(c["last_update"])[:16].replace("T", " "))
-st.divider()
+# ---- Tab: Overview (Section 1 + 2) ------------------------------------------
+with tabs[1]:
+    st.markdown("<div class='row'>" + "".join([
+        metric("Documents", c["n_documents"]),
+        metric("Data sources", c["n_sources"]),
+        metric("Industry", c["industry"]),
+        metric("Last update", str(c["last_update"])[:16].replace("T", " ")),
+    ]) + "</div>", unsafe_allow_html=True)
 
-# ---- Section 2: Market Intelligence -----------------------------------------
-st.header("📰 Market Intelligence")
-mi = data.get("market_intelligence", {})
-left, right = st.columns(2)
-with left:
-    st.subheader("Recent news")
-    for n in mi.get("recent_news", []):
-        st.markdown(f"- [{n['title']}]({n['url']}) — *{n['source']}*" if n.get("url")
-                    else f"- {n['title']} — *{n['source']}*")
-with right:
-    st.subheader("Competitor activity")
-    for e in mi.get("competitor_activity", []):
-        st.markdown(f"- **{e.get('title', '')}** — {e.get('source', '')}")
-st.caption("Trending keywords: " + ", ".join(mi.get("keywords", [])))
-st.divider()
+    mi = data.get("market_intelligence", {})
+    left, right = st.columns(2)
+    with left:
+        st.markdown("##### 📰 Recent news")
+        for n in mi.get("recent_news", []):
+            link = f"[{n['title']}]({n['url']})" if n.get("url") else n["title"]
+            st.markdown(f"- {link}  ·  *{n.get('source', '')}*")
+    with right:
+        st.markdown("##### 🏁 Competitor activity")
+        for e in mi.get("competitor_activity", []):
+            st.markdown(f"- **{e.get('title', '')}**  ·  *{e.get('source', '')}*")
+    if mi.get("keywords"):
+        st.caption("Trending: " + " · ".join(mi["keywords"]))
 
-# ---- Section 3: Opportunity Monitor -----------------------------------------
-st.header("🚀 Opportunity Monitor")
-for opp in data.get("opportunities", []):
-    with st.expander(f"{badge(opp.get('impact'))}  ·  {opp['title']}  ·  confidence {opp.get('confidence', 0)}"):
-        show_evidence(opp.get("evidence", []))
-st.divider()
+# ---- Tab: Opportunities (Section 3) -----------------------------------------
+with tabs[2]:
+    for opp in data.get("opportunities", []):
+        card(f"<span class='card-title'>{esc(opp['title'])}</span>{badge(opp.get('impact'))}",
+             f"<div class='muted'>Confidence {esc(opp.get('confidence', 0))}</div>{evidence_html(opp.get('evidence', []))}")
 
-# ---- Section 4: Risk Monitor ------------------------------------------------
-st.header("⚠️ Risk Monitor")
-for risk in data.get("risks", []):
-    header = f"{badge(risk.get('severity'))}  ·  {risk['title']}  ·  {risk.get('category', '')}  ·  confidence {risk.get('confidence', 0)}"
-    with st.expander(header):
-        show_evidence(risk.get("evidence", []))
-st.divider()
+# ---- Tab: Risks (Section 4) -------------------------------------------------
+with tabs[3]:
+    for r in data.get("risks", []):
+        card(f"<span class='card-title'>{esc(r['title'])}</span>{badge(r.get('severity'))}",
+             f"<div class='muted'>{esc(r.get('category', ''))} · confidence {esc(r.get('confidence', 0))}</div>"
+             f"{evidence_html(r.get('evidence', []))}")
 
-# ---- Section 5: Sentiment Analysis ------------------------------------------
-st.header("📊 Sentiment Analysis")
-s = data.get("sentiment", {})
-sc = st.columns(3)
-sc[0].metric("News sentiment", s.get("news_sentiment", 0))
-sc[1].metric("Public sentiment", s.get("public_sentiment", 0))
-sc[2].metric("Overall", s.get("overall_sentiment", 0))
-viz = st.columns(2)
-with viz[0]:
-    st.caption("Distribution")
-    dist = s.get("distribution", {})
-    if dist:
-        st.bar_chart(pd.Series(dist, name="documents"))
-with viz[1]:
-    st.caption("Sentiment trend")
-    trend = s.get("trend", [])
-    if trend:
-        st.line_chart(pd.DataFrame(trend).set_index("period")["sentiment"])
-st.divider()
+# ---- Tab: Sentiment (Section 5) ---------------------------------------------
+with tabs[4]:
+    s = data.get("sentiment", {})
+    st.markdown("<div class='row'>" + "".join([
+        metric("News sentiment", s.get("news_sentiment", 0)),
+        metric("Public sentiment", s.get("public_sentiment", 0)),
+        metric("Overall", s.get("overall_sentiment", 0)),
+    ]) + "</div>", unsafe_allow_html=True)
+    v1, v2 = st.columns(2)
+    with v1:
+        st.markdown("##### Distribution")
+        if s.get("distribution"):
+            st.bar_chart(pd.Series(s["distribution"], name="documents"))
+    with v2:
+        st.markdown("##### Sentiment trend")
+        if s.get("trend"):
+            st.line_chart(pd.DataFrame(s["trend"]).set_index("period")["sentiment"])
 
-# ---- Section 6: Strategic Recommendations -----------------------------------
-st.header("✅ Strategic Recommendations")
-for r in data.get("recommendations", []):
-    with st.container(border=True):
-        st.markdown(f"### {r['recommendation']}")
-        m = st.columns(2)
-        m[0].markdown(f"**Priority:** {badge(r.get('priority'))}")
-        m[1].markdown(f"**Risk level:** {badge(r.get('risk_level'))}")
-        st.markdown("**Expected impact:** " + ", ".join(r.get("expected_impact", [])))
-        st.markdown("**Supporting evidence:**")
-        show_evidence(r.get("supporting_evidence", []))
-st.divider()
+# ---- Tab: Recommendations (Section 6) ---------------------------------------
+with tabs[5]:
+    for r in data.get("recommendations", []):
+        body = (f"<div style='margin:.3rem 0'>{badge(r.get('priority'))} priority "
+                f"&nbsp; {badge(r.get('risk_level'))} risk</div>"
+                f"<div class='muted'>Expected impact: {esc(', '.join(r.get('expected_impact', [])))}</div>"
+                f"{evidence_html(r.get('supporting_evidence', []))}")
+        card(f"<span class='card-title'>{esc(r['recommendation'])}</span>", body)
 
-# ---- Section 7: CEO Briefing ------------------------------------------------
-st.header("📝 CEO Briefing")
-b = data.get("briefing", {})
-st.subheader("What happened?")
-st.write(b.get("what_happened", ""))
-st.subheader("Why does it matter?")
-st.write(b.get("why_it_matters", ""))
-st.subheader("What should management do next?")
-st.write(b.get("what_next", ""))
+# ---- Tab: Briefing (Section 7) ----------------------------------------------
+with tabs[6]:
+    b = data.get("briefing", {})
+    for title, key in [("What happened?", "what_happened"),
+                       ("Why does it matter?", "why_it_matters"),
+                       ("What should management do next?", "what_next")]:
+        st.markdown(f"<div class='card'><div class='card-title'>{title}</div>"
+                    f"<div style='margin-top:.4rem;line-height:1.6'>{esc(b.get(key, ''))}</div></div>",
+                    unsafe_allow_html=True)
