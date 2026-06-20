@@ -8,3 +8,6 @@ data/chroma/
 __pycache__/__pycache__/
 *.pyc
 data/chroma/
+__pycache__/
+*.pyc
+data/chroma/
