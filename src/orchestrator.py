@@ -37,7 +37,6 @@ class GraphState(TypedDict, total=False):
     recommendations: list
     metrics: dict
     briefing: str
-    retries: int
     trace: list
 
 
@@ -76,13 +75,8 @@ def node_intelligence(state: GraphState) -> GraphState:
 
 
 def node_recommend(state: GraphState) -> GraphState:
-    retries = state.get("retries", 0)
     recs = generate_recommendations(state["intel"])
-    return {
-        "recommendations": recs,
-        "retries": retries + 1,
-        "trace": _trace(state, "recommend", {"n": len(recs), "pass": retries + 1}),
-    }
+    return {"recommendations": recs, "trace": _trace(state, "recommend", {"n": len(recs)})}
 
 
 def node_verify(state: GraphState) -> GraphState:
@@ -97,35 +91,35 @@ def node_brief(state: GraphState) -> GraphState:
 
 
 # ----------------------------------------------------------------------------
-# Conditional edge — retry recommendation once if confidence is too low
+# Two graphs: ingest (slow, rare) and analyze (fast, repeatable).
+# Splitting them means iterating on the analysis never re-collects or re-embeds.
 # ----------------------------------------------------------------------------
-def should_retry(state: GraphState) -> str:
-    low = state["metrics"]["mean_confidence"] < config.CONFIDENCE_THRESHOLD
-    return "retry" if (low and state.get("retries", 0) < 2) else "ok"
-
-
-# ----------------------------------------------------------------------------
-# Build + compile the graph
-# ----------------------------------------------------------------------------
-def build_graph():
+def build_ingest_graph():
+    """collect -> process -> index. Run when you want fresh data."""
     g = StateGraph(GraphState)
     g.add_node("collect", node_collect)
     g.add_node("process", node_process)
     g.add_node("index", node_index)
+    g.set_entry_point("collect")
+    g.add_edge("collect", "process")
+    g.add_edge("process", "index")
+    g.add_edge("index", END)
+    return g.compile()
+
+
+def build_analyze_graph():
+    """analyze -> intelligence -> recommend -> verify -> brief. Reuses the stored index."""
+    g = StateGraph(GraphState)
     g.add_node("analyze", node_analyze)
     g.add_node("intelligence", node_intelligence)
     g.add_node("recommend", node_recommend)
     g.add_node("verify", node_verify)
     g.add_node("brief", node_brief)
-
-    g.set_entry_point("collect")
-    g.add_edge("collect", "process")
-    g.add_edge("process", "index")
-    g.add_edge("index", "analyze")
+    g.set_entry_point("analyze")
     g.add_edge("analyze", "intelligence")
     g.add_edge("intelligence", "recommend")
     g.add_edge("recommend", "verify")
-    g.add_conditional_edges("verify", should_retry, {"retry": "recommend", "ok": "brief"})
+    g.add_edge("verify", "brief")
     g.add_edge("brief", END)
     return g.compile()
 
@@ -136,13 +130,13 @@ def _save_outputs(state: GraphState) -> None:
     save_json(state["trace"], config.RESULTS_DIR / "trace.json")
     save_text(state.get("briefing", ""), config.RESULTS_DIR / "ceo_briefing.txt")
 
-    # Number of independent source types actually present in the corpus (news/finance/community/research).
+    # Counts come from the persisted corpus/index, so analyze-only runs report correctly.
     n_sources = int(load_corpus()["source_type"].nunique())
     dashboard = {
         "company": {
             "name": config.COMPANY,
             "industry": config.INDUSTRY,
-            "n_documents": state.get("docs", 0),
+            "n_documents": kb_count(),
             "n_sources": n_sources,
             "last_update": now_iso(),
         },
@@ -156,11 +150,22 @@ def _save_outputs(state: GraphState) -> None:
     print(f"[orchestrator] outputs written to {config.RESULTS_DIR}")
 
 
+def run_ingest() -> GraphState:
+    """Refresh the knowledge base only (collect -> process -> index)."""
+    return build_ingest_graph().invoke({}, {"recursion_limit": 10})
+
+
+def run_analyze() -> GraphState:
+    """Analyze the stored index and write all results. Fast; assumes a prior ingest."""
+    state = build_analyze_graph().invoke({}, {"recursion_limit": 10})
+    _save_outputs(state)
+    return state
+
+
 def run_pipeline() -> GraphState:
-    graph = build_graph()
-    final_state = graph.invoke({}, {"recursion_limit": 25})
-    _save_outputs(final_state)
-    return final_state
+    """Full run: refresh data, then analyze."""
+    run_ingest()
+    return run_analyze()
 
 
 if __name__ == "__main__":
