@@ -1,476 +1,476 @@
 {
   "opportunities": [
     {
-      "title": "Cloud-based SCADA solutions for non-renewable energy sources",
-      "impact": "Medium",
-      "confidence": 0.847,
-      "evidence": [
-        {
-          "ref": "src-1",
-          "title": "Siemens delivers major cloud-based SCADA for renewables - Siemens",
-          "source": "Siemens",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBzdVZFdFdMNWlwdU10NGZPcUhLcVJZVDJ3dkFCdzJRbXNRWjFkWUJRUWQxRVV5Ym9kY0MyMzdmSFFhc3Q4LXhMN1JvaHlIMUwtRVZIb19rTTVqeHRIXzVQZ1pWNzVsaEdwRmp1d0V5NWFXZmM?oc=5",
-          "score": 0.8603
-        },
-        {
-          "ref": "src-2",
-          "title": "Smart building infrastructure and technologies - Siemens",
-          "source": "Siemens",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9CdHlmNk1SNWF0REYxRTJPSG5xTTlZM014eEd5ZUd6d1N0a1NxOG16SDNxWXZIRzNCM2d3c1o5LXJIYU5yLXpXNkY3OHhzaDRaODdMUUllSV9GTGxMV1NvTUZndVJDQXoxUEhCSWRLN2FjT0RMQkRR?oc=5",
-          "score": 0.8573
-        },
-        {
-          "ref": "src-3",
-          "title": "Siemens unveils technologies to accelerate the industrial AI revolution at CES 2026 - Siemens press",
-          "source": "Siemens press",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWUl4Q2NONi03VDladkJlXzFVMWZpQzZHeGN6blhyQjZhMGE3cXktdFFHUVpqWnBWVEtUZzBWYzBVenNwMHNLVzNUenBYb0NuUjdyRGhLeGlCV0dZZ3V0NXRaNlZUbGV2UUlqdDJ6ZWNFODZRSjNTTmRJYkdROXlPX1pPWDRfMlNKb0NhUWFaNnZMdDlrNE1MeTVYQlBub0dmdm5tSUlHLWFfdWZUM1p4SVB5T2UyWkVmbmhVX21KTQ?oc=5",
-          "score": 0.8239
-        }
-      ]
-    },
-    {
-      "title": "Smart building infrastructure expansion into new markets",
-      "impact": "Medium",
-      "confidence": 0.847,
-      "evidence": [
-        {
-          "ref": "src-1",
-          "title": "Siemens delivers major cloud-based SCADA for renewables - Siemens",
-          "source": "Siemens",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBzdVZFdFdMNWlwdU10NGZPcUhLcVJZVDJ3dkFCdzJRbXNRWjFkWUJRUWQxRVV5Ym9kY0MyMzdmSFFhc3Q4LXhMN1JvaHlIMUwtRVZIb19rTTVqeHRIXzVQZ1pWNzVsaEdwRmp1d0V5NWFXZmM?oc=5",
-          "score": 0.8603
-        },
-        {
-          "ref": "src-2",
-          "title": "Smart building infrastructure and technologies - Siemens",
-          "source": "Siemens",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9CdHlmNk1SNWF0REYxRTJPSG5xTTlZM014eEd5ZUd6d1N0a1NxOG16SDNxWXZIRzNCM2d3c1o5LXJIYU5yLXpXNkY3OHhzaDRaODdMUUllSV9GTGxMV1NvTUZndVJDQXoxUEhCSWRLN2FjT0RMQkRR?oc=5",
-          "score": 0.8573
-        },
-        {
-          "ref": "src-3",
-          "title": "Siemens unveils technologies to accelerate the industrial AI revolution at CES 2026 - Siemens press",
-          "source": "Siemens press",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWUl4Q2NONi03VDladkJlXzFVMWZpQzZHeGN6blhyQjZhMGE3cXktdFFHUVpqWnBWVEtUZzBWYzBVenNwMHNLVzNUenBYb0NuUjdyRGhLeGlCV0dZZ3V0NXRaNlZUbGV2UUlqdDJ6ZWNFODZRSjNTTmRJYkdROXlPX1pPWDRfMlNKb0NhUWFaNnZMdDlrNE1MeTVYQlBub0dmdm5tSUlHLWFfdWZUM1p4SVB5T2UyWkVmbmhVX21KTQ?oc=5",
-          "score": 0.8239
-        }
-      ]
-    },
-    {
-      "title": "Industrial AI adoption consulting services for manufacturing companies",
+      "title": "AI-driven hardware differentiation**",
       "impact": "High",
-      "confidence": 0.847,
+      "confidence": 0.873,
       "evidence": [
         {
           "ref": "src-1",
-          "title": "Siemens delivers major cloud-based SCADA for renewables - Siemens",
-          "source": "Siemens",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBzdVZFdFdMNWlwdU10NGZPcUhLcVJZVDJ3dkFCdzJRbXNRWjFkWUJRUWQxRVV5Ym9kY0MyMzdmSFFhc3Q4LXhMN1JvaHlIMUwtRVZIb19rTTVqeHRIXzVQZ1pWNzVsaEdwRmp1d0V5NWFXZmM?oc=5",
-          "score": 0.8603
+          "title": "Apple Inc. (AAPL): Renaissance Technologies Opens New Position - Yahoo Finance",
+          "source": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPSFhaNjZVUWpJNW5VSS1WXzlBWThmNzc5UFF3RzNYb0hOUWN4MkpGOFdpWnNBTVdpQ3pZRHZSeFlVbkF6d3ByWVRPQTJHMjJpNFA2WFhXeTNodmpteldyUVZaTTRXUnBuNDBtLVYzeVo4QTItazN3VHNpSGdHSG5rclJyQ2pKRzBFVnluUzhKWmotMmtTMjc2U1VpNVN4bkR2YjBCYklNYw?oc=5",
+          "score": 0.9467
         },
         {
           "ref": "src-2",
-          "title": "Smart building infrastructure and technologies - Siemens",
-          "source": "Siemens",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9CdHlmNk1SNWF0REYxRTJPSG5xTTlZM014eEd5ZUd6d1N0a1NxOG16SDNxWXZIRzNCM2d3c1o5LXJIYU5yLXpXNkY3OHhzaDRaODdMUUllSV9GTGxMV1NvTUZndVJDQXoxUEhCSWRLN2FjT0RMQkRR?oc=5",
-          "score": 0.8573
+          "title": "Renaissance Technologies Takes New Position In Apple Inc. (NASDAQ: AAPL), Ranking It Third Among Top Stock Picks - foreignpolicyjournal.com",
+          "source": "foreignpolicyjournal.com",
+          "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNZmpOQ1FYa0FTQkZfc2RDdldNb1pGa1loVkhEX3ljT2hWb29manhpSzNQTzFBNEE1ZFhnRDhnamliaGRzQkFvSEhvLUtYYlFOWGJrc3JabElQMUlhN2RzOEdNRlN1cGUzVC1IalVJeEM2U1dTUTlYTHFVX0hWdzYxQjR5Q2FoNTFONDJMNmhiN2R5NndnVnV5ZFZKRjY0aTM4aEZzdWU2a3dMRDYxMzEtUHE5a2pOZWtibWRyR3plWnBDTmhMcXpYU0JFQ2JHcmJ6N1lkdkJnTlJNcHBlT3BWaTJXSVI5Z1A2Q2lzcw?oc=5",
+          "score": 0.8614
         },
         {
           "ref": "src-3",
-          "title": "Siemens unveils technologies to accelerate the industrial AI revolution at CES 2026 - Siemens press",
-          "source": "Siemens press",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWUl4Q2NONi03VDladkJlXzFVMWZpQzZHeGN6blhyQjZhMGE3cXktdFFHUVpqWnBWVEtUZzBWYzBVenNwMHNLVzNUenBYb0NuUjdyRGhLeGlCV0dZZ3V0NXRaNlZUbGV2UUlqdDJ6ZWNFODZRSjNTTmRJYkdROXlPX1pPWDRfMlNKb0NhUWFaNnZMdDlrNE1MeTVYQlBub0dmdm5tSUlHLWFfdWZUM1p4SVB5T2UyWkVmbmhVX21KTQ?oc=5",
-          "score": 0.8239
+          "title": "Is Slowing Services Growth and Hardware Bottleneck a Problem for Apple Inc. (AAPL)? - Yahoo Finance",
+          "source": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPWnpCSTk2b0dWNGJSSzZTN2hpU3FheU9JblZTbGU0X180aVlOVTZ4YnFaSDEtdlFSVTBqeFhQQ3EtcUJfaEFqb3UwandvSERsSW9HdGhHU0RORWktY1ZKcEV5WGVpUE42X1JLTlVDaTJWdl9xbkZzSkJMVUFrMXB3LUdUUnlONjNyQ0FSMEEtTC11c1pRcmZlUmptVmxzTGF4NVEwcS1yRVhBeGoz?oc=5",
+          "score": 0.811
         }
       ]
     },
     {
-      "title": "Hosting industrial AI conferences and events globally",
+      "title": "Expansion into FinTech services**",
       "impact": "Medium",
-      "confidence": 0.847,
+      "confidence": 0.873,
       "evidence": [
         {
           "ref": "src-1",
-          "title": "Siemens delivers major cloud-based SCADA for renewables - Siemens",
-          "source": "Siemens",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBzdVZFdFdMNWlwdU10NGZPcUhLcVJZVDJ3dkFCdzJRbXNRWjFkWUJRUWQxRVV5Ym9kY0MyMzdmSFFhc3Q4LXhMN1JvaHlIMUwtRVZIb19rTTVqeHRIXzVQZ1pWNzVsaEdwRmp1d0V5NWFXZmM?oc=5",
-          "score": 0.8603
+          "title": "Apple Inc. (AAPL): Renaissance Technologies Opens New Position - Yahoo Finance",
+          "source": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPSFhaNjZVUWpJNW5VSS1WXzlBWThmNzc5UFF3RzNYb0hOUWN4MkpGOFdpWnNBTVdpQ3pZRHZSeFlVbkF6d3ByWVRPQTJHMjJpNFA2WFhXeTNodmpteldyUVZaTTRXUnBuNDBtLVYzeVo4QTItazN3VHNpSGdHSG5rclJyQ2pKRzBFVnluUzhKWmotMmtTMjc2U1VpNVN4bkR2YjBCYklNYw?oc=5",
+          "score": 0.9467
         },
         {
           "ref": "src-2",
-          "title": "Smart building infrastructure and technologies - Siemens",
-          "source": "Siemens",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9CdHlmNk1SNWF0REYxRTJPSG5xTTlZM014eEd5ZUd6d1N0a1NxOG16SDNxWXZIRzNCM2d3c1o5LXJIYU5yLXpXNkY3OHhzaDRaODdMUUllSV9GTGxMV1NvTUZndVJDQXoxUEhCSWRLN2FjT0RMQkRR?oc=5",
-          "score": 0.8573
+          "title": "Renaissance Technologies Takes New Position In Apple Inc. (NASDAQ: AAPL), Ranking It Third Among Top Stock Picks - foreignpolicyjournal.com",
+          "source": "foreignpolicyjournal.com",
+          "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNZmpOQ1FYa0FTQkZfc2RDdldNb1pGa1loVkhEX3ljT2hWb29manhpSzNQTzFBNEE1ZFhnRDhnamliaGRzQkFvSEhvLUtYYlFOWGJrc3JabElQMUlhN2RzOEdNRlN1cGUzVC1IalVJeEM2U1dTUTlYTHFVX0hWdzYxQjR5Q2FoNTFONDJMNmhiN2R5NndnVnV5ZFZKRjY0aTM4aEZzdWU2a3dMRDYxMzEtUHE5a2pOZWtibWRyR3plWnBDTmhMcXpYU0JFQ2JHcmJ6N1lkdkJnTlJNcHBlT3BWaTJXSVI5Z1A2Q2lzcw?oc=5",
+          "score": 0.8614
         },
         {
           "ref": "src-3",
-          "title": "Siemens unveils technologies to accelerate the industrial AI revolution at CES 2026 - Siemens press",
-          "source": "Siemens press",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWUl4Q2NONi03VDladkJlXzFVMWZpQzZHeGN6blhyQjZhMGE3cXktdFFHUVpqWnBWVEtUZzBWYzBVenNwMHNLVzNUenBYb0NuUjdyRGhLeGlCV0dZZ3V0NXRaNlZUbGV2UUlqdDJ6ZWNFODZRSjNTTmRJYkdROXlPX1pPWDRfMlNKb0NhUWFaNnZMdDlrNE1MeTVYQlBub0dmdm5tSUlHLWFfdWZUM1p4SVB5T2UyWkVmbmhVX21KTQ?oc=5",
-          "score": 0.8239
+          "title": "Is Slowing Services Growth and Hardware Bottleneck a Problem for Apple Inc. (AAPL)? - Yahoo Finance",
+          "source": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPWnpCSTk2b0dWNGJSSzZTN2hpU3FheU9JblZTbGU0X180aVlOVTZ4YnFaSDEtdlFSVTBqeFhQQ3EtcUJfaEFqb3UwandvSERsSW9HdGhHU0RORWktY1ZKcEV5WGVpUE42X1JLTlVDaTJWdl9xbkZzSkJMVUFrMXB3LUdUUnlONjNyQ0FSMEEtTC11c1pRcmZlUmptVmxzTGF4NVEwcS1yRVhBeGoz?oc=5",
+          "score": 0.811
         }
       ]
     },
     {
-      "title": "Expansion of manufacturing operations into new booming towns",
-      "impact": "High",
-      "confidence": 0.847,
+      "title": "Strategic partnerships with hedge funds (e.g., Renaissance Technologies)**",
+      "impact": "Low",
+      "confidence": 0.873,
       "evidence": [
         {
           "ref": "src-1",
-          "title": "Siemens delivers major cloud-based SCADA for renewables - Siemens",
-          "source": "Siemens",
-          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBzdVZFdFdMNWlwdU10NGZPcUhLcVJZVDJ3dkFCdzJRbXNRWjFkWUJRUWQxRVV5Ym9kY0MyMzdmSFFhc3Q4LXhMN1JvaHlIMUwtRVZIb19rTTVqeHRIXzVQZ1pWNzVsaEdwRmp1d0V5NWFXZmM?oc=5",
-          "score": 0.8603
+          "title": "Apple Inc. (AAPL): Renaissance Technologies Opens New Position - Yahoo Finance",
+          "source": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPSFhaNjZVUWpJNW5VSS1WXzlBWThmNzc5UFF3RzNYb0hOUWN4MkpGOFdpWnNBTVdpQ3pZRHZSeFlVbkF6d3ByWVRPQTJHMjJpNFA2WFhXeTNodmpteldyUVZaTTRXUnBuNDBtLVYzeVo4QTItazN3VHNpSGdHSG5rclJyQ2pKRzBFVnluUzhKWmotMmtTMjc2U1VpNVN4bkR2YjBCYklNYw?oc=5",
+          "score": 0.9467
         },
         {
           "ref": "src-2",
-          "title": "Smart building infrastructure and technologies - Siemens",
-          "source": "Siemens",
-          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9CdHlmNk1SNWF0REYxRTJPSG5xTTlZM014eEd5ZUd6d1N0a1NxOG16SDNxWXZIRzNCM2d3c1o5LXJIYU5yLXpXNkY3OHhzaDRaODdMUUllSV9GTGxMV1NvTUZndVJDQXoxUEhCSWRLN2FjT0RMQkRR?oc=5",
-          "score": 0.8573
+          "title": "Renaissance Technologies Takes New Position In Apple Inc. (NASDAQ: AAPL), Ranking It Third Among Top Stock Picks - foreignpolicyjournal.com",
+          "source": "foreignpolicyjournal.com",
+          "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNZmpOQ1FYa0FTQkZfc2RDdldNb1pGa1loVkhEX3ljT2hWb29manhpSzNQTzFBNEE1ZFhnRDhnamliaGRzQkFvSEhvLUtYYlFOWGJrc3JabElQMUlhN2RzOEdNRlN1cGUzVC1IalVJeEM2U1dTUTlYTHFVX0hWdzYxQjR5Q2FoNTFONDJMNmhiN2R5NndnVnV5ZFZKRjY0aTM4aEZzdWU2a3dMRDYxMzEtUHE5a2pOZWtibWRyR3plWnBDTmhMcXpYU0JFQ2JHcmJ6N1lkdkJnTlJNcHBlT3BWaTJXSVI5Z1A2Q2lzcw?oc=5",
+          "score": 0.8614
         },
         {
           "ref": "src-3",
-          "title": "Siemens unveils technologies to accelerate the industrial AI revolution at CES 2026 - Siemens press",
-          "source": "Siemens press",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNWUl4Q2NONi03VDladkJlXzFVMWZpQzZHeGN6blhyQjZhMGE3cXktdFFHUVpqWnBWVEtUZzBWYzBVenNwMHNLVzNUenBYb0NuUjdyRGhLeGlCV0dZZ3V0NXRaNlZUbGV2UUlqdDJ6ZWNFODZRSjNTTmRJYkdROXlPX1pPWDRfMlNKb0NhUWFaNnZMdDlrNE1MeTVYQlBub0dmdm5tSUlHLWFfdWZUM1p4SVB5T2UyWkVmbmhVX21KTQ?oc=5",
-          "score": 0.8239
+          "title": "Is Slowing Services Growth and Hardware Bottleneck a Problem for Apple Inc. (AAPL)? - Yahoo Finance",
+          "source": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPWnpCSTk2b0dWNGJSSzZTN2hpU3FheU9JblZTbGU0X180aVlOVTZ4YnFaSDEtdlFSVTBqeFhQQ3EtcUJfaEFqb3UwandvSERsSW9HdGhHU0RORWktY1ZKcEV5WGVpUE42X1JLTlVDaTJWdl9xbkZzSkJMVUFrMXB3LUdUUnlONjNyQ0FSMEEtTC11c1pRcmZlUmptVmxzTGF4NVEwcS1yRVhBeGoz?oc=5",
+          "score": 0.811
+        }
+      ]
+    },
+    {
+      "title": "Revitalizing services growth through AI integration**",
+      "impact": "High",
+      "confidence": 0.873,
+      "evidence": [
+        {
+          "ref": "src-1",
+          "title": "Apple Inc. (AAPL): Renaissance Technologies Opens New Position - Yahoo Finance",
+          "source": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPSFhaNjZVUWpJNW5VSS1WXzlBWThmNzc5UFF3RzNYb0hOUWN4MkpGOFdpWnNBTVdpQ3pZRHZSeFlVbkF6d3ByWVRPQTJHMjJpNFA2WFhXeTNodmpteldyUVZaTTRXUnBuNDBtLVYzeVo4QTItazN3VHNpSGdHSG5rclJyQ2pKRzBFVnluUzhKWmotMmtTMjc2U1VpNVN4bkR2YjBCYklNYw?oc=5",
+          "score": 0.9467
+        },
+        {
+          "ref": "src-2",
+          "title": "Renaissance Technologies Takes New Position In Apple Inc. (NASDAQ: AAPL), Ranking It Third Among Top Stock Picks - foreignpolicyjournal.com",
+          "source": "foreignpolicyjournal.com",
+          "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNZmpOQ1FYa0FTQkZfc2RDdldNb1pGa1loVkhEX3ljT2hWb29manhpSzNQTzFBNEE1ZFhnRDhnamliaGRzQkFvSEhvLUtYYlFOWGJrc3JabElQMUlhN2RzOEdNRlN1cGUzVC1IalVJeEM2U1dTUTlYTHFVX0hWdzYxQjR5Q2FoNTFONDJMNmhiN2R5NndnVnV5ZFZKRjY0aTM4aEZzdWU2a3dMRDYxMzEtUHE5a2pOZWtibWRyR3plWnBDTmhMcXpYU0JFQ2JHcmJ6N1lkdkJnTlJNcHBlT3BWaTJXSVI5Z1A2Q2lzcw?oc=5",
+          "score": 0.8614
+        },
+        {
+          "ref": "src-3",
+          "title": "Is Slowing Services Growth and Hardware Bottleneck a Problem for Apple Inc. (AAPL)? - Yahoo Finance",
+          "source": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPWnpCSTk2b0dWNGJSSzZTN2hpU3FheU9JblZTbGU0X180aVlOVTZ4YnFaSDEtdlFSVTBqeFhQQ3EtcUJfaEFqb3UwandvSERsSW9HdGhHU0RORWktY1ZKcEV5WGVpUE42X1JLTlVDaTJWdl9xbkZzSkJMVUFrMXB3LUdUUnlONjNyQ0FSMEEtTC11c1pRcmZlUmptVmxzTGF4NVEwcS1yRVhBeGoz?oc=5",
+          "score": 0.811
+        }
+      ]
+    },
+    {
+      "title": "Competitive pricing adjustments for AI-enhanced devices**",
+      "impact": "Medium",
+      "confidence": 0.873,
+      "evidence": [
+        {
+          "ref": "src-1",
+          "title": "Apple Inc. (AAPL): Renaissance Technologies Opens New Position - Yahoo Finance",
+          "source": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPSFhaNjZVUWpJNW5VSS1WXzlBWThmNzc5UFF3RzNYb0hOUWN4MkpGOFdpWnNBTVdpQ3pZRHZSeFlVbkF6d3ByWVRPQTJHMjJpNFA2WFhXeTNodmpteldyUVZaTTRXUnBuNDBtLVYzeVo4QTItazN3VHNpSGdHSG5rclJyQ2pKRzBFVnluUzhKWmotMmtTMjc2U1VpNVN4bkR2YjBCYklNYw?oc=5",
+          "score": 0.9467
+        },
+        {
+          "ref": "src-2",
+          "title": "Renaissance Technologies Takes New Position In Apple Inc. (NASDAQ: AAPL), Ranking It Third Among Top Stock Picks - foreignpolicyjournal.com",
+          "source": "foreignpolicyjournal.com",
+          "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNZmpOQ1FYa0FTQkZfc2RDdldNb1pGa1loVkhEX3ljT2hWb29manhpSzNQTzFBNEE1ZFhnRDhnamliaGRzQkFvSEhvLUtYYlFOWGJrc3JabElQMUlhN2RzOEdNRlN1cGUzVC1IalVJeEM2U1dTUTlYTHFVX0hWdzYxQjR5Q2FoNTFONDJMNmhiN2R5NndnVnV5ZFZKRjY0aTM4aEZzdWU2a3dMRDYxMzEtUHE5a2pOZWtibWRyR3plWnBDTmhMcXpYU0JFQ2JHcmJ6N1lkdkJnTlJNcHBlT3BWaTJXSVI5Z1A2Q2lzcw?oc=5",
+          "score": 0.8614
+        },
+        {
+          "ref": "src-3",
+          "title": "Is Slowing Services Growth and Hardware Bottleneck a Problem for Apple Inc. (AAPL)? - Yahoo Finance",
+          "source": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPWnpCSTk2b0dWNGJSSzZTN2hpU3FheU9JblZTbGU0X180aVlOVTZ4YnFaSDEtdlFSVTBqeFhQQ3EtcUJfaEFqb3UwandvSERsSW9HdGhHU0RORWktY1ZKcEV5WGVpUE42X1JLTlVDaTJWdl9xbkZzSkJMVUFrMXB3LUdUUnlONjNyQ0FSMEEtTC11c1pRcmZlUmptVmxzTGF4NVEwcS1yRVhBeGoz?oc=5",
+          "score": 0.811
         }
       ]
     }
   ],
   "risks": [
     {
-      "title": "Loss of Competitive Advantage",
-      "category": "competitive",
-      "severity": "High",
-      "confidence": 0.726,
+      "title": "Forced labor in supply chain**",
+      "category": "**supply chain**",
+      "severity": "**high",
+      "confidence": 0.797,
       "evidence": [
         {
           "ref": "src-1",
-          "title": "How PepsiCo Slashes Supply Chain Costs with Siemens AI Tech - Supply Chain Digital",
-          "source": "Supply Chain Digital",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNV0VUR0lxYm5DTHh6TzA4UVNnY1p2Rjc5WjFRNFhmODUyUGJJb241WXZNTU9SRGtiNlcxbWNKczNWdGppd0RQX3JBQTBydzRoejRYU0pCRHloY2w5NDZDWl9CYzhYa3JmNEdQQlVnTHJyR2xBNXlNUUltYTdOYlVWYWh1RjROU2NQNEoybHFMVGVmb3RCQmlaS3RR?oc=5",
-          "score": 0.8254
+          "title": "Xinjiang forced labour in multinational supply chains including Apple",
+          "source": "Hacker News",
+          "url": "https://www.ft.com/content/8912445a-5bd3-11ea-8033-fa40a0d65a98",
+          "score": 0.8233
         },
         {
           "ref": "src-2",
-          "title": "Siemens Plans A Shake-Up To Break Up Its Biggest Divisions - Finimize",
-          "source": "Finimize",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNQUdqcnpQR3VOWkFXdGFRcVpoOVBnT1g0Q2RveVBTY00xSmc3Mk12dDZvSUxIcUhhS1BaMFZTSHJXWkdndm90dVpYQTVPX0kwUG5OOHo5cDg3Q0xnX3luSWZuSnNxVUNNODgyWmlTYjlIYzF0cHFlUHZxVVJmamg1QkFFRkRYM0dMWGo0WFp1SzI?oc=5",
-          "score": 0.7125
+          "title": "Apple Inc. (AAPL): One of the 20 Stocks with the Biggest Share Buybacks - Yahoo Finance",
+          "source": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPcGZmaG1hTjgwR0hqY1MyTUtleTN1V3VKWTdGV25hWE9vUXhhczRZRUd4a2VlVzh6cWtsd0JtVE4xdFpzaHg3dzdhTUgzXzRidy1fanVjSTExdXEyYnRqQUlBQ1hzTVZ4a1NKaGh0OEViR2E4LWlrTVJNTlZ5UFhuSG45Tk1OMTV1a3JRVmUtOA?oc=5",
+          "score": 0.7976
         },
         {
           "ref": "src-3",
-          "title": "Manchester, UK: Siemens Returns with 2-Day Transform Event at 0 Euros Entry as What Others Are Missing in Industrial AI Adoption as it Becomes Exposed - Travel And Tour World",
-          "source": "Travel And Tour World",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9BSEhSMWVHYVg5OHRUc3JlUlRvSmhBTkZ0RDhjMU9ISHU5R2dQNC1KQnRzTHUwWkR2VmhJUFF0UDFrcWdVYnFRXzFwbmg4c25WYTBXc254UnlrSXhWUV9NRUNiOGJCd0NEbjFxZGNB?oc=5",
-          "score": 0.6398
+          "title": "Snap quietly fixed the biggest problem with Apple Vision Pro, and I'm excited by what's coming - t3.com",
+          "source": "t3.com",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPb0doTU9MdHV0eFZqZms5Um9vdExnZE5DLVJDNFM0eWJkY2E3V0x0STFzWTR1alRMTTVLWjd4QThvdWpmdnN2T2FXSDFqWlJ1TGxzR3JwU3JweXg3R2ZwX0NWVXNkdXBTRG9JbHRONHhNdmZFU25wUVB5TzdmbUxYLXAxRVhKSW1fSloxcHJJSHBFVmllTHliMktMZGhlVmhNQlBkeElqZ1g3UDV6OWFTQ1RNMXBRbXphMVE?oc=5",
+          "score": 0.7693
         }
       ]
     },
     {
-      "title": "Regulatory Non-Compliance",
-      "category": "regulatory",
-      "severity": "Medium",
-      "confidence": 0.726,
+      "title": "Share buybacks may signal financial instability**",
+      "category": "**financial**",
+      "severity": "**medium",
+      "confidence": 0.797,
       "evidence": [
         {
           "ref": "src-1",
-          "title": "How PepsiCo Slashes Supply Chain Costs with Siemens AI Tech - Supply Chain Digital",
-          "source": "Supply Chain Digital",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNV0VUR0lxYm5DTHh6TzA4UVNnY1p2Rjc5WjFRNFhmODUyUGJJb241WXZNTU9SRGtiNlcxbWNKczNWdGppd0RQX3JBQTBydzRoejRYU0pCRHloY2w5NDZDWl9CYzhYa3JmNEdQQlVnTHJyR2xBNXlNUUltYTdOYlVWYWh1RjROU2NQNEoybHFMVGVmb3RCQmlaS3RR?oc=5",
-          "score": 0.8254
+          "title": "Xinjiang forced labour in multinational supply chains including Apple",
+          "source": "Hacker News",
+          "url": "https://www.ft.com/content/8912445a-5bd3-11ea-8033-fa40a0d65a98",
+          "score": 0.8233
         },
         {
           "ref": "src-2",
-          "title": "Siemens Plans A Shake-Up To Break Up Its Biggest Divisions - Finimize",
-          "source": "Finimize",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNQUdqcnpQR3VOWkFXdGFRcVpoOVBnT1g0Q2RveVBTY00xSmc3Mk12dDZvSUxIcUhhS1BaMFZTSHJXWkdndm90dVpYQTVPX0kwUG5OOHo5cDg3Q0xnX3luSWZuSnNxVUNNODgyWmlTYjlIYzF0cHFlUHZxVVJmamg1QkFFRkRYM0dMWGo0WFp1SzI?oc=5",
-          "score": 0.7125
+          "title": "Apple Inc. (AAPL): One of the 20 Stocks with the Biggest Share Buybacks - Yahoo Finance",
+          "source": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPcGZmaG1hTjgwR0hqY1MyTUtleTN1V3VKWTdGV25hWE9vUXhhczRZRUd4a2VlVzh6cWtsd0JtVE4xdFpzaHg3dzdhTUgzXzRidy1fanVjSTExdXEyYnRqQUlBQ1hzTVZ4a1NKaGh0OEViR2E4LWlrTVJNTlZ5UFhuSG45Tk1OMTV1a3JRVmUtOA?oc=5",
+          "score": 0.7976
         },
         {
           "ref": "src-3",
-          "title": "Manchester, UK: Siemens Returns with 2-Day Transform Event at 0 Euros Entry as What Others Are Missing in Industrial AI Adoption as it Becomes Exposed - Travel And Tour World",
-          "source": "Travel And Tour World",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9BSEhSMWVHYVg5OHRUc3JlUlRvSmhBTkZ0RDhjMU9ISHU5R2dQNC1KQnRzTHUwWkR2VmhJUFF0UDFrcWdVYnFRXzFwbmg4c25WYTBXc254UnlrSXhWUV9NRUNiOGJCd0NEbjFxZGNB?oc=5",
-          "score": 0.6398
+          "title": "Snap quietly fixed the biggest problem with Apple Vision Pro, and I'm excited by what's coming - t3.com",
+          "source": "t3.com",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPb0doTU9MdHV0eFZqZms5Um9vdExnZE5DLVJDNFM0eWJkY2E3V0x0STFzWTR1alRMTTVLWjd4QThvdWpmdnN2T2FXSDFqWlJ1TGxzR3JwU3JweXg3R2ZwX0NWVXNkdXBTRG9JbHRONHhNdmZFU25wUVB5TzdmbUxYLXAxRVhKSW1fSloxcHJJSHBFVmllTHliMktMZGhlVmhNQlBkeElqZ1g3UDV6OWFTQ1RNMXBRbXphMVE?oc=5",
+          "score": 0.7693
         }
       ]
     },
     {
-      "title": "Negative Sentiment Impact on Brand Reputation",
-      "category": "sentiment",
-      "severity": "Medium",
-      "confidence": 0.726,
+      "title": "Competitor Snap improves Vision Pro experience**",
+      "category": "**competitive**",
+      "severity": "**medium",
+      "confidence": 0.797,
       "evidence": [
         {
           "ref": "src-1",
-          "title": "How PepsiCo Slashes Supply Chain Costs with Siemens AI Tech - Supply Chain Digital",
-          "source": "Supply Chain Digital",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNV0VUR0lxYm5DTHh6TzA4UVNnY1p2Rjc5WjFRNFhmODUyUGJJb241WXZNTU9SRGtiNlcxbWNKczNWdGppd0RQX3JBQTBydzRoejRYU0pCRHloY2w5NDZDWl9CYzhYa3JmNEdQQlVnTHJyR2xBNXlNUUltYTdOYlVWYWh1RjROU2NQNEoybHFMVGVmb3RCQmlaS3RR?oc=5",
-          "score": 0.8254
+          "title": "Xinjiang forced labour in multinational supply chains including Apple",
+          "source": "Hacker News",
+          "url": "https://www.ft.com/content/8912445a-5bd3-11ea-8033-fa40a0d65a98",
+          "score": 0.8233
         },
         {
           "ref": "src-2",
-          "title": "Siemens Plans A Shake-Up To Break Up Its Biggest Divisions - Finimize",
-          "source": "Finimize",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNQUdqcnpQR3VOWkFXdGFRcVpoOVBnT1g0Q2RveVBTY00xSmc3Mk12dDZvSUxIcUhhS1BaMFZTSHJXWkdndm90dVpYQTVPX0kwUG5OOHo5cDg3Q0xnX3luSWZuSnNxVUNNODgyWmlTYjlIYzF0cHFlUHZxVVJmamg1QkFFRkRYM0dMWGo0WFp1SzI?oc=5",
-          "score": 0.7125
+          "title": "Apple Inc. (AAPL): One of the 20 Stocks with the Biggest Share Buybacks - Yahoo Finance",
+          "source": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPcGZmaG1hTjgwR0hqY1MyTUtleTN1V3VKWTdGV25hWE9vUXhhczRZRUd4a2VlVzh6cWtsd0JtVE4xdFpzaHg3dzdhTUgzXzRidy1fanVjSTExdXEyYnRqQUlBQ1hzTVZ4a1NKaGh0OEViR2E4LWlrTVJNTlZ5UFhuSG45Tk1OMTV1a3JRVmUtOA?oc=5",
+          "score": 0.7976
         },
         {
           "ref": "src-3",
-          "title": "Manchester, UK: Siemens Returns with 2-Day Transform Event at 0 Euros Entry as What Others Are Missing in Industrial AI Adoption as it Becomes Exposed - Travel And Tour World",
-          "source": "Travel And Tour World",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9BSEhSMWVHYVg5OHRUc3JlUlRvSmhBTkZ0RDhjMU9ISHU5R2dQNC1KQnRzTHUwWkR2VmhJUFF0UDFrcWdVYnFRXzFwbmg4c25WYTBXc254UnlrSXhWUV9NRUNiOGJCd0NEbjFxZGNB?oc=5",
-          "score": 0.6398
+          "title": "Snap quietly fixed the biggest problem with Apple Vision Pro, and I'm excited by what's coming - t3.com",
+          "source": "t3.com",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPb0doTU9MdHV0eFZqZms5Um9vdExnZE5DLVJDNFM0eWJkY2E3V0x0STFzWTR1alRMTTVLWjd4QThvdWpmdnN2T2FXSDFqWlJ1TGxzR3JwU3JweXg3R2ZwX0NWVXNkdXBTRG9JbHRONHhNdmZFU25wUVB5TzdmbUxYLXAxRVhKSW1fSloxcHJJSHBFVmllTHliMktMZGhlVmhNQlBkeElqZ1g3UDV6OWFTQ1RNMXBRbXphMVE?oc=5",
+          "score": 0.7693
         }
       ]
     },
     {
-      "title": "Disruption to Supply Chain Partnerships",
-      "category": "supply chain",
-      "severity": "Medium",
-      "confidence": 0.726,
+      "title": "Unpatchable chip vulnerabilities in A12/A13**",
+      "category": "**regulatory**",
+      "severity": "**high",
+      "confidence": 0.797,
       "evidence": [
         {
           "ref": "src-1",
-          "title": "How PepsiCo Slashes Supply Chain Costs with Siemens AI Tech - Supply Chain Digital",
-          "source": "Supply Chain Digital",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNV0VUR0lxYm5DTHh6TzA4UVNnY1p2Rjc5WjFRNFhmODUyUGJJb241WXZNTU9SRGtiNlcxbWNKczNWdGppd0RQX3JBQTBydzRoejRYU0pCRHloY2w5NDZDWl9CYzhYa3JmNEdQQlVnTHJyR2xBNXlNUUltYTdOYlVWYWh1RjROU2NQNEoybHFMVGVmb3RCQmlaS3RR?oc=5",
-          "score": 0.8254
+          "title": "Xinjiang forced labour in multinational supply chains including Apple",
+          "source": "Hacker News",
+          "url": "https://www.ft.com/content/8912445a-5bd3-11ea-8033-fa40a0d65a98",
+          "score": 0.8233
         },
         {
           "ref": "src-2",
-          "title": "Siemens Plans A Shake-Up To Break Up Its Biggest Divisions - Finimize",
-          "source": "Finimize",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNQUdqcnpQR3VOWkFXdGFRcVpoOVBnT1g0Q2RveVBTY00xSmc3Mk12dDZvSUxIcUhhS1BaMFZTSHJXWkdndm90dVpYQTVPX0kwUG5OOHo5cDg3Q0xnX3luSWZuSnNxVUNNODgyWmlTYjlIYzF0cHFlUHZxVVJmamg1QkFFRkRYM0dMWGo0WFp1SzI?oc=5",
-          "score": 0.7125
+          "title": "Apple Inc. (AAPL): One of the 20 Stocks with the Biggest Share Buybacks - Yahoo Finance",
+          "source": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPcGZmaG1hTjgwR0hqY1MyTUtleTN1V3VKWTdGV25hWE9vUXhhczRZRUd4a2VlVzh6cWtsd0JtVE4xdFpzaHg3dzdhTUgzXzRidy1fanVjSTExdXEyYnRqQUlBQ1hzTVZ4a1NKaGh0OEViR2E4LWlrTVJNTlZ5UFhuSG45Tk1OMTV1a3JRVmUtOA?oc=5",
+          "score": 0.7976
         },
         {
           "ref": "src-3",
-          "title": "Manchester, UK: Siemens Returns with 2-Day Transform Event at 0 Euros Entry as What Others Are Missing in Industrial AI Adoption as it Becomes Exposed - Travel And Tour World",
-          "source": "Travel And Tour World",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9BSEhSMWVHYVg5OHRUc3JlUlRvSmhBTkZ0RDhjMU9ISHU5R2dQNC1KQnRzTHUwWkR2VmhJUFF0UDFrcWdVYnFRXzFwbmg4c25WYTBXc254UnlrSXhWUV9NRUNiOGJCd0NEbjFxZGNB?oc=5",
-          "score": 0.6398
+          "title": "Snap quietly fixed the biggest problem with Apple Vision Pro, and I'm excited by what's coming - t3.com",
+          "source": "t3.com",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPb0doTU9MdHV0eFZqZms5Um9vdExnZE5DLVJDNFM0eWJkY2E3V0x0STFzWTR1alRMTTVLWjd4QThvdWpmdnN2T2FXSDFqWlJ1TGxzR3JwU3JweXg3R2ZwX0NWVXNkdXBTRG9JbHRONHhNdmZFU25wUVB5TzdmbUxYLXAxRVhKSW1fSloxcHJJSHBFVmllTHliMktMZGhlVmhNQlBkeElqZ1g3UDV6OWFTQ1RNMXBRbXphMVE?oc=5",
+          "score": 0.7693
         }
       ]
     },
     {
-      "title": "Financial Impact from Division Break-Up",
-      "category": "financial",
-      "severity": "High",
-      "confidence": 0.726,
+      "title": "Supply chain disruptions due to memory shortages**",
+      "category": "**supply chain**",
+      "severity": "**medium",
+      "confidence": 0.797,
       "evidence": [
         {
           "ref": "src-1",
-          "title": "How PepsiCo Slashes Supply Chain Costs with Siemens AI Tech - Supply Chain Digital",
-          "source": "Supply Chain Digital",
-          "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNV0VUR0lxYm5DTHh6TzA4UVNnY1p2Rjc5WjFRNFhmODUyUGJJb241WXZNTU9SRGtiNlcxbWNKczNWdGppd0RQX3JBQTBydzRoejRYU0pCRHloY2w5NDZDWl9CYzhYa3JmNEdQQlVnTHJyR2xBNXlNUUltYTdOYlVWYWh1RjROU2NQNEoybHFMVGVmb3RCQmlaS3RR?oc=5",
-          "score": 0.8254
+          "title": "Xinjiang forced labour in multinational supply chains including Apple",
+          "source": "Hacker News",
+          "url": "https://www.ft.com/content/8912445a-5bd3-11ea-8033-fa40a0d65a98",
+          "score": 0.8233
         },
         {
           "ref": "src-2",
-          "title": "Siemens Plans A Shake-Up To Break Up Its Biggest Divisions - Finimize",
-          "source": "Finimize",
-          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNQUdqcnpQR3VOWkFXdGFRcVpoOVBnT1g0Q2RveVBTY00xSmc3Mk12dDZvSUxIcUhhS1BaMFZTSHJXWkdndm90dVpYQTVPX0kwUG5OOHo5cDg3Q0xnX3luSWZuSnNxVUNNODgyWmlTYjlIYzF0cHFlUHZxVVJmamg1QkFFRkRYM0dMWGo0WFp1SzI?oc=5",
-          "score": 0.7125
+          "title": "Apple Inc. (AAPL): One of the 20 Stocks with the Biggest Share Buybacks - Yahoo Finance",
+          "source": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPcGZmaG1hTjgwR0hqY1MyTUtleTN1V3VKWTdGV25hWE9vUXhhczRZRUd4a2VlVzh6cWtsd0JtVE4xdFpzaHg3dzdhTUgzXzRidy1fanVjSTExdXEyYnRqQUlBQ1hzTVZ4a1NKaGh0OEViR2E4LWlrTVJNTlZ5UFhuSG45Tk1OMTV1a3JRVmUtOA?oc=5",
+          "score": 0.7976
         },
         {
           "ref": "src-3",
-          "title": "Manchester, UK: Siemens Returns with 2-Day Transform Event at 0 Euros Entry as What Others Are Missing in Industrial AI Adoption as it Becomes Exposed - Travel And Tour World",
-          "source": "Travel And Tour World",
-          "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9BSEhSMWVHYVg5OHRUc3JlUlRvSmhBTkZ0RDhjMU9ISHU5R2dQNC1KQnRzTHUwWkR2VmhJUFF0UDFrcWdVYnFRXzFwbmg4c25WYTBXc254UnlrSXhWUV9NRUNiOGJCd0NEbjFxZGNB?oc=5",
-          "score": 0.6398
+          "title": "Snap quietly fixed the biggest problem with Apple Vision Pro, and I'm excited by what's coming - t3.com",
+          "source": "t3.com",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPb0doTU9MdHV0eFZqZms5Um9vdExnZE5DLVJDNFM0eWJkY2E3V0x0STFzWTR1alRMTTVLWjd4QThvdWpmdnN2T2FXSDFqWlJ1TGxzR3JwU3JweXg3R2ZwX0NWVXNkdXBTRG9JbHRONHhNdmZFU25wUVB5TzdmbUxYLXAxRVhKSW1fSloxcHJJSHBFVmllTHliMktMZGhlVmhNQlBkeElqZ1g3UDV6OWFTQ1RNMXBRbXphMVE?oc=5",
+          "score": 0.7693
         }
       ]
     }
   ],
   "trends": [
     {
-      "title": "Here are 5 emerging trends that Siemens management should monitor based on the provided evidence:",
-      "confidence": 0.834,
+      "title": "Shift from Vision Pro to Smart Glasses** (src-5)",
+      "confidence": 0.799,
       "evidence": [
         {
           "ref": "src-1",
-          "title": "Smart manufacturing for the semiconductors industry - Siemens",
-          "source": "Siemens",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTEJkRWRXMjhHck5MMk5KeVJKS25DNGNLdGt1Vk9JZG1rMnpLQ1Q1VDNoeXhHMF9qaUFDNHBDMGNWSERZTFJQZElscFV4OGFFcnMtNUhRU2ljaXROREc1UVdUZHotTnh5OWlKb0EtaThzeWpvNVFrcTE2cUFNend5dC1MTm1tcmM?oc=5",
-          "score": 0.8436
+          "title": "Comparative Study: Apple And Industry Competitors In Technology Hardware, Storage & Peripherals Indus - Benzinga",
+          "source": "Benzinga",
+          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOOE1qeDNmMlJKblpUZ3NVM2JqRlZ6Z2NKdm1GTjhHUVpfTmp4SVd5dUZLNEdOVVMtcURMNmJoRm9aazFjdGFnbVZkbUU4YkdGaGEwTlNETnRkeUMtdHJibUIwRmFLSnh2c1BxVUNIdWp1OTBkT1dRS2lJZDFoeWZNUVl0LVJoMG83T2d3QnpZTzBnaEt6ZEdtYi1OdG9EOTlDV1VJVGZBOWJfQjZ5STAteUpPVllMRWFGY2kxRXBua3BocmxYVi1RcU01MFZEdmhsUV9ISG43TC1KSjNtUTR4U2dUTGZaMEJZ?oc=5",
+          "score": 0.9456
         },
         {
           "ref": "src-2",
-          "title": "Siemens transforms customer engagement for electronic component manufacturers with PartQuest Design Enablement - Siemens",
-          "source": "Siemens",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBQUUZhdDJVeGRpdVVGa1NndjNhTHBtVWhnZjI4bnhRendPY0h4T3ljNDJydENsR2trUzBYUXpOY1FKX3NpNTJzRjc0Vm5rUFMyWjdqbVh6NTFUbWc5M29Qbklvd29VRGJjVVdkdFJfNHJvMm4yMFE?oc=5",
-          "score": 0.8416
+          "title": "Apple Inc. (AAPL) is Attracting Investor Attention: Here is What You Should Know - Yahoo Finance",
+          "source": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQNXJOYXQxaTlfSW0yVS1pT1I4VTBtM2lvRndBSmJCaHBMd2hJUHJDZWc3QzNRVmFxdEYyMzZSdnhTMjJjY093cERhTWppeHc2QXQ2ODA2eEdBU3c1cVd4VDFEY1A4Wnk3X3VHZFhzTnpnVlMxSDNDcVhyQlNVZ056NnQybGR1QjlCNXBYeFROaXVTNTc3bllFMVJ6dkRkbTdr?oc=5",
+          "score": 0.7792
         },
         {
           "ref": "src-3",
-          "title": "Nokia, Siemens and Iran: When technology gets bloody",
-          "source": "Hacker News",
-          "url": "http://blogs.telegraph.co.uk/technology/basheerakhan/100000089/nokia-siemens-and-iran-when-technology-gets-bloody/",
-          "score": 0.817
+          "title": "'It sees what you see': Why Siri AI on Apple Vision Pro is 'cyborg-level' technology - WION",
+          "source": "WION",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQU09SZnk4TlljNVRKdjlEQVg5OVJlM0xjWTdpZmg1eEFaX3pqYkdRUHpXNkF4U2ZnTDdYU2dPNFVCVDJyOC1ZV0ZNNE5GUU13anpQMDh1ajdORnFQdWJIclNuRDktT3FBYXFiTmg4OEJpMDZXcmZsUHlaUDVXeU52bU5lQnJuNUREZllhOEd0dHNSZmI4RTVVcEZ1ZU1hVC1yX2Q4eU1OVHhpMGPSAbABQVVfeXFMTko1alJMZHlnXy00SUVCWmRCVDRzalVNMklMcjZfZVAyaFBYMHlIWkxyNkNsOHpYWFNrMHMyZEZXV1Q2NU5FVjYtX2ZIZnAxaWJJM3VNNkhoNUZzTVFIZHlIUTRlREppN1p4YldMTXNxclZrTHRBQVpTckcwVW5qYmNJd00xZDZtblk3aXVjbEZkXzR6cExTaUowZ3k4QWhjMXFNd0VQZC1rVVRaUDBYVlc?oc=5",
+          "score": 0.6736
         }
       ],
       "keywords": [
-        "siemens",
-        "nbsp",
-        "healthineers",
-        "siemens healthineers",
-        "energy",
-        "nbsp nbsp",
-        "siemens energy",
+        "apple",
+        "iphone",
+        "silicon",
+        "apple silicon",
+        "pro",
+        "apple iphone",
+        "ios",
         "ai"
       ]
     },
     {
-      "title": "Increased adoption of smart manufacturing in the semiconductor industry**: As seen in [src-1], smart manufacturing is becoming a key focus for the semiconductor industry, and Siemens is at the forefront of this trend.",
-      "confidence": 0.834,
+      "title": "Integration of AI with AR/VR for \"cyborg-level\" capabilities** (src-3)",
+      "confidence": 0.799,
       "evidence": [
         {
           "ref": "src-1",
-          "title": "Smart manufacturing for the semiconductors industry - Siemens",
-          "source": "Siemens",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTEJkRWRXMjhHck5MMk5KeVJKS25DNGNLdGt1Vk9JZG1rMnpLQ1Q1VDNoeXhHMF9qaUFDNHBDMGNWSERZTFJQZElscFV4OGFFcnMtNUhRU2ljaXROREc1UVdUZHotTnh5OWlKb0EtaThzeWpvNVFrcTE2cUFNend5dC1MTm1tcmM?oc=5",
-          "score": 0.8436
+          "title": "Comparative Study: Apple And Industry Competitors In Technology Hardware, Storage & Peripherals Indus - Benzinga",
+          "source": "Benzinga",
+          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOOE1qeDNmMlJKblpUZ3NVM2JqRlZ6Z2NKdm1GTjhHUVpfTmp4SVd5dUZLNEdOVVMtcURMNmJoRm9aazFjdGFnbVZkbUU4YkdGaGEwTlNETnRkeUMtdHJibUIwRmFLSnh2c1BxVUNIdWp1OTBkT1dRS2lJZDFoeWZNUVl0LVJoMG83T2d3QnpZTzBnaEt6ZEdtYi1OdG9EOTlDV1VJVGZBOWJfQjZ5STAteUpPVllMRWFGY2kxRXBua3BocmxYVi1RcU01MFZEdmhsUV9ISG43TC1KSjNtUTR4U2dUTGZaMEJZ?oc=5",
+          "score": 0.9456
         },
         {
           "ref": "src-2",
-          "title": "Siemens transforms customer engagement for electronic component manufacturers with PartQuest Design Enablement - Siemens",
-          "source": "Siemens",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBQUUZhdDJVeGRpdVVGa1NndjNhTHBtVWhnZjI4bnhRendPY0h4T3ljNDJydENsR2trUzBYUXpOY1FKX3NpNTJzRjc0Vm5rUFMyWjdqbVh6NTFUbWc5M29Qbklvd29VRGJjVVdkdFJfNHJvMm4yMFE?oc=5",
-          "score": 0.8416
+          "title": "Apple Inc. (AAPL) is Attracting Investor Attention: Here is What You Should Know - Yahoo Finance",
+          "source": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQNXJOYXQxaTlfSW0yVS1pT1I4VTBtM2lvRndBSmJCaHBMd2hJUHJDZWc3QzNRVmFxdEYyMzZSdnhTMjJjY093cERhTWppeHc2QXQ2ODA2eEdBU3c1cVd4VDFEY1A4Wnk3X3VHZFhzTnpnVlMxSDNDcVhyQlNVZ056NnQybGR1QjlCNXBYeFROaXVTNTc3bllFMVJ6dkRkbTdr?oc=5",
+          "score": 0.7792
         },
         {
           "ref": "src-3",
-          "title": "Nokia, Siemens and Iran: When technology gets bloody",
-          "source": "Hacker News",
-          "url": "http://blogs.telegraph.co.uk/technology/basheerakhan/100000089/nokia-siemens-and-iran-when-technology-gets-bloody/",
-          "score": 0.817
+          "title": "'It sees what you see': Why Siri AI on Apple Vision Pro is 'cyborg-level' technology - WION",
+          "source": "WION",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQU09SZnk4TlljNVRKdjlEQVg5OVJlM0xjWTdpZmg1eEFaX3pqYkdRUHpXNkF4U2ZnTDdYU2dPNFVCVDJyOC1ZV0ZNNE5GUU13anpQMDh1ajdORnFQdWJIclNuRDktT3FBYXFiTmg4OEJpMDZXcmZsUHlaUDVXeU52bU5lQnJuNUREZllhOEd0dHNSZmI4RTVVcEZ1ZU1hVC1yX2Q4eU1OVHhpMGPSAbABQVVfeXFMTko1alJMZHlnXy00SUVCWmRCVDRzalVNMklMcjZfZVAyaFBYMHlIWkxyNkNsOHpYWFNrMHMyZEZXV1Q2NU5FVjYtX2ZIZnAxaWJJM3VNNkhoNUZzTVFIZHlIUTRlREppN1p4YldMTXNxclZrTHRBQVpTckcwVW5qYmNJd00xZDZtblk3aXVjbEZkXzR6cExTaUowZ3k4QWhjMXFNd0VQZC1rVVRaUDBYVlc?oc=5",
+          "score": 0.6736
         }
       ],
       "keywords": [
-        "siemens",
-        "nbsp",
-        "healthineers",
-        "siemens healthineers",
-        "energy",
-        "nbsp nbsp",
-        "siemens energy",
+        "apple",
+        "iphone",
+        "silicon",
+        "apple silicon",
+        "pro",
+        "apple iphone",
+        "ios",
         "ai"
       ]
     },
     {
-      "title": "Growing importance of AI in industrial processes**: The partnership between Siemens and Capgemini, as mentioned in [src-5], highlights the increasing role of AI in driving industrial innovation and future growth.",
-      "confidence": 0.834,
+      "title": "Health monitoring via wearable tech (e.g., heart activity tracking)** (src-4)",
+      "confidence": 0.799,
       "evidence": [
         {
           "ref": "src-1",
-          "title": "Smart manufacturing for the semiconductors industry - Siemens",
-          "source": "Siemens",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTEJkRWRXMjhHck5MMk5KeVJKS25DNGNLdGt1Vk9JZG1rMnpLQ1Q1VDNoeXhHMF9qaUFDNHBDMGNWSERZTFJQZElscFV4OGFFcnMtNUhRU2ljaXROREc1UVdUZHotTnh5OWlKb0EtaThzeWpvNVFrcTE2cUFNend5dC1MTm1tcmM?oc=5",
-          "score": 0.8436
+          "title": "Comparative Study: Apple And Industry Competitors In Technology Hardware, Storage & Peripherals Indus - Benzinga",
+          "source": "Benzinga",
+          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOOE1qeDNmMlJKblpUZ3NVM2JqRlZ6Z2NKdm1GTjhHUVpfTmp4SVd5dUZLNEdOVVMtcURMNmJoRm9aazFjdGFnbVZkbUU4YkdGaGEwTlNETnRkeUMtdHJibUIwRmFLSnh2c1BxVUNIdWp1OTBkT1dRS2lJZDFoeWZNUVl0LVJoMG83T2d3QnpZTzBnaEt6ZEdtYi1OdG9EOTlDV1VJVGZBOWJfQjZ5STAteUpPVllMRWFGY2kxRXBua3BocmxYVi1RcU01MFZEdmhsUV9ISG43TC1KSjNtUTR4U2dUTGZaMEJZ?oc=5",
+          "score": 0.9456
         },
         {
           "ref": "src-2",
-          "title": "Siemens transforms customer engagement for electronic component manufacturers with PartQuest Design Enablement - Siemens",
-          "source": "Siemens",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBQUUZhdDJVeGRpdVVGa1NndjNhTHBtVWhnZjI4bnhRendPY0h4T3ljNDJydENsR2trUzBYUXpOY1FKX3NpNTJzRjc0Vm5rUFMyWjdqbVh6NTFUbWc5M29Qbklvd29VRGJjVVdkdFJfNHJvMm4yMFE?oc=5",
-          "score": 0.8416
+          "title": "Apple Inc. (AAPL) is Attracting Investor Attention: Here is What You Should Know - Yahoo Finance",
+          "source": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQNXJOYXQxaTlfSW0yVS1pT1I4VTBtM2lvRndBSmJCaHBMd2hJUHJDZWc3QzNRVmFxdEYyMzZSdnhTMjJjY093cERhTWppeHc2QXQ2ODA2eEdBU3c1cVd4VDFEY1A4Wnk3X3VHZFhzTnpnVlMxSDNDcVhyQlNVZ056NnQybGR1QjlCNXBYeFROaXVTNTc3bllFMVJ6dkRkbTdr?oc=5",
+          "score": 0.7792
         },
         {
           "ref": "src-3",
-          "title": "Nokia, Siemens and Iran: When technology gets bloody",
-          "source": "Hacker News",
-          "url": "http://blogs.telegraph.co.uk/technology/basheerakhan/100000089/nokia-siemens-and-iran-when-technology-gets-bloody/",
-          "score": 0.817
+          "title": "'It sees what you see': Why Siri AI on Apple Vision Pro is 'cyborg-level' technology - WION",
+          "source": "WION",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQU09SZnk4TlljNVRKdjlEQVg5OVJlM0xjWTdpZmg1eEFaX3pqYkdRUHpXNkF4U2ZnTDdYU2dPNFVCVDJyOC1ZV0ZNNE5GUU13anpQMDh1ajdORnFQdWJIclNuRDktT3FBYXFiTmg4OEJpMDZXcmZsUHlaUDVXeU52bU5lQnJuNUREZllhOEd0dHNSZmI4RTVVcEZ1ZU1hVC1yX2Q4eU1OVHhpMGPSAbABQVVfeXFMTko1alJMZHlnXy00SUVCWmRCVDRzalVNMklMcjZfZVAyaFBYMHlIWkxyNkNsOHpYWFNrMHMyZEZXV1Q2NU5FVjYtX2ZIZnAxaWJJM3VNNkhoNUZzTVFIZHlIUTRlREppN1p4YldMTXNxclZrTHRBQVpTckcwVW5qYmNJd00xZDZtblk3aXVjbEZkXzR6cExTaUowZ3k4QWhjMXFNd0VQZC1rVVRaUDBYVlc?oc=5",
+          "score": 0.6736
         }
       ],
       "keywords": [
-        "siemens",
-        "nbsp",
-        "healthineers",
-        "siemens healthineers",
-        "energy",
-        "nbsp nbsp",
-        "siemens energy",
+        "apple",
+        "iphone",
+        "silicon",
+        "apple silicon",
+        "pro",
+        "apple iphone",
+        "ios",
         "ai"
       ]
     },
     {
-      "title": "Rise of design enablement platforms for electronic component manufacturers**: Siemens' PartQuest Design Enablement platform, mentioned in [src-2], is an example of the growing need for digital tools that facilitate collaboration and design enablement in the electronics industry.",
-      "confidence": 0.834,
+      "title": "Investor focus on Apple’s long-term tech hardware innovation** (src-2)",
+      "confidence": 0.799,
       "evidence": [
         {
           "ref": "src-1",
-          "title": "Smart manufacturing for the semiconductors industry - Siemens",
-          "source": "Siemens",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTEJkRWRXMjhHck5MMk5KeVJKS25DNGNLdGt1Vk9JZG1rMnpLQ1Q1VDNoeXhHMF9qaUFDNHBDMGNWSERZTFJQZElscFV4OGFFcnMtNUhRU2ljaXROREc1UVdUZHotTnh5OWlKb0EtaThzeWpvNVFrcTE2cUFNend5dC1MTm1tcmM?oc=5",
-          "score": 0.8436
+          "title": "Comparative Study: Apple And Industry Competitors In Technology Hardware, Storage & Peripherals Indus - Benzinga",
+          "source": "Benzinga",
+          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOOE1qeDNmMlJKblpUZ3NVM2JqRlZ6Z2NKdm1GTjhHUVpfTmp4SVd5dUZLNEdOVVMtcURMNmJoRm9aazFjdGFnbVZkbUU4YkdGaGEwTlNETnRkeUMtdHJibUIwRmFLSnh2c1BxVUNIdWp1OTBkT1dRS2lJZDFoeWZNUVl0LVJoMG83T2d3QnpZTzBnaEt6ZEdtYi1OdG9EOTlDV1VJVGZBOWJfQjZ5STAteUpPVllMRWFGY2kxRXBua3BocmxYVi1RcU01MFZEdmhsUV9ISG43TC1KSjNtUTR4U2dUTGZaMEJZ?oc=5",
+          "score": 0.9456
         },
         {
           "ref": "src-2",
-          "title": "Siemens transforms customer engagement for electronic component manufacturers with PartQuest Design Enablement - Siemens",
-          "source": "Siemens",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBQUUZhdDJVeGRpdVVGa1NndjNhTHBtVWhnZjI4bnhRendPY0h4T3ljNDJydENsR2trUzBYUXpOY1FKX3NpNTJzRjc0Vm5rUFMyWjdqbVh6NTFUbWc5M29Qbklvd29VRGJjVVdkdFJfNHJvMm4yMFE?oc=5",
-          "score": 0.8416
+          "title": "Apple Inc. (AAPL) is Attracting Investor Attention: Here is What You Should Know - Yahoo Finance",
+          "source": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQNXJOYXQxaTlfSW0yVS1pT1I4VTBtM2lvRndBSmJCaHBMd2hJUHJDZWc3QzNRVmFxdEYyMzZSdnhTMjJjY093cERhTWppeHc2QXQ2ODA2eEdBU3c1cVd4VDFEY1A4Wnk3X3VHZFhzTnpnVlMxSDNDcVhyQlNVZ056NnQybGR1QjlCNXBYeFROaXVTNTc3bllFMVJ6dkRkbTdr?oc=5",
+          "score": 0.7792
         },
         {
           "ref": "src-3",
-          "title": "Nokia, Siemens and Iran: When technology gets bloody",
-          "source": "Hacker News",
-          "url": "http://blogs.telegraph.co.uk/technology/basheerakhan/100000089/nokia-siemens-and-iran-when-technology-gets-bloody/",
-          "score": 0.817
+          "title": "'It sees what you see': Why Siri AI on Apple Vision Pro is 'cyborg-level' technology - WION",
+          "source": "WION",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQU09SZnk4TlljNVRKdjlEQVg5OVJlM0xjWTdpZmg1eEFaX3pqYkdRUHpXNkF4U2ZnTDdYU2dPNFVCVDJyOC1ZV0ZNNE5GUU13anpQMDh1ajdORnFQdWJIclNuRDktT3FBYXFiTmg4OEJpMDZXcmZsUHlaUDVXeU52bU5lQnJuNUREZllhOEd0dHNSZmI4RTVVcEZ1ZU1hVC1yX2Q4eU1OVHhpMGPSAbABQVVfeXFMTko1alJMZHlnXy00SUVCWmRCVDRzalVNMklMcjZfZVAyaFBYMHlIWkxyNkNsOHpYWFNrMHMyZEZXV1Q2NU5FVjYtX2ZIZnAxaWJJM3VNNkhoNUZzTVFIZHlIUTRlREppN1p4YldMTXNxclZrTHRBQVpTckcwVW5qYmNJd00xZDZtblk3aXVjbEZkXzR6cExTaUowZ3k4QWhjMXFNd0VQZC1rVVRaUDBYVlc?oc=5",
+          "score": 0.6736
         }
       ],
       "keywords": [
-        "siemens",
-        "nbsp",
-        "healthineers",
-        "siemens healthineers",
-        "energy",
-        "nbsp nbsp",
-        "siemens energy",
+        "apple",
+        "iphone",
+        "silicon",
+        "apple silicon",
+        "pro",
+        "apple iphone",
+        "ios",
         "ai"
       ]
     },
     {
-      "title": "Growing recognition of quality management system software**: Siemens' recognition as a leader in the Gartner Magic Quadrant for Quality Management System Software, as reported in [src-4], indicates a growing demand for robust quality management systems in various industries.",
-      "confidence": 0.834,
+      "title": "Competitive pressure in the hardware, storage, and peripherals industry** (src-1)",
+      "confidence": 0.799,
       "evidence": [
         {
           "ref": "src-1",
-          "title": "Smart manufacturing for the semiconductors industry - Siemens",
-          "source": "Siemens",
-          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTEJkRWRXMjhHck5MMk5KeVJKS25DNGNLdGt1Vk9JZG1rMnpLQ1Q1VDNoeXhHMF9qaUFDNHBDMGNWSERZTFJQZElscFV4OGFFcnMtNUhRU2ljaXROREc1UVdUZHotTnh5OWlKb0EtaThzeWpvNVFrcTE2cUFNend5dC1MTm1tcmM?oc=5",
-          "score": 0.8436
+          "title": "Comparative Study: Apple And Industry Competitors In Technology Hardware, Storage & Peripherals Indus - Benzinga",
+          "source": "Benzinga",
+          "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOOE1qeDNmMlJKblpUZ3NVM2JqRlZ6Z2NKdm1GTjhHUVpfTmp4SVd5dUZLNEdOVVMtcURMNmJoRm9aazFjdGFnbVZkbUU4YkdGaGEwTlNETnRkeUMtdHJibUIwRmFLSnh2c1BxVUNIdWp1OTBkT1dRS2lJZDFoeWZNUVl0LVJoMG83T2d3QnpZTzBnaEt6ZEdtYi1OdG9EOTlDV1VJVGZBOWJfQjZ5STAteUpPVllMRWFGY2kxRXBua3BocmxYVi1RcU01MFZEdmhsUV9ISG43TC1KSjNtUTR4U2dUTGZaMEJZ?oc=5",
+          "score": 0.9456
         },
         {
           "ref": "src-2",
-          "title": "Siemens transforms customer engagement for electronic component manufacturers with PartQuest Design Enablement - Siemens",
-          "source": "Siemens",
-          "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBQUUZhdDJVeGRpdVVGa1NndjNhTHBtVWhnZjI4bnhRendPY0h4T3ljNDJydENsR2trUzBYUXpOY1FKX3NpNTJzRjc0Vm5rUFMyWjdqbVh6NTFUbWc5M29Qbklvd29VRGJjVVdkdFJfNHJvMm4yMFE?oc=5",
-          "score": 0.8416
+          "title": "Apple Inc. (AAPL) is Attracting Investor Attention: Here is What You Should Know - Yahoo Finance",
+          "source": "Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQNXJOYXQxaTlfSW0yVS1pT1I4VTBtM2lvRndBSmJCaHBMd2hJUHJDZWc3QzNRVmFxdEYyMzZSdnhTMjJjY093cERhTWppeHc2QXQ2ODA2eEdBU3c1cVd4VDFEY1A4Wnk3X3VHZFhzTnpnVlMxSDNDcVhyQlNVZ056NnQybGR1QjlCNXBYeFROaXVTNTc3bllFMVJ6dkRkbTdr?oc=5",
+          "score": 0.7792
         },
         {
           "ref": "src-3",
-          "title": "Nokia, Siemens and Iran: When technology gets bloody",
-          "source": "Hacker News",
-          "url": "http://blogs.telegraph.co.uk/technology/basheerakhan/100000089/nokia-siemens-and-iran-when-technology-gets-bloody/",
-          "score": 0.817
+          "title": "'It sees what you see': Why Siri AI on Apple Vision Pro is 'cyborg-level' technology - WION",
+          "source": "WION",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQU09SZnk4TlljNVRKdjlEQVg5OVJlM0xjWTdpZmg1eEFaX3pqYkdRUHpXNkF4U2ZnTDdYU2dPNFVCVDJyOC1ZV0ZNNE5GUU13anpQMDh1ajdORnFQdWJIclNuRDktT3FBYXFiTmg4OEJpMDZXcmZsUHlaUDVXeU52bU5lQnJuNUREZllhOEd0dHNSZmI4RTVVcEZ1ZU1hVC1yX2Q4eU1OVHhpMGPSAbABQVVfeXFMTko1alJMZHlnXy00SUVCWmRCVDRzalVNMklMcjZfZVAyaFBYMHlIWkxyNkNsOHpYWFNrMHMyZEZXV1Q2NU5FVjYtX2ZIZnAxaWJJM3VNNkhoNUZzTVFIZHlIUTRlREppN1p4YldMTXNxclZrTHRBQVpTckcwVW5qYmNJd00xZDZtblk3aXVjbEZkXzR6cExTaUowZ3k4QWhjMXFNd0VQZC1rVVRaUDBYVlc?oc=5",
+          "score": 0.6736
         }
       ],
       "keywords": [
-        "siemens",
-        "nbsp",
-        "healthineers",
-        "siemens healthineers",
-        "energy",
-        "nbsp nbsp",
-        "siemens energy",
+        "apple",
+        "iphone",
+        "silicon",
+        "apple silicon",
+        "pro",
+        "apple iphone",
+        "ios",
         "ai"
       ]
     }
@@ -478,41 +478,41 @@
   "competitor_activity": [
     {
       "ref": "src-1",
-      "title": "Manchester, UK: Siemens Returns with 2-Day Transform Event at 0 Euros Entry as What Others Are Missing in Industrial AI Adoption as it Becomes Exposed - Travel And Tour World",
-      "source": "Travel And Tour World",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9BSEhSMWVHYVg5OHRUc3JlUlRvSmhBTkZ0RDhjMU9ISHU5R2dQNC1KQnRzTHUwWkR2VmhJUFF0UDFrcWdVYnFRXzFwbmg4c25WYTBXc254UnlrSXhWUV9NRUNiOGJCd0NEbjFxZGNB?oc=5",
-      "score": 0.8669
+      "title": "Apple's iPhones Trail Samsung, Google Devices in Internet Speeds",
+      "source": "Hacker News",
+      "url": "https://www.bloomberg.com/news/articles/2018-07-23/apple-s-iphones-trail-samsung-google-devices-in-internet-speeds",
+      "score": 0.8928
     },
     {
       "ref": "src-2",
-      "title": "SPS 2025: How Siemens, Beckhoff, Rockwell, ABB, and peers are positioning for industrial automation’s future - IoT Analytics",
-      "source": "IoT Analytics",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQVElLaGxaZVFNa0NzMkJJeGl4Nkd2QV8zYVpfX1YtNzJZb25WX1AwTG9QclJnVXRQT093YU9qc2lRcU1NQXdCeU5faEFxc0RhNm9BOGhoM0RBZzJub3BEMXMwNmJKUHBFUmp3aEgzRXRJYXc0eG0zUzcyM09mQ3BZeURVMjhwRXhOWUJ4VmpJS0prMzJtVUF5RjFB?oc=5",
-      "score": 0.7785
+      "title": "Comparative Study: Apple And Industry Competitors In Technology Hardware, Storage & Peripherals Indus - Benzinga",
+      "source": "Benzinga",
+      "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxOOE1qeDNmMlJKblpUZ3NVM2JqRlZ6Z2NKdm1GTjhHUVpfTmp4SVd5dUZLNEdOVVMtcURMNmJoRm9aazFjdGFnbVZkbUU4YkdGaGEwTlNETnRkeUMtdHJibUIwRmFLSnh2c1BxVUNIdWp1OTBkT1dRS2lJZDFoeWZNUVl0LVJoMG83T2d3QnpZTzBnaEt6ZEdtYi1OdG9EOTlDV1VJVGZBOWJfQjZ5STAteUpPVllMRWFGY2kxRXBua3BocmxYVi1RcU01MFZEdmhsUV9ISG43TC1KSjNtUTR4U2dUTGZaMEJZ?oc=5",
+      "score": 0.8617
     },
     {
       "ref": "src-3",
-      "title": "Airbus partners with Rolls-Royce and Siemens to build an electric airplane",
-      "source": "Hacker News",
-      "url": "https://electrek.co/2017/11/28/airbus-partners-rolls-royce-siemens-build-electric-plane/",
-      "score": 0.6728
+      "title": "Structuring the Smartphone Industry: Is the Mobile Internet OS Platform the Key?",
+      "source": "OpenAlex",
+      "url": "https://doi.org/10.1007/s10842-011-0105-6",
+      "score": 0.7556
     }
   ],
   "keywords": [
-    "siemens",
-    "nbsp",
-    "healthineers",
-    "siemens healthineers",
-    "energy",
-    "nbsp nbsp",
-    "siemens energy",
+    "apple",
+    "iphone",
+    "silicon",
+    "apple silicon",
+    "pro",
+    "apple iphone",
+    "ios",
     "ai",
-    "nbsp siemens",
-    "digital",
-    "industrial",
-    "automation",
-    "finance",
-    "yahoo",
-    "yahoo finance"
+    "vision",
+    "vision pro",
+    "new",
+    "apple vision",
+    "cook",
+    "tim",
+    "tim cook"
   ]
 }

@@ -136,12 +136,14 @@ def _save_outputs(state: GraphState) -> None:
     save_json(state["trace"], config.RESULTS_DIR / "trace.json")
     save_text(state.get("briefing", ""), config.RESULTS_DIR / "ceo_briefing.txt")
 
+    # Number of independent source types actually present in the corpus (news/finance/community/research).
+    n_sources = int(load_corpus()["source_type"].nunique())
     dashboard = {
         "company": {
             "name": config.COMPANY,
             "industry": config.INDUSTRY,
             "n_documents": state.get("docs", 0),
-            "n_sources": 3,
+            "n_sources": n_sources,
             "last_update": now_iso(),
         },
         "sentiment": state.get("sentiment", {}),

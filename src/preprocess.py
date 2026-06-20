@@ -14,17 +14,22 @@ Steps (all classical NLP, Module 2/3 style):
   5. remove duplicates (exact id + identical normalised title)
 """
 
+import re
+
 import pandas as pd
 
 from src import config
 from src.utils import clean_text, load_json
 
+# Match brand/competitor names as WHOLE WORDS so generic names ("Apple") don't
+# catch "pineapple" / "apple pie". Falls back to COMPANY if no alias list is set.
+_ALIASES = getattr(config, "COMPANY_ALIASES", [config.COMPANY]) + config.COMPETITORS
+_RELEVANT_RE = re.compile(r"\b(" + "|".join(re.escape(a) for a in _ALIASES) + r")\b", re.IGNORECASE)
+
 
 def _relevant(text: str) -> bool:
-    """Keep a document only if it mentions the company or a competitor."""
-    low = text.lower()
-    keywords = [config.COMPANY.lower()] + [c.lower() for c in config.COMPETITORS]
-    return any(k in low for k in keywords)
+    """Keep a document only if it mentions the company (by any alias) or a competitor."""
+    return bool(_RELEVANT_RE.search(text))
 
 
 def build_corpus() -> pd.DataFrame:

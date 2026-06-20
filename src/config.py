@@ -10,18 +10,33 @@ from pathlib import Path
 # ----------------------------------------------------------------------------
 # Company under analysis (Step 1 of the PDF)
 # ----------------------------------------------------------------------------
-COMPANY = "Siemens"
-INDUSTRY = "Industrial Technology / Automation"
-TICKER = "SIEGY"  # Siemens ADR on the US market (used for finance news feed)
+COMPANY = "Apple"
+INDUSTRY = "Consumer Technology / Software & Hardware"
+TICKER = "AAPL"  # Apple Inc, primary US listing (used for finance news feed)
+
+# "Apple" is a generic word (fruit, "Big Apple"), so the relevance filter matches
+# these aliases as WHOLE WORDS. Brand/product names anchor the company unambiguously.
+COMPANY_ALIASES = [
+    "Apple",
+    "iPhone",
+    "iPad",
+    "MacBook",
+    "App Store",
+    "iOS",
+    "Vision Pro",
+    "Tim Cook",
+    "AAPL",
+]
 
 # Competitors we also watch (used by the intelligence engine for "competitor activity")
 COMPETITORS = [
-    "ABB",
-    "Schneider Electric",
-    "General Electric",
-    "Honeywell",
-    "Rockwell Automation",
-    "Bosch",
+    "Samsung",
+    "Google",
+    "Microsoft",
+    "Huawei",
+    "Xiaomi",
+    "Sony",
+    "Meta",
 ]
 
 # ----------------------------------------------------------------------------
@@ -59,13 +74,13 @@ CONFIDENCE_THRESHOLD = 0.7  # retry a recommendation if verifier confidence is b
 # ----------------------------------------------------------------------------
 ENGINE_QUERIES = {
     "opportunities": "What are the major growth opportunities, new markets, "
-                     "partnerships and emerging technologies for Siemens?",
+                     "partnerships and emerging technologies for Apple?",
     "risks": "What are the biggest risks, competitive threats, regulatory issues, "
-             "supply chain problems and negative sentiment facing Siemens?",
+             "supply chain problems and negative sentiment facing Apple?",
     "trends": "What technology trends, industry developments and customer behaviour "
-              "shifts should Siemens management monitor?",
-    "competitors": "What are Siemens competitors such as ABB, Schneider Electric and "
-                   "GE doing recently?",
+              "shifts should Apple management monitor?",
+    "competitors": "What are Apple competitors such as Samsung, Google and "
+                   "Microsoft doing recently?",
 }
 
 # ----------------------------------------------------------------------------
@@ -76,7 +91,7 @@ DATA_DIR = ROOT_DIR / "data"
 RAW_DIR = DATA_DIR / "raw"
 CORPUS_CSV = DATA_DIR / "corpus.csv"
 CHROMA_DIR = DATA_DIR / "chroma"
-COLLECTION_NAME = "siemens_docs"
+COLLECTION_NAME = "apple_docs"
 RESULTS_DIR = ROOT_DIR / "results"
 
 # Create the folders on import so no module has to worry about it.

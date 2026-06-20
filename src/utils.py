@@ -168,8 +168,6 @@ def get_llm():
 
 def ask_llm(prompt: str) -> str:
     """Send a prompt to the LLM and return clean text. One call site for all agents."""
-    llm = get_llm()
-    out = llm.invoke(prompt)
+    out = get_llm().invoke(prompt)
     # HuggingFacePipeline returns str; some wrappers return objects with .content
-    text = getattr(out, "content", out)
-    return str(text).strip()
+    return str(getattr(out, "content", out)).strip()

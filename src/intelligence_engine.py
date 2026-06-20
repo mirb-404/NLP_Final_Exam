@@ -53,6 +53,11 @@ def _confidence(docs: list[dict]) -> float:
     return round(sum(d["score"] for d in top) / len(top), 3) if top else 0.0
 
 
+_PREAMBLE_RE = re.compile(
+    r"^(here (are|is)|based on|the following|sure|below are|these are|as an? )", re.IGNORECASE
+)
+
+
 def _parse_lines(raw: str) -> list[str]:
     """Pull clean items out of an LLM numbered/bulleted list."""
     items = []
@@ -64,6 +69,9 @@ def _parse_lines(raw: str) -> list[str]:
         if len(line) <= 3:
             continue
         if re.fullmatch(r"(?:high|medium|low|\s|::|\|)+", line, flags=re.IGNORECASE):
+            continue
+        # skip LLM framing lines: "Here are 5 trends...:", "Based on the evidence:"
+        if line.endswith(":") or _PREAMBLE_RE.match(line):
             continue
         items.append(line)
     return items[:5]

@@ -7,7 +7,7 @@ of the pipeline is uniform:  {id, title, text, source, source_type, url, date}
 
     news       Google News RSS
     finance    Yahoo Finance RSS
-    community  Hacker News + Stack Overflow  (+ Reddit, best-effort)
+    community  Hacker News + Stack Overflow
     research   arXiv + OpenAlex
 """
 
@@ -24,27 +24,25 @@ HEADERS = {"User-Agent": "ai-ceo-research-agent/1.0 (educational NLP project)"}
 TIMEOUT = 25
 MIN_DOCS = 100  # PDF Task 1 minimum
 
+# Queries say "Apple Inc" / product names, never bare "Apple", to keep the fruit out.
 NEWS_RSS = "https://news.google.com/rss/search?q={query}&hl=en-US&gl=US&ceid=US:en"
-NEWS_QUERIES = ["Siemens", "Siemens Energy", "Siemens Healthineers",
-                "Siemens automation", "Siemens digital industries"]
+NEWS_QUERIES = ["Apple Inc", "Apple iPhone", "Apple Vision Pro",
+                "Apple AI", "Tim Cook Apple"]
 
 FINANCE_RSS = "https://feeds.finance.yahoo.com/rss/2.0/headline?s={ticker}&region=US&lang=en-US"
 
 HN_API = "https://hn.algolia.com/api/v1/search?query={query}&tags=story&hitsPerPage=100"
-HN_QUERIES = ["Siemens", "Siemens automation", "Siemens industrial"]
+HN_QUERIES = ["Apple Inc", "Apple iPhone", "Apple Silicon"]
 
 STACKEX_API = ("https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=relevance"
                "&q={query}&site=stackoverflow&pagesize=50&filter=withbody")
-STACKEX_QUERIES = ["Siemens", "Siemens PLC", "Siemens TIA Portal"]
-
-REDDIT_API = "https://www.reddit.com/search.json?q={query}&sort=new&limit=100"  # often 403; optional
-REDDIT_QUERIES = ["Siemens", "Siemens automation", "Siemens PLC"]
+STACKEX_QUERIES = ["Apple iOS", "Apple Swift", "Apple Xcode"]
 
 ARXIV_API = "http://export.arxiv.org/api/query?search_query=all:{query}&start=0&max_results=50"
-ARXIV_QUERIES = ["Siemens", "Siemens automation", "Siemens digital twin"]
+ARXIV_QUERIES = ["Apple Inc machine learning", "Apple Silicon chip", "Apple iOS privacy"]
 
 OPENALEX_API = "https://api.openalex.org/works?search={query}&per_page=50&mailto=bhandarimirang03@gmail.com"
-OPENALEX_QUERIES = ["Siemens automation", "Siemens industrial", "Siemens energy"]
+OPENALEX_QUERIES = ["Apple Inc smartphone", "Apple Silicon processor", "Apple iOS security"]
 
 
 # --- shared helpers ---------------------------------------------------------
@@ -127,19 +125,6 @@ def collect_stackexchange() -> list[dict]:
     return _report("community(stackexchange)", docs)
 
 
-# --- community: reddit (best-effort; often 403) --------------------------
-def collect_reddit() -> list[dict]:
-    docs = []
-    for query in REDDIT_QUERIES:
-        for c in _get_json(REDDIT_API.format(query=_quote(query))).get("data", {}).get("children", []):
-            d = c.get("data", {})
-            docs.append(_record(d.get("title", ""), d.get("selftext", "") or d.get("title", ""),
-                                f"reddit/{d.get('subreddit', '?')}", "community",
-                                "https://www.reddit.com" + d.get("permalink", ""),
-                                str(d.get("created_utc", ""))))
-    return _report("community(reddit)", docs)
-
-
 # --- research: arxiv -----------------------------------------------------
 def collect_arxiv() -> list[dict]:
     docs = []
@@ -179,7 +164,7 @@ def collect_all() -> list[dict]:
     by_type = {
         "news": collect_news(),
         "finance": collect_finance(),
-        "community": collect_hackernews() + collect_stackexchange() + collect_reddit(),
+        "community": collect_hackernews() + collect_stackexchange(),
         "research": collect_arxiv() + collect_openalex(),
     }
     for name, docs in by_type.items():
