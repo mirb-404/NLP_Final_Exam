@@ -8,6 +8,7 @@ own modules. The graph is the brain; the modules are the hands.
 
     python main.py                     # agent answers the default CEO question
     python main.py ask "<question>"    # agent answers your question
+    python main.py chat                # interactive: type questions in a loop
     python main.py ingest              # refresh data: collect -> corpus -> Chroma index
     python main.py report              # deterministic pipeline -> results/*.json deliverables
 
@@ -131,6 +132,13 @@ def main() -> None:
         from src.orchestrator import run_analyze
         state = run_analyze()
         print("\n=== CEO BRIEFING ===\n" + state.get("briefing", ""))
+    elif cmd == "chat":
+        print(f"AI CEO agent for {config.COMPANY}. Ask a question (or 'exit').")
+        while True:
+            q = input("\n> ").strip()
+            if q.lower() in ("exit", "quit", "q", ""):
+                break
+            print("\n" + ask_ceo(q))
     else:  # "ask" or no command -> run the agent
         question = " ".join(sys.argv[2:]) if cmd == "ask" else ""
         question = question or f"If you were the CEO of {config.COMPANY} today, what would you do next and why?"
