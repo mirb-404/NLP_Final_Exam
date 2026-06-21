@@ -20,10 +20,15 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 import pandas as pd  # noqa: E402
 import streamlit as st  # noqa: E402
+from dotenv import load_dotenv  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "results" / "dashboard_data.json"
 ACTIVITY = ROOT / "results" / "activity.json"   # grows as the CEO asks questions
+
+# Load .env so the pipeline run from the dashboard uses MODEL_SERVER_URL (Mistral),
+# not the local Qwen fallback.
+load_dotenv(ROOT / ".env")
 
 sys.path.insert(0, str(ROOT))
 from src import config  # noqa: E402  (model ids for the tech-stack panel)
@@ -145,14 +150,16 @@ def log_activity(entry: dict) -> None:
 # ---- analysis data: refreshed whenever the agent calls the LLM --------------
 def regenerate_data(full: bool = False) -> None:
     """Run the analysis pipeline so every tab reflects the latest data. Called after each
-    agent question (LLM call). full=True re-collects fresh documents first."""
+    agent question (LLM call). full=True re-collects fresh documents first.
+    Falls back to a full pipeline whenever the index OR the corpus is missing, so a
+    half-built state (e.g. Chroma exists but corpus.csv was wiped) self-heals."""
     from src.knowledge_base import count as kb_count
     from src.orchestrator import run_analyze, run_pipeline
     try:
-        has_index = kb_count() > 0
+        ready = kb_count() > 0 and config.CORPUS_CSV.exists()
     except Exception:
-        has_index = False
-    run_pipeline() if (full or not has_index) else run_analyze()
+        ready = False
+    run_pipeline() if (full or not ready) else run_analyze()
 
 
 def load_dashboard_data() -> dict:
