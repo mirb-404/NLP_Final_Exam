@@ -1,21 +1,20 @@
 [
   {
-    "recommendation": "Launch a sub-$30k Tesla model",
-    "rationale": "Affordable EVs are the fastest-growing segment and Teslas lineup starts too high.",
-    "first_step": "Greenlight the Gigafactory Mexico compact platform this quarter.",
+    "recommendation": "Launch a sub-30k Tesla",
+    "rationale": "Affordable EVs grow fastest.",
+    "first_step": "Greenlight compact platform.",
     "priority": "High",
     "risk_level": "Medium",
     "expected_impact": [
-      "Volume growth",
-      "Share defense"
+      "Volume"
     ],
     "risk_assessment": [
-      "Margin pressure"
+      "Margin"
     ],
     "supporting_evidence": [
       {
         "ref": "src-1",
-        "title": "BYD overtakes Tesla EV sales",
+        "title": "BYD overtakes Tesla",
         "source": "Benzinga",
         "url": "http://x",
         "score": 0.9

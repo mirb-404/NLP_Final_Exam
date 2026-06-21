@@ -13,6 +13,7 @@ import html
 import io
 import json
 import sys
+from datetime import datetime
 from pathlib import Path
 
 import pandas as pd
@@ -20,6 +21,17 @@ import streamlit as st
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "results" / "dashboard_data.json"
+ACTIVITY = ROOT / "results" / "activity.json"   # grows as the CEO asks questions
+
+
+def load_activity() -> list:
+    return json.loads(ACTIVITY.read_text(encoding="utf-8")) if ACTIVITY.exists() else []
+
+
+def log_activity(entry: dict) -> None:
+    items = load_activity()
+    items.insert(0, entry)
+    ACTIVITY.write_text(json.dumps(items[:50], indent=2, ensure_ascii=False), encoding="utf-8")
 
 sys.path.insert(0, str(ROOT))
 from src import config  # noqa: E402  (model ids for the tech-stack panel)
@@ -99,12 +111,34 @@ def get_retriever():
     return HybridRetriever()
 
 
-# -------------------------------------------------------------------- data ---
-if not DATA.exists():
-    st.error(f"No data yet. Run `python main.py report` first.\n\nExpected: {DATA}")
-    st.stop()
+# ---- analysis data: refreshed whenever the agent calls the LLM --------------
+def regenerate_data(full: bool = False) -> None:
+    """Run the analysis pipeline so every tab reflects the latest data. Called after each
+    agent question (LLM call), so asking also refreshes opportunities / risks /
+    recommendations / briefing. full=True re-collects fresh documents first."""
+    from src.knowledge_base import count as kb_count
+    from src.orchestrator import run_analyze, run_pipeline
+    try:
+        has_index = kb_count() > 0
+    except Exception:
+        has_index = False
+    run_pipeline() if (full or not has_index) else run_analyze()
 
-data = json.loads(DATA.read_text(encoding="utf-8"))
+
+def load_dashboard_data() -> dict:
+    """Load the latest analysis; generate it once if it does not exist yet."""
+    if not DATA.exists():
+        regenerate_data()
+    return json.loads(DATA.read_text(encoding="utf-8"))
+
+
+# -------------------------------------------------------------------- data ---
+try:
+    data = load_dashboard_data()
+except Exception as exc:
+    st.error("Could not load analysis. Make sure the model server is running and the index "
+             f"is built (`python main.py ingest`).\n\n{exc}")
+    st.stop()
 c = data["company"]
 
 st.markdown(f"<div class='hero'>AI CEO — {esc(c['name'])}</div>", unsafe_allow_html=True)
@@ -113,8 +147,23 @@ st.markdown(f"<div class='sub'>{esc(c['industry'])}</div>", unsafe_allow_html=Tr
 # ---- Sidebar: tech stack (visible on every tab) -----------------------------
 with st.sidebar:
     st.markdown("### AI CEO")
-    if st.button("Reload data", use_container_width=True):
-        st.rerun()
+    st.caption(f"Last update {str(c['last_update'])[:16].replace('T', ' ')}")
+    if st.button("Re-analyse now", use_container_width=True):
+        with st.spinner("Re-analysing…"):
+            try:
+                regenerate_data()
+                st.rerun()
+            except Exception as exc:
+                st.error(f"Re-analyse failed — is the model server up?\n\n{exc}")
+    if st.button("Collect fresh data + re-analyse", use_container_width=True,
+                 help="Pull new live documents, re-index, then re-analyse — updates every tab"):
+        with st.spinner("Collecting fresh data and analysing…"):
+            try:
+                regenerate_data(full=True)
+                st.success("All tabs updated with fresh data.")
+                st.rerun()
+            except Exception as exc:
+                st.error(f"Re-run failed — is the model server up?\n\n{exc}")
     st.divider()
     st.markdown("**Models & Retrieval**")
     st.markdown(f"<div class='stack'><b>LLM</b><br><code>{esc(LLM_MODEL)}</code></div>"
@@ -123,13 +172,14 @@ with st.sidebar:
                 unsafe_allow_html=True)
 
 tabs = st.tabs(["Ask the CEO", "Overview", "Opportunities", "Risks",
-                "Sentiment", "Recommendations", "Briefing", "Retrieval"])
+                "Sentiment", "Recommendations", "Briefing", "Retrieval", "Activity"])
 
 # ---- Tab: Ask the CEO (interactive agent) -----------------------------------
 with tabs[0]:
     st.markdown("#### Ask the AI CEO anything strategic")
     st.markdown("<div class='muted'>The agent reasons, calls tools for evidence, answers, then offers a "
-                "menu of strategic options and sharper follow-up questions.</div>", unsafe_allow_html=True)
+                "menu of strategic options. Asking also re-runs the analysis, so every other tab "
+                "updates from the same fresh evidence.</div>", unsafe_allow_html=True)
 
     queued = st.session_state.pop("queued_q", None)          # set by a follow-up button
     q = st.text_input("question", value=queued or "", key="ask_q",
@@ -137,34 +187,43 @@ with tabs[0]:
 
     if (st.button("Ask the CEO", type="primary") or queued) and q.strip():
         buf = io.StringIO()
-        with st.spinner("Reasoning and calling tools…"):
+        with st.spinner("Reasoning, calling tools, and refreshing every tab…"):
             try:
                 from main import ask_ceo, strategic_options
                 with contextlib.redirect_stdout(buf):
                     answer = ask_ceo(q.strip())
-                st.markdown(f"<div class='answer'>{esc(answer)}</div>", unsafe_allow_html=True)
-
-                tool_lines = [l.strip() for l in buf.getvalue().splitlines() if "calling tool" in l]
-                if tool_lines:
-                    with st.expander(f"{len(tool_lines)} tool calls"):
-                        st.code("\n".join(tool_lines), language="text")
-
                 opts = strategic_options(q.strip(), answer)
-                if opts["options"]:
-                    st.markdown("##### Your strategic options")
-                    for o in opts["options"]:
-                        path, _, upside = o.partition("|")
-                        st.markdown(f"<div class='card'><span class='card-title'>{esc(path.strip())}</span>"
-                                    f"<div class='desc'>{esc(upside.strip())}</div></div>",
-                                    unsafe_allow_html=True)
-                if opts["followups"]:
-                    st.markdown("##### Dig deeper")
-                    for i, fu in enumerate(opts["followups"]):
-                        if st.button(fu, key=f"fu_{i}"):
-                            st.session_state.queued_q = fu
-                            st.rerun()
+                tool_lines = [l.strip() for l in buf.getvalue().splitlines() if "calling tool" in l]
+                log_activity({"time": datetime.now().isoformat(timespec="minutes"),
+                              "question": q.strip(), "answer": answer, "options": opts["options"]})
+                # The LLM was called -> re-run the analysis so all other tabs update too.
+                try:
+                    regenerate_data()
+                except Exception:
+                    pass
+                st.session_state["last_result"] = {"answer": answer, "tools": tool_lines, **opts}
+                st.rerun()
             except Exception as exc:
                 st.error(f"Agent unavailable — is the model server running?\n\n{exc}")
+
+    res = st.session_state.get("last_result")
+    if res:
+        st.markdown(f"<div class='answer'>{esc(res['answer'])}</div>", unsafe_allow_html=True)
+        if res["tools"]:
+            with st.expander(f"{len(res['tools'])} tool calls"):
+                st.code("\n".join(res["tools"]), language="text")
+        if res["options"]:
+            st.markdown("##### Your strategic options")
+            for o in res["options"]:
+                path, _, upside = o.partition("|")
+                st.markdown(f"<div class='card'><span class='card-title'>{esc(path.strip())}</span>"
+                            f"<div class='desc'>{esc(upside.strip())}</div></div>", unsafe_allow_html=True)
+        if res["followups"]:
+            st.markdown("##### Dig deeper")
+            for i, fu in enumerate(res["followups"]):
+                if st.button(fu, key=f"fu_{i}"):
+                    st.session_state.queued_q = fu
+                    st.rerun()
 
 # ---- Tab: Overview (Section 1 + 2) ------------------------------------------
 with tabs[1]:
@@ -272,3 +331,17 @@ with tabs[7]:
                         f"<div class='desc'>{esc(h['text'][:320])}</div></div>", unsafe_allow_html=True)
             except Exception as exc:
                 st.error(f"Retrieval failed — is the index built? Run `python main.py ingest`.\n\n{exc}")
+
+# ---- Tab: Activity (grows as the CEO asks questions) ------------------------
+with tabs[8]:
+    st.markdown("#### Activity log")
+    st.markdown("<div class='muted'>Every question you ask the agent is logged here, newest first — "
+                "a running record of decisions explored.</div>", unsafe_allow_html=True)
+    activity = load_activity()
+    if not activity:
+        st.info("No questions yet. Ask the CEO something on the first tab to start the log.")
+    for it in activity:
+        opts = "".join(f"<div class='evidence'>{esc(o)}</div>" for o in it.get("options", []))
+        card(f"<span class='card-title'>{esc(it['question'])}</span>"
+             f"<span class='muted'>{esc(it.get('time', ''))}</span>",
+             f"<div class='desc'>{esc(it.get('answer', ''))}</div>{opts}")

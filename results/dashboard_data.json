@@ -4,7 +4,7 @@
     "industry": "Electric Vehicles / Clean Energy",
     "n_documents": 399,
     "n_sources": 4,
-    "last_update": "2026-06-21T15:35:44.698085+02:00"
+    "last_update": "2026-06-21T16:15:39.545169+02:00"
   },
   "market_intelligence": {
     "recent_news": [
@@ -73,7 +73,7 @@
         "evidence": [
           {
             "ref": "src-1",
-            "title": "BYD overtakes Tesla EV sales",
+            "title": "BYD overtakes Tesla",
             "source": "Benzinga",
             "url": "http://x",
             "score": 0.9
@@ -86,20 +86,19 @@
     ],
     "keywords": [
       "tesla",
-      "ev",
-      "battery"
+      "ev"
     ]
   },
   "opportunities": [
     {
       "title": "Energy storage scale-up",
       "impact": "High",
-      "description": "Grid + Powerwall storage is a high-margin market beyond cars.",
+      "description": "Grid storage is high-margin.",
       "confidence": 0.8,
       "evidence": [
         {
           "ref": "src-1",
-          "title": "BYD overtakes Tesla EV sales",
+          "title": "BYD overtakes Tesla",
           "source": "Benzinga",
           "url": "http://x",
           "score": 0.9
@@ -112,12 +111,12 @@
       "title": "China price war",
       "category": "competitive",
       "severity": "High",
-      "description": "BYD undercuts Tesla in the largest EV market.",
+      "description": "BYD undercuts Tesla.",
       "confidence": 0.6,
       "evidence": [
         {
           "ref": "src-1",
-          "title": "BYD overtakes Tesla EV sales",
+          "title": "BYD overtakes Tesla",
           "source": "Benzinga",
           "url": "http://x",
           "score": 0.9
@@ -159,22 +158,21 @@
   },
   "recommendations": [
     {
-      "recommendation": "Launch a sub-$30k Tesla model",
-      "rationale": "Affordable EVs are the fastest-growing segment and Teslas lineup starts too high.",
-      "first_step": "Greenlight the Gigafactory Mexico compact platform this quarter.",
+      "recommendation": "Launch a sub-30k Tesla",
+      "rationale": "Affordable EVs grow fastest.",
+      "first_step": "Greenlight compact platform.",
       "priority": "High",
       "risk_level": "Medium",
       "expected_impact": [
-        "Volume growth",
-        "Share defense"
+        "Volume"
       ],
       "risk_assessment": [
-        "Margin pressure"
+        "Margin"
       ],
       "supporting_evidence": [
         {
           "ref": "src-1",
-          "title": "BYD overtakes Tesla EV sales",
+          "title": "BYD overtakes Tesla",
           "source": "Benzinga",
           "url": "http://x",
           "score": 0.9
@@ -185,10 +183,10 @@
     }
   ],
   "briefing": {
-    "raw": "WHAT HAPPENED:\nRising EV competition.\n\nWHY IT MATTERS:\nShare at risk.\n\nWHAT TO DO NEXT:\nShip an affordable model.",
-    "what_happened": "Rising EV competition.",
-    "why_it_matters": "Share at risk.",
-    "what_next": "Ship an affordable model."
+    "raw": "WHAT HAPPENED:\nEV competition.\n\nWHY IT MATTERS:\nShare risk.\n\nWHAT TO DO NEXT:\nShip affordable model.",
+    "what_happened": "EV competition.",
+    "why_it_matters": "Share risk.",
+    "what_next": "Ship affordable model."
   },
   "metrics": {
     "mean_confidence": 0.6

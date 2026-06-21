@@ -145,10 +145,12 @@ def strategic_options(question: str, answer: str) -> dict:
         "FOLLOWUP: <another follow-up question>\n"
     )
     text = ask_llm(prompt)
-    return {
-        "options": [o.strip() for o in re.findall(r"OPTION:\s*(.+)", text)][:3],
-        "followups": [f.strip() for f in re.findall(r"FOLLOWUP:\s*(.+)", text)][:3],
-    }
+    # capture "move | upside" but stop the upside at the next | or newline so a
+    # same-line FOLLOWUP never bleeds into it; pull FOLLOWUPs separately.
+    options = [f"{p.strip()} | {u.strip()}"
+               for p, u in re.findall(r"OPTION:\s*([^|\n]+)\|\s*([^|\n]+)", text)][:3]
+    followups = [f.strip() for f in re.findall(r"FOLLOWUP:\s*([^\n|]+)", text)][:3]
+    return {"options": options, "followups": followups}
 
 
 # ----------------------------------------------------------------------------
