@@ -75,7 +75,7 @@ html, body, [class*="css"] { font-family:'Inter',system-ui,sans-serif; }
 </style>
 """, unsafe_allow_html=True)
 
-_PIE_COLORS = ["#7ddf9f", "#ff8a8a", "#9fd0ff", "#ffc46b", "#c9a0ff", "#8a93a3"]
+_PIE_COLORS = ["#4ade80", "#f87171", "#60a5fa", "#fbbf24", "#c084fc", "#94a3b8"]
 
 
 # ----------------------------------------------------------------- helpers ---
@@ -114,19 +114,34 @@ def card(title_html: str, body_html: str) -> None:
                 unsafe_allow_html=True)
 
 
+def _contrast(hex_color: str) -> str:
+    """Black or white, whichever contrasts with the given slice colour (by luminance)."""
+    h = hex_color.lstrip("#")
+    r, g, b = int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)
+    luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255
+    return "#0e1117" if luminance > 0.55 else "#ffffff"
+
+
 def show_pie(values: dict, caption: str = "") -> None:
-    """Dark-themed pie chart from a {label: count} mapping."""
+    """Dark-themed pie chart — bright wedges, each % label coloured opposite its slice."""
     values = {k: v for k, v in (values or {}).items() if v}
     if not values:
         return
-    fig, ax = plt.subplots(figsize=(3.1, 3.1))
-    fig.patch.set_alpha(0)
-    ax.pie(list(values.values()), labels=list(values.keys()), autopct="%1.0f%%",
-           colors=_PIE_COLORS[:len(values)], textprops={"color": "#dbe3f2", "fontsize": 9},
-           wedgeprops={"linewidth": 1, "edgecolor": "#0e1117"})
-    ax.set_aspect("equal")
     if caption:
-        st.caption(caption)
+        st.markdown(f"<div class='muted'>{esc(caption)}</div>", unsafe_allow_html=True)
+    colors = _PIE_COLORS[:len(values)]
+    fig, ax = plt.subplots(figsize=(4.4, 4.4))
+    fig.patch.set_alpha(0)
+    wedges, texts, autotexts = ax.pie(
+        list(values.values()), labels=list(values.keys()), autopct="%1.0f%%",
+        colors=colors, startangle=90, pctdistance=0.72, labeldistance=1.08,
+        textprops={"color": "#eef2f9", "fontsize": 13, "fontweight": "600"},
+        wedgeprops={"linewidth": 2, "edgecolor": "#0e1117"})
+    for a, col in zip(autotexts, colors):     # % label contrasts with its own wedge
+        a.set_color(_contrast(col))
+        a.set_fontsize(12)
+        a.set_fontweight("700")
+    ax.set_aspect("equal")
     st.pyplot(fig, use_container_width=True)
     plt.close(fig)
 
@@ -162,16 +177,39 @@ def regenerate_data(full: bool = False) -> None:
     run_pipeline() if (full or not ready) else run_analyze()
 
 
+def empty_data() -> dict:
+    """Placeholder so the dashboard (and the Ask tab) still load before any corpus exists."""
+    return {
+        "company": {"name": config.COMPANY, "industry": config.INDUSTRY,
+                    "n_documents": 0, "n_sources": 0, "source_breakdown": {}, "last_update": "—"},
+        "market_intelligence": {}, "opportunities": [], "risks": [],
+        "sentiment": {}, "recommendations": [], "briefing": {},
+    }
+
+
 def load_dashboard_data() -> dict:
-    if not DATA.exists():
-        regenerate_data()
-    return json.loads(DATA.read_text(encoding="utf-8"))
+    """Load the latest analysis if present; otherwise return an empty placeholder so the
+    app never crashes — the agent / Re-analyse builds the corpus on first use."""
+    if DATA.exists():
+        try:
+            return json.loads(DATA.read_text(encoding="utf-8"))
+        except Exception:
+            pass
+    return empty_data()
+
+
+def not_ready_note() -> None:
+    st.info("No analysis yet. Ask the agent a question on the **Ask the CEO** tab "
+            "(it builds the knowledge base on first use), or click **Re-analyse** in the sidebar.")
 
 
 # ------------------------------------------------------- section renderers ---
 # Each takes a data dict so it renders the live data OR a saved Activity snapshot.
 def render_overview(d: dict) -> None:
     co = d["company"]
+    if not co.get("n_documents"):
+        not_ready_note()
+        return
     st.markdown("<div class='row'>" + "".join([
         metric("Documents", co.get("n_documents", 0)),
         metric("Data sources", co.get("n_sources", 0)),
@@ -196,6 +234,9 @@ def render_overview(d: dict) -> None:
 
 
 def render_opportunities(d: dict) -> None:
+    if not d.get("opportunities"):
+        not_ready_note()
+        return
     for opp in d.get("opportunities", []):
         desc = f"<div class='desc'>{esc(opp['description'])}</div>" if opp.get("description") else ""
         card(f"<span class='card-title'>{esc(opp['title'])}</span>{badge(opp.get('impact'))}",
@@ -205,6 +246,9 @@ def render_opportunities(d: dict) -> None:
 
 def render_risks(d: dict) -> None:
     risks = d.get("risks", [])
+    if not risks:
+        not_ready_note()
+        return
     severity = {}
     for r in risks:
         key = str(r.get("severity", "Medium")).capitalize()
@@ -222,6 +266,9 @@ def render_risks(d: dict) -> None:
 
 def render_sentiment(d: dict) -> None:
     s = d.get("sentiment", {})
+    if not s:
+        not_ready_note()
+        return
     st.markdown("<div class='row'>" + "".join([
         metric("News sentiment", sentiment_label(s.get("news_sentiment", 0))),
         metric("Public sentiment", sentiment_label(s.get("public_sentiment", 0))),
@@ -239,6 +286,9 @@ def render_sentiment(d: dict) -> None:
 
 
 def render_recommendations(d: dict) -> None:
+    if not d.get("recommendations"):
+        not_ready_note()
+        return
     for r in d.get("recommendations", []):
         rationale = f"<div class='desc'>{esc(r['rationale'])}</div>" if r.get("rationale") else ""
         first_step = f"<div class='step'>First step: {esc(r['first_step'])}</div>" if r.get("first_step") else ""
@@ -251,6 +301,9 @@ def render_recommendations(d: dict) -> None:
 
 def render_briefing(d: dict) -> None:
     b = d.get("briefing", {})
+    if not b:
+        not_ready_note()
+        return
     for title, key in [("What happened?", "what_happened"),
                        ("Why does it matter?", "why_it_matters"),
                        ("What should management do next?", "what_next")]:
@@ -259,12 +312,7 @@ def render_briefing(d: dict) -> None:
 
 
 # -------------------------------------------------------------------- data ---
-try:
-    data = load_dashboard_data()
-except Exception as exc:
-    st.error("Could not load analysis. Make sure the model server is running and the index "
-             f"is built (`python main.py ingest`).\n\n{exc}")
-    st.stop()
+data = load_dashboard_data()
 c = data["company"]
 
 st.markdown(f"<div class='hero'>AI CEO — {esc(c['name'])}</div>", unsafe_allow_html=True)
@@ -288,6 +336,20 @@ with st.sidebar:
                 st.rerun()
             except Exception as exc:
                 st.error(f"Re-run failed — is the model server up?\n\n{exc}")
+    with st.expander("Manage data"):
+        st.caption("Delete the corpus, index and results. The agent rebuilds them on the next question.")
+        if st.checkbox("Confirm delete", key="confirm_del") and \
+                st.button("Delete all collected data", use_container_width=True):
+            import shutil
+            get_retriever.clear()
+            shutil.rmtree(ROOT / "data", ignore_errors=True)
+            for f in (ROOT / "results").glob("*"):
+                try:
+                    f.unlink()
+                except Exception:
+                    pass
+            st.success("Deleted. Ask the agent to rebuild.")
+            st.rerun()
     st.divider()
     st.markdown("**Models & Retrieval**")
     st.markdown(f"<div class='stack'><b>LLM</b><br><code>{esc(LLM_MODEL)}</code></div>"
@@ -315,10 +377,14 @@ with tabs[0]:
         with st.spinner("Reasoning, calling tools, and refreshing every tab…"):
             try:
                 from main import ask_ceo, strategic_options
+                if not config.CORPUS_CSV.exists():       # first use -> agent builds the knowledge base
+                    regenerate_data()
                 with contextlib.redirect_stdout(buf):
                     answer = ask_ceo(q.strip())
                 opts = strategic_options(q.strip(), answer)
-                tool_lines = [l.strip() for l in buf.getvalue().splitlines() if "calling tool" in l]
+                # full live trace: each tool call AND what it returned
+                trace = [l.rstrip() for l in buf.getvalue().splitlines()
+                         if "calling tool:" in l or l.lstrip().startswith("->")]
                 try:
                     regenerate_data()       # LLM was called -> refresh every other tab
                 except Exception:
@@ -327,7 +393,7 @@ with tabs[0]:
                 log_activity({"time": datetime.now().isoformat(timespec="minutes"),
                               "question": q.strip(), "answer": answer,
                               "options": opts["options"], "snapshot": snapshot})
-                st.session_state["last_result"] = {"answer": answer, "tools": tool_lines, **opts}
+                st.session_state["last_result"] = {"answer": answer, "trace": trace, **opts}
                 st.rerun()
             except Exception as exc:
                 st.error(f"Agent unavailable — is the model server running?\n\n{exc}")
@@ -335,9 +401,10 @@ with tabs[0]:
     res = st.session_state.get("last_result")
     if res:
         st.markdown(f"<div class='answer'>{esc(res['answer'])}</div>", unsafe_allow_html=True)
-        if res["tools"]:
-            with st.expander(f"{len(res['tools'])} tool calls"):
-                st.code("\n".join(res["tools"]), language="text")
+        if res.get("trace"):
+            n_calls = sum(1 for l in res["trace"] if "calling tool:" in l)
+            with st.expander(f"Tool calls & outputs ({n_calls})", expanded=True):
+                st.code("\n".join(res["trace"]), language="text")
         if res["options"]:
             st.markdown("##### Your strategic options")
             for o in res["options"]:

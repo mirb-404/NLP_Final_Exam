@@ -92,7 +92,7 @@ def act_node(state: AgentState) -> AgentState:
             obs = tool.invoke({"query": arg} if "query" in tool.args else {})
         except Exception as exc:
             obs = f"Tool error: {exc}"
-    print(f"     -> {obs[:140].replace(chr(10), ' ')} ...")
+    print(f"     -> {obs[:300].replace(chr(10), ' ')}")
     return {"scratchpad": state["scratchpad"] + f"\nObservation: {obs}\n"}
 
 
