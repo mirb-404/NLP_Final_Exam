@@ -1,107 +1,106 @@
 {
   "company": {
-    "name": "Apple",
-    "industry": "Consumer Technology / Software & Hardware",
-    "n_documents": 426,
+    "name": "Tesla",
+    "industry": "Electric Vehicles / Clean Energy",
+    "n_documents": 399,
     "n_sources": 4,
-    "last_update": "2026-06-20T16:50:11.545108+02:00"
+    "last_update": "2026-06-21T15:35:44.698085+02:00"
   },
   "market_intelligence": {
     "recent_news": [
       {
-        "title": "A Summary Reversal in Apple v. Epic Games? - Divided Argument | Substack",
-        "source": "Divided Argument | Substack",
-        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBCdjJrUGJ1d245eVB2ZVJJU21ZWjRlNndVQjhDZlMyakkwLWNvdlQybm81X0RtTjRwQS1fNGZkQzBWVmttZTd4eUdZSUNKWkxvVy13aVdhdnQxS19UV0puZHFqWmYzSlJIWFdYS0IwdVJVRno3STVGRg?oc=5",
-        "date": "Thu, 18 Jun 2026 09:03:39 GMT"
-      },
-      {
-        "title": "Trump claims Apple has agreed to buy chips from Intel, boosting its stock - SiliconANGLE",
-        "source": "SiliconANGLE",
-        "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPeFQtSU9qYUE0SVBwR1dzTVFPMlJ3UXowckxoVzEzR0oyME5UQl9lR0U2bVVycHFTdTRKU1UwQUtYUEpwZm9ybWE2R3Z3Mjgwd20tUEdzaU45T0V5OV9BaXBXRDhCMFNVRms3MU1PRXZDdllXUDVfUTF3Vk1raFVqbDIwaGlkcTh4R3M0WkdsQWk3QQ?oc=5",
-        "date": "Thu, 18 Jun 2026 23:36:07 GMT"
-      },
-      {
-        "title": "Here’s Why Apple Inc (AAPL) Is Falling Despite AI Advancements at WWDC 2026 - Yahoo Finance",
+        "title": "Is Tesla, Inc. (TSLA) Among the Best EV Stocks to Invest In According to Hedge Funds? - Yahoo Finance",
         "source": "Yahoo Finance",
-        "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPeDFhZWFCdElyS1BUQndyQ2tmU1ktQlU2S3ByR203NTNBeDREd1JuYlBlbThVV0tmOXotTzRKYloxYWxVNmxicXBteGhXR19lUHJ6ZDNkZ08xTVkzMmdWZ01xNkZyeTd3bkFOV2Z2VlFwRk1XakFMSjVicGIxc3l0RXdpbTZDOVNaNmVSeTJtSjNGTURmdUE?oc=5",
-        "date": "Tue, 16 Jun 2026 18:49:32 GMT"
+        "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOeUdicF9fQWkwVzdLLWZBd2ZTYWIwZ1BWVDBpZlJMbU1MTnR5UmNQeHFISHc3Zy1hWlZuRFJla1MtUE1wd3ItTmhjUXY0b2hFN21ReGxLUkh2ekNBbEtrNlhZMnVIdmY1Ql9VZktCN3pfZVJDaHBCY3hqNmhIRDM0XzZBd3dTY3FUQXhlaGRBcmtHejBq?oc=5",
+        "date": "Sun, 21 Jun 2026 11:40:30 GMT"
       },
       {
-        "title": "AAPL - Apple Inc Stock Price and Quote - Finviz",
-        "source": "Finviz",
-        "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5OcXZ0WUY5TUFhb1JEbC1vR0xvaUdXcUhSVVo5NHVRYWtxd3k3Zy1pcHNBTWt5U3kyVDNzanVZdENiTzdIUUE?oc=5",
-        "date": "Thu, 18 Jun 2026 20:00:00 GMT"
+        "title": "Union Savings Bank Takes Position in Tesla, Inc. $TSLA - MarketBeat",
+        "source": "MarketBeat",
+        "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcUtmb2FhbjN3SVRSR0NHVm1aaVVJQmhDUWE5b0M0NmFaV1JReGkxOE1rZFM4UzMwTWtUSTBwYkN1Y1EzOEZpNUFPTFZpZGJsSS1LOTlsSzg3SkczTC1VaTgzZzVldXIyVGJDYkRzM3poUDV6QkRtM2NNVU00UUlmb0EwQ2ZUVnZHbVlJcnU3Wno5VkZKSDN0UkpTQURfOXViREVCN0k1eTg1dFlSZFFoZ053?oc=5",
+        "date": "Sun, 21 Jun 2026 09:39:56 GMT"
       },
       {
-        "title": "Xiao-I patent fight with Apple turns to China’s top court - Stock Titan",
-        "source": "Stock Titan",
-        "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPWU5CS3FiY3ZCejEtWUZFZnZtdzdjR1czOGV1azJlWVdab3MtcUx2UGRLakd5SEFjTGtrSmRhdGJWSEJJeTczVEtYalRmRld2Z2RlNXFobXdEMUFaaXlqbktjZUV4RnhHZ3Nrd0lBWHRFbmdWZVk4RXVxMnRlUngtZDg2TGIzcjZHQmJ6b05hZkpVcmpVelhOQjI2LUo0TXJ6Y05oQ2dEYTItTXhqRkVvcmlyNTdpM1ltcFE?oc=5",
-        "date": "Fri, 19 Jun 2026 21:00:00 GMT"
+        "title": "Tesla $1.6T Bet on Self-Driving Just Hit a Wall in Europe. Here’s Where the Stock Could Go - TIKR.com",
+        "source": "TIKR.com",
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOZ2g5MXdJb2VRSnhlQk5mb2lsTXh1dER2MU43TEJORk5ieWhfeTl3ZUlmeVNNek1BZHd6emxLd0RoMWpIbXd3bFFwVEppV0dnQ3g3N1NUWVBMSFp0OVVZRDF0dDk2ek5tczJSMlBvQVdlMmdZRVlGc25Ia0VHNWlWMGtPUVdxNXJjbFBQbklEZ19oZV9yVTZWZzJqUFBUekdPUkJROW9NZFhxRVFlRzNkSXhCdw?oc=5",
+        "date": "Sun, 21 Jun 2026 06:56:04 GMT"
       },
       {
-        "title": "Apple plans camera AirPods alongside upgraded foldable iPhone in 2027 - SiliconValley.com",
-        "source": "SiliconValley.com",
-        "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQaGEwSG9PdmpLSWczbWZiWF9Kekt0cDJFUHFnWG56c0JFS1puVkxSYkxGQjBBdDVsRGg0VFB2QnBHMnJ5d2VpZWZFYl9LWDJsN1BTSWVzel9sRWZSSDF5eGFBbUlNaUZqOFJwUlQwOFliZnpOSk5pVkZzdUI2ckMySG1YT1lPdmtVb1Fv0gGQAUFVX3lxTE0xY0JHdHdLZVFLUWJfek5WYUtjbFljWl92SEFvekQtUE10cEdWNHFaVFJfSVphakQxUFVrT3Jtc0NhZDAyOXRhUUpmTG0tX3pBRmtDSG5OejVkQ1pjVlhRZFhDT1Z5Z2dFWEJyVVdlZVVDRXlNcWZTanFXOTdFT0taZlA0UFVEZThnS1doSE9xbA?oc=5",
-        "date": "Wed, 17 Jun 2026 04:07:30 GMT"
+        "title": "SpaceX-Tesla Inc. Is Inching Closer. Watch Out, Nvidia? - Advisor Perspectives",
+        "source": "Advisor Perspectives",
+        "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQYlF3c1lQd0FTbGtWUzJRYzctSnRVQTlpcTY5RGtOYjIzWWxrbFF6RmlkcGJPd3BMZy1JV05RU29PdXVKZTBjOFc4MzB2QXFKdnRXN3ROSVgwWHdsaXRmOVJaUE1NengzRU0wcjRTWjdMdG9oc1piRFdMU200UWNORm1YYVIzQ24zWXpvQVVMNnhKX1ExTnVFelE1QXA?oc=5",
+        "date": "Thu, 18 Jun 2026 14:06:58 GMT"
       },
       {
-        "title": "Memory shortage crisis: Apple CEO confirms higher prices are on the way; chip stocks keep soaring - Fast Company",
-        "source": "Fast Company",
-        "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOUh6LTJheEpxZDlTN0l1V2o5M3hLQ2xJTjBhbkltUWxkOTB6Z1BXRVFScWNwVzlWNkV5cUpWX3M4WHZUWGo1TzVtTWJobTEyMmZET3k3RWgzUlF3MTJELVdrSHZsb3J1ZjFQcFdEOWw5b1NnTUZXXzZlM1VRc21IWEVWcXBkM1B1TXp4eUU2YWR5XzRNWDM3YkR0endWMHpZRGNN?oc=5",
-        "date": "Thu, 18 Jun 2026 12:26:10 GMT"
+        "title": "Tesla Semi spotted with autonomous validation equipment as the automaker prepares the truck for FSD - Tesla Oracle",
+        "source": "Tesla Oracle",
+        "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQblpzdnBPbVotVGRrZlgzWDlmUDAydjk1SzR1UDRBcXNOSm1TQ2FVVWhkRnc3alljbU9KQkt0SG5WTnZ6TEFncUgwc2lvUjlvYU1uVnRFcDlCOTM4QzVXbEtPQUx5MURtbFIwXy1fWWQ5WkRnS19Td0w5TWlCZVRsZWNrQjZYbUV5ajFnYmd3WEJJbWdWU2pRajNvbjRwdmdRLV9RZU1fYU1pZmJFM0hWSG5IMHN4NVR6Unp3OENwNGRxLTZtSUdTN3lVWWJqUXp0NkZuc3p3?oc=5",
+        "date": "Sun, 21 Jun 2026 12:48:57 GMT"
       },
       {
-        "title": "Trump says Apple to partner with Intel on US chip design, production - Reuters",
-        "source": "Reuters",
-        "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQUnN4Ym4xVHp1d21VWFd5dFFMRWd6OGQ3MFRYT1NjMUVqYk13NGFydVJwU3BCTGZjRzdKQ3RMd2kzSVZOZW52X1hRM1BQQ3N0VUpfeTh2aHhvSjZJSTFSX3UzUnpfZ2hVMzRwWmxJcVAxQU1saXV5ZXJjdk94OGE2YnhtQndZWEFEQkdiUnFMSURWcjBwWXlWY1ZfYWZENWM?oc=5",
-        "date": "Thu, 18 Jun 2026 22:43:34 GMT"
+        "title": "Clearwave Capital LLC Purchases Shares of 1,589 Tesla, Inc. $TSLA - MarketBeat",
+        "source": "MarketBeat",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNNGtyTUVTS25Wdlc3TnZ1M1I1aFdjT3pRYkhtYlFmRFNMS0U0LWNyYWJxM1EwSWJDeEdQNERmSUotTnZpYzBKRnJjNVhqdm1WQTQta2dJT0dibkltZWF3cm5zMVhVeGpZUy1lck5HX2otQmxZLUZYNGYybGw1YVBvUHBTel9acWJJN19ZU1BUMThWU291NEc2eW1aWlR4Qk1vOVd3VjlENjJTcW5mWm40NFhLcHVWaGN1LXZNRmpNcw?oc=5",
+        "date": "Sun, 21 Jun 2026 07:25:19 GMT"
+      },
+      {
+        "title": "EJMK Ventures LLC Makes New Investment in Tesla, Inc. $TSLA - MarketBeat",
+        "source": "MarketBeat",
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPSjJMaDl0VTlUZ2dZRG1zbk53LTRPS2c0X1lKUmZNZlZnSHRGd2xiTDlrNjBuYlpfV3VoNGVfTEJJc05Da0hZSlh1X1llc19XenhBeVVUaXVKTk1UQ19QSERWMTVCazVYLU9jTDAwZnpaMHJiUVlZRFdFQlk4OEFjcUhBWURONVRsN29QX25PVEZrZWJ0eFJyazdmS1U3eVN6TmZEb3pTMzhTWlozc0lWUjZfSW1oOXRh?oc=5",
+        "date": "Sun, 21 Jun 2026 09:09:41 GMT"
+      },
+      {
+        "title": "BSN CAPITAL PARTNERS Ltd Sells 82,000 Shares of Tesla, Inc. $TSLA - MarketBeat",
+        "source": "MarketBeat",
+        "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOcVNGX3ctczRBalotNC1ZMVNmZ3JpU28wUU5YNzVUdFpnb1VfOEg5NGpNVnpObERYQ0lkVkxQUU0yb3F4Z1Q2TXVvbHhqQzFaVHlEM1E3RWpBXzZpREJCNDlEeE1DYU1QUFJ5c09ZcW5rVnRLOXdBdjN0ekU5R0NuRGNpVWthT0p4VENFZVpiczQ3WXZlelJfTlpEdEFFN2ZfbFVyMDVDdXZwX2ZURUZfN1RLWk80SndRc3RmblItRQ?oc=5",
+        "date": "Sun, 21 Jun 2026 10:01:23 GMT"
       }
     ],
     "competitor_activity": [
       {
         "ref": "src-1",
-        "title": "Samsung Galaxy AI",
+        "title": "BYD overtakes Tesla",
         "source": "Benzinga",
-        "url": "http://y",
-        "score": 0.8
+        "url": "http://x",
+        "score": 0.9
       }
     ],
     "emerging_technologies": [
       {
-        "title": "On-device AI",
+        "title": "Affordable EVs",
         "confidence": 0.7,
         "evidence": [
           {
             "ref": "src-1",
-            "title": "Apple AAPL regulatory risk",
-            "source": "Yahoo Finance",
+            "title": "BYD overtakes Tesla EV sales",
+            "source": "Benzinga",
             "url": "http://x",
             "score": 0.9
           }
         ],
         "keywords": [
-          "ai",
-          "ios"
+          "ev"
         ]
       }
     ],
     "keywords": [
-      "apple",
-      "iphone",
-      "ai",
-      "aapl"
+      "tesla",
+      "ev",
+      "battery"
     ]
   },
   "opportunities": [
     {
-      "title": "AI on-device features",
+      "title": "Energy storage scale-up",
       "impact": "High",
-      "confidence": 0.81,
+      "description": "Grid + Powerwall storage is a high-margin market beyond cars.",
+      "confidence": 0.8,
       "evidence": [
         {
           "ref": "src-1",
-          "title": "Apple AAPL regulatory risk",
-          "source": "Yahoo Finance",
+          "title": "BYD overtakes Tesla EV sales",
+          "source": "Benzinga",
           "url": "http://x",
           "score": 0.9
         }
@@ -110,15 +109,16 @@
   ],
   "risks": [
     {
-      "title": "Regulatory scrutiny",
-      "category": "regulatory",
+      "title": "China price war",
+      "category": "competitive",
       "severity": "High",
-      "confidence": 0.62,
+      "description": "BYD undercuts Tesla in the largest EV market.",
+      "confidence": 0.6,
       "evidence": [
         {
           "ref": "src-1",
-          "title": "Apple AAPL regulatory risk",
-          "source": "Yahoo Finance",
+          "title": "BYD overtakes Tesla EV sales",
+          "source": "Benzinga",
           "url": "http://x",
           "score": 0.9
         }
@@ -126,80 +126,71 @@
     }
   ],
   "sentiment": {
-    "news_sentiment": 0.0966,
-    "public_sentiment": -0.0059,
-    "overall_sentiment": 0.0649,
+    "news_sentiment": 0.1167,
+    "public_sentiment": -0.0839,
+    "overall_sentiment": 0.0497,
     "distribution": {
-      "negative": 70,
-      "positive": 129,
-      "neutral": 227
+      "positive": 130,
+      "neutral": 193,
+      "negative": 76
     },
     "trend": [
       {
-        "period": "2026-01",
-        "sentiment": 0.1283,
-        "count": 6
-      },
-      {
         "period": "2026-02",
-        "sentiment": 0.0795,
-        "count": 4
-      },
-      {
-        "period": "2026-03",
-        "sentiment": 0.1976,
-        "count": 6
+        "sentiment": -0.1779,
+        "count": 1
       },
       {
         "period": "2026-04",
-        "sentiment": 0.0915,
-        "count": 38
+        "sentiment": 0.1187,
+        "count": 30
       },
       {
         "period": "2026-05",
-        "sentiment": 0.1515,
-        "count": 46
+        "sentiment": 0.0275,
+        "count": 24
       },
       {
         "period": "2026-06",
-        "sentiment": 0.0765,
-        "count": 131
+        "sentiment": 0.1272,
+        "count": 169
       }
     ]
   },
   "recommendations": [
     {
-      "recommendation": "Ship on-device AI across iPhone line",
+      "recommendation": "Launch a sub-$30k Tesla model",
+      "rationale": "Affordable EVs are the fastest-growing segment and Teslas lineup starts too high.",
+      "first_step": "Greenlight the Gigafactory Mexico compact platform this quarter.",
       "priority": "High",
       "risk_level": "Medium",
       "expected_impact": [
-        "Revenue growth",
-        "Differentiation"
+        "Volume growth",
+        "Share defense"
       ],
       "risk_assessment": [
-        "Regulatory"
+        "Margin pressure"
       ],
       "supporting_evidence": [
         {
           "ref": "src-1",
-          "title": "Apple AAPL regulatory risk",
-          "source": "Yahoo Finance",
+          "title": "BYD overtakes Tesla EV sales",
+          "source": "Benzinga",
           "url": "http://x",
           "score": 0.9
         }
       ],
       "confidence": 0.62,
-      "source_signal": "opportunity"
+      "source_signal": "risk"
     }
   ],
   "briefing": {
-    "raw": "WHAT HAPPENED:\nApple pushed AI.\n\nWHY IT MATTERS:\nDifferentiation.\n\nWHAT TO DO NEXT:\nShip features.",
-    "what_happened": "Apple pushed AI.",
-    "why_it_matters": "Differentiation.",
-    "what_next": "Ship features."
+    "raw": "WHAT HAPPENED:\nRising EV competition.\n\nWHY IT MATTERS:\nShare at risk.\n\nWHAT TO DO NEXT:\nShip an affordable model.",
+    "what_happened": "Rising EV competition.",
+    "why_it_matters": "Share at risk.",
+    "what_next": "Ship an affordable model."
   },
   "metrics": {
-    "mean_confidence": 0.62,
-    "factual_precision": 0.4
+    "mean_confidence": 0.6
   }
 }

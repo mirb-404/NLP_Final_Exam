@@ -80,7 +80,7 @@ sources ──HTTP──> data/raw/*.json ──clean/dedup/relevance──> dat
 2. **Process** — clean (HTML unescape/strip), drop <5-word docs, keep only docs that
    mention the company (by alias, whole-word) or a competitor, de-duplicate by id + title.
 3. **Index** — embed each doc and store in a persistent Chroma collection.
-4. **Retrieve** — per strategic theme, fuse BM25 + dense scores (`alpha=0.5`) → top-k cited evidence.
+4. **Retrieve** — per strategic theme, fuse BM25 + dense scores (`alpha=0.5`) -> top-k cited evidence.
 5. **Reason** — the LLM extracts opportunities / risks / trends grounded *only* in retrieved evidence.
 6. **Recommend** — convert the strongest signals into Task-6 recommendations
    (action, evidence, expected impact, risk, priority).
@@ -96,8 +96,8 @@ sources ──HTTP──> data/raw/*.json ──clean/dedup/relevance──> dat
   `collector.py`. Switching company = edit those + rerun. Built for live-coding changes.
 - **Generic-name safety.** Names like *Apple* are matched as **whole-word aliases**
   (`iPhone`, `AAPL`, `Tim Cook`, …) so the relevance filter never keeps *pineapple* / *apple pie*.
-- **Uniform document shape** across all sources → the rest of the pipeline is source-agnostic.
-- **Open-source LLM only**, selected at runtime: self-hosted server → HF Inference → local fallback.
+- **Uniform document shape** across all sources -> the rest of the pipeline is source-agnostic.
+- **Open-source LLM only**, selected at runtime: self-hosted server -> HF Inference -> local fallback.
   Never depends on a paid API (PDF "Not Allowed").
 - **Evidence-first.** Every signal and recommendation carries cited `[src-#]` evidence;
   the verifier rejects ungrounded claims.

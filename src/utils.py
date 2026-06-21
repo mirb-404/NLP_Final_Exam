@@ -150,7 +150,7 @@ def get_llm():
             from huggingface_hub import InferenceClient
 
             return _ChatLLM(InferenceClient(token=token), config.LLM_REPO_ID)
-        except Exception as exc:  # network / model gated → fall through to local
+        except Exception as exc:  # network / model gated -> fall through to local
             print(f"[utils] HF Inference unavailable ({exc}); using local fallback.")
 
     from langchain_community.llms import HuggingFacePipeline

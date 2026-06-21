@@ -1,76 +1,0 @@
-warning: `VIRTUAL_ENV=E:\Master'"'"'s Notes\2nd semester\NLP\NLP_Final_Exam\.venv` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead
-[collector] news: 490 items
-[collector] finance: 20 items
-[collector] community(hackernews): 300 items
-[collector] community(stackexchange): 150 items
-[collector] research(arxiv): 150 items
-[collector] research(openalex): 150 items
-[collector] TOTAL collected: 1260 (target >= 100)
-[preprocess] clean corpus: 970 documents -> corpus.csv
-[preprocess] sources: {'news': 435, 'community': 428, 'research': 98, 'finance': 9}
-Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 1238.98it/s]
-Batches:   0%|          | 0/31 [00:00<?, ?it/s]Batches:   3%|3         | 1/31 [00:02<01:04,  2.14s/it]Batches:   6%|6         | 2/31 [00:03<00:41,  1.42s/it]Batches:  10%|9         | 3/31 [00:03<00:33,  1.19s/it]Batches:  13%|#2        | 4/31 [00:04<00:28,  1.07s/it]Batches:  16%|#6        | 5/31 [00:05<00:25,  1.04it/s]Batches:  19%|#9        | 6/31 [00:06<00:20,  1.23it/s]Batches:  23%|##2       | 7/31 [00:06<00:15,  1.55it/s]Batches:  26%|##5       | 8/31 [00:06<00:11,  1.92it/s]Batches:  29%|##9       | 9/31 [00:06<00:09,  2.33it/s]Batches:  32%|###2      | 10/31 [00:07<00:07,  2.86it/s]Batches:  35%|###5      | 11/31 [00:07<00:05,  3.47it/s]Batches:  39%|###8      | 12/31 [00:07<00:04,  4.12it/s]Batches:  42%|####1     | 13/31 [00:07<00:04,  4.37it/s]Batches:  45%|####5     | 14/31 [00:07<00:03,  5.05it/s]Batches:  48%|####8     | 15/31 [00:07<00:02,  5.88it/s]Batches:  52%|#####1    | 16/31 [00:07<00:02,  5.85it/s]Batches:  55%|#####4    | 17/31 [00:08<00:02,  5.99it/s]Batches:  58%|#####8    | 18/31 [00:08<00:02,  5.97it/s]Batches:  61%|######1   | 19/31 [00:08<00:01,  6.19it/s]Batches:  68%|######7   | 21/31 [00:08<00:01,  7.37it/s]Batches:  74%|#######4  | 23/31 [00:08<00:01,  7.89it/s]Batches:  77%|#######7  | 24/31 [00:09<00:00,  7.95it/s]Batches:  81%|########  | 25/31 [00:09<00:00,  7.92it/s]Batches:  84%|########3 | 26/31 [00:09<00:00,  8.22it/s]Batches:  90%|######### | 28/31 [00:09<00:00,  8.94it/s]Batches:  97%|#########6| 30/31 [00:09<00:00, 10.43it/s]Batches: 100%|##########| 31/31 [00:09<00:00,  3.22it/s]
-[knowledge_base] indexed 970 documents in Chroma
-[intelligence_engine] 5 opportunities, 5 risks, 5 trends
-[verifier] mean_confidence=0.649 precision=0.2
-Traceback (most recent call last):
-  File "E:\Master's Notes\2nd semester\NLP\NLP_Final_Exam\.venv\Lib\site-packages\huggingface_hub\utils\_http.py", line 761, in hf_raise_for_status
-    response.raise_for_status()
-  File "E:\Master's Notes\2nd semester\NLP\NLP_Final_Exam\.venv\Lib\site-packages\httpx\_models.py", line 829, in raise_for_status
-    raise HTTPStatusError(message, request=request, response=self)
-httpx.HTTPStatusError: Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "E:\Master's Notes\2nd semester\NLP\NLP_Final_Exam\main.py", line 41, in <module>
-    main()
-  File "E:\Master's Notes\2nd semester\NLP\NLP_Final_Exam\main.py", line 35, in main
-    state = run_pipeline()
-            ^^^^^^^^^^^^^^
-  File "E:\Master's Notes\2nd semester\NLP\NLP_Final_Exam\src\orchestrator.py", line 161, in run_pipeline
-    final_state = graph.invoke({}, {"recursion_limit": 25})
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "E:\Master's Notes\2nd semester\NLP\NLP_Final_Exam\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3928, in invoke
-    for chunk in self.stream(
-  File "E:\Master's Notes\2nd semester\NLP\NLP_Final_Exam\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2982, in stream
-    for _ in runner.tick(
-  File "E:\Master's Notes\2nd semester\NLP\NLP_Final_Exam\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 207, in tick
-    run_with_retry(
-  File "E:\Master's Notes\2nd semester\NLP\NLP_Final_Exam\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 617, in run_with_retry
-    return task.proc.invoke(task.input, config)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "E:\Master's Notes\2nd semester\NLP\NLP_Final_Exam\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 684, in invoke
-    input = context.run(step.invoke, input, config, **kwargs)
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "E:\Master's Notes\2nd semester\NLP\NLP_Final_Exam\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 426, in invoke
-    ret = self.func(*args, **kwargs)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "E:\Master's Notes\2nd semester\NLP\NLP_Final_Exam\src\orchestrator.py", line 80, in node_recommend
-    recs = generate_recommendations(state["intel"])
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "E:\Master's Notes\2nd semester\NLP\NLP_Final_Exam\src\ceo_agent.py", line 74, in generate_recommendations
-    recs.append(_signal_to_recommendation(opp, "opportunity"))
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "E:\Master's Notes\2nd semester\NLP\NLP_Final_Exam\src\ceo_agent.py", line 46, in _signal_to_recommendation
-    resp = ask_llm(prompt)
-           ^^^^^^^^^^^^^^^
-  File "E:\Master's Notes\2nd semester\NLP\NLP_Final_Exam\src\utils.py", line 172, in ask_llm
-    out = llm.invoke(prompt)
-          ^^^^^^^^^^^^^^^^^^
-  File "E:\Master's Notes\2nd semester\NLP\NLP_Final_Exam\src\utils.py", line 85, in invoke
-    resp = self._client.chat_completion(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "E:\Master's Notes\2nd semester\NLP\NLP_Final_Exam\.venv\Lib\site-packages\huggingface_hub\inference\_client.py", line 930, in chat_completion
-    data = self._inner_post(request_parameters, stream=stream)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "E:\Master's Notes\2nd semester\NLP\NLP_Final_Exam\.venv\Lib\site-packages\huggingface_hub\inference\_client.py", line 283, in _inner_post
-    hf_raise_for_status(response)
-  File "E:\Master's Notes\2nd semester\NLP\NLP_Final_Exam\.venv\Lib\site-packages\huggingface_hub\utils\_http.py", line 877, in hf_raise_for_status
-    raise _format(HfHubHTTPError, str(e), response) from e
-huggingface_hub.errors.HfHubHTTPError: Client error '402 Payment Required' for url 'https://router.huggingface.co/v1/chat/completions' (Request ID: Root=1-6a366acf-16082ea92eb1f40d13f8f957;572d9655-d719-4eeb-b751-5aa535b5a72e)
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
-
-You have depleted your monthly included credits. Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get 20x more included usage.
-During task with name 'recommend' and id '8bbc42cb-76fa-fe39-a8c0-989892486411'

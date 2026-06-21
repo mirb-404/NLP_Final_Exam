@@ -10,33 +10,33 @@ from pathlib import Path
 # ----------------------------------------------------------------------------
 # Company under analysis (Step 1 of the PDF)
 # ----------------------------------------------------------------------------
-COMPANY = "Apple"
-INDUSTRY = "Consumer Technology / Software & Hardware"
-TICKER = "AAPL"  # Apple Inc, primary US listing (used for finance news feed)
+COMPANY = "Tesla"
+INDUSTRY = "Electric Vehicles / Clean Energy"
+TICKER = "TSLA"  # Tesla Inc, primary US listing (used for finance news feed)
 
-# "Apple" is a generic word (fruit, "Big Apple"), so the relevance filter matches
-# these aliases as WHOLE WORDS. Brand/product names anchor the company unambiguously.
+# "tesla" is also a physics unit / a person (Nikola Tesla), so the relevance filter
+# matches these aliases as WHOLE WORDS. Brand/product names anchor the company.
 COMPANY_ALIASES = [
-    "Apple",
-    "iPhone",
-    "iPad",
-    "MacBook",
-    "App Store",
-    "iOS",
-    "Vision Pro",
-    "Tim Cook",
-    "AAPL",
+    "Tesla",
+    "TSLA",
+    "Elon Musk",
+    "Model 3",
+    "Model Y",
+    "Model S",
+    "Cybertruck",
+    "Gigafactory",
+    "Powerwall",
 ]
 
 # Competitors we also watch (used by the intelligence engine for "competitor activity")
 COMPETITORS = [
-    "Samsung",
-    "Google",
-    "Microsoft",
-    "Huawei",
-    "Xiaomi",
-    "Sony",
-    "Meta",
+    "BYD",
+    "Rivian",
+    "Lucid",
+    "Ford",
+    "General Motors",
+    "Volkswagen",
+    "NIO",
 ]
 
 # ----------------------------------------------------------------------------
@@ -73,13 +73,13 @@ CONFIDENCE_THRESHOLD = 0.7  # retry a recommendation if verifier confidence is b
 # ----------------------------------------------------------------------------
 ENGINE_QUERIES = {
     "opportunities": "What are the major growth opportunities, new markets, "
-                     "partnerships and emerging technologies for Apple?",
+                     "partnerships and emerging technologies for Tesla?",
     "risks": "What are the biggest risks, competitive threats, regulatory issues, "
-             "supply chain problems and negative sentiment facing Apple?",
+             "supply chain problems and negative sentiment facing Tesla?",
     "trends": "What technology trends, industry developments and customer behaviour "
-              "shifts should Apple management monitor?",
-    "competitors": "What are Apple competitors such as Samsung, Google and "
-                   "Microsoft doing recently?",
+              "shifts should Tesla management monitor?",
+    "competitors": "What are Tesla competitors such as BYD, Rivian and "
+                   "Ford doing recently?",
 }
 
 # ----------------------------------------------------------------------------
@@ -90,7 +90,7 @@ DATA_DIR = ROOT_DIR / "data"
 RAW_DIR = DATA_DIR / "raw"
 CORPUS_CSV = DATA_DIR / "corpus.csv"
 CHROMA_DIR = DATA_DIR / "chroma"
-COLLECTION_NAME = "apple_docs"
+COLLECTION_NAME = "tesla_docs"
 RESULTS_DIR = ROOT_DIR / "results"
 
 # Create the folders on import so no module has to worry about it.

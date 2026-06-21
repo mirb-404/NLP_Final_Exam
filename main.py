@@ -11,6 +11,7 @@ own modules. The graph is the brain; the modules are the hands.
     python main.py chat                # interactive: type questions in a loop
     python main.py ingest              # refresh data: collect -> corpus -> Chroma index
     python main.py report              # deterministic pipeline -> results/*.json deliverables
+    python main.py collect|corpus|index   # run a single ingest stage
 
 Tool calls are printed live so you can watch the agent fetch evidence.
 """
@@ -83,7 +84,7 @@ def act_node(state: AgentState) -> AgentState:
     arg = m.group(2).strip()
 
     tool = _TOOLS_BY_NAME.get(name)
-    print(f"  🔧 calling tool: {name}({arg!r})")
+    print(f"  calling tool: {name}({arg!r})")
     if tool is None:
         obs = f"Unknown tool '{name}'. Choose one of: {list(_TOOLS_BY_NAME)}"
     else:
@@ -91,7 +92,7 @@ def act_node(state: AgentState) -> AgentState:
             obs = tool.invoke({"query": arg} if "query" in tool.args else {})
         except Exception as exc:
             obs = f"Tool error: {exc}"
-    print(f"     ↳ {obs[:140].replace(chr(10), ' ')} ...")
+    print(f"     -> {obs[:140].replace(chr(10), ' ')} ...")
     return {"scratchpad": state["scratchpad"] + f"\nObservation: {obs}\n"}
 
 
@@ -129,13 +130,44 @@ def ask_ceo(question: str) -> str:
     return final.split("Final Answer:")[-1].strip()
 
 
+def strategic_options(question: str, answer: str) -> dict:
+    """Turn the agent's answer into a decision menu: strategic moves (with upside) and
+    sharper follow-up questions, so the CEO sees how much further they can push."""
+    prompt = (
+        f"You are advising the CEO of {config.COMPANY}.\n"
+        f"Question: {question}\nAnswer so far: {answer}\n\n"
+        "Give the CEO a decision menu. Use EXACTLY this format, nothing else:\n"
+        "OPTION: <a bold strategic move> | <the upside: how much better this could make the company>\n"
+        "OPTION: <a different move> | <upside>\n"
+        "OPTION: <a different move> | <upside>\n"
+        "FOLLOWUP: <a sharper question the CEO should ask next>\n"
+        "FOLLOWUP: <another follow-up question>\n"
+        "FOLLOWUP: <another follow-up question>\n"
+    )
+    text = ask_llm(prompt)
+    return {
+        "options": [o.strip() for o in re.findall(r"OPTION:\s*(.+)", text)][:3],
+        "followups": [f.strip() for f in re.findall(r"FOLLOWUP:\s*(.+)", text)][:3],
+    }
+
+
 # ----------------------------------------------------------------------------
 # CLI
 # ----------------------------------------------------------------------------
 def main() -> None:
     cmd = sys.argv[1] if len(sys.argv) > 1 else "ask"
 
-    if cmd == "ingest":
+    if cmd == "collect":
+        from src.collector import collect_all
+        collect_all()
+    elif cmd == "corpus":
+        from src.preprocess import build_corpus
+        build_corpus()
+    elif cmd == "index":
+        from src.knowledge_base import build_index
+        from src.preprocess import load_corpus
+        build_index(load_corpus())
+    elif cmd == "ingest":
         from src.orchestrator import run_ingest
         run_ingest()
     elif cmd == "report":

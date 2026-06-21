@@ -1,25 +1,27 @@
 [
   {
-    "recommendation": "Ship on-device AI across iPhone line",
+    "recommendation": "Launch a sub-$30k Tesla model",
+    "rationale": "Affordable EVs are the fastest-growing segment and Teslas lineup starts too high.",
+    "first_step": "Greenlight the Gigafactory Mexico compact platform this quarter.",
     "priority": "High",
     "risk_level": "Medium",
     "expected_impact": [
-      "Revenue growth",
-      "Differentiation"
+      "Volume growth",
+      "Share defense"
     ],
     "risk_assessment": [
-      "Regulatory"
+      "Margin pressure"
     ],
     "supporting_evidence": [
       {
         "ref": "src-1",
-        "title": "Apple AAPL regulatory risk",
-        "source": "Yahoo Finance",
+        "title": "BYD overtakes Tesla EV sales",
+        "source": "Benzinga",
         "url": "http://x",
         "score": 0.9
       }
     ],
     "confidence": 0.62,
-    "source_signal": "opportunity"
+    "source_signal": "risk"
   }
 ]

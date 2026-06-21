@@ -38,8 +38,10 @@ def _signal_to_recommendation(signal: dict, kind: str) -> dict:
     prompt = (
         f"You are advising the CEO of {config.COMPANY}.\n"
         f"Strategic {kind}: {signal['title']}\n"
-        f"Write a recommendation in EXACTLY this format:\n"
-        f"RECOMMENDATION: <one decisive action>\n"
+        f"Write an executive recommendation in EXACTLY this format:\n"
+        f"RECOMMENDATION: <one decisive, specific action>\n"
+        f"RATIONALE: <one sentence on why this matters now>\n"
+        f"FIRST STEP: <the concrete first move to make this quarter>\n"
         f"IMPACT: <2-3 expected business impacts, comma separated>\n"
         f"RISK: <2-3 risks of acting, comma separated>\n"
     )
@@ -47,6 +49,8 @@ def _signal_to_recommendation(signal: dict, kind: str) -> dict:
     confidence = signal.get("confidence", 0.0)
     return {
         "recommendation": _field(resp, "RECOMMENDATION", default=f"Act on: {signal['title']}"),
+        "rationale": _field(resp, "RATIONALE"),
+        "first_step": _field(resp, "FIRST STEP"),
         "priority": level if level in _IMPACT_RANK else "Medium",
         # single risk level (Section 6): acting on weaker evidence = higher execution risk
         "risk_level": "High" if confidence < 0.5 else "Medium" if confidence < 0.75 else "Low",

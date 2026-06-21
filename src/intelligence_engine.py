@@ -81,18 +81,19 @@ def detect_opportunities(retriever: HybridRetriever) -> list[dict]:
     docs = retriever.retrieve(config.ENGINE_QUERIES["opportunities"])
     prompt = (
         f"You are a strategy analyst for {config.COMPANY}. Using ONLY the evidence "
-        f"below, list up to 5 concrete business OPPORTUNITIES.\n"
-        f"One per line, format:  <short opportunity> :: <High|Medium|Low impact>\n\n"
+        f"below, list up to 5 concrete business OPPORTUNITIES.\nOne per line, format:\n"
+        f"<short opportunity title> :: <High|Medium|Low> :: <one full sentence on the opportunity and why it matters>\n\n"
         f"EVIDENCE:\n{_evidence_block(docs)}\n\nOPPORTUNITIES:"
     )
     items = []
     for line in _parse_lines(ask_llm(prompt)):
-        title, _, impact = line.partition("::")
-        if not title.strip():
+        parts = [p.strip() for p in line.split("::")]
+        if not parts[0]:
             continue  # drop malformed lines that carry no actual opportunity
         items.append({
-            "title": title.strip(),
-            "impact": (impact.strip() or "Medium").split()[0].capitalize(),
+            "title": parts[0],
+            "impact": (parts[1].split()[0].capitalize() if len(parts) > 1 and parts[1] else "Medium"),
+            "description": parts[2] if len(parts) > 2 else "",
             "confidence": _confidence(docs),
             "evidence": _evidence_list(docs),
         })
@@ -103,9 +104,10 @@ def detect_risks(retriever: HybridRetriever) -> list[dict]:
     docs = retriever.retrieve(config.ENGINE_QUERIES["risks"])
     prompt = (
         f"You are a risk analyst for {config.COMPANY}. Using ONLY the evidence below, "
-        f"list up to 5 concrete RISKS.\nOne per line, format:  "
-        f"<short risk> :: <competitive|regulatory|sentiment|supply chain|financial> :: "
-        f"<High|Medium|Low severity>\n\nEVIDENCE:\n{_evidence_block(docs)}\n\nRISKS:"
+        f"list up to 5 concrete RISKS.\nOne per line, format:\n"
+        f"<short risk title> :: <competitive|regulatory|sentiment|supply chain|financial> :: "
+        f"<High|Medium|Low> :: <one full sentence on the risk and its impact>\n\n"
+        f"EVIDENCE:\n{_evidence_block(docs)}\n\nRISKS:"
     )
     items = []
     for line in _parse_lines(ask_llm(prompt)):
@@ -115,7 +117,8 @@ def detect_risks(retriever: HybridRetriever) -> list[dict]:
         items.append({
             "title": parts[0],
             "category": parts[1] if len(parts) > 1 else "competitive",
-            "severity": (parts[2].split()[0].capitalize() if len(parts) > 2 else "Medium"),
+            "severity": (parts[2].split()[0].capitalize() if len(parts) > 2 and parts[2] else "Medium"),
+            "description": parts[3] if len(parts) > 3 else "",
             "confidence": _confidence(docs),
             "evidence": _evidence_list(docs),
         })
