@@ -156,13 +156,15 @@ def _save_outputs(state: GraphState) -> None:
 
     intel = state.get("intel", {})
     briefing = state.get("briefing", "")
+    df = load_corpus()
     # Keys map 1:1 to the PDF dashboard sections so the frontend is a thin renderer.
     dashboard = {
         "company": {                                                  # Section 1
             "name": config.COMPANY,
             "industry": config.INDUSTRY,
             "n_documents": kb_count(),
-            "n_sources": int(load_corpus()["source_type"].nunique()),
+            "n_sources": int(df["source_type"].nunique()),
+            "source_breakdown": df["source_type"].value_counts().to_dict(),
             "last_update": now_iso(),
         },
         "market_intelligence": {                                      # Section 2

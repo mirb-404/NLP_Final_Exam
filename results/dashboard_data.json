@@ -4,7 +4,13 @@
     "industry": "Electric Vehicles / Clean Energy",
     "n_documents": 399,
     "n_sources": 4,
-    "last_update": "2026-06-21T16:15:39.545169+02:00"
+    "source_breakdown": {
+      "news": 120,
+      "finance": 120,
+      "community": 120,
+      "research": 39
+    },
+    "last_update": "2026-06-21T16:58:19.403312+02:00"
   },
   "market_intelligence": {
     "recent_news": [
@@ -73,32 +79,35 @@
         "evidence": [
           {
             "ref": "src-1",
-            "title": "BYD overtakes Tesla",
+            "title": "BYD overtakes Tesla in EV sales",
             "source": "Benzinga",
             "url": "http://x",
             "score": 0.9
           }
         ],
         "keywords": [
-          "ev"
+          "ev",
+          "battery"
         ]
       }
     ],
     "keywords": [
       "tesla",
-      "ev"
+      "ev",
+      "battery",
+      "elon musk"
     ]
   },
   "opportunities": [
     {
       "title": "Energy storage scale-up",
       "impact": "High",
-      "description": "Grid storage is high-margin.",
+      "description": "Grid + Powerwall storage is high-margin beyond cars.",
       "confidence": 0.8,
       "evidence": [
         {
           "ref": "src-1",
-          "title": "BYD overtakes Tesla",
+          "title": "BYD overtakes Tesla in EV sales",
           "source": "Benzinga",
           "url": "http://x",
           "score": 0.9
@@ -111,12 +120,28 @@
       "title": "China price war",
       "category": "competitive",
       "severity": "High",
-      "description": "BYD undercuts Tesla.",
+      "description": "BYD undercuts Tesla in the largest EV market.",
       "confidence": 0.6,
       "evidence": [
         {
           "ref": "src-1",
-          "title": "BYD overtakes Tesla",
+          "title": "BYD overtakes Tesla in EV sales",
+          "source": "Benzinga",
+          "url": "http://x",
+          "score": 0.9
+        }
+      ]
+    },
+    {
+      "title": "Regulatory probes",
+      "category": "regulatory",
+      "severity": "Medium",
+      "description": "Autopilot/FSD scrutiny in the US and EU.",
+      "confidence": 0.5,
+      "evidence": [
+        {
+          "ref": "src-1",
+          "title": "BYD overtakes Tesla in EV sales",
           "source": "Benzinga",
           "url": "http://x",
           "score": 0.9
@@ -158,13 +183,14 @@
   },
   "recommendations": [
     {
-      "recommendation": "Launch a sub-30k Tesla",
-      "rationale": "Affordable EVs grow fastest.",
-      "first_step": "Greenlight compact platform.",
+      "recommendation": "Launch a sub-30k Tesla model",
+      "rationale": "Affordable EVs are the fastest-growing segment.",
+      "first_step": "Greenlight the compact platform this quarter.",
       "priority": "High",
       "risk_level": "Medium",
       "expected_impact": [
-        "Volume"
+        "Volume growth",
+        "Share defense"
       ],
       "risk_assessment": [
         "Margin"
@@ -172,7 +198,7 @@
       "supporting_evidence": [
         {
           "ref": "src-1",
-          "title": "BYD overtakes Tesla",
+          "title": "BYD overtakes Tesla in EV sales",
           "source": "Benzinga",
           "url": "http://x",
           "score": 0.9
@@ -183,10 +209,10 @@
     }
   ],
   "briefing": {
-    "raw": "WHAT HAPPENED:\nEV competition.\n\nWHY IT MATTERS:\nShare risk.\n\nWHAT TO DO NEXT:\nShip affordable model.",
-    "what_happened": "EV competition.",
-    "why_it_matters": "Share risk.",
-    "what_next": "Ship affordable model."
+    "raw": "WHAT HAPPENED:\nEV competition rising.\n\nWHY IT MATTERS:\nShare at risk.\n\nWHAT TO DO NEXT:\nShip an affordable model.",
+    "what_happened": "EV competition rising.",
+    "why_it_matters": "Share at risk.",
+    "what_next": "Ship an affordable model."
   },
   "metrics": {
     "mean_confidence": 0.6

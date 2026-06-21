@@ -1,12 +1,13 @@
 [
   {
-    "recommendation": "Launch a sub-30k Tesla",
-    "rationale": "Affordable EVs grow fastest.",
-    "first_step": "Greenlight compact platform.",
+    "recommendation": "Launch a sub-30k Tesla model",
+    "rationale": "Affordable EVs are the fastest-growing segment.",
+    "first_step": "Greenlight the compact platform this quarter.",
     "priority": "High",
     "risk_level": "Medium",
     "expected_impact": [
-      "Volume"
+      "Volume growth",
+      "Share defense"
     ],
     "risk_assessment": [
       "Margin"
@@ -14,7 +15,7 @@
     "supporting_evidence": [
       {
         "ref": "src-1",
-        "title": "BYD overtakes Tesla",
+        "title": "BYD overtakes Tesla in EV sales",
         "source": "Benzinga",
         "url": "http://x",
         "score": 0.9
