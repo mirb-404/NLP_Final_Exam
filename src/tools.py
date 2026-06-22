@@ -48,8 +48,8 @@ def get_competitor_activity() -> str:
 
 @tool
 def get_sentiment() -> str:
-    """Return news vs public sentiment for the company (DistilBERT SST-2) and the
-    positive/negative/neutral distribution across the corpus."""
+    """Return news vs public sentiment for the company (RoBERTa, 3-class TweetEval) and
+    the positive/negative/neutral distribution across the corpus."""
     s = corpus_sentiment(load_corpus())
     return (f"news_sentiment={s['news_sentiment']}, public_sentiment={s['public_sentiment']}, "
             f"overall={s['overall_sentiment']}, distribution={dict(s['distribution'])}")

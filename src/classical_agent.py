@@ -4,10 +4,11 @@ Classical NLP Agent  (Module 3 / 9 idioms).
 Provides the "classical" signals the dashboard and intelligence engine need,
 without the reasoning LLM:
 
-  - sentiment   : DistilBERT fine-tuned on SST-2, via a transformers
-                  `sentiment-analysis` pipeline (the course's Module 9 / reference
-                  sentiment model) -> mapped to a signed -1..+1 score so news vs
-                  public sentiment stays comparable.
+  - sentiment   : RoBERTa fine-tuned on the 3-class TweetEval scheme
+                  (negative/neutral/positive) via a transformers `sentiment-analysis`
+                  pipeline. TweetEval is the sentiment task taught in Module 9b; the
+                  neutral class is essential so factual finance/news text isn't forced
+                  to a pole. Mapped to a signed P(pos)-P(neg) score in [-1, 1].
   - keywords    : scikit-learn TF-IDF top terms
 
 These are deterministic (greedy argmax, no sampling) and run over the whole corpus.
@@ -23,23 +24,30 @@ from src import config
 
 
 # ----------------------------------------------------------------------------
-# Sentiment (Module 9 — transformers pipeline, DistilBERT fine-tuned on SST-2)
+# Sentiment (Module 9b — transformers pipeline, RoBERTa fine-tuned on 3-class TweetEval)
 # ----------------------------------------------------------------------------
 @lru_cache(maxsize=1)
 def _classifier():
-    """Load the SST-2 sentiment pipeline once (cached)."""
+    """Load the 3-class TweetEval sentiment pipeline once (cached)."""
     from transformers import pipeline
 
     return pipeline("sentiment-analysis", model=config.SENTIMENT_MODEL)
 
 
 def _signed(scores: list[dict]) -> float:
-    """Map one SST-2 result `[{label, score}, ...]` to a compound-style value in
-    [-1, 1] using P(positive):  score = 2·P(positive) − 1.
-    A confident POSITIVE -> ~+1, a confident NEGATIVE -> ~-1, an uncertain doc
-    (P≈0.5) -> ~0, which keeps the dashboard's ±0.05 neutral band meaningful."""
-    p_pos = next((s["score"] for s in scores if s["label"].upper().startswith("POS")), 0.0)
-    return 2 * p_pos - 1
+    """Map one pipeline result `[{label, score}, ...]` to a compound-style value in
+    [-1, 1] as `P(positive) − P(negative)`.
+
+    A confident positive -> ~+1, a confident negative -> ~-1, and a neutral doc (most
+    mass on the neutral class) -> ~0. This works for the 3-class TweetEval scheme
+    (negative/neutral/positive) and degrades correctly to binary models too. Label names
+    are matched loosely so both readable labels and `LABEL_0/1/2` schemes work."""
+    p = {s["label"].lower(): s["score"] for s in scores}
+
+    def prob(*keys: str) -> float:
+        return next((p[k] for k in keys if k in p), 0.0)
+
+    return prob("positive", "pos", "label_2") - prob("negative", "neg", "label_0")
 
 
 def _sentiment_scores(texts: list[str]) -> list[float]:
