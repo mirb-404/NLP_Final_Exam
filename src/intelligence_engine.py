@@ -159,7 +159,6 @@ def detect_trends(retriever: HybridRetriever, df) -> list[dict]:
         f"<one full sentence on the trend and why it matters>\n\n"
         f"EVIDENCE:\n{_evidence_block(docs)}\n\nTRENDS:"
     )
-    keywords = top_keywords((df["title"] + " " + df["text"]).tolist())
     items = []
     for line in _parse_lines(ask_llm(prompt)):
         parts = [p.strip() for p in line.split("::")]
@@ -178,7 +177,6 @@ def detect_trends(retriever: HybridRetriever, df) -> list[dict]:
             "description": strip_src_refs(desc),
             "confidence": _confidence(docs),
             "evidence": _evidence_list(docs, line),
-            "keywords": keywords[:8],
         })
     return items
 

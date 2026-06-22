@@ -360,26 +360,25 @@ def render_trends(d: dict) -> None:
         with right:
             show_bar([(s["keyword"], s["mentions"]) for s in signals])
     st.markdown("##### Emerging trends to monitor")
-    st.caption("Grouped by lens: 🔧 Technology trends · 👥 Customer behaviour shifts · "
-               "🏭 Industry developments.")
-    icons = {"Technology": "🔧", "Customer behaviour": "👥", "Industry": "🏭"}
-    by_cat = {c: [] for c in ("Technology", "Customer behaviour", "Industry")}
+    st.caption("Grouped by lens: Technology trends · Customer behaviour shifts · Industry developments.")
+    labels = {"Technology": "Technology trends",
+              "Customer behaviour": "Customer behaviour shifts",
+              "Industry": "Industry developments"}
+    by_cat = {c: [] for c in labels}
     for it in items:                                  # legacy items lack a category
         cat = it.get("category")
         by_cat[cat if cat in by_cat else "Industry"].append(it)
     for cat, group in by_cat.items():
         if not group:
             continue
-        st.markdown(f"**{icons[cat]} {cat}**")
+        st.markdown(f"**{labels[cat]}**")
         for it in group:
-            kws = [k for k in it.get("keywords", []) if not config.keyword_is_noise(k)]
-            kw_html = (f"<div class='muted'>Signals: {esc(' · '.join(kws[:8]))}</div>" if kws else "")
             desc = strip_src_refs(it.get("description", ""))
             desc_html = f"<div class='desc'>{esc(desc)}</div>" if desc else ""
             card(f"<span class='card-title'>{esc(strip_src_refs(it.get('title', '')))}</span>"
                  f"{badge('monitor')}",
                  f"{desc_html}<div class='muted'>Confidence {esc(it.get('confidence', 0))}</div>"
-                 f"{kw_html}{evidence_html(it.get('evidence', []))}")
+                 f"{evidence_html(it.get('evidence', []))}")
 
 
 def render_sentiment(d: dict) -> None:
