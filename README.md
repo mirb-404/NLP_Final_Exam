@@ -38,12 +38,10 @@ flowchart TD
     R --> IE[Task 4 — intelligence_engine.py<br/>opportunities · risks · trends]
     CL --> IE
     IE --> CEO[Task 5/6 — ceo_agent.py<br/>recommendations + briefing]
-    CEO --> V[verifier_agent.py<br/>SBERT grounding confidence]
-    V -->|confidence < 0.7| CEO
+    CEO --> V[verifier_agent.py<br/>SBERT grounding confidence + factual precision]
     V --> OUT[(results/*.json + ceo_briefing.txt + dashboard_data.json)]
-    CEO --> OUT
     OUT --> DASH[dashboard/app.py<br/>Streamlit — 7 sections + Ask the CEO]
-    ORCH[[orchestrator.py — LangGraph StateGraph<br/>drives every node + retry + trace]]
+    ORCH[[orchestrator.py — LangGraph StateGraph<br/>drives every node + writes trace]]
     AGENT[[main.py — LangGraph ReAct agent<br/>tool-calling over src/tools.py]]
     LLM[[LLM: self-hosted model_server<br/>Mistral-7B-Instruct-v0.3]]
     AGENT -.calls.-> LLM
@@ -100,7 +98,7 @@ sources ──HTTP──> data/raw/*.json ──clean/dedup/relevance──> dat
 6. **Recommend** — convert the strongest signals into Task-6 recommendations
    (action, supporting evidence, expected impact, **risk assessment**, priority, risk level).
 7. **Verify** — score each recommendation's grounding (SBERT cosine vs evidence); blend with retrieval
-   confidence. If mean confidence `< 0.7`, the LangGraph loop retries the recommendation node once.
+   confidence and flag any recommendation below `0.7` as unverified (drives the factual-precision metric).
 8. **Brief** — generate the CEO briefing (*what happened / why it matters / what to do next*).
 9. **Persist** — write `results/*.json`, `ceo_briefing.txt`, and `dashboard_data.json`.
 10. **Serve** — Streamlit renders `dashboard_data.json` across all 7 sections; the *Ask the CEO* tab
@@ -117,7 +115,7 @@ sources ──HTTP──> data/raw/*.json ──clean/dedup/relevance──> dat
 | (Overview) | §2 Market Intelligence | recent news, competitor activity, **emerging technologies**, **company announcements**, trending keywords |
 | Opportunities | §3 Opportunity Monitor | title, impact level, evidence, confidence |
 | Risks | §4 Risk Monitor | title, category, severity, evidence, confidence, severity pie |
-| **Trends** | Task 4 Trends | emerging trends + confidence + evidence + **signal-strength bar chart** |
+| **Trends** | Task 4 Trends | emerging trends **grouped by lens** (Technology / Customer behaviour / Industry) + confidence + evidence + **signal-strength bar chart** |
 | Sentiment | §5 Sentiment | news / public / overall (VADER), distribution pie, **monthly trend line** |
 | Recommendations | §6 | recommendation, priority, evidence, expected impact, risk assessment, risk level |
 | Briefing | §7 CEO Briefing | what happened / why it matters / what to do next |
@@ -148,7 +146,7 @@ corpus and refresh every tab. Requires the LLM (see `.env`) to be reachable.
   (analyze→intelligence→recommend→verify→brief, fast) so iterating on analysis never re-collects
   or re-embeds.
 - **Evidence-first.** Every signal and recommendation carries cited `[src-#]` evidence; the
-  verifier scores grounding and the graph retries weakly-grounded recommendations once.
+  verifier scores grounding and flags weakly-grounded recommendations (confidence < 0.7).
 
 ## Module map
 

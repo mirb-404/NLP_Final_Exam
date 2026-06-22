@@ -1,17 +1,9 @@
 """
-Task 3 — Information Processing.
+Task 3 — Information Processing (classical NLP, Module 2/3).
 
-Takes the raw documents from data/raw/ and produces a clean, de-duplicated
-corpus at data/corpus.csv with one row per document:
-
-    id, title, text, source, source_type, url, date
-
-Steps (all classical NLP, Module 2/3 style):
-  1. merge all raw sources
-  2. clean text (handled in collector; re-applied defensively)
-  3. drop empty / very short documents
-  4. keep only documents relevant to the company or its competitors
-  5. remove duplicates (exact id + identical normalised title)
+Raw docs (data/raw/) -> clean, de-duplicated corpus (data/corpus.csv). Steps: merge
+sources, defensive re-clean, drop <5-word docs, keep only company/competitor-relevant
+docs, drop duplicates (id + normalised title), cap per source type for balance.
 """
 
 import re

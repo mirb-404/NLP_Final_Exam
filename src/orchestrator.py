@@ -1,11 +1,10 @@
 """
 Task 5 — Orchestration with LangGraph (Module 11 pattern).
 
-Wires every agent into a single automated pipeline:
+Wires every agent into two LangGraph pipelines:
 
-    collect -> process -> index -> analyze -> intelligence
-            -> recommend -> verify --(confidence < 0.7?)--> recommend (retry once)
-                                   --(ok)--> brief -> END
+    ingest:   collect -> process -> index -> END
+    analyze:  analyze -> intelligence -> recommend -> verify -> brief -> END
 
 State flows through a typed GraphState; each node returns partial updates
 (exactly like Module11/LangGraph.ipynb). The full execution trace is written to

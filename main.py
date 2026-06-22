@@ -1,19 +1,15 @@
 """
-AI Strategy Consultant — Strategic Intelligence Agent  (main entry point).
+AI Strategy Consultant — main entry point.
 
-main.py IS the agent graph: a LangGraph ReAct loop where the DataLab Mistral
-decides which tool to call, fetches real evidence, and answers. Every capability
-is a tool (src/tools.py); collection, retrieval, intelligence, etc. live in their
-own modules. The graph is the brain; the modules are the hands.
+main.py IS the agent graph: a LangGraph ReAct loop where the LLM picks a tool
+(src/tools.py), fetches real evidence, and answers. Graph = brain, modules = hands.
 
     python main.py                     # agent answers the default CEO question
     python main.py ask "<question>"    # agent answers your question
-    python main.py chat                # interactive: type questions in a loop
+    python main.py chat                # interactive loop
     python main.py ingest              # refresh data: collect -> corpus -> Chroma index
-    python main.py report              # deterministic pipeline -> results/*.json deliverables
+    python main.py report              # deterministic pipeline -> results/*.json
     python main.py collect|corpus|index   # run a single ingest stage
-
-Tool calls are printed live so you can watch the agent fetch evidence.
 """
 
 import re

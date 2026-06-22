@@ -106,7 +106,7 @@ CHUNK_PREVIEW = 400  # characters of doc text shown as evidence
 # ----------------------------------------------------------------------------
 # Orchestration (Module 11)
 # ----------------------------------------------------------------------------
-CONFIDENCE_THRESHOLD = 0.7  # retry a recommendation if verifier confidence is below this
+CONFIDENCE_THRESHOLD = 0.7  # recommendations below this are flagged unverified (factual_precision)
 
 # ----------------------------------------------------------------------------
 # Strategic questions the engine answers (from the PDF "Project Objective")

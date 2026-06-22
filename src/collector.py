@@ -1,14 +1,9 @@
 """
 Task 1 — Live Data Collection.
 
-Pulls live public documents about the company from four independent source types
-and writes them to data/raw/*.json. Every record has the same shape so the rest
-of the pipeline is uniform:  {id, title, text, source, source_type, url, date}
-
-    news       Google News RSS
-    finance    Yahoo Finance RSS
-    community  Hacker News + Stack Overflow
-    research   arXiv + OpenAlex
+Pulls live public docs from 4 source types into data/raw/*.json, all in one uniform
+shape {id, title, text, source, source_type, url, date}:
+    news=Google News · finance=Yahoo Finance · community=Hacker News + Stack Overflow · research=arXiv + OpenAlex
 """
 
 import hashlib

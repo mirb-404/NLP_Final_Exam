@@ -1,18 +1,10 @@
 """
-Task 6 (verification half) — Verifier / Evaluator Agent.
+Task 6 (verification half) — Verifier / Evaluator Agent (MiniHackathon pattern).
 
-Checks that each recommendation is actually grounded in its supporting evidence,
-using Sentence-BERT cosine similarity (MiniHackathon verifier pattern).
-
-For every recommendation:
-    confidence = cosine( embed(recommendation), embed(evidence titles) )
-A recommendation with confidence below config.CONFIDENCE_THRESHOLD is flagged
-'verified = False', which the orchestrator uses to trigger a retry.
-
-Aggregate metrics (-> results/metrics.json):
-    factual_precision   : share of recommendations above the threshold
-    mean_confidence
-    contradiction_rate  : optional NLI check (off by default; heavy model)
+Grounds each recommendation against its evidence with Sentence-BERT cosine:
+    confidence = cosine(embed(recommendation), embed(evidence titles))
+Below config.CONFIDENCE_THRESHOLD -> verified=False. Aggregate metrics
+(mean_confidence, factual_precision) -> results/metrics.json.
 """
 
 from sentence_transformers import util

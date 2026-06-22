@@ -1,17 +1,10 @@
 """
-Task 5 + 6 — AI Strategy Consultant Agent and Evidence-Based Recommendations.
+Task 5 + 6 — Recommendations + CEO briefing (the reasoning layer).
 
-This is the reasoning layer. It does NOT retrieve or summarise for its own sake;
-it converts the strategic signals from the intelligence engine into prioritised,
-evidence-backed executive recommendations and a CEO briefing.
-
-Each recommendation follows the PDF Task 6 schema:
-    recommendation, supporting_evidence, expected_impact, risk_assessment, priority
-
-The CEO briefing (PDF Section 7) answers:
-    What happened?  /  Why does it matter?  /  What should management do next?
-
-Reasoning engine: Mistral-7B-Instruct via the free HF Hub endpoint (see utils.get_llm).
+Converts the intelligence engine's signals into prioritised, evidence-backed
+recommendations (Task 6 schema: recommendation, supporting_evidence, expected_impact,
+risk_assessment, priority) and a CEO briefing answering Section 7's three questions:
+What happened? / Why does it matter? / What should management do next?
 """
 
 import re

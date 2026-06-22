@@ -1,21 +1,9 @@
 """
 Task 4 — Strategic Intelligence Engine.
 
-Turns the indexed corpus into structured strategic signals:
-
-  - opportunities : emerging tech, new markets, partnerships, products
-  - risks         : competitive / regulatory / sentiment / supply-chain
-  - trends        : technology + industry + customer-behaviour shifts
-  - competitor_activity
-
-For each theme we:
-  1. retrieve the most relevant documents (hybrid BM25 + dense),
-  2. ask the LLM to extract a short list of concrete items grounded in that
-     evidence (one item per line, easy to parse),
-  3. attach the supporting evidence + a confidence score derived from the
-     retrieval scores.
-
-Output -> results/intelligence.json
+Per theme (opportunities / risks / trends / competitor_activity): retrieve evidence
+(hybrid BM25 + dense), ask the LLM for concrete items grounded in it, then attach the
+cited evidence + a retrieval-derived confidence. Output -> results/intelligence.json
 """
 
 import re
