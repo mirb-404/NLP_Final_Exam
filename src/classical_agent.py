@@ -1,37 +1,57 @@
 """
-Classical NLP Agent  (Module 2, 3, 9 idioms).
+Classical NLP Agent  (Module 3 / 9 idioms).
 
 Provides the "classical" signals the dashboard and intelligence engine need,
-without any LLM:
+without the reasoning LLM:
 
-  - sentiment   : VADER (nltk) compound score  -> news vs public sentiment
+  - sentiment   : DistilBERT fine-tuned on SST-2, via a transformers
+                  `sentiment-analysis` pipeline (the course's Module 9 / reference
+                  sentiment model) -> mapped to a signed -1..+1 score so news vs
+                  public sentiment stays comparable.
   - keywords    : scikit-learn TF-IDF top terms
 
-These are deterministic and fast, so they run over the whole corpus.
+These are deterministic (greedy argmax, no sampling) and run over the whole corpus.
 """
 
 from collections import Counter
+from functools import lru_cache
 
-import nltk
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 from src import config
 
-# ---- one-time lightweight resource downloads -------------------------------
-try:
-    nltk.data.find("sentiment/vader_lexicon.zip")
-except LookupError:
-    nltk.download("vader_lexicon", quiet=True)
-
-from nltk.sentiment.vader import SentimentIntensityAnalyzer  # noqa: E402
-
-_VADER = SentimentIntensityAnalyzer()
-
 
 # ----------------------------------------------------------------------------
-# Sentiment (Module 9)
+# Sentiment (Module 9 — transformers pipeline, DistilBERT fine-tuned on SST-2)
 # ----------------------------------------------------------------------------
+@lru_cache(maxsize=1)
+def _classifier():
+    """Load the SST-2 sentiment pipeline once (cached)."""
+    from transformers import pipeline
+
+    return pipeline("sentiment-analysis", model=config.SENTIMENT_MODEL)
+
+
+def _signed(scores: list[dict]) -> float:
+    """Map one SST-2 result `[{label, score}, ...]` to a compound-style value in
+    [-1, 1] using P(positive):  score = 2·P(positive) − 1.
+    A confident POSITIVE -> ~+1, a confident NEGATIVE -> ~-1, an uncertain doc
+    (P≈0.5) -> ~0, which keeps the dashboard's ±0.05 neutral band meaningful."""
+    p_pos = next((s["score"] for s in scores if s["label"].upper().startswith("POS")), 0.0)
+    return 2 * p_pos - 1
+
+
+def _sentiment_scores(texts: list[str]) -> list[float]:
+    """Signed sentiment in [-1, 1] for each text. One batched forward pass;
+    `top_k=None` returns both class probabilities, `truncation` respects the
+    model's 512-token limit."""
+    if not texts:
+        return []
+    out = _classifier()([t or " " for t in texts], top_k=None, truncation=True, batch_size=16)
+    return [round(_signed(item), 4) for item in out]
+
+
 def corpus_sentiment(df) -> dict:
     """
     Aggregate sentiment for the dashboard (Section 5).
@@ -39,8 +59,7 @@ def corpus_sentiment(df) -> dict:
     Scores title + body so the signal reflects the whole document, not just the headline.
     """
     blob = (df["title"].fillna("") + ". " + df["text"].fillna("")).str.slice(0, 1000)
-    scores = blob.map(lambda t: _VADER.polarity_scores(t)["compound"])
-    df = df.assign(_sent=scores)
+    df = df.assign(_sent=_sentiment_scores(blob.tolist()))
 
     def _avg(mask):
         sub = df[mask]
@@ -51,7 +70,7 @@ def corpus_sentiment(df) -> dict:
     return {
         "news_sentiment": _avg(news_mask),
         "public_sentiment": _avg(public_mask),
-        "overall_sentiment": round(float(df["_sent"].mean()), 4),
+        "overall_sentiment": round(float(df["_sent"].mean()), 4) if len(df) else 0.0,
         "distribution": dict(Counter(
             df["_sent"].map(
                 lambda s: "positive" if s > 0.05 else "negative" if s < -0.05 else "neutral"

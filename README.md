@@ -41,7 +41,7 @@ flowchart TD
 
     %% ---------------- analyze graph: Tasks 4-7 ----------------
     subgraph ANALYZE["Analyze graph — Tasks 4-7 (driven by orchestrator)"]
-        CL["classical_agent.py<br/>VADER sentiment · TF-IDF"]
+        CL["classical_agent.py<br/>DistilBERT SST-2 sentiment · TF-IDF"]
         IE["Task 4 — intelligence_engine.py<br/>opportunities · risks · trends"]
         REC["Task 5/6 — ceo_agent.py<br/>recommendations"]
         VER["Task 6 — verifier_agent.py<br/>SBERT grounding + factual precision"]
@@ -115,7 +115,7 @@ sources ──HTTP──> data/raw/*.json ──clean/dedup/relevance──> dat
 | Storage / index | **ChromaDB** (persistent, cosine) | Task 2, Module 10 |
 | Embeddings | `sentence-transformers/all-MiniLM-L6-v2` | PDF-recommended, light |
 | Retrieval | **Hybrid** BM25 (`rank_bm25`) + dense cosine, min-max fused | Module 10 Task 3 fusion |
-| Classical NLP | `nltk` VADER sentiment · `scikit-learn` TF-IDF keywords | Modules 3/9 — deterministic, fast, explainable |
+| Classical NLP | **DistilBERT SST-2** sentiment (`transformers` pipeline) · `scikit-learn` TF-IDF keywords | Modules 3/9 — reference sentiment model, deterministic (greedy) |
 | Reasoning LLM | **Mistral-7B-Instruct-v0.3** via self-hosted `model_server/` (OpenAI-compatible); HF Inference then local `Qwen2.5-0.5B` as fallbacks | PDF rule: open/free only — **no paid API** |
 | LLM serving | `model_server/server.py` (FastAPI) on a GPU box, exposed via **cloudflared** tunnel | run a strong open model with no local GPU |
 | Verifier | SBERT cosine grounding vs evidence | MiniHackathon verifier |
@@ -154,7 +154,7 @@ sources ──HTTP──> data/raw/*.json ──clean/dedup/relevance──> dat
 | Opportunities | §3 Opportunity Monitor | title, impact level, evidence, confidence |
 | Risks | §4 Risk Monitor | title, category, severity, evidence, confidence, severity pie |
 | **Trends** | Task 4 Trends | emerging trends **grouped by lens** (Technology / Customer behaviour / Industry) + confidence + evidence + **signal-strength bar chart** |
-| Sentiment | §5 Sentiment | news / public / overall (VADER), distribution pie, **monthly trend line** |
+| Sentiment | §5 Sentiment | news / public / overall (DistilBERT SST-2), distribution pie, **monthly trend line** |
 | Recommendations | §6 | recommendation, priority, evidence, expected impact, risk assessment, risk level |
 | Briefing | §7 CEO Briefing | what happened / why it matters / what to do next |
 | Retrieval | — | hybrid RAG explorer (dense / sparse / fused scores) |

@@ -90,6 +90,10 @@ def keyword_is_noise(term: str) -> bool:
 # Models (PDF "Mandatory Components" — open-source / freely accessible only)
 # ----------------------------------------------------------------------------
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"               # Module 10 embedding model
+# Classical sentiment model (Module 9 transformers pipeline) — DistilBERT fine-tuned on
+# SST-2, the course-reference sentiment model. It outputs POSITIVE/NEGATIVE; we map it to
+# a signed -1..+1 score in classical_agent.py so news/public sentiment stays comparable.
+SENTIMENT_MODEL = "distilbert/distilbert-base-uncased-finetuned-sst-2-english"
 # Primary reasoning LLM: PDF-recommended Mistral-7B-Instruct, served by the local
 # DataLab model_server (OpenAI-compatible). This id MUST match what your server
 # advertises at GET /v1/models  (curl http://127.0.0.1:8000/v1/models).

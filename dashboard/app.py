@@ -92,7 +92,7 @@ def badge(level) -> str:
 
 
 def sentiment_label(score) -> str:
-    """VADER compound score (-1..+1) -> readable label + value. ±0.05 = neutral."""
+    """Signed sentiment score (-1..+1) from DistilBERT SST-2 -> readable label + value. ±0.05 = neutral."""
     x = float(score or 0)
     word = "Positive" if x >= 0.05 else "Negative" if x <= -0.05 else "Neutral"
     return f"{word} ({x:+.2f})"
@@ -391,7 +391,7 @@ def render_sentiment(d: dict) -> None:
         metric("Public sentiment", sentiment_label(s.get("public_sentiment", 0))),
         metric("Overall", sentiment_label(s.get("overall_sentiment", 0))),
     ]) + "</div>", unsafe_allow_html=True)
-    st.caption("VADER compound score, −1 (very negative) to +1 (very positive); within ±0.05 counts as neutral.")
+    st.caption("DistilBERT SST-2 sentiment mapped to −1 (very negative) … +1 (very positive); within ±0.05 counts as neutral.")
     v1, v2 = st.columns(2)
     with v1:
         st.markdown("##### Sentiment split")
