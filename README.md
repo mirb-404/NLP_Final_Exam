@@ -21,32 +21,70 @@ Two front doors:
 
 ```mermaid
 flowchart TD
-    subgraph Collect["Task 1 — Live Collection (collector.py)"]
-        N[Google News RSS]
-        F[Yahoo Finance RSS + finance news]
-        H[Hacker News API]
-        S[Stack Overflow API]
-        A[arXiv API]
-        O[OpenAlex API]
+    %% ---------------- live sources ----------------
+    subgraph SRC["Live sources — HTTP (collector.py)"]
+        direction LR
+        N[Google News]
+        F[Yahoo Finance]
+        H[Hacker News]
+        S[Stack Overflow]
+        A[arXiv]
+        O[OpenAlex]
     end
-    Collect --> RAW[(data/raw/*.json)]
-    RAW --> P[Task 3 — preprocess.py<br/>clean · dedup · relevance filter · cap/type]
-    P --> CORP[(data/corpus.csv)]
-    CORP --> KB[Task 2 — knowledge_base.py<br/>ChromaDB persistent index + embeddings]
-    KB --> R[retriever_hybrid.py<br/>BM25 + dense fusion]
-    CORP --> CL[classical_agent.py<br/>VADER sentiment · TF-IDF keywords]
-    R --> IE[Task 4 — intelligence_engine.py<br/>opportunities · risks · trends]
-    CL --> IE
-    IE --> CEO[Task 5/6 — ceo_agent.py<br/>recommendations + briefing]
-    CEO --> V[verifier_agent.py<br/>SBERT grounding confidence + factual precision]
-    V --> OUT[(results/*.json + ceo_briefing.txt + dashboard_data.json)]
-    OUT --> DASH[dashboard/app.py<br/>Streamlit — 7 sections + Ask the CEO]
-    ORCH[[orchestrator.py — LangGraph StateGraph<br/>drives every node + writes trace]]
-    AGENT[[main.py — LangGraph ReAct agent<br/>tool-calling over src/tools.py]]
-    LLM[[LLM: self-hosted model_server<br/>Mistral-7B-Instruct-v0.3]]
-    AGENT -.calls.-> LLM
-    IE -.calls.-> LLM
-    CEO -.calls.-> LLM
+
+    %% ---------------- ingest graph: Tasks 1-3 ----------------
+    subgraph INGEST["Ingest graph — Tasks 1-3 (driven by orchestrator)"]
+        COL["Task 1 — collector.py"]
+        PRE["Task 3 — preprocess.py<br/>clean · dedup · relevance · cap/type"]
+        IDX["Task 2 — knowledge_base.py<br/>embeddings + ChromaDB index"]
+    end
+
+    %% ---------------- analyze graph: Tasks 4-7 ----------------
+    subgraph ANALYZE["Analyze graph — Tasks 4-7 (driven by orchestrator)"]
+        CL["classical_agent.py<br/>VADER sentiment · TF-IDF"]
+        IE["Task 4 — intelligence_engine.py<br/>opportunities · risks · trends"]
+        REC["Task 5/6 — ceo_agent.py<br/>recommendations"]
+        VER["Task 6 — verifier_agent.py<br/>SBERT grounding + factual precision"]
+        BRIEF["Task 7 — ceo_agent.py<br/>CEO briefing"]
+    end
+
+    %% ---------------- artifacts + the rest ----------------
+    RAW[(data/raw/*.json)]
+    CORP[(data/corpus.csv)]
+    CHROMA[(data/chroma/ — ChromaDB)]
+    R["retriever_hybrid.py<br/>BM25 + dense fusion"]
+    OUT[(results/*.json · ceo_briefing.txt · dashboard_data.json)]
+    DASH["dashboard/app.py<br/>Streamlit — 7 sections + Ask"]
+    ORCH["orchestrator.py — LangGraph StateGraph<br/>runs both graphs · writes trace.json"]
+    AGENT["main.py — LangGraph ReAct agent<br/>tool-calling loop"]
+    TOOLS["src/tools.py<br/>search_kb · sentiment · keywords · overview"]
+    LLM["LLM — model_server / Mistral-7B-Instruct-v0.3<br/>(HF Inference · local Qwen fallback)"]
+
+    %% ---------------- data spine ----------------
+    SRC --> COL
+    COL --> RAW --> PRE --> CORP
+    CORP --> IDX --> CHROMA --> R
+    CORP --> CL
+    R --> IE
+    CL --> IE --> REC --> VER --> BRIEF --> OUT --> DASH
+
+    %% ---------------- orchestrator drives both graphs ----------------
+    ORCH ==> INGEST
+    ORCH ==> ANALYZE
+    ORCH -. writes .-> OUT
+
+    %% ---------------- interactive ReAct agent ----------------
+    DASH -. Ask tab .-> AGENT
+    DASH -. Re-analyse .-> ORCH
+    AGENT --> TOOLS
+    TOOLS --> R
+    TOOLS --> CL
+
+    %% ---------------- LLM calls ----------------
+    IE -. calls .-> LLM
+    REC -. calls .-> LLM
+    BRIEF -. calls .-> LLM
+    AGENT -. calls .-> LLM
 ```
 
 ## Data flow
