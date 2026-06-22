@@ -17,7 +17,7 @@ Reasoning engine: Mistral-7B-Instruct via the free HF Hub endpoint (see utils.ge
 import re
 
 from src import config
-from src.utils import ask_llm
+from src.utils import ask_llm, strip_src_refs
 
 _IMPACT_RANK = {"High": 3, "Medium": 2, "Low": 1}
 
@@ -48,9 +48,9 @@ def _signal_to_recommendation(signal: dict, kind: str) -> dict:
     resp = ask_llm(prompt)
     confidence = signal.get("confidence", 0.0)
     return {
-        "recommendation": _field(resp, "RECOMMENDATION", default=f"Act on: {signal['title']}"),
-        "rationale": _field(resp, "RATIONALE"),
-        "first_step": _field(resp, "FIRST STEP"),
+        "recommendation": strip_src_refs(_field(resp, "RECOMMENDATION", default=f"Act on: {signal['title']}")),
+        "rationale": strip_src_refs(_field(resp, "RATIONALE")),
+        "first_step": strip_src_refs(_field(resp, "FIRST STEP")),
         "priority": level if level in _IMPACT_RANK else "Medium",
         # single risk level (Section 6): acting on weaker evidence = higher execution risk
         "risk_level": "High" if confidence < 0.5 else "Medium" if confidence < 0.75 else "Low",
@@ -101,7 +101,7 @@ def generate_briefing(intel: dict, sentiment: dict) -> str:
         f"paragraph of 4-6 sentences (specific, evidence-grounded, no bullet points):\n"
         f"WHAT HAPPENED:\nWHY IT MATTERS:\nWHAT TO DO NEXT:\n"
     )
-    return ask_llm(prompt)
+    return strip_src_refs(ask_llm(prompt))
 
 
 if __name__ == "__main__":

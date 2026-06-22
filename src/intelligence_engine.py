@@ -24,7 +24,7 @@ from src import config
 from src.classical_agent import top_keywords
 from src.preprocess import load_corpus
 from src.retriever_hybrid import HybridRetriever
-from src.utils import ask_llm, save_json
+from src.utils import ask_llm, save_json, strip_src_refs
 
 EVIDENCE_PER_ITEM = 3
 
@@ -91,9 +91,9 @@ def detect_opportunities(retriever: HybridRetriever) -> list[dict]:
         if not parts[0]:
             continue  # drop malformed lines that carry no actual opportunity
         items.append({
-            "title": parts[0],
+            "title": strip_src_refs(parts[0]),
             "impact": (parts[1].split()[0].capitalize() if len(parts) > 1 and parts[1] else "Medium"),
-            "description": parts[2] if len(parts) > 2 else "",
+            "description": strip_src_refs(parts[2]) if len(parts) > 2 else "",
             "confidence": _confidence(docs),
             "evidence": _evidence_list(docs),
         })
@@ -115,10 +115,10 @@ def detect_risks(retriever: HybridRetriever) -> list[dict]:
         if not parts[0]:
             continue  # drop malformed lines that carry no actual risk
         items.append({
-            "title": parts[0],
+            "title": strip_src_refs(parts[0]),
             "category": parts[1] if len(parts) > 1 else "competitive",
             "severity": (parts[2].split()[0].capitalize() if len(parts) > 2 and parts[2] else "Medium"),
-            "description": parts[3] if len(parts) > 3 else "",
+            "description": strip_src_refs(parts[3]) if len(parts) > 3 else "",
             "confidence": _confidence(docs),
             "evidence": _evidence_list(docs),
         })
@@ -135,8 +135,8 @@ def detect_trends(retriever: HybridRetriever, df) -> list[dict]:
     )
     keywords = top_keywords((df["title"] + " " + df["text"]).tolist())
     return [
-        {"title": t, "confidence": _confidence(docs), "evidence": _evidence_list(docs),
-         "keywords": keywords[:8]}
+        {"title": strip_src_refs(t), "confidence": _confidence(docs),
+         "evidence": _evidence_list(docs), "keywords": keywords[:8]}
         for t in _parse_lines(ask_llm(prompt))
     ]
 

@@ -32,6 +32,7 @@ load_dotenv(ROOT / ".env")
 
 sys.path.insert(0, str(ROOT))
 from src import config  # noqa: E402  (model ids for the tech-stack panel)
+from src.utils import strip_src_refs  # noqa: E402  (drop inline (src-N) markers from LLM text)
 
 LLM_MODEL = config.LLM_REPO_ID
 EMBED_MODEL = config.EMBEDDING_MODEL
@@ -261,7 +262,7 @@ def render_overview(d: dict) -> None:
         techs = mi.get("emerging_technologies", [])
         if techs:
             for t in techs:
-                st.markdown(f"- **{t.get('title', '')}**"
+                st.markdown(f"- **{strip_src_refs(t.get('title', ''))}**"
                             + (f"  ·  *confidence {t['confidence']}*" if t.get("confidence") else ""))
         else:
             st.caption("None surfaced yet — see the **Trends** tab.")
@@ -276,7 +277,7 @@ def render_opportunities(d: dict) -> None:
         not_ready_note()
         return
     for opp in d.get("opportunities", []):
-        desc = f"<div class='desc'>{esc(opp['description'])}</div>" if opp.get("description") else ""
+        desc = f"<div class='desc'>{esc(strip_src_refs(opp['description']))}</div>" if opp.get("description") else ""
         card(f"<span class='card-title'>{esc(opp['title'])}</span>{badge(opp.get('impact'))}",
              f"{desc}<div class='muted'>Confidence {esc(opp.get('confidence', 0))}</div>"
              f"{evidence_html(opp.get('evidence', []))}")
@@ -296,7 +297,7 @@ def render_risks(d: dict) -> None:
         with mid:
             show_pie(severity, "Risks by severity")
     for r in risks:
-        desc = f"<div class='desc'>{esc(r['description'])}</div>" if r.get("description") else ""
+        desc = f"<div class='desc'>{esc(strip_src_refs(r['description']))}</div>" if r.get("description") else ""
         card(f"<span class='card-title'>{esc(r['title'])}</span>{badge(r.get('severity'))}",
              f"{desc}<div class='muted'>{esc(r.get('category', ''))} · confidence {esc(r.get('confidence', 0))}</div>"
              f"{evidence_html(r.get('evidence', []))}")
@@ -320,7 +321,7 @@ def render_trends(d: dict) -> None:
     for it in items:
         kws = it.get("keywords", [])
         kw_html = (f"<div class='muted'>Signals: {esc(' · '.join(kws[:8]))}</div>" if kws else "")
-        card(f"<span class='card-title'>{esc(it.get('title', ''))}</span>"
+        card(f"<span class='card-title'>{esc(strip_src_refs(it.get('title', '')))}</span>"
              f"{badge('monitor')}",
              f"<div class='muted'>Confidence {esc(it.get('confidence', 0))}</div>"
              f"{kw_html}{evidence_html(it.get('evidence', []))}")
@@ -352,8 +353,8 @@ def render_recommendations(d: dict) -> None:
         not_ready_note()
         return
     for r in d.get("recommendations", []):
-        rationale = f"<div class='desc'>{esc(r['rationale'])}</div>" if r.get("rationale") else ""
-        first_step = f"<div class='step'>First step: {esc(r['first_step'])}</div>" if r.get("first_step") else ""
+        rationale = f"<div class='desc'>{esc(strip_src_refs(r['rationale']))}</div>" if r.get("rationale") else ""
+        first_step = f"<div class='step'>First step: {esc(strip_src_refs(r['first_step']))}</div>" if r.get("first_step") else ""
         risk_assess = r.get("risk_assessment", [])
         risk_html = (f"<div class='muted'>Risk assessment: {esc(', '.join(risk_assess))}</div>"
                      if risk_assess else "")
@@ -373,7 +374,7 @@ def render_briefing(d: dict) -> None:
                        ("Why does it matter?", "why_it_matters"),
                        ("What should management do next?", "what_next")]:
         st.markdown(f"<div class='brief-card'><div class='brief-q'>{title}</div>"
-                    f"<div class='brief-a'>{esc(b.get(key, ''))}</div></div>", unsafe_allow_html=True)
+                    f"<div class='brief-a'>{esc(strip_src_refs(b.get(key, '')))}</div></div>", unsafe_allow_html=True)
 
 
 # -------------------------------------------------------------------- data ---

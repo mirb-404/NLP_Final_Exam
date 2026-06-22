@@ -58,6 +58,23 @@ def clean_text(text: str) -> str:
     return text.strip()
 
 
+# Inline citation markers the LLM embeds in free text: "(src-2)", "(src-1, src-3)".
+_SRC_REF_RE = re.compile(r"\s*\(\s*src-\d+(?:\s*,\s*src-\d+)*\s*\)", re.IGNORECASE)
+
+
+def strip_src_refs(text: str) -> str:
+    """Drop inline (src-N) citation markers from LLM-generated text. The real,
+    clickable evidence is rendered separately, so these bare markers are noise —
+    and they can reference sources not in the shown evidence list. Tidies the
+    spacing/punctuation left behind."""
+    if not text:
+        return text
+    out = _SRC_REF_RE.sub("", text)
+    out = re.sub(r"\s+([,.;:])", r"\1", out)   # " ," -> ","  left by a removed marker
+    out = _WS_RE.sub(" ", out)
+    return out.strip()
+
+
 # ----------------------------------------------------------------------------
 # Models
 # ----------------------------------------------------------------------------
