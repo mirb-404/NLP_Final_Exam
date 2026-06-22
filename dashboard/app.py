@@ -12,6 +12,8 @@ import html
 import io
 import json
 import sys
+import threading
+import time
 from datetime import datetime
 from pathlib import Path
 
@@ -183,6 +185,42 @@ def load_activity() -> list:
 def log_activity(entry: dict) -> None:
     items = [entry] + load_activity()
     ACTIVITY.write_text(json.dumps(items[:20], indent=2, ensure_ascii=False), encoding="utf-8")
+
+
+@contextlib.contextmanager
+def live_timer(placeholder, label="⏱ Agent running"):
+    """Tick an elapsed-seconds counter in `placeholder` from a background thread while a
+    blocking call (the agent loop) runs in the main thread. Streamlit only lets a thread
+    touch the UI if it carries the script-run context, so we attach it; if that internal
+    API is missing on this Streamlit build we degrade gracefully to a final time only."""
+    start = time.perf_counter()
+    stop = threading.Event()
+    thread = None
+    try:
+        from streamlit.runtime.scriptrunner import add_script_run_ctx, get_script_run_ctx
+        ctx = get_script_run_ctx()
+
+        def _tick():
+            while not stop.is_set():
+                placeholder.markdown(
+                    f"<div class='muted'>{label} {time.perf_counter() - start:.1f}s</div>",
+                    unsafe_allow_html=True)
+                time.sleep(0.1)
+
+        thread = threading.Thread(target=_tick, daemon=True)
+        add_script_run_ctx(thread, ctx)
+        thread.start()
+    except Exception:
+        thread = None  # live ticking unsupported -> final elapsed still shown below
+    try:
+        yield lambda: time.perf_counter() - start
+    finally:
+        stop.set()
+        if thread:
+            thread.join(timeout=1)
+        placeholder.markdown(
+            f"<div class='muted'>{label} — done in {time.perf_counter() - start:.1f}s</div>",
+            unsafe_allow_html=True)
 
 
 # ---- analysis data: refreshed whenever the agent calls the LLM --------------
@@ -440,26 +478,31 @@ with tabs[0]:
 
     if (st.button("Ask the Consultant", type="primary") or queued) and q.strip():
         buf = io.StringIO()
+        timer_box = st.empty()        # live elapsed counter, sits next to the spinner
         with st.spinner("Reasoning, calling tools, and refreshing every tab…"):
             try:
                 from main import ask_ceo, strategic_options
                 if not config.CORPUS_CSV.exists():       # first use -> agent builds the knowledge base
                     regenerate_data()
-                with contextlib.redirect_stdout(buf):
-                    answer = ask_ceo(q.strip())
-                opts = strategic_options(q.strip(), answer)
-                # full live trace: each tool call AND what it returned
-                trace = [l.rstrip() for l in buf.getvalue().splitlines()
-                         if "calling tool:" in l or l.lstrip().startswith("->")]
-                try:
-                    regenerate_data()       # LLM was called -> refresh every other tab
-                except Exception:
-                    pass
-                snapshot = json.loads(DATA.read_text(encoding="utf-8")) if DATA.exists() else {}
-                log_activity({"time": datetime.now().isoformat(timespec="minutes"),
-                              "question": q.strip(), "answer": answer,
-                              "options": opts["options"], "snapshot": snapshot})
-                st.session_state["last_result"] = {"answer": answer, "trace": trace, **opts}
+                with live_timer(timer_box):
+                    t0 = time.perf_counter()
+                    with contextlib.redirect_stdout(buf):
+                        answer = ask_ceo(q.strip())
+                    agent_secs = round(time.perf_counter() - t0, 1)   # the agent loop itself
+                    opts = strategic_options(q.strip(), answer)
+                    # full live trace: each tool call AND what it returned
+                    trace = [l.rstrip() for l in buf.getvalue().splitlines()
+                             if "calling tool:" in l or l.lstrip().startswith("->")]
+                    try:
+                        regenerate_data()       # LLM was called -> refresh every other tab
+                    except Exception:
+                        pass
+                    snapshot = json.loads(DATA.read_text(encoding="utf-8")) if DATA.exists() else {}
+                    log_activity({"time": datetime.now().isoformat(timespec="minutes"),
+                                  "question": q.strip(), "answer": answer, "elapsed": agent_secs,
+                                  "options": opts["options"], "snapshot": snapshot})
+                    st.session_state["last_result"] = {"answer": answer, "trace": trace,
+                                                       "elapsed": agent_secs, **opts}
                 st.rerun()
             except Exception as exc:
                 st.error(f"Agent unavailable — is the model server running?\n\n{exc}")
@@ -467,6 +510,8 @@ with tabs[0]:
     res = st.session_state.get("last_result")
     if res:
         st.markdown(f"<div class='answer'>{esc(res['answer'])}</div>", unsafe_allow_html=True)
+        if res.get("elapsed") is not None:
+            st.caption(f"⏱ Agent loop ran in {res['elapsed']}s")
         if res.get("trace"):
             n_calls = sum(1 for l in res["trace"] if "calling tool:" in l)
             with st.expander(f"Tool calls & outputs ({n_calls})", expanded=True):
@@ -541,6 +586,8 @@ with tabs[9]:
         idx = st.selectbox("Logged question", range(len(activity)), format_func=lambda i: labels[i])
         it = activity[idx]
         st.markdown(f"<div class='answer'>{esc(it.get('answer', ''))}</div>", unsafe_allow_html=True)
+        if it.get("elapsed") is not None:
+            st.caption(f"⏱ Agent loop ran in {it['elapsed']}s")
         for o in it.get("options", []):
             path, _, upside = o.partition("|")
             st.markdown(f"<div class='card'><span class='card-title'>{esc(path.strip())}</span>"
