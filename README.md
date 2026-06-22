@@ -49,11 +49,11 @@ flowchart TD
     end
 
     %% ---------------- artifacts + the rest ----------------
-    RAW[(data/raw/*.json)]
-    CORP[(data/corpus.csv)]
-    CHROMA[(data/chroma/ — ChromaDB)]
+    RAW[("data/raw/*.json")]
+    CORP[("data/corpus.csv")]
+    CHROMA[("data/chroma/ — ChromaDB")]
     R["retriever_hybrid.py<br/>BM25 + dense fusion"]
-    OUT[(results/*.json · ceo_briefing.txt · dashboard_data.json)]
+    OUT[("results/*.json · ceo_briefing.txt · dashboard_data.json")]
     DASH["dashboard/app.py<br/>Streamlit — 7 sections + Ask"]
     ORCH["orchestrator.py — LangGraph StateGraph<br/>runs both graphs · writes trace.json"]
     AGENT["main.py — LangGraph ReAct agent<br/>tool-calling loop"]
