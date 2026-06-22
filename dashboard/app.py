@@ -79,6 +79,13 @@ html, body, [class*="css"] { font-family:'Inter',system-ui,sans-serif; }
 """, unsafe_allow_html=True)
 
 _PIE_COLORS = ["#4ade80", "#f87171", "#60a5fa", "#fbbf24", "#c084fc", "#94a3b8"]
+# Meaning-aware slice colours (green=good, red=bad) so a pie's colours match its labels
+# regardless of dict/Counter order. Used for sentiment and risk-severity pies; any label
+# not listed falls back to the positional _PIE_COLORS palette.
+_LABEL_COLORS = {
+    "positive": "#4ade80", "neutral": "#60a5fa", "negative": "#f87171",
+    "high": "#f87171", "medium": "#fbbf24", "low": "#4ade80",
+}
 
 
 # ----------------------------------------------------------------- helpers ---
@@ -125,14 +132,20 @@ def _contrast(hex_color: str) -> str:
     return "#0e1117" if luminance > 0.55 else "#ffffff"
 
 
-def show_pie(values: dict, caption: str = "") -> None:
-    """Dark-themed pie chart — bright wedges, each % label coloured opposite its slice."""
+def show_pie(values: dict, caption: str = "", color_map: dict | None = None) -> None:
+    """Dark-themed pie chart — bright wedges, each % label coloured opposite its slice.
+    Pass color_map to colour slices by label meaning (e.g. positive=green); otherwise
+    slices take the positional _PIE_COLORS palette."""
     values = {k: v for k, v in (values or {}).items() if v}
     if not values:
         return
     if caption:
         st.markdown(f"<div class='muted'>{esc(caption)}</div>", unsafe_allow_html=True)
-    colors = _PIE_COLORS[:len(values)]
+    if color_map:
+        colors = [color_map.get(str(k).lower(), _PIE_COLORS[i % len(_PIE_COLORS)])
+                  for i, k in enumerate(values)]
+    else:
+        colors = _PIE_COLORS[:len(values)]
     fig, ax = plt.subplots(figsize=(4.4, 4.4))
     fig.patch.set_alpha(0)
     wedges, texts, autotexts = ax.pie(
@@ -334,7 +347,7 @@ def render_risks(d: dict) -> None:
     if severity:
         _, mid, _ = st.columns([1, 1, 1])
         with mid:
-            show_pie(severity, "Risks by severity")
+            show_pie(severity, "Risks by severity", color_map=_LABEL_COLORS)
     for r in risks:
         desc = f"<div class='desc'>{esc(strip_src_refs(r['description']))}</div>" if r.get("description") else ""
         card(f"<span class='card-title'>{esc(r['title'])}</span>{badge(r.get('severity'))}",
@@ -387,15 +400,20 @@ def render_sentiment(d: dict) -> None:
         not_ready_note()
         return
     st.markdown("<div class='row'>" + "".join([
-        metric("News sentiment", sentiment_label(s.get("news_sentiment", 0))),
-        metric("Public sentiment", sentiment_label(s.get("public_sentiment", 0))),
-        metric("Overall", sentiment_label(s.get("overall_sentiment", 0))),
+        metric("Avg news tone", sentiment_label(s.get("news_sentiment", 0))),
+        metric("Avg public tone", sentiment_label(s.get("public_sentiment", 0))),
+        metric("Avg overall tone", sentiment_label(s.get("overall_sentiment", 0))),
     ]) + "</div>", unsafe_allow_html=True)
-    st.caption("RoBERTa fine-tuned on TweetEval (negative/neutral/positive), mapped to −1 … +1 as P(pos)−P(neg); within ±0.05 counts as neutral.")
+    st.caption("Average tone = the mean of every article's score (RoBERTa / TweetEval, −1 … +1; within ±0.05 = neutral). "
+               "Because it's an average, a few harsh negatives can pull it toward neutral even when most articles lean "
+               "positive — so it can differ from the split on the left.")
     v1, v2 = st.columns(2)
     with v1:
-        st.markdown("##### Sentiment split")
-        show_pie(s.get("distribution", {}))
+        st.markdown("##### Article split (share by count)")
+        _total = sum(v for v in (s.get("distribution") or {}).values())
+        if _total:
+            st.caption(f"How many of the {_total} articles fall in each bucket — a headcount, not an average.")
+        show_pie(s.get("distribution", {}), color_map=_LABEL_COLORS)
     with v2:
         st.markdown("##### Sentiment trend")
         if s.get("trend"):
