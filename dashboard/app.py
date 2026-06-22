@@ -146,6 +146,28 @@ def show_pie(values: dict, caption: str = "") -> None:
     plt.close(fig)
 
 
+def show_bar(pairs: list[tuple], caption: str = "") -> None:
+    """Dark-themed horizontal bar chart — used for trend signal strength (keyword mentions)."""
+    pairs = [(str(k), float(v)) for k, v in (pairs or []) if v]
+    if not pairs:
+        return
+    if caption:
+        st.markdown(f"<div class='muted'>{esc(caption)}</div>", unsafe_allow_html=True)
+    pairs = pairs[:10][::-1]                       # biggest bar on top
+    labels, values = [p[0] for p in pairs], [p[1] for p in pairs]
+    fig, ax = plt.subplots(figsize=(5.6, max(2.4, 0.42 * len(pairs))))
+    fig.patch.set_alpha(0)
+    ax.barh(labels, values, color="#60a5fa", edgecolor="#0e1117")
+    ax.tick_params(colors="#aeb8c7", labelsize=10)
+    for spine in ax.spines.values():
+        spine.set_visible(False)
+    ax.set_facecolor("none")
+    for i, v in enumerate(values):
+        ax.text(v, i, f" {int(v)}", va="center", color="#eef2f9", fontsize=10, fontweight="600")
+    st.pyplot(fig, use_container_width=True)
+    plt.close(fig)
+
+
 @st.cache_resource
 def get_retriever():
     """Load the hybrid retriever once (reads the Chroma index)."""
@@ -227,6 +249,22 @@ def render_overview(d: dict) -> None:
         for e in mi.get("competitor_activity", []):
             title = f"[{e['title']}]({e['url']})" if e.get("url") else f"**{e.get('title', '')}**"
             st.markdown(f"- {title}  ·  *{e.get('source', '')}*")
+        st.markdown("##### Important company announcements")
+        anns = mi.get("company_announcements", [])
+        if anns:
+            for a in anns:
+                link = f"[{a['title']}]({a['url']})" if a.get("url") else a["title"]
+                st.markdown(f"- {link}  ·  *{a.get('source', '')}*")
+        else:
+            st.caption("No official announcements detected in the current corpus.")
+        st.markdown("##### Emerging technologies")
+        techs = mi.get("emerging_technologies", [])
+        if techs:
+            for t in techs:
+                st.markdown(f"- **{t.get('title', '')}**"
+                            + (f"  ·  *confidence {t['confidence']}*" if t.get("confidence") else ""))
+        else:
+            st.caption("None surfaced yet — see the **Trends** tab.")
         if mi.get("keywords"):
             st.caption("Trending: " + " · ".join(mi["keywords"]))
     with right:
@@ -264,6 +302,30 @@ def render_risks(d: dict) -> None:
              f"{evidence_html(r.get('evidence', []))}")
 
 
+def render_trends(d: dict) -> None:
+    """Task 4 — emerging trends management should monitor, with a signal-strength chart."""
+    t = d.get("trends", {})
+    items, signals = t.get("items", []), t.get("signals", [])
+    if not items and not signals:
+        not_ready_note()
+        return
+    if signals:
+        left, right = st.columns([1, 1])
+        with left:
+            st.markdown("##### Trend signal strength")
+            st.caption("Documents in the corpus mentioning each top term — the evidence weight behind a trend.")
+        with right:
+            show_bar([(s["keyword"], s["mentions"]) for s in signals])
+    st.markdown("##### Emerging trends to monitor")
+    for it in items:
+        kws = it.get("keywords", [])
+        kw_html = (f"<div class='muted'>Signals: {esc(' · '.join(kws[:8]))}</div>" if kws else "")
+        card(f"<span class='card-title'>{esc(it.get('title', ''))}</span>"
+             f"{badge('monitor')}",
+             f"<div class='muted'>Confidence {esc(it.get('confidence', 0))}</div>"
+             f"{kw_html}{evidence_html(it.get('evidence', []))}")
+
+
 def render_sentiment(d: dict) -> None:
     s = d.get("sentiment", {})
     if not s:
@@ -292,10 +354,13 @@ def render_recommendations(d: dict) -> None:
     for r in d.get("recommendations", []):
         rationale = f"<div class='desc'>{esc(r['rationale'])}</div>" if r.get("rationale") else ""
         first_step = f"<div class='step'>First step: {esc(r['first_step'])}</div>" if r.get("first_step") else ""
+        risk_assess = r.get("risk_assessment", [])
+        risk_html = (f"<div class='muted'>Risk assessment: {esc(', '.join(risk_assess))}</div>"
+                     if risk_assess else "")
         body = (f"<div style='margin:.35rem 0'>{badge(r.get('priority'))} priority "
                 f"&nbsp; {badge(r.get('risk_level'))} risk</div>{rationale}{first_step}"
                 f"<div class='muted'>Expected impact: {esc(', '.join(r.get('expected_impact', [])))}</div>"
-                f"{evidence_html(r.get('supporting_evidence', []))}")
+                f"{risk_html}{evidence_html(r.get('supporting_evidence', []))}")
         card(f"<span class='card-title'>{esc(r['recommendation'])}</span>", body)
 
 
@@ -357,7 +422,7 @@ with st.sidebar:
                 f"<div class='stack'><b>RAG tool</b><br><code>{esc(RAG_TOOL)}</code></div>",
                 unsafe_allow_html=True)
 
-tabs = st.tabs(["Ask the CEO", "Overview", "Opportunities", "Risks",
+tabs = st.tabs(["Ask the CEO", "Overview", "Opportunities", "Risks", "Trends",
                 "Sentiment", "Recommendations", "Briefing", "Retrieval", "Activity"])
 
 # ---- Tab: Ask the CEO (interactive agent) -----------------------------------
@@ -425,14 +490,16 @@ with tabs[2]:
 with tabs[3]:
     render_risks(data)
 with tabs[4]:
-    render_sentiment(data)
+    render_trends(data)
 with tabs[5]:
-    render_recommendations(data)
+    render_sentiment(data)
 with tabs[6]:
+    render_recommendations(data)
+with tabs[7]:
     render_briefing(data)
 
 # ---- Tab: Retrieval (Hybrid RAG — top-ranked results) -----------------------
-with tabs[7]:
+with tabs[8]:
     st.markdown("#### Hybrid RAG Retrieval")
     st.markdown("<div class='muted'>BM25 (sparse) + dense embeddings, fused and min-max normalised "
                 "(score = 0.5·dense + 0.5·sparse). Enter a query to see the top-ranked evidence.</div>",
@@ -461,7 +528,7 @@ with tabs[7]:
                 st.error(f"Retrieval failed — is the index built? Run `python main.py ingest`.\n\n{exc}")
 
 # ---- Tab: Activity (each entry stores a full dashboard snapshot) ------------
-with tabs[8]:
+with tabs[9]:
     st.markdown("#### Activity log")
     st.markdown("<div class='muted'>Every question is saved with a full snapshot of every tab at that "
                 "moment. Pick one to replay the dashboard exactly as it was.</div>", unsafe_allow_html=True)
@@ -480,7 +547,8 @@ with tabs[8]:
         snap = it.get("snapshot")
         if snap:
             st.markdown("##### Dashboard snapshot at that time")
-            sub = st.tabs(["Overview", "Opportunities", "Risks", "Sentiment", "Recommendations", "Briefing"])
+            sub = st.tabs(["Overview", "Opportunities", "Risks", "Trends",
+                           "Sentiment", "Recommendations", "Briefing"])
             with sub[0]:
                 render_overview(snap)
             with sub[1]:
@@ -488,10 +556,12 @@ with tabs[8]:
             with sub[2]:
                 render_risks(snap)
             with sub[3]:
-                render_sentiment(snap)
+                render_trends(snap)
             with sub[4]:
-                render_recommendations(snap)
+                render_sentiment(snap)
             with sub[5]:
+                render_recommendations(snap)
+            with sub[6]:
                 render_briefing(snap)
         else:
             st.caption("No snapshot stored for this entry.")

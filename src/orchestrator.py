@@ -148,6 +148,47 @@ def _recent_news(n: int = 8) -> list[dict]:
             for r in news.itertuples()]
 
 
+# Words that mark a headline as an official company action, not market chatter
+# (analyst notes, "stock up 3%", fund-buys-shares, etc.). Drives Section 2.
+_ANNOUNCE_RE = re.compile(
+    r"\b(announces?|announced|unveils?|unveiled|launch(?:es|ed)?|introduc(?:es|ed)|"
+    r"recall(?:s|ed)?|deliver(?:s|ies|ed)|earnings|results|opens?|opened|expand(?:s|ed)?|"
+    r"partner(?:s|ship)?|invest(?:s|ment|ed)?|robotaxi|gigafactory|price cut|unveiling)\b",
+    re.IGNORECASE,
+)
+
+
+def _company_announcements(n: int = 6) -> list[dict]:
+    """Important company announcements (Section 2). Heuristic: recent news/finance
+    headlines describing an official Tesla action (launch, recall, earnings, …),
+    deduplicated by title."""
+    df = load_corpus()
+    pool = df[df["source_type"].isin(["news", "finance"])]
+    out, seen = [], set()
+    for r in pool.itertuples():
+        title = str(r.title)
+        key = title.lower().strip()
+        if key in seen or not _ANNOUNCE_RE.search(title):
+            continue
+        seen.add(key)
+        out.append({"title": title, "source": r.source, "url": r.url, "date": str(r.date)})
+        if len(out) >= n:
+            break
+    return out
+
+
+def _trend_signals(df, keywords: list[str], top: int = 10) -> list[dict]:
+    """How many documents mention each top keyword — the 'signal strength' behind a
+    trend, used for the Trends bar chart visualisation."""
+    text = (df["title"].fillna("") + " " + df["text"].fillna("")).str.lower()
+    signals = []
+    for kw in keywords[:top]:
+        mentions = int(text.str.contains(re.escape(kw.lower()), regex=True).sum())
+        if mentions:
+            signals.append({"keyword": kw, "mentions": mentions})
+    return sorted(signals, key=lambda s: s["mentions"], reverse=True)
+
+
 def _save_outputs(state: GraphState) -> None:
     """Persist all deliverables to results/, including the section-aligned dashboard payload."""
     save_json(state["recommendations"], config.RESULTS_DIR / "recommendations.json")
@@ -171,10 +212,15 @@ def _save_outputs(state: GraphState) -> None:
             "recent_news": _recent_news(),
             "competitor_activity": intel.get("competitor_activity", []),
             "emerging_technologies": intel.get("trends", []),
+            "company_announcements": _company_announcements(),
             "keywords": intel.get("keywords", []),
         },
         "opportunities": intel.get("opportunities", []),              # Section 3
         "risks": intel.get("risks", []),                             # Section 4
+        "trends": {                                                   # Task 4 — Trends
+            "items": intel.get("trends", []),
+            "signals": _trend_signals(df, intel.get("keywords", [])),
+        },
         "sentiment": state.get("sentiment", {}),                      # Section 5 (incl. trend)
         "recommendations": state.get("recommendations", []),          # Section 6 (incl. risk_level)
         "briefing": {"raw": briefing, **_briefing_sections(briefing)},  # Section 7
