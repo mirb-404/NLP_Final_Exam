@@ -40,6 +40,47 @@ COMPETITORS = [
 ]
 
 # ----------------------------------------------------------------------------
+# Keyword / trend-signal noise filter
+# ----------------------------------------------------------------------------
+# Terms that dominate a single-company corpus but are NOT trends: news-source /
+# publisher names and generic finance filler. The company's own identity tokens
+# (COMPANY / TICKER / COMPANY_ALIASES) are added automatically below, so "tesla",
+# "tsla", "model 3" etc. never get counted as an emerging trend.
+KEYWORD_STOPWORDS = {
+    # publisher / source / platform names that leak in from feed metadata
+    "yahoo", "finance", "news", "com", "reuters", "bloomberg", "marketbeat",
+    "benzinga", "globe", "mail", "motley", "fool", "cnbc", "forbes", "insider",
+    "nasdaq", "zacks", "tipranks", "barron", "seeking", "alpha", "watch",
+    "stocktwits", "reddit", "twitter", "hackernews", "stackoverflow", "arxiv",
+    "openalex", "tikr", "oracle",
+    # generic finance / filler
+    "stock", "stocks", "shares", "share", "market", "markets", "price", "prices",
+    "company", "inc", "report", "reports", "says", "said", "new", "year", "years",
+    "today", "week", "day", "billion", "million",
+    # fund-trading boilerplate that floods finance feeds
+    # ("X Capital LLC Purchases/Sells Shares of Tesla, Inc. $TSLA")
+    "llc", "ltd", "lp", "capital", "partners", "ventures", "holdings", "group",
+    "management", "advisors", "advisory", "asset", "investment", "investments",
+    "fund", "funds", "trust", "purchases", "sells", "buys", "position", "stake",
+    "takes", "makes", "increases", "decreases", "reduces", "boosts", "trims",
+    "hedge", "according", "bank", "savings",
+}
+
+# Company identity is noise (it's the subject of every doc); competitors are NOT —
+# a competitor surging is itself a trend worth monitoring, and has its own panel.
+_KEYWORD_STOP = set(KEYWORD_STOPWORDS)
+for _name in COMPANY_ALIASES + [COMPANY, TICKER]:
+    _KEYWORD_STOP.update(_name.lower().split())
+
+
+def keyword_is_noise(term: str) -> bool:
+    """True if a keyword/phrase is domain noise — i.e. any of its tokens is the
+    company itself, its ticker/products, a news source, or generic finance filler.
+    Used to keep the trend-signal chart and keyword lists meaningful."""
+    return any(w in _KEYWORD_STOP for w in str(term).lower().split())
+
+
+# ----------------------------------------------------------------------------
 # Task 1 — Live data sources
 # Endpoints + queries live in collector.py (one home for everything about
 # collection). The company identity below (COMPANY / TICKER) drives them.

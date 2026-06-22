@@ -75,8 +75,13 @@ def _sentiment_trend(df) -> list[dict]:
 # ----------------------------------------------------------------------------
 # TF-IDF keywords (Module 4/10)
 # ----------------------------------------------------------------------------
-def top_keywords(texts: list[str], n: int = 15) -> list[str]:
-    """Most important terms across a set of documents (TF-IDF)."""
+def top_keywords(texts: list[str], n: int = 15, exclude_domain: bool = True) -> list[str]:
+    """Most important terms across a set of documents (TF-IDF).
+
+    With exclude_domain (default), domain noise is dropped — the company's own
+    name/ticker/products, news-source names, and generic finance filler — so the
+    result is the actual emerging topics, not 'tesla' / 'tsla' / 'yahoo finance'.
+    """
     if not texts:
         return []
     vec = TfidfVectorizer(stop_words="english", ngram_range=(1, 2), max_features=2000)
@@ -84,7 +89,14 @@ def top_keywords(texts: list[str], n: int = 15) -> list[str]:
     weights = matrix.sum(axis=0).A1
     vocab = vec.get_feature_names_out()
     ranked = sorted(zip(vocab, weights), key=lambda x: x[1], reverse=True)
-    return [term for term, _ in ranked[:n]]
+    out = []
+    for term, _ in ranked:
+        if exclude_domain and config.keyword_is_noise(term):
+            continue
+        out.append(term)
+        if len(out) >= n:
+            break
+    return out
 
 
 if __name__ == "__main__":

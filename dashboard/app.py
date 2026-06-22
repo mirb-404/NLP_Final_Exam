@@ -304,8 +304,9 @@ def render_overview(d: dict) -> None:
                             + (f"  ·  *confidence {t['confidence']}*" if t.get("confidence") else ""))
         else:
             st.caption("None surfaced yet — see the **Trends** tab.")
-        if mi.get("keywords"):
-            st.caption("Trending: " + " · ".join(mi["keywords"]))
+        kw = [k for k in mi.get("keywords", []) if not config.keyword_is_noise(k)]
+        if kw:
+            st.caption("Trending: " + " · ".join(kw))
     with right:
         show_pie(co.get("source_breakdown", {}), "Document mix by source")
 
@@ -344,7 +345,10 @@ def render_risks(d: dict) -> None:
 def render_trends(d: dict) -> None:
     """Task 4 — emerging trends management should monitor, with a signal-strength chart."""
     t = d.get("trends", {})
-    items, signals = t.get("items", []), t.get("signals", [])
+    items = t.get("items", [])
+    # Drop domain noise (company name, ticker, publisher names, finance filler) so the
+    # chart shows real topics — handles older data saved before the engine-side filter.
+    signals = [s for s in t.get("signals", []) if not config.keyword_is_noise(s.get("keyword", ""))]
     if not items and not signals:
         not_ready_note()
         return
@@ -352,12 +356,12 @@ def render_trends(d: dict) -> None:
         left, right = st.columns([1, 1])
         with left:
             st.markdown("##### Trend signal strength")
-            st.caption("Documents in the corpus mentioning each top term — the evidence weight behind a trend.")
+            st.caption("Documents in the corpus mentioning each top topic — the evidence weight behind a trend.")
         with right:
             show_bar([(s["keyword"], s["mentions"]) for s in signals])
     st.markdown("##### Emerging trends to monitor")
     for it in items:
-        kws = it.get("keywords", [])
+        kws = [k for k in it.get("keywords", []) if not config.keyword_is_noise(k)]
         kw_html = (f"<div class='muted'>Signals: {esc(' · '.join(kws[:8]))}</div>" if kws else "")
         card(f"<span class='card-title'>{esc(strip_src_refs(it.get('title', '')))}</span>"
              f"{badge('monitor')}",
