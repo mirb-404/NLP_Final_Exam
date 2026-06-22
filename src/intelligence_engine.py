@@ -88,6 +88,46 @@ def _parse_lines(raw: str) -> list[str]:
     return items[:5]
 
 
+_LEVELS = ("high", "medium", "low")
+_RISK_CATS = ("competitive", "regulatory", "sentiment", "supply chain", "financial")
+
+
+def _split_fields(line: str) -> list[str]:
+    """Split an LLM list item into atomic fields, tolerating both '::' and '|'
+    separators — the model often merges 'category | severity' with a pipe instead
+    of two '::', which a positional parser would misalign."""
+    return [p.strip() for p in re.split(r"::|\|", line) if p.strip()]
+
+
+def _pick_level(fields: list[str], default: str = "Medium") -> str:
+    """First High/Medium/Low rating among the fields (exact field, else leading word)."""
+    for f in fields:
+        if f.lower() in _LEVELS:
+            return f.capitalize()
+    for f in fields:
+        head = f.lower().split()
+        if head and head[0] in _LEVELS:
+            return head[0].capitalize()
+    return default
+
+
+def _pick_from(fields: list[str], vocab, default: str) -> str:
+    """First field that names one of `vocab` (substring match)."""
+    for f in fields:
+        fl = f.lower()
+        for v in vocab:
+            if v in fl:
+                return v
+    return default
+
+
+def _description(fields: list[str], tags) -> str:
+    """Recombine the free-text fields (everything that isn't a rating/category tag)
+    into the full sentence, so a description split by a stray separator stays whole."""
+    free = [f for f in fields if f.lower() not in tags]
+    return " ".join(free)
+
+
 def detect_opportunities(retriever: HybridRetriever) -> list[dict]:
     docs = retriever.retrieve(config.ENGINE_QUERIES["opportunities"])
     prompt = (
@@ -98,13 +138,14 @@ def detect_opportunities(retriever: HybridRetriever) -> list[dict]:
     )
     items = []
     for line in _parse_lines(ask_llm(prompt)):
-        parts = [p.strip() for p in line.split("::")]
-        if not parts[0]:
+        fields = _split_fields(line)
+        if not fields:
             continue  # drop malformed lines that carry no actual opportunity
+        title, rest = fields[0], fields[1:]
         items.append({
-            "title": strip_src_refs(parts[0]),
-            "impact": (parts[1].split()[0].capitalize() if len(parts) > 1 and parts[1] else "Medium"),
-            "description": strip_src_refs(parts[2]) if len(parts) > 2 else "",
+            "title": strip_src_refs(title),
+            "impact": _pick_level(rest),
+            "description": strip_src_refs(_description(rest, _LEVELS)),
             "confidence": _confidence(docs),
             "evidence": _evidence_list(docs, line),
         })
@@ -122,14 +163,15 @@ def detect_risks(retriever: HybridRetriever) -> list[dict]:
     )
     items = []
     for line in _parse_lines(ask_llm(prompt)):
-        parts = [p.strip() for p in line.split("::")]
-        if not parts[0]:
+        fields = _split_fields(line)
+        if not fields:
             continue  # drop malformed lines that carry no actual risk
+        title, rest = fields[0], fields[1:]
         items.append({
-            "title": strip_src_refs(parts[0]),
-            "category": parts[1] if len(parts) > 1 else "competitive",
-            "severity": (parts[2].split()[0].capitalize() if len(parts) > 2 and parts[2] else "Medium"),
-            "description": strip_src_refs(parts[3]) if len(parts) > 3 else "",
+            "title": strip_src_refs(title),
+            "category": _pick_from(rest, _RISK_CATS, "competitive"),
+            "severity": _pick_level(rest),
+            "description": strip_src_refs(_description(rest, _LEVELS + _RISK_CATS)),
             "confidence": _confidence(docs),
             "evidence": _evidence_list(docs, line),
         })
@@ -161,19 +203,18 @@ def detect_trends(retriever: HybridRetriever, df) -> list[dict]:
     )
     items = []
     for line in _parse_lines(ask_llm(prompt)):
-        parts = [p.strip() for p in line.split("::")]
-        if not parts[0]:
+        fields = _split_fields(line)
+        if not fields:
             continue  # drop malformed lines that carry no actual trend
-        # expected "<cat> :: <title> :: <desc>"; tolerate a missing category/desc
-        if len(parts) >= 3:
-            category, title, desc = parts[0], parts[1], parts[2]
-        else:
-            category, title, desc = parts[0], (parts[1] if len(parts) > 1 else parts[0]), ""
+        # category leads, then the title, then the sentence
+        category = _trend_category(fields[0])
+        title = fields[1] if len(fields) >= 2 else fields[0]
+        desc = " ".join(fields[2:]) if len(fields) >= 3 else ""
         if not title:
             continue
         items.append({
             "title": strip_src_refs(title),
-            "category": _trend_category(category),
+            "category": category,
             "description": strip_src_refs(desc),
             "confidence": _confidence(docs),
             "evidence": _evidence_list(docs, line),
