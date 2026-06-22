@@ -136,20 +136,51 @@ def detect_risks(retriever: HybridRetriever) -> list[dict]:
     return items
 
 
+# The three lenses the brief asks trends to cover. The LLM's free-text label is
+# snapped onto one of these so the dashboard can group cleanly.
+def _trend_category(raw: str) -> str:
+    """Snap an LLM category label onto one of the three brief-defined buckets."""
+    t = raw.lower()
+    if any(w in t for w in ("custom", "behav", "consumer", "demand", "buyer", "adopt")):
+        return "Customer behaviour"
+    if any(w in t for w in ("tech", "ai", "battery", "software", "autonom", "product", "innovat")):
+        return "Technology"
+    return "Industry"   # market / regulatory / competitive / supply-chain developments
+
+
 def detect_trends(retriever: HybridRetriever, df) -> list[dict]:
     docs = retriever.retrieve(config.ENGINE_QUERIES["trends"])
     prompt = (
         f"Using ONLY the evidence below, list up to 5 emerging TRENDS "
-        f"{config.COMPANY} management should monitor (technology, industry, customer "
-        f"behaviour). One short trend per line.\n\n"
+        f"{config.COMPANY} management should monitor. Cover all three lenses where the "
+        f"evidence supports them: Technology trends, Customer behaviour shifts and "
+        f"Industry developments.\nOne per line, format:\n"
+        f"<Technology|Customer behaviour|Industry> :: <short trend title> :: "
+        f"<one full sentence on the trend and why it matters>\n\n"
         f"EVIDENCE:\n{_evidence_block(docs)}\n\nTRENDS:"
     )
     keywords = top_keywords((df["title"] + " " + df["text"]).tolist())
-    return [
-        {"title": strip_src_refs(t), "confidence": _confidence(docs),
-         "evidence": _evidence_list(docs, t), "keywords": keywords[:8]}
-        for t in _parse_lines(ask_llm(prompt))
-    ]
+    items = []
+    for line in _parse_lines(ask_llm(prompt)):
+        parts = [p.strip() for p in line.split("::")]
+        if not parts[0]:
+            continue  # drop malformed lines that carry no actual trend
+        # expected "<cat> :: <title> :: <desc>"; tolerate a missing category/desc
+        if len(parts) >= 3:
+            category, title, desc = parts[0], parts[1], parts[2]
+        else:
+            category, title, desc = parts[0], (parts[1] if len(parts) > 1 else parts[0]), ""
+        if not title:
+            continue
+        items.append({
+            "title": strip_src_refs(title),
+            "category": _trend_category(category),
+            "description": strip_src_refs(desc),
+            "confidence": _confidence(docs),
+            "evidence": _evidence_list(docs, line),
+            "keywords": keywords[:8],
+        })
+    return items
 
 
 def competitor_activity(retriever: HybridRetriever) -> list[dict]:
