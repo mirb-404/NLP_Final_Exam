@@ -36,8 +36,10 @@ def corpus_sentiment(df) -> dict:
     """
     Aggregate sentiment for the dashboard (Section 5).
     'news'/'finance' -> news sentiment ; 'community' -> public sentiment.
+    Scores title + body so the signal reflects the whole document, not just the headline.
     """
-    scores = df["title"].fillna("").map(lambda t: _VADER.polarity_scores(t)["compound"])
+    blob = (df["title"].fillna("") + ". " + df["text"].fillna("")).str.slice(0, 1000)
+    scores = blob.map(lambda t: _VADER.polarity_scores(t)["compound"])
     df = df.assign(_sent=scores)
 
     def _avg(mask):

@@ -23,8 +23,9 @@ from src.utils import clean_text, load_json
 
 MAX_DOCS_PER_TYPE = 120  # balance + shrink: at most this many docs per source type
 
-# Match brand/competitor names as WHOLE WORDS so generic names ("Apple") don't
-# catch "pineapple" / "apple pie". Falls back to COMPANY if no alias list is set.
+# Match brand/competitor names as WHOLE WORDS so a generic token ("Tesla", which is
+# also a physics unit / a surname) doesn't catch unrelated text. Falls back to COMPANY
+# if no alias list is set.
 _ALIASES = getattr(config, "COMPANY_ALIASES", [config.COMPANY]) + config.COMPETITORS
 _RELEVANT_RE = re.compile(r"\b(" + "|".join(re.escape(a) for a in _ALIASES) + r")\b", re.IGNORECASE)
 

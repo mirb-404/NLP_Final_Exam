@@ -134,7 +134,7 @@ def get_llm():
          model_server/server.py. Best for the exam: strong open model, no local
          GPU, no paid API. See model_server/README.md.
       2. HF Inference Providers endpoint (HUGGINGFACEHUB_API_TOKEN set) — free
-         tier, credit-limited (Llama-3.1-8B-Instruct).
+         tier, credit-limited (serves config.LLM_REPO_ID = Mistral-7B-Instruct-v0.3).
       3. Local Qwen2.5-0.5B-Instruct via HuggingFacePipeline (pattern from
          Module11/LangGraph.ipynb) — offline, no token, weak but never fails.
     """
