@@ -38,12 +38,23 @@ def _evidence_block(docs: list[dict]) -> str:
     return "\n".join(lines)
 
 
-def _evidence_list(docs: list[dict]) -> list[dict]:
-    """Compact evidence objects for the dashboard / recommendations."""
+_SRC_REF_RE = re.compile(r"src-(\d+)", re.IGNORECASE)
+
+
+def _evidence_list(docs: list[dict], cited_text: str = "") -> list[dict]:
+    """Compact evidence objects for the dashboard / recommendations.
+
+    Always shows the top EVIDENCE_PER_ITEM ranked docs, but extends the list far
+    enough to cover the highest [src-N] the item text actually cites — so a
+    sentence that references src-5 renders src-5 instead of dangling at src-3."""
+    n = EVIDENCE_PER_ITEM
+    refs = [int(m) for m in _SRC_REF_RE.findall(cited_text or "")]
+    if refs:
+        n = max(n, min(max(refs), len(docs)))
     return [
         {"ref": f"src-{d['rank']}", "title": d["title"], "source": d["source"],
          "url": d["url"], "score": d["score"]}
-        for d in docs[:EVIDENCE_PER_ITEM]
+        for d in docs[:n]
     ]
 
 
@@ -95,7 +106,7 @@ def detect_opportunities(retriever: HybridRetriever) -> list[dict]:
             "impact": (parts[1].split()[0].capitalize() if len(parts) > 1 and parts[1] else "Medium"),
             "description": strip_src_refs(parts[2]) if len(parts) > 2 else "",
             "confidence": _confidence(docs),
-            "evidence": _evidence_list(docs),
+            "evidence": _evidence_list(docs, line),
         })
     return items
 
@@ -120,7 +131,7 @@ def detect_risks(retriever: HybridRetriever) -> list[dict]:
             "severity": (parts[2].split()[0].capitalize() if len(parts) > 2 and parts[2] else "Medium"),
             "description": strip_src_refs(parts[3]) if len(parts) > 3 else "",
             "confidence": _confidence(docs),
-            "evidence": _evidence_list(docs),
+            "evidence": _evidence_list(docs, line),
         })
     return items
 
@@ -136,7 +147,7 @@ def detect_trends(retriever: HybridRetriever, df) -> list[dict]:
     keywords = top_keywords((df["title"] + " " + df["text"]).tolist())
     return [
         {"title": strip_src_refs(t), "confidence": _confidence(docs),
-         "evidence": _evidence_list(docs), "keywords": keywords[:8]}
+         "evidence": _evidence_list(docs, t), "keywords": keywords[:8]}
         for t in _parse_lines(ask_llm(prompt))
     ]
 
