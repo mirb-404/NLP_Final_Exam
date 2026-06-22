@@ -394,28 +394,90 @@ def render_trends(d: dict) -> None:
                  f"{evidence_html(it.get('evidence', []))}")
 
 
+def _sentiment_word(score) -> str:
+    """Just the polarity word for inline prose."""
+    x = float(score or 0)
+    return "positive" if x >= 0.05 else "negative" if x <= -0.05 else "neutral"
+
+
+def _sentiment_stats(s: dict) -> dict:
+    """Derive CEO-readable stats from the stored sentiment block. Everything comes from
+    distribution / trend / the means, so it works on live data AND old Activity snapshots."""
+    dist = s.get("distribution", {}) or {}
+    pos, neu, neg = dist.get("positive", 0), dist.get("neutral", 0), dist.get("negative", 0)
+    total = pos + neu + neg
+    net = round((pos - neg) / total, 3) if total else 0.0
+    pct = ({k: round(100 * v / total) for k, v in
+            (("positive", pos), ("neutral", neu), ("negative", neg))} if total else {})
+    trend = [t for t in (s.get("trend") or []) if "sentiment" in t]
+    momentum, delta = "", 0.0
+    if len(trend) >= 2:                       # latest month vs the average of prior months
+        baseline = sum(t["sentiment"] for t in trend[:-1]) / (len(trend) - 1)
+        delta = round(trend[-1]["sentiment"] - baseline, 3)
+        momentum = "Improving" if delta > 0.03 else "Cooling" if delta < -0.03 else "Steady"
+    return {"net": net, "pct": pct, "total": total, "momentum": momentum, "delta": delta}
+
+
+def _sentiment_story(s: dict, stats: dict) -> str:
+    """Turn the numbers into a short, plain-English narrative for the CEO."""
+    pct = stats["pct"]
+    if not pct:
+        return ""
+    net, overall = stats["net"], float(s.get("overall_sentiment") or 0)
+    news, pub = float(s.get("news_sentiment") or 0), float(s.get("public_sentiment") or 0)
+    verdict = ("Coverage is clearly positive" if net >= 0.25 else
+               "Coverage leans positive" if net >= 0.05 else
+               "Coverage is mixed" if net > -0.05 else
+               "Coverage leans negative" if net > -0.25 else
+               "Coverage is clearly negative")
+    parts = [f"{verdict} — {pct.get('positive', 0)}% of the {stats['total']} articles are positive "
+             f"and {pct.get('negative', 0)}% negative."]
+    if net >= 0.1 and overall <= 0.1:
+        parts.append("Average tone is only around neutral, though: a smaller set of sharper negative "
+                     "stories offsets a lot of mildly positive coverage.")
+    elif net <= -0.1 and overall >= -0.1:
+        parts.append("Average tone holds near neutral because the positive stories are milder than the negatives.")
+    if news - pub >= 0.1:
+        parts.append(f"Press & finance ({_sentiment_word(news)}) is warmer than the public / developer "
+                     f"community ({_sentiment_word(pub)}).")
+    elif pub - news >= 0.1:
+        parts.append(f"The public / developer community ({_sentiment_word(pub)}) is warmer than press & "
+                     f"finance ({_sentiment_word(news)}).")
+    if stats["momentum"] in ("Improving", "Cooling"):
+        parts.append(f"Momentum has {'improved' if stats['momentum'] == 'Improving' else 'cooled'} in the latest month.")
+    return " ".join(parts)
+
+
 def render_sentiment(d: dict) -> None:
     s = d.get("sentiment", {})
     if not s:
         not_ready_note()
         return
+    stats = _sentiment_stats(s)
+    story = _sentiment_story(s, stats)
+    if story:                                 # the headline a CEO reads first
+        card("<span class='card-title'>Sentiment story</span>", f"<div class='desc'>{esc(story)}</div>")
+    mom = f"{stats['momentum']} ({stats['delta']:+.2f})" if stats["momentum"] else "—"
     st.markdown("<div class='row'>" + "".join([
-        metric("Avg news tone", sentiment_label(s.get("news_sentiment", 0))),
-        metric("Avg public tone", sentiment_label(s.get("public_sentiment", 0))),
-        metric("Avg overall tone", sentiment_label(s.get("overall_sentiment", 0))),
+        metric("Net sentiment", sentiment_label(stats["net"])),
+        metric("Avg tone", sentiment_label(s.get("overall_sentiment", 0))),
+        metric("Press & finance", sentiment_label(s.get("news_sentiment", 0))),
+        metric("Public / community", sentiment_label(s.get("public_sentiment", 0))),
+        metric("Momentum", mom),
     ]) + "</div>", unsafe_allow_html=True)
-    st.caption("Average tone = the mean of every article's score (RoBERTa / TweetEval, −1 … +1; within ±0.05 = neutral). "
-               "Because it's an average, a few harsh negatives can pull it toward neutral even when most articles lean "
-               "positive — so it can differ from the split on the left.")
+    st.caption("**Net sentiment** = %positive − %negative (a headcount, matches the split). "
+               "**Avg tone** = mean article score, which also weights how harsh each story is — so the two "
+               "can differ. RoBERTa / TweetEval, −1 … +1; within ±0.05 = neutral.")
     v1, v2 = st.columns(2)
     with v1:
         st.markdown("##### Article split (share by count)")
-        _total = sum(v for v in (s.get("distribution") or {}).values())
-        if _total:
-            st.caption(f"How many of the {_total} articles fall in each bucket — a headcount, not an average.")
+        if stats["total"]:
+            st.caption(f"How many of the {stats['total']} articles fall in each bucket — a headcount, not an average.")
         show_pie(s.get("distribution", {}), color_map=_LABEL_COLORS)
     with v2:
         st.markdown("##### Sentiment trend")
+        if stats["momentum"]:
+            st.caption(f"Momentum: {mom} vs prior months.")
         if s.get("trend"):
             st.line_chart(pd.DataFrame(s["trend"]).set_index("period")["sentiment"])
 

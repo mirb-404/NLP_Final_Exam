@@ -178,7 +178,7 @@ def _trend_category(raw: str) -> str:
     return "Industry"   # market / regulatory / competitive / supply-chain developments
 
 
-def detect_trends(retriever: HybridRetriever, df) -> list[dict]:
+def detect_trends(retriever: HybridRetriever) -> list[dict]:
     docs = retriever.retrieve(config.ENGINE_QUERIES["trends"])
     prompt = (
         f"Using ONLY the evidence below, list up to 5 emerging TRENDS "
@@ -221,7 +221,7 @@ def run() -> dict:
     intel = {
         "opportunities": detect_opportunities(retriever),
         "risks": detect_risks(retriever),
-        "trends": detect_trends(retriever, df),
+        "trends": detect_trends(retriever),
         "competitor_activity": competitor_activity(retriever),
         "keywords": top_keywords((df["title"] + " " + df["text"]).tolist()),
     }

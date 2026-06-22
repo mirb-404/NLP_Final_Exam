@@ -6,6 +6,7 @@ sources, defensive re-clean, drop <5-word docs, keep only company/competitor-rel
 docs, drop duplicates (id + normalised title), cap per source type for balance.
 """
 
+import itertools
 import re
 
 import pandas as pd
@@ -25,6 +26,19 @@ _RELEVANT_RE = re.compile(r"\b(" + "|".join(re.escape(a) for a in _ALIASES) + r"
 def _relevant(text: str) -> bool:
     """Keep a document only if it mentions the company (by any alias) or a competitor."""
     return bool(_RELEVANT_RE.search(text))
+
+
+def _round_robin_by_source(df: pd.DataFrame) -> pd.DataFrame:
+    """Reorder rows so that within each source_type the underlying sources alternate
+    (round-robin). The per-type head() cap then keeps a balanced mix instead of dropping
+    whichever source was collected last — e.g. Stack Overflow sat entirely behind Hacker
+    News in 'community', so the 120-doc cap dropped all of it."""
+    order = []
+    for _, grp in df.groupby("source_type", sort=False):
+        per_source = [list(g.index) for _, g in grp.groupby("source", sort=False)]
+        for picks in itertools.zip_longest(*per_source):
+            order.extend(i for i in picks if i is not None)
+    return df.loc[order]
 
 
 def build_corpus() -> pd.DataFrame:
@@ -47,7 +61,9 @@ def build_corpus() -> pd.DataFrame:
     df = df.drop_duplicates(subset="_norm_title")
     df = df.drop(columns="_norm_title").reset_index(drop=True)
 
-    # 6. cap per source type -> smaller, balanced corpus (news/community no longer dominate)
+    # 6. balance the sources within each type, then cap per type -> smaller, balanced corpus
+    #    (round-robin first so e.g. 'community' keeps both Hacker News AND Stack Overflow)
+    df = _round_robin_by_source(df)
     df = df.groupby("source_type", group_keys=False).head(MAX_DOCS_PER_TYPE).reset_index(drop=True)
 
     df.to_csv(config.CORPUS_CSV, index=False)
