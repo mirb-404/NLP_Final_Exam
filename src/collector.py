@@ -20,7 +20,7 @@ from src import config
 from src.utils import clean_text, now_iso, save_json
 
 # --- source endpoints + queries ---------------------------------------------
-HEADERS = {"User-Agent": "ai-ceo-research-agent/1.0 (educational NLP project)"}
+HEADERS = {"User-Agent": "ai-strategy-consultant-agent/1.0 (educational NLP project)"}
 TIMEOUT = 25
 MIN_DOCS = 100  # PDF Task 1 minimum
 

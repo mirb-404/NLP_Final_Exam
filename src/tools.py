@@ -1,5 +1,5 @@
 """
-LangChain tools for the AI CEO agent (Module 11 — tool-calling agent).
+LangChain tools for the AI Strategy Consultant agent (Module 11 — tool-calling agent).
 
 Every capability the agent needs is exposed here as an @tool, so a LangGraph
 agent can *decide* which to call and fetch real evidence from the knowledge base

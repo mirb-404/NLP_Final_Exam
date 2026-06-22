@@ -1,5 +1,5 @@
 """
-Central configuration for the AI CEO Strategic Intelligence Agent.
+Central configuration for the AI Strategy Consultant Strategic Intelligence Agent.
 
 Everything that changes between runs (company, sources, model ids, thresholds,
 file paths) lives here so the rest of the code never hard-codes values.

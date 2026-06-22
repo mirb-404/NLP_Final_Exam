@@ -1,11 +1,11 @@
-# AI CEO — Strategic Intelligence Agent (Siemens)
+# AI Strategy Consultant — Strategic Intelligence Agent (Tesla)
 
 NLP Final Exam project. Mirrors the structure/idioms of the course repo
 `ChandnaSwati/ADSA-NLP-Modules` (Modules 1–11 + MiniHackathon) so every file
 maps to something taught in class and can be explained in the oral exam.
 
 ## Decisions
-- **Company:** Siemens (industry: Industrial Technology / Automation).
+- **Company:** Tesla (industry: Electric Vehicles / Clean Energy).
 - **LLM (reasoning engine):** `mistralai/Mistral-7B-Instruct-v0.2` via the free
   Hugging Face Hub inference endpoint (`HuggingFaceHub`, pattern from
   `Module11/LangChain agent.ipynb`). Falls back to local `google/flan-t5-base`
@@ -24,7 +24,7 @@ maps to something taught in class and can be explained in the oral exam.
 | 2 Knowledge repository | `src/knowledge_base.py` | Module 10 (Chroma) |
 | 3 Information processing (clean/dedup/extract/embed) | `src/preprocess.py` | Module 2, 3 |
 | 4 Strategic Intelligence Engine (opp/risk/trend) | `src/intelligence_engine.py` | Module 6, 9, 10 |
-| 5 AI CEO Agent (reason/prioritize/recommend) | `src/ceo_agent.py` | Module 11 |
+| 5 AI Strategy Consultant Agent (reason/prioritize/recommend) | `src/ceo_agent.py` | Module 11 |
 | 6 Evidence-based recommendations (verify/confidence) | `src/verifier_agent.py` | MiniHackathon verifier |
 | (retrieval) | `src/retriever_hybrid.py` | Module 10 Task 3, MiniHackathon |
 | (classical NLP: NER/sentiment/TF-IDF) | `src/classical_agent.py` | Module 2,3,9 + MiniHackathon |

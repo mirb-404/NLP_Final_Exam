@@ -1,5 +1,5 @@
 """
-AI CEO — Strategic Intelligence Agent  (main entry point).
+AI Strategy Consultant — Strategic Intelligence Agent  (main entry point).
 
 main.py IS the agent graph: a LangGraph ReAct loop where the DataLab Mistral
 decides which tool to call, fetches real evidence, and answers. Every capability
@@ -177,7 +177,7 @@ def main() -> None:
         state = run_analyze()
         print("\n=== CEO BRIEFING ===\n" + state.get("briefing", ""))
     elif cmd == "chat":
-        print(f"AI CEO agent for {config.COMPANY}. Ask a question (or 'exit').")
+        print(f"AI Strategy Consultant agent for {config.COMPANY}. Ask a question (or 'exit').")
         while True:
             q = input("\n> ").strip()
             if q.lower() in ("exit", "quit", "q", ""):
@@ -186,7 +186,7 @@ def main() -> None:
     else:  # "ask" or no command -> run the agent
         question = " ".join(sys.argv[2:]) if cmd == "ask" else ""
         question = question or f"If you were the CEO of {config.COMPANY} today, what would you do next and why?"
-        print(f"\n=== AI CEO AGENT ===\nQ: {question}\n")
+        print(f"\n=== AI STRATEGY CONSULTANT AGENT ===\nQ: {question}\n")
         print("\nANSWER:\n" + ask_ceo(question))
 
 

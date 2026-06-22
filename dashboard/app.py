@@ -24,7 +24,7 @@ from dotenv import load_dotenv  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "results" / "dashboard_data.json"
-ACTIVITY = ROOT / "results" / "activity.json"   # grows as the CEO asks questions
+ACTIVITY = ROOT / "results" / "activity.json"   # grows as questions are asked
 
 # Load .env so the pipeline run from the dashboard uses MODEL_SERVER_URL (Mistral),
 # not the local Qwen fallback.
@@ -37,7 +37,7 @@ LLM_MODEL = config.LLM_REPO_ID
 EMBED_MODEL = config.EMBEDDING_MODEL
 RAG_TOOL = "search_knowledge_base — Hybrid BM25 + dense"
 
-st.set_page_config(page_title="AI CEO — Strategic Intelligence", layout="wide")
+st.set_page_config(page_title="AI Strategy Consultant — Strategic Intelligence", layout="wide")
 
 # ---------------------------------------------------------------- styling ----
 st.markdown("""
@@ -221,7 +221,7 @@ def load_dashboard_data() -> dict:
 
 
 def not_ready_note() -> None:
-    st.info("No analysis yet. Ask the agent a question on the **Ask the CEO** tab "
+    st.info("No analysis yet. Ask the agent a question on the **Ask the Consultant** tab "
             "(it builds the knowledge base on first use), or click **Re-analyse** in the sidebar.")
 
 
@@ -380,11 +380,11 @@ def render_briefing(d: dict) -> None:
 data = load_dashboard_data()
 c = data["company"]
 
-st.markdown(f"<div class='hero'>AI CEO — {esc(c['name'])}</div>", unsafe_allow_html=True)
+st.markdown(f"<div class='hero'>AI Strategy Consultant — {esc(c['name'])}</div>", unsafe_allow_html=True)
 st.markdown(f"<div class='sub'>{esc(c['industry'])}</div>", unsafe_allow_html=True)
 
 with st.sidebar:
-    st.markdown("### AI CEO")
+    st.markdown("### AI Strategy Consultant")
     st.caption(f"Last update {str(c['last_update'])[:16].replace('T', ' ')}")
     if st.button("Re-analyse now", use_container_width=True):
         with st.spinner("Re-analysing…"):
@@ -422,12 +422,12 @@ with st.sidebar:
                 f"<div class='stack'><b>RAG tool</b><br><code>{esc(RAG_TOOL)}</code></div>",
                 unsafe_allow_html=True)
 
-tabs = st.tabs(["Ask the CEO", "Overview", "Opportunities", "Risks", "Trends",
+tabs = st.tabs(["Ask the Consultant", "Overview", "Opportunities", "Risks", "Trends",
                 "Sentiment", "Recommendations", "Briefing", "Retrieval", "Activity"])
 
-# ---- Tab: Ask the CEO (interactive agent) -----------------------------------
+# ---- Tab: Ask the Consultant (interactive agent) ----------------------------
 with tabs[0]:
-    st.markdown("#### Ask the AI CEO anything strategic")
+    st.markdown("#### Ask the AI Strategy Consultant anything strategic")
     st.markdown("<div class='muted'>The agent reasons, calls tools for evidence, answers, then offers a "
                 "menu of strategic options. Asking also re-runs the analysis, so every other tab updates "
                 "from the same fresh evidence — and the whole state is saved to the Activity log.</div>",
@@ -437,7 +437,7 @@ with tabs[0]:
     q = st.text_input("question", value=queued or "", key="ask_q",
                       placeholder="e.g. How do we beat BYD in China?", label_visibility="collapsed")
 
-    if (st.button("Ask the CEO", type="primary") or queued) and q.strip():
+    if (st.button("Ask the Consultant", type="primary") or queued) and q.strip():
         buf = io.StringIO()
         with st.spinner("Reasoning, calling tools, and refreshing every tab…"):
             try:
@@ -534,7 +534,7 @@ with tabs[9]:
                 "moment. Pick one to replay the dashboard exactly as it was.</div>", unsafe_allow_html=True)
     activity = load_activity()
     if not activity:
-        st.info("No questions yet. Ask the CEO something on the first tab to start the log.")
+        st.info("No questions yet. Ask the Consultant something on the first tab to start the log.")
     else:
         labels = [f"{it.get('time', '')} — {it['question'][:60]}" for it in activity]
         idx = st.selectbox("Logged question", range(len(activity)), format_func=lambda i: labels[i])

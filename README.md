@@ -1,4 +1,4 @@
-# AI CEO — Strategic Intelligence Agent
+# AI Strategy Consultant — Strategic Intelligence Agent
 
 An AI Strategy Consultant for a chosen public company (default: **Tesla, TSLA**).
 It **collects live public information**, builds a **knowledge repository**, runs a
@@ -112,7 +112,7 @@ sources ──HTTP──> data/raw/*.json ──clean/dedup/relevance──> dat
 
 | Tab | PDF section | Shows |
 |---|---|---|
-| Ask the CEO | Task 5 | live ReAct agent: answer + tool-call trace + strategic options + follow-ups |
+| Ask the Consultant | Task 5 | live ReAct agent: answer + tool-call trace + strategic options + follow-ups |
 | Overview | §1 Company Overview | name, industry, #docs, #sources, last update, source-mix pie |
 | (Overview) | §2 Market Intelligence | recent news, competitor activity, **emerging technologies**, **company announcements**, trending keywords |
 | Opportunities | §3 Opportunity Monitor | title, impact level, evidence, confidence |

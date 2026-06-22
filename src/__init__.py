@@ -1,1 +1,1 @@
-"""AI CEO — Strategic Intelligence Agent (backend package)."""
+"""AI Strategy Consultant — Strategic Intelligence Agent (backend package)."""

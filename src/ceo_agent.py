@@ -1,5 +1,5 @@
 """
-Task 5 + 6 — AI CEO Agent and Evidence-Based Recommendations.
+Task 5 + 6 — AI Strategy Consultant Agent and Evidence-Based Recommendations.
 
 This is the reasoning layer. It does NOT retrieve or summarise for its own sake;
 it converts the strategic signals from the intelligence engine into prioritised,
