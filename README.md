@@ -19,72 +19,58 @@ Two front doors:
 
 ## System architecture
 
+The whole system is just **two graphs**: one linear **pipeline** (the deterministic
+deliverables) and the **ReAct agent loop** (interactive Q&A). Everything else is a plain
+stage function or an agent tool.
+
 ```mermaid
 flowchart TD
-    %% ---------------- live sources ----------------
-    subgraph SRC["Live sources — HTTP (collector.py)"]
+    SRC["Live sources — collector.py<br/>News · Finance · Hacker News · Stack Overflow · arXiv · OpenAlex"]
+
+    %% ===== GRAPH 1 — the pipeline (one linear LangGraph in orchestrator.py) =====
+    subgraph PIPE["GRAPH 1 · Pipeline — orchestrator.py (one linear LangGraph)"]
+        C["collect · collector.py"]
+        P["process · preprocess.py"]
+        IX["index · knowledge_base.py"]
+        AZ["analyze · classical_agent.py"]
+        IE["intelligence · intelligence_engine.py"]
+        RC["recommend · ceo_agent.py"]
+        VF["verify · verifier_agent.py"]
+        BR["brief · ceo_agent.py"]
+        C --> P --> IX --> AZ --> IE --> RC --> VF --> BR
+    end
+
+    %% ===== GRAPH 2 — the ReAct agent loop (main.py) =====
+    subgraph AGENT["GRAPH 2 · ReAct agent — main.py"]
         direction LR
-        N[Google News]
-        F[Yahoo Finance]
-        H[Hacker News]
-        S[Stack Overflow]
-        A[arXiv]
-        O[OpenAlex]
+        RE["reason<br/>LLM picks an Action"] -->|Action| AC["act<br/>run a tool"]
+        AC -->|Observation| RE
     end
 
-    %% ---------------- ingest graph: Tasks 1-3 ----------------
-    subgraph INGEST["Ingest graph — Tasks 1-3 (driven by orchestrator)"]
-        COL["Task 1 — collector.py"]
-        PRE["Task 3 — preprocess.py<br/>clean · dedup · relevance · cap/type"]
-        IDX["Task 2 — knowledge_base.py<br/>embeddings + ChromaDB index"]
-    end
-
-    %% ---------------- analyze graph: Tasks 4-7 ----------------
-    subgraph ANALYZE["Analyze graph — Tasks 4-7 (driven by orchestrator)"]
-        CL["classical_agent.py<br/>RoBERTa/TweetEval sentiment · TF-IDF"]
-        IE["Task 4 — intelligence_engine.py<br/>opportunities · risks · trends"]
-        REC["Task 5/6 — ceo_agent.py<br/>recommendations"]
-        VER["Task 6 — verifier_agent.py<br/>SBERT grounding + factual precision"]
-        BRIEF["Task 7 — ceo_agent.py<br/>CEO briefing"]
-    end
-
-    %% ---------------- artifacts + the rest ----------------
     RAW[("data/raw/*.json")]
     CORP[("data/corpus.csv")]
-    CHROMA[("data/chroma/ — ChromaDB")]
-    R["retriever_hybrid.py<br/>BM25 + dense fusion"]
-    OUT[("results/*.json · ceo_briefing.txt · dashboard_data.json")]
-    DASH["dashboard/app.py<br/>Streamlit — 7 sections + Ask"]
-    ORCH["orchestrator.py — LangGraph StateGraph<br/>runs both graphs · writes trace.json"]
-    AGENT["main.py — LangGraph ReAct agent<br/>tool-calling loop"]
-    TOOLS["src/tools.py<br/>search_kb · sentiment · keywords · overview"]
-    LLM["LLM — model_server / Mistral-7B-Instruct-v0.3<br/>(HF Inference · local Qwen fallback)"]
+    CHROMA[("data/chroma — ChromaDB")]
+    OUT[("results/dashboard_data.json + result files")]
+    RET["retriever_hybrid.py<br/>BM25 + dense fusion"]
+    TOOLS["tools.py<br/>search_kb · sentiment · keywords · overview"]
+    DASH["dashboard/app.py<br/>Streamlit dashboard"]
+    LLM["LLM — model_server / Mistral-7B<br/>(HF Inference · Qwen fallback)"]
 
-    %% ---------------- data spine ----------------
-    SRC --> COL
-    COL --> RAW --> PRE --> CORP
-    CORP --> IDX --> CHROMA --> R
-    CORP --> CL
-    R --> IE
-    CL --> IE --> REC --> VER --> BRIEF --> OUT --> DASH
+    SRC --> C
+    C -. writes .-> RAW
+    P -. writes .-> CORP
+    IX -. writes .-> CHROMA
+    CHROMA --> RET --> IE
+    BR --> OUT --> DASH
 
-    %% ---------------- orchestrator drives both graphs ----------------
-    ORCH ==> INGEST
-    ORCH ==> ANALYZE
-    ORCH -. writes .-> OUT
+    AC --> TOOLS --> RET
+    DASH -->|Ask button| AGENT
+    DASH -->|Re-analyse| PIPE
 
-    %% ---------------- interactive ReAct agent ----------------
-    DASH -. Ask tab .-> AGENT
-    DASH -. Re-analyse .-> ORCH
-    AGENT --> TOOLS
-    TOOLS --> R
-    TOOLS --> CL
-
-    %% ---------------- LLM calls ----------------
     IE -. calls .-> LLM
-    REC -. calls .-> LLM
-    BRIEF -. calls .-> LLM
-    AGENT -. calls .-> LLM
+    RC -. calls .-> LLM
+    BR -. calls .-> LLM
+    RE -. calls .-> LLM
 ```
 
 ## Data flow
@@ -119,7 +105,7 @@ sources ──HTTP──> data/raw/*.json ──clean/dedup/relevance──> dat
 | Reasoning LLM | **Mistral-7B-Instruct-v0.3** via self-hosted `model_server/` (OpenAI-compatible); HF Inference then local `Qwen2.5-0.5B` as fallbacks | PDF rule: open/free only — **no paid API** |
 | LLM serving | `model_server/server.py` (FastAPI) on a GPU box, exposed via **cloudflared** tunnel | run a strong open model with no local GPU |
 | Verifier | SBERT cosine grounding vs evidence | MiniHackathon verifier |
-| Orchestration | **LangGraph** `StateGraph` (ingest + analyze graphs) | Module 11 |
+| Orchestration | **LangGraph** `StateGraph` (one linear pipeline graph) | Module 11 |
 | Agent | **LangGraph ReAct** loop, tool-calling (`src/tools.py`) | Module 11 |
 | Dashboard | **Streamlit** (`dashboard/app.py`) | PDF example, Deliverable 2 |
 
@@ -180,9 +166,9 @@ corpus and refresh every tab. Requires the LLM (see `.env`) to be reachable.
 - **Uniform document shape** across all sources → the rest of the pipeline is source-agnostic.
 - **Open-source LLM only**, selected at runtime: self-hosted `model_server` (Mistral-7B) →
   HF Inference → local Qwen fallback. Never depends on a paid API (PDF "Not Allowed").
-- **Two LangGraph graphs.** `ingest` (collect→process→index, slow) is split from `analyze`
-  (analyze→intelligence→recommend→verify→brief, fast) so iterating on analysis never re-collects
-  or re-embeds.
+- **Two graphs, that's it.** One linear pipeline graph (`collect→process→index→analyze→
+  intelligence→recommend→verify→brief`) and the ReAct agent loop. `run_analyze()` runs just the
+  `analyze…brief` tail of the same pipeline (reusing the index) so refreshes never re-collect.
 - **Evidence-first.** Every signal and recommendation carries cited `[src-#]` evidence; the
   verifier scores grounding and flags weakly-grounded recommendations (confidence < 0.7).
 
@@ -240,7 +226,6 @@ See `model_server/README.md`. If no server/token is set, the pipeline still runs
 | `intelligence.json` | opportunities, risks, trends, competitor activity, keywords |
 | `recommendations.json` | recs with evidence / impact / risk assessment / priority / confidence |
 | `metrics.json` | verifier mean confidence + factual precision |
-| `trace.json` | LangGraph execution trace (one entry per node) |
 | `ceo_briefing.txt` | what happened / why it matters / what to do next |
 | `dashboard_data.json` | assembled payload rendered by the Streamlit dashboard |
 | `activity.json` | dashboard Q&A log with per-question snapshots |

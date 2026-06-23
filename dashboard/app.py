@@ -3,8 +3,8 @@ Executive Intelligence Dashboard (Streamlit) — Deliverable 2.
 
 Styled renderer of results/dashboard_data.json. Each PDF section is rendered by a
 render_*(d) function so the same code shows the live data AND any historical
-snapshot saved in the Activity log. Asking the agent re-runs the analysis, so a
-question refreshes every tab and is saved with a full snapshot.
+snapshot saved in the Activity log. The "Ask" tab runs ONLY the agent (Graph 2); the
+standing report tabs are refreshed by the pipeline (Graph 1) via the "Re-analyse" button.
 """
 
 import contextlib
@@ -564,8 +564,8 @@ tabs = st.tabs(["Ask the Consultant", "Overview", "Opportunities", "Risks", "Tre
 with tabs[0]:
     st.markdown("#### Ask the AI Strategy Consultant anything strategic")
     st.markdown("<div class='muted'>The agent reasons, calls tools for evidence, answers, then offers a "
-                "menu of strategic options. Asking also re-runs the analysis, so every other tab updates "
-                "from the same fresh evidence — and the whole state is saved to the Activity log.</div>",
+                "menu of strategic options — and the question + answer are saved to the Activity log. "
+                "To refresh the other tabs (the standing report), use <b>Re-analyse</b> in the sidebar.</div>",
                 unsafe_allow_html=True)
 
     queued = st.session_state.pop("queued_q", None)          # set by a follow-up button
@@ -575,7 +575,7 @@ with tabs[0]:
     if (st.button("Ask the Consultant", type="primary") or queued) and q.strip():
         buf = io.StringIO()
         timer_box = st.empty()        # live elapsed counter, sits next to the spinner
-        with st.spinner("Reasoning, calling tools, and refreshing every tab…"):
+        with st.spinner("Reasoning and calling tools…"):
             try:
                 from main import ask_ceo, strategic_options
                 if not config.CORPUS_CSV.exists():       # first use -> agent builds the knowledge base
@@ -589,10 +589,9 @@ with tabs[0]:
                     # full live trace: each tool call AND what it returned
                     trace = [l.rstrip() for l in buf.getvalue().splitlines()
                              if "calling tool:" in l or l.lstrip().startswith("->")]
-                    try:
-                        regenerate_data()       # LLM was called -> refresh every other tab
-                    except Exception:
-                        pass
+                    # Ask runs ONLY the agent (Graph 2). The standing report (tabs) is the
+                    # pipeline's job (Graph 1) — refresh it with the sidebar "Re-analyse"
+                    # button, since it never depends on the question asked.
                     snapshot = json.loads(DATA.read_text(encoding="utf-8")) if DATA.exists() else {}
                     log_activity({"time": datetime.now().isoformat(timespec="minutes"),
                                   "question": q.strip(), "answer": answer, "elapsed": agent_secs,
