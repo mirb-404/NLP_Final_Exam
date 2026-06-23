@@ -14,7 +14,8 @@ import pandas as pd
 from src import config
 from src.utils import clean_text, load_json
 
-MAX_DOCS_PER_TYPE = 120  # balance + shrink: at most this many docs per source type
+MAX_DOCS_PER_TYPE = 500  # growth ceiling per source type — accumulation fills toward this
+                         # (round-robin first keeps the sources balanced under the cap)
 
 # Match brand/competitor names as WHOLE WORDS so a generic token ("Tesla", which is
 # also a physics unit / a surname) doesn't catch unrelated text. Falls back to COMPANY
@@ -32,7 +33,7 @@ def _round_robin_by_source(df: pd.DataFrame) -> pd.DataFrame:
     """Reorder rows so that within each source_type the underlying sources alternate
     (round-robin). The per-type head() cap then keeps a balanced mix instead of dropping
     whichever source was collected last — e.g. Stack Overflow sat entirely behind Hacker
-    News in 'community', so the 120-doc cap dropped all of it."""
+    News in 'community', so the per-type cap dropped all of it."""
     order = []
     for _, grp in df.groupby("source_type", sort=False):
         per_source = [list(g.index) for _, g in grp.groupby("source", sort=False)]

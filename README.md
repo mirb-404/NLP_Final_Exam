@@ -111,10 +111,12 @@ sources ──HTTP──> data/raw/*.json ──clean/dedup/relevance──> dat
 
 ## AI pipeline
 
-1. **Collect** — `collect_all()` pulls live docs from 6 endpoints (4 source types) into a uniform shape.
+1. **Collect** — `collect_all()` pulls live docs from 6 endpoints (4 source types) into a uniform shape;
+   API sources are fetched 3 pages deep, and each run **merges with prior runs (dedup by id)** so a
+   refresh grows the corpus instead of replacing it.
 2. **Process** — clean (HTML unescape/strip, whitespace), drop <5-word docs, keep only docs that
    mention the company (by whole-word alias) or a competitor, de-duplicate by id + normalised title,
-   cap 120 docs per source type for balance.
+   cap 500 docs per source type (growth ceiling) for balance.
 3. **Index** — embed each doc (`all-MiniLM-L6-v2`) and store in a persistent Chroma collection.
 4. **Retrieve** — per strategic theme, min-max normalise and fuse BM25 + dense scores
    (`score = 0.5·dense + 0.5·sparse`) → top-k cited evidence (`[src-#]`).
