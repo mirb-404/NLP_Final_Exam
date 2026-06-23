@@ -409,13 +409,7 @@ def _sentiment_stats(s: dict) -> dict:
     net = round((pos - neg) / total, 3) if total else 0.0
     pct = ({k: round(100 * v / total) for k, v in
             (("positive", pos), ("neutral", neu), ("negative", neg))} if total else {})
-    trend = [t for t in (s.get("trend") or []) if "sentiment" in t]
-    momentum, delta = "", 0.0
-    if len(trend) >= 2:                       # latest month vs the average of prior months
-        baseline = sum(t["sentiment"] for t in trend[:-1]) / (len(trend) - 1)
-        delta = round(trend[-1]["sentiment"] - baseline, 3)
-        momentum = "Improving" if delta > 0.03 else "Cooling" if delta < -0.03 else "Steady"
-    return {"net": net, "pct": pct, "total": total, "momentum": momentum, "delta": delta}
+    return {"net": net, "pct": pct, "total": total}
 
 
 def _sentiment_story(s: dict, stats: dict) -> str:
@@ -443,8 +437,6 @@ def _sentiment_story(s: dict, stats: dict) -> str:
     elif pub - news >= 0.1:
         parts.append(f"The public / developer community ({_sentiment_word(pub)}) is warmer than press & "
                      f"finance ({_sentiment_word(news)}).")
-    if stats["momentum"] in ("Improving", "Cooling"):
-        parts.append(f"Momentum has {'improved' if stats['momentum'] == 'Improving' else 'cooled'} in the latest month.")
     return " ".join(parts)
 
 
@@ -457,13 +449,11 @@ def render_sentiment(d: dict) -> None:
     story = _sentiment_story(s, stats)
     if story:                                 # the headline a CEO reads first
         card("<span class='card-title'>Sentiment story</span>", f"<div class='desc'>{esc(story)}</div>")
-    mom = f"{stats['momentum']} ({stats['delta']:+.2f})" if stats["momentum"] else "—"
     st.markdown("<div class='row'>" + "".join([
         metric("Net sentiment", sentiment_label(stats["net"])),
         metric("Avg tone", sentiment_label(s.get("overall_sentiment", 0))),
         metric("Press & finance", sentiment_label(s.get("news_sentiment", 0))),
         metric("Public / community", sentiment_label(s.get("public_sentiment", 0))),
-        metric("Momentum", mom),
     ]) + "</div>", unsafe_allow_html=True)
     st.caption("**Net sentiment** = %positive − %negative (a headcount, matches the split). "
                "**Avg tone** = mean article score, which also weights how harsh each story is — so the two "
@@ -476,8 +466,6 @@ def render_sentiment(d: dict) -> None:
         show_pie(s.get("distribution", {}), color_map=_LABEL_COLORS)
     with v2:
         st.markdown("##### Sentiment trend")
-        if stats["momentum"]:
-            st.caption(f"Momentum: {mom} vs prior months.")
         if s.get("trend"):
             st.line_chart(pd.DataFrame(s["trend"]).set_index("period")["sentiment"])
 
