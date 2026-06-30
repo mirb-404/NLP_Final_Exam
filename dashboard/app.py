@@ -592,16 +592,18 @@ with tabs[0]:
         if res.get("elapsed") is not None:
             st.caption(f"⏱ Agent loop ran in {res['elapsed']}s")
         if res.get("steps"):
-            st.markdown(f"##### Agent loop — plan → act → observe ({len(res['steps'])} steps)")
-            for i, s in enumerate(res["steps"], 1):
-                inp = "" if s["input"].upper() in ("", "NONE") else s["input"]
-                st.markdown(
-                    f"<div class='card'><span class='card-title'>Step {i} · 🔧 {esc(s['tool'])}({esc(inp)})</span>"
-                    f"<div class='desc'>🧠 <b>Thought:</b> {esc(s['thought'])}</div>"
-                    f"<div class='desc'>📄 <b>Observation:</b> {esc(s['observation'][:400])}"
-                    f"{'…' if len(s['observation']) > 400 else ''}</div></div>",
-                    unsafe_allow_html=True,
-                )
+            # whole loop in ONE collapsed dropdown -> minimal clutter; the tool sequence
+            # + reasoning only appear when expanded.
+            with st.expander(f"Agent loop — plan → act → observe ({len(res['steps'])} steps)"):
+                for i, s in enumerate(res["steps"], 1):
+                    inp = "" if s["input"].upper() in ("", "NONE") else s["input"]
+                    st.markdown(
+                        f"<div class='card'><span class='card-title'>Step {i} — {esc(s['tool'])}({esc(inp)})</span>"
+                        f"<div class='desc'><b>Thought:</b> {esc(s['thought'])}</div>"
+                        f"<div class='desc'><b>Observation:</b> {esc(s['observation'][:400])}"
+                        f"{'…' if len(s['observation']) > 400 else ''}</div></div>",
+                        unsafe_allow_html=True,
+                    )
         if res["options"]:
             st.markdown("##### Your strategic options")
             for o in res["options"]:
