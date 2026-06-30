@@ -38,15 +38,17 @@ MAX_STEPS = 6  # tool calls before the agent must answer
 
 _TOOLS_BY_NAME = {t.name: t for t in TOOLS}
 _TOOL_DESCS = "\n".join(f"- {t.name}: {t.description.splitlines()[0]}" for t in TOOLS)
-_ACTION_RE = re.compile(r"Action:\s*([^\n]+)\n+Action Input:\s*([^\n]*)", re.IGNORECASE)
+# tolerate the model putting "Action:" and "Action Input:" on one line or two
+_ACTION_RE = re.compile(r"Action:\s*([^\n]+?)\s+Action Input:\s*([^\n]*)", re.IGNORECASE)
 
 SYSTEM = (
     f"You are the AI strategic advisor to the CEO of {config.COMPANY}. "
     "Give concrete, prioritised, evidence-based advice citing the [src-#] markers from tools.\n\n"
-    f"Available tools:\n{_TOOL_DESCS}\n\n"
+    f"Available tools (use ONLY these — never invent another tool):\n{_TOOL_DESCS}\n\n"
     "Reason step by step in EXACTLY this format:\n"
     "Thought: <reasoning>\nAction: <one tool name>\nAction Input: <input, or NONE>\n"
-    "(You then receive an `Observation:`.) When you have enough evidence, output:\n"
+    "Then STOP and wait for the real Observation — never write the Observation yourself "
+    "or make up tool results. When you have enough evidence, output:\n"
     "Final Answer: <the executive answer>"
 )
 
@@ -151,10 +153,28 @@ def _final_answer(question: str, scratchpad: str) -> str:
     return forced.split("Final Answer:")[-1].strip()
 
 
+_GREETING_RE = re.compile(
+    r"^\s*(hi|hello|hey|yo|sup|how are you|how'?s it going|good (morning|afternoon|evening)|"
+    r"thanks?|thank you|who are you|what can you do)\b",
+    re.IGNORECASE,
+)
+
+
+def _is_chitchat(question: str) -> bool:
+    """Cheap gate: a short greeting / pleasantry rather than a strategic question.
+    These get a one-line redirect instead of triggering the whole agent loop."""
+    q = question.strip()
+    return bool(_GREETING_RE.match(q)) and len(q.split()) <= 5
+
+
 def run_agent(question: str) -> dict:
     """Run the ReAct loop once and return the final answer *and* the step-by-step
     reasoning trace (Thought -> Action -> Observation), so callers can show how the
     agent decided, not just its conclusion."""
+    if _is_chitchat(question):   # don't fabricate a question + run tools for a greeting
+        return {"answer": (f"I'm the AI strategy consultant for {config.COMPANY}. "
+                           "Ask me a strategic question — e.g. 'How do we beat BYD in China?'"),
+                "steps": []}
     state = build_agent().invoke(
         {"question": question, "scratchpad": "", "steps": 0},
         {"recursion_limit": 2 * MAX_STEPS + 2},
