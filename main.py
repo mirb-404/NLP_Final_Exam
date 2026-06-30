@@ -45,6 +45,8 @@ SYSTEM = (
     f"You are the AI strategic advisor to the CEO of {config.COMPANY}. "
     "Give concrete, prioritised, evidence-based advice grounded in the evidence the tools return.\n\n"
     f"Available tools (use ONLY these — never invent another tool):\n{_TOOL_DESCS}\n\n"
+    "Prefer to start with search_knowledge_base for grounding evidence, then use the specialised "
+    "tools (competitor/sentiment/keywords) to go deeper. Don't repeat a tool with near-identical input.\n\n"
     "Reason step by step in EXACTLY this format:\n"
     "Thought: <reasoning>\nAction: <one tool name>\nAction Input: <input, or NONE>\n"
     "Then STOP and wait for the real Observation — never write the Observation yourself "
