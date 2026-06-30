@@ -66,6 +66,7 @@ def reason_node(state: AgentState) -> AgentState:
     if m:
         text = text[: m.end()]   # keep only the first Thought + Action + Action Input; we run the tool
     text = text.strip()
+    print(text)                  # show the agent's reasoning + chosen action live
     return {
         "pending": text,
         "scratchpad": state.get("scratchpad", "") + "\n" + text + "\n",
@@ -110,20 +111,61 @@ def build_agent():
     return g.compile()
 
 
-def ask_ceo(question: str) -> str:
-    """Run the agent on one strategic question and return its final answer."""
+_STEP_RE = re.compile(
+    r"Thought:\s*(.*?)\n+Action:\s*([^\n]+?)\s*\n+Action Input:\s*([^\n]*)",
+    re.IGNORECASE | re.DOTALL,
+)
+
+
+def agent_steps(scratchpad: str) -> list[dict]:
+    """Split the agent's transcript into ordered steps — one per tool call — each as
+    {thought, tool, input, observation}. This only READS what the ReAct loop already
+    produced, so the CLI and dashboard can show *why* each tool was chosen."""
+    observations = re.findall(
+        r"Observation:\s*(.*?)(?=\n\s*Thought:|\Z)", scratchpad, re.IGNORECASE | re.DOTALL
+    )
+    steps = []
+    for i, (thought, tool, arg) in enumerate(_STEP_RE.findall(scratchpad)):
+        name = tool.strip().strip("`").split()
+        steps.append({
+            "thought": thought.strip(),
+            "tool": name[0] if name else tool.strip(),
+            "input": arg.strip(),
+            "observation": observations[i].strip() if i < len(observations) else "",
+        })
+    return steps
+
+
+def _final_answer(question: str, scratchpad: str) -> str:
+    """The agent's Final Answer, cut off before any trailing Thought/Action the model
+    tacked on. Falls back to one clean synthesis if the loop never concluded."""
+    m = re.search(
+        r"Final Answer:\s*(.*?)(?=\n\s*(?:Thought:|Action:|Observation:)|\Z)",
+        scratchpad, re.IGNORECASE | re.DOTALL,
+    )
+    if m and m.group(1).strip():
+        return m.group(1).strip()
+    # Ran out of steps without concluding -> force one clean synthesis from the evidence gathered.
+    forced = ask_llm(f"{SYSTEM}\n\nQuestion: {question}\n{scratchpad}\n\n"
+                     "You now have enough evidence. Reply with ONLY:\nFinal Answer:")
+    return forced.split("Final Answer:")[-1].strip()
+
+
+def run_agent(question: str) -> dict:
+    """Run the ReAct loop once and return the final answer *and* the step-by-step
+    reasoning trace (Thought -> Action -> Observation), so callers can show how the
+    agent decided, not just its conclusion."""
     state = build_agent().invoke(
         {"question": question, "scratchpad": "", "steps": 0},
         {"recursion_limit": 2 * MAX_STEPS + 2},
     )
     pad = state["scratchpad"]
-    m = re.search(r"Final Answer:\s*(.+)", pad, re.IGNORECASE | re.DOTALL)
-    if m:
-        return m.group(1).strip()
-    # Ran out of steps without concluding -> force one clean synthesis from the evidence gathered.
-    final = ask_llm(f"{SYSTEM}\n\nQuestion: {question}\n{pad}\n\n"
-                    "You now have enough evidence. Reply with ONLY:\nFinal Answer:")
-    return final.split("Final Answer:")[-1].strip()
+    return {"answer": _final_answer(question, pad), "steps": agent_steps(pad)}
+
+
+def ask_ceo(question: str) -> str:
+    """The agent's final answer to one strategic question."""
+    return run_agent(question)["answer"]
 
 
 def strategic_options(question: str, answer: str) -> dict:

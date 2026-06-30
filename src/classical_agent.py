@@ -99,6 +99,24 @@ def _sentiment_trend(df) -> list[dict]:
             for _, r in g.sort_values("_month").iterrows()]
 
 
+def texts_sentiment(texts: list[str]) -> dict:
+    """Sentiment summary for an arbitrary set of texts — the mean signed score in
+    [-1, 1] plus the positive/negative/neutral breakdown. Used by the agent's
+    query-scoped get_sentiment tool, so it reads the sentiment of just the evidence
+    retrieved for a question rather than the whole corpus."""
+    scores = _sentiment_scores(texts)
+    if not scores:
+        return {"mean_sentiment": 0.0, "distribution": {}}
+
+    def _label(s: float) -> str:
+        return "positive" if s > 0.05 else "negative" if s < -0.05 else "neutral"
+
+    return {
+        "mean_sentiment": round(sum(scores) / len(scores), 4),
+        "distribution": dict(Counter(_label(s) for s in scores)),
+    }
+
+
 # ----------------------------------------------------------------------------
 # TF-IDF keywords (Module 4/10)
 # ----------------------------------------------------------------------------

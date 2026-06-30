@@ -9,7 +9,6 @@ question refreshes every tab and is saved with a full snapshot.
 
 import contextlib
 import html
-import io
 import json
 import sys
 import threading
@@ -561,22 +560,18 @@ with tabs[0]:
                       placeholder="e.g. How do we beat BYD in China?", label_visibility="collapsed")
 
     if (st.button("Ask the Consultant", type="primary") or queued) and q.strip():
-        buf = io.StringIO()
         timer_box = st.empty()        # live elapsed counter, sits next to the spinner
         with st.spinner("Reasoning, calling tools, and refreshing every tab…"):
             try:
-                from main import ask_ceo, strategic_options
+                from main import run_agent, strategic_options
                 if not config.CORPUS_CSV.exists():       # first use -> agent builds the knowledge base
                     regenerate_data()
                 with live_timer(timer_box):
                     t0 = time.perf_counter()
-                    with contextlib.redirect_stdout(buf):
-                        answer = ask_ceo(q.strip())
+                    result = run_agent(q.strip())         # answer + step-by-step reasoning trace
+                    answer, steps = result["answer"], result["steps"]
                     agent_secs = round(time.perf_counter() - t0, 1)   # the agent loop itself
                     opts = strategic_options(q.strip(), answer)
-                    # full live trace: each tool call AND what it returned
-                    trace = [l.rstrip() for l in buf.getvalue().splitlines()
-                             if "calling tool:" in l or l.lstrip().startswith("->")]
                     try:
                         regenerate_data()       # also refresh the report tabs/charts from the latest data
                     except Exception:
@@ -585,7 +580,7 @@ with tabs[0]:
                     log_activity({"time": datetime.now().isoformat(timespec="minutes"),
                                   "question": q.strip(), "answer": answer, "elapsed": agent_secs,
                                   "options": opts["options"], "snapshot": snapshot})
-                    st.session_state["last_result"] = {"answer": answer, "trace": trace,
+                    st.session_state["last_result"] = {"answer": answer, "steps": steps,
                                                        "elapsed": agent_secs, **opts}
                 st.rerun()
             except Exception as exc:
@@ -596,10 +591,17 @@ with tabs[0]:
         st.markdown(f"<div class='answer'>{esc(res['answer'])}</div>", unsafe_allow_html=True)
         if res.get("elapsed") is not None:
             st.caption(f"⏱ Agent loop ran in {res['elapsed']}s")
-        if res.get("trace"):
-            n_calls = sum(1 for l in res["trace"] if "calling tool:" in l)
-            with st.expander(f"Tool calls & outputs ({n_calls})", expanded=True):
-                st.code("\n".join(res["trace"]), language="text")
+        if res.get("steps"):
+            st.markdown(f"##### Agent loop — plan → act → observe ({len(res['steps'])} steps)")
+            for i, s in enumerate(res["steps"], 1):
+                inp = "" if s["input"].upper() in ("", "NONE") else s["input"]
+                st.markdown(
+                    f"<div class='card'><span class='card-title'>Step {i} · 🔧 {esc(s['tool'])}({esc(inp)})</span>"
+                    f"<div class='desc'>🧠 <b>Thought:</b> {esc(s['thought'])}</div>"
+                    f"<div class='desc'>📄 <b>Observation:</b> {esc(s['observation'][:400])}"
+                    f"{'…' if len(s['observation']) > 400 else ''}</div></div>",
+                    unsafe_allow_html=True,
+                )
         if res["options"]:
             st.markdown("##### Your strategic options")
             for o in res["options"]:

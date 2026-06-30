@@ -14,7 +14,7 @@ from functools import lru_cache
 from langchain_core.tools import tool
 
 from src import config
-from src.classical_agent import corpus_sentiment, top_keywords
+from src.classical_agent import texts_sentiment, top_keywords
 from src.preprocess import load_corpus
 from src.retriever_hybrid import HybridRetriever
 
@@ -41,30 +41,32 @@ def search_knowledge_base(query: str) -> str:
 
 
 @tool
-def get_competitor_activity() -> str:
-    """Return recent evidence about what the company's competitors are doing."""
-    return _format(_retriever().retrieve(config.ENGINE_QUERIES["competitors"]))
+def get_competitor_activity(query: str) -> str:
+    """Return evidence about what competitors are doing, focused on the query
+    (e.g. a named rival or market such as 'BYD in China')."""
+    return _format(_retriever().retrieve(f"competitors and rivals: {query}"))
 
 
 @tool
-def get_sentiment() -> str:
-    """Return news vs public sentiment for the company (RoBERTa, 3-class TweetEval) and
-    the positive/negative/neutral distribution across the corpus."""
-    s = corpus_sentiment(load_corpus())
-    return (f"news_sentiment={s['news_sentiment']}, public_sentiment={s['public_sentiment']}, "
-            f"overall={s['overall_sentiment']}, distribution={dict(s['distribution'])}")
+def get_sentiment(query: str) -> str:
+    """Return the sentiment (RoBERTa, 3-class TweetEval) of the evidence about the query —
+    the mean signed score and the positive/negative/neutral breakdown."""
+    docs = _retriever().retrieve(query)
+    s = texts_sentiment([d["title"] + " " + d["text"] for d in docs])
+    return f"mean_sentiment={s['mean_sentiment']}, distribution={s['distribution']}"
 
 
 @tool
-def get_trending_keywords() -> str:
-    """Return the most important terms across the collected corpus (TF-IDF)."""
-    df = load_corpus()
-    return ", ".join(top_keywords((df["title"] + " " + df["text"]).tolist()))
+def get_trending_keywords(query: str) -> str:
+    """Return the most important terms (TF-IDF) in the evidence about the query."""
+    docs = _retriever().retrieve(query)
+    return ", ".join(top_keywords([d["title"] + " " + d["text"] for d in docs]))
 
 
 @tool
 def get_company_overview() -> str:
-    """Return the company name, industry, number of collected documents and source types."""
+    """Return the company name, industry, number of collected documents and source types.
+    A corpus-wide status tool — takes no query."""
     df = load_corpus()
     return (f"company={config.COMPANY}, industry={config.INDUSTRY}, "
             f"documents={len(df)}, source_types={sorted(df['source_type'].unique())}")
