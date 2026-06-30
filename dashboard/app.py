@@ -10,6 +10,7 @@ question refreshes every tab and is saved with a full snapshot.
 import contextlib
 import html
 import json
+import re
 import sys
 import threading
 import time
@@ -90,6 +91,15 @@ _LABEL_COLORS = {
 # ----------------------------------------------------------------- helpers ---
 def esc(x) -> str:
     return html.escape(str(x))
+
+
+# The main chat answer is prose only (evidence lives in the step dropdown), so strip any
+# [src-#] / (src-#) markers the model leaves in. Scoped to this page — the report tabs keep theirs.
+_SRC_MARK_RE = re.compile(r"\s*[\[(]\s*src-\d+(?:\s*,\s*src-\d+)*\s*[\])]", re.IGNORECASE)
+
+
+def strip_citations(text: str) -> str:
+    return re.sub(r"\s+([,.;:])", r"\1", _SRC_MARK_RE.sub("", text or "")).strip()
 
 
 def badge(level) -> str:
@@ -569,7 +579,8 @@ with tabs[0]:
                 with live_timer(timer_box):
                     t0 = time.perf_counter()
                     result = run_agent(q.strip())         # answer + step-by-step reasoning trace
-                    answer, steps = result["answer"], result["steps"]
+                    answer = strip_citations(result["answer"])   # main page = prose only
+                    steps = result["steps"]
                     agent_secs = round(time.perf_counter() - t0, 1)   # the agent loop itself
                     opts = strategic_options(q.strip(), answer)
                     try:

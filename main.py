@@ -43,13 +43,17 @@ _ACTION_RE = re.compile(r"Action:\s*([^\n]+?)\s+Action Input:\s*([^\n]*)", re.IG
 
 SYSTEM = (
     f"You are the AI strategic advisor to the CEO of {config.COMPANY}. "
-    "Give concrete, prioritised, evidence-based advice citing the [src-#] markers from tools.\n\n"
+    "Give concrete, prioritised, evidence-based advice grounded in the evidence the tools return.\n\n"
     f"Available tools (use ONLY these — never invent another tool):\n{_TOOL_DESCS}\n\n"
     "Reason step by step in EXACTLY this format:\n"
     "Thought: <reasoning>\nAction: <one tool name>\nAction Input: <input, or NONE>\n"
     "Then STOP and wait for the real Observation — never write the Observation yourself "
     "or make up tool results. When you have enough evidence, output:\n"
-    "Final Answer: <the executive answer>"
+    "Final Answer: <the executive answer>\n"
+    "The Final Answer MUST be grounded in the Observations you actually received — refer to "
+    "their real figures/keywords, invent no supporting data, and avoid generic advice that would "
+    "fit any company. If the evidence is thin, say so plainly. Write it as clean prose for the "
+    "CEO — do NOT print [src-#] markers."
 )
 
 
@@ -149,7 +153,8 @@ def _final_answer(question: str, scratchpad: str) -> str:
         return m.group(1).strip()
     # Ran out of steps without concluding -> force one clean synthesis from the evidence gathered.
     forced = ask_llm(f"{SYSTEM}\n\nQuestion: {question}\n{scratchpad}\n\n"
-                     "You now have enough evidence. Reply with ONLY:\nFinal Answer:")
+                     "Using ONLY the evidence in the Observations above (use the real figures/"
+                     "keywords, invent nothing, no [src-#] markers), reply with ONLY:\nFinal Answer:")
     return forced.split("Final Answer:")[-1].strip()
 
 
