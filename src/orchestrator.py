@@ -77,7 +77,6 @@ def brief(state: State) -> State:
 
 INGEST = [collect, process, index]                                   # refresh the data
 ANALYZE = [analyze, intelligence, recommend, verify, brief]          # reason over the index
-PIPELINE = INGEST + ANALYZE
 
 
 def _run(steps: list) -> State:
